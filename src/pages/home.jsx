@@ -22,6 +22,7 @@ function Home() {
         <div className="container" id='competitions'>
           <ImageGallery></ImageGallery>
         </div>
+        <Footer />
       </body>
     </div>
   );
