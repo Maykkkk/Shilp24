@@ -1,5 +1,6 @@
 import '../links/css/home.css';
 import NavBar from '../components/NavBar';
+import Shilp from '../components/shilp';
 
 function Home() {
   return (
@@ -16,6 +17,9 @@ function Home() {
           </div>
         </div>
         <div className="container"></div>
+        <div>
+          <Shilp />
+        </div>
       </body>
     </div>
   );
