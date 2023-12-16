@@ -1,6 +1,8 @@
 import '../links/css/home.css';
 import NavBar from '../components/NavBar';
 import ImageGallery from '../components/ImageGallery';
+import Footer from '../components/Footer';
+
 
 function Home() {
   return (
