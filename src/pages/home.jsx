@@ -4,7 +4,7 @@ import ImageGallery from '../components/ImageGallery';
 import Footer from '../components/Footer';
 import Shilp from '../components/shilp';
 import About from '../components/About';
-import Events from '../components/Events';
+import ExploreMore from '../components/ExploreMore';
 
 function Home() {
   return (
@@ -26,7 +26,7 @@ function Home() {
         </div>
         <div className="container-about-events-footer">
           <About/>
-          <Events/>
+          <ExploreMore/>
         </div>
         <Footer />
       </body>

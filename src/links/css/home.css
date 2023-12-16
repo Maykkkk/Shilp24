@@ -40,18 +40,18 @@
 }
 
 .container-about-events-footer{
-    height: 200vh;
+    height: 250vh;
     width: 100%;
     background-image: url(../img/Technec\ BGtechnex_bg.png);
-    background-size: 100% 65%;
+    background-size: 100% 75%;
     background-repeat: no-repeat;
     background-position-y:40vh ;
     position: relative;
 }
 @media screen and (max-width: 360px) {
-    .container-about-events{
+    .container-about-events-footer{
         border: 2px solid red;
         background-size: 100% 30%;
-        background-position-y: 11vh;
+        background-position-y: 9.7vh;
     } 
 }
