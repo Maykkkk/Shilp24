@@ -3,6 +3,8 @@ import NavBar from '../components/NavBar';
 import ImageGallery from '../components/ImageGallery';
 import Footer from '../components/Footer';
 import Shilp from '../components/shilp';
+import About from '../components/About';
+import Events from '../components/Events';
 
 function Home() {
   return (
@@ -21,6 +23,10 @@ function Home() {
         <div className="container" id='competitions'><Shilp/></div>
         <div className="container" id='competitions'>
           <ImageGallery></ImageGallery>
+        </div>
+        <div className="container-about-events-footer">
+          <About/>
+          <Events/>
         </div>
         <Footer />
       </body>

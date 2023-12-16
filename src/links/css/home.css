@@ -38,3 +38,20 @@
 .primary{
     color: #d800d2;
 }
+
+.container-about-events-footer{
+    height: 200vh;
+    width: 100%;
+    background-image: url(../img/Technec\ BGtechnex_bg.png);
+    background-size: 100% 65%;
+    background-repeat: no-repeat;
+    background-position-y:40vh ;
+    position: relative;
+}
+@media screen and (max-width: 360px) {
+    .container-about-events{
+        border: 2px solid red;
+        background-size: 100% 30%;
+        background-position-y: 11vh;
+    } 
+}
