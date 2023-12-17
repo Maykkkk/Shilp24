@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <body className="body">
+      <div className="body">
         <div className="container d-flex align-items-center justify-content-center" id='home'>
           <div id="title" className=''>
           <h1 className='m-0 p-0 '>
@@ -29,7 +29,7 @@ function Home() {
           <ExploreMore/>
         </div>
         <Footer />
-      </body>
+      </div>
     </div>
   );
 }

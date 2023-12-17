@@ -54,7 +54,7 @@ function Footer() {
                 <a href="https://www.linkedin.com/company/civil-engineering-society-iit-bhu/"><FaLinkedin className='linkedIn'/></a>
                 <a href="https://www.instagram.com/ces_iitbhu/"><FaInstagram className='instagram' style={{margin:"0 0 0 1vw"}}/></a>
                 <a href="https://www.facebook.com/groups/157760987681133/"><FaSquareFacebook className='facebook' style={{margin:"0 0 0 1vw"}}/></a>
-                <a href="#"><IoLogoYoutube className='youtube' style={{margin:"0 0 0 1vw"}}/></a>
+                <a href="https://www.youtube.com"><IoLogoYoutube className='youtube' style={{margin:"0 0 0 1vw"}}/></a>
             </div>
         </div>
         {/* -------------- */}
