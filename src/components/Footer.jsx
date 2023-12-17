@@ -30,11 +30,11 @@ function Footer() {
                 <img src={newspaper} alt="" />
             </div>
             <div className="subscribe">
-                <a href="#">Subscribe to our Newsletter!</a>
+                Subscribe to our Newsletter!
             </div>
             <input type="email" name="user-mail" id="user-mail" placeholder='Enter your email'/>
             <div className="subscribe-mobile">
-                <a href="#">Subscribe to our Newsletter!</a>
+                Subscribe to our Newsletter!
             </div>
         </div>
         {/* ---------------- */}

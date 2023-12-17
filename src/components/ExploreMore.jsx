@@ -14,25 +14,25 @@ function ExploreMore() {
 
         <div className="event-gallery">
           <div className="event event-1">
-            <a href="#">
+            <a href="#events">
               <img src={event1} alt="" />
               <br />Event 1
             </a>
           </div>
           <div className="event event-2">
-            <a href="#">
+            <a href="#events">
               <img src={event2} alt="" />
               <br />Event 2
             </a>
           </div>
           <div className="event event-3">
-            <a href="#">
+            <a href="#events">
               <img src={event3} alt="" />
               <br />Event 3
             </a>
           </div>
           <div className="event event-4">
-            <a href="#">
+            <a href="#events">
               <img src={event4} alt="" />
               <br />Event 4
             </a>
