@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,700&display=swap');
+
+
+.clashCarnival{
+    background-image: url(../img/Clubs.png);
+    height: 100%;
+    width: 100%;
+    padding: 20vh 5vw 10vh 5vw;
+    margin-bottom: 3vw;
+}
+.main{
+    height: 100vh;
+    background: linear-gradient(251.9deg, rgba(76, 18, 77, 0.65) -6.07%, rgba(13, 4, 27, 0.65) 47.04%, rgba(70, 18, 72, 0.65) 86.81%);
+    border-radius: 50px;
+}
+.heading{
+    color: #D12156;
+    font-size: 7.7vw;
+    font-weight: 700;
+    line-height: 11vw;
+    font-family: 'Poppins', sans-serif;
+}
+.carnival-gallery{
+    margin-top: 2vw;
+    display: flex;
+    justify-content:space-around;
+}
+.event{
+    text-align: center;
+    color: white;
+    margin-left: 3vw;
+    font-size: 3vw;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+.clashCarnival .main img{
+    margin-top: 0.7vw;
+    margin-bottom: 2vw;
+    height: 20vw;
+    width: 20vw;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.register{
+    height: 5vh;
+    width: 5vw;
+    background: rgba(54, 24, 68, 1);
+    border-radius: 200px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.25vw;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.7;
+    width: 8vw;
+}
+.register:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.explore{
+    background: rgba(54, 24, 68, 1);
+    border-radius: 200px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.25vw;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.7;
+    width: 8vw;
+}
+.explore:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 1000px) {
+    .clashCarnival .main img{
+        height: 30vw;
+        width: 25vw;
+        margin-top: 3vw;
+    }
+    .carnival-gallery{
+        margin-top: 6vw;
+    }
+    .register{
+        width: 11vw;
+    }
+    .explore{
+        width: 11vw;
+    }   
+}
+@media screen and (max-width:525px){
+    .carnival-gallery{
+        display: grid;
+        grid-template-rows: 43vh 43vh;
+        grid-template-columns:55vw 45vw;
+        align-items: center;
+    }
+    .clashCarnival .main img{
+        height: 35vw;
+        width: 35vw;
+    }
+    .register{
+        width: 15vw;
+        font-size: 2.2vw;
+    }
+    .explore{
+        width: 15vw;
+        font-size: 2.2vw;
+    }
+    .event-1{
+        padding-right: 10vw;
+    }
+    .event-1 .register{
+        margin-left: 5vw;
+    }
+    .event-1 .explore{
+        margin-right: 6vw;
+    }
+    .event-3{
+        margin-left: 30vw;
+    }
+    .event-3{
+        margin-right: -10vw;
+    }
+}
+@media screen and (max-width:360px){
+    .heading{
+        padding-top: 2vw;
+        font-size: 10vw;
+    }
+    .carnival-gallery{
+        display: flex;
+        flex-direction: column;
+    }
+    .carnival-gallery span{
+        padding-top: 20vw;
+        font-size: 6vw;
+    }
+    .event-1{
+        padding: 0;
+    }
+    .event-3{
+        margin: 0;
+    }
+    .clashCarnival .main img{
+        margin-top: 2vw;
+        height: 35vw;
+        width: 40vw;
+    }
+    .buttons{
+        margin-bottom: 5vw;
+        display: flex;
+    }
+    .register{
+        font-size: 2.8vw;
+        width: 18vw;
+    }
+    .explore{
+        margin-left: 2.2vw;
+        font-size: 2.8vw;
+        width: 18vw;
+    }
+}

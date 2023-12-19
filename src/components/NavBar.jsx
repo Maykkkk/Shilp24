@@ -1,5 +1,6 @@
 import "../links/css/navbar.css";
 import CES from "../links/img/CES.png";
+import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
@@ -22,7 +23,7 @@ function NavBar() {
                         <a className="nav-link" href="#guests">Guests</a>
                     </li>
                     <li className="nav-item px-2 mx-2">
-                        <a className="nav-link" href="#events">Events</a>
+                        <Link className="nav-link" to='/events'>Events</Link>
                     </li>
                     <li className="nav-item px-2 mx-2">
                         <a className="nav-link" href="#contacts">Contacts</a>
