@@ -9,8 +9,8 @@ import ExploreMore from '../components/ExploreMore';
 function Home() {
   return (
     <div className="App">
-      <NavBar></NavBar>
       <div className="body">
+        <NavBar></NavBar>
         <div className="container d-flex align-items-center justify-content-center" id='home'>
           <div id="title" className=''>
           <h1 className='m-0 p-0 '>

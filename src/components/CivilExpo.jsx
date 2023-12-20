@@ -1,14 +1,14 @@
-import '../links/css/clashCarnival.css'
-import event1 from '../links/img/Events/1.png'
+import '../links/css/civilexpo.css'
+import event1 from '../links/img/Event 1.png'
 
-function ClashCarnival() {
+function CivilExpo() {
   return (
-    <div className='clashCarnival'>
+    <div className='civilexpo'>
         <div className="main">
             <div className="heading">
-                CLASH CARNIVAL
+                CIVIL EXPO
             </div>
-            <div className="carnival-gallery">
+            <div className="expo-gallery-row1">
                 {/* Event-1 */}
                 <div className="event-1 event">
                     <div className='event-name'>Event 1</div>
@@ -31,6 +31,8 @@ function ClashCarnival() {
                         <button className="explore">Explore</button>
                     </div>
                 </div>
+              </div>
+              <div className="expo-gallery-row2">
                 {/* Event -3 */}
                 <div className="event-3 event">
                     <div className='event-name'>Event 3</div>
@@ -42,11 +44,21 @@ function ClashCarnival() {
                         <button className="explore">Explore</button>
                     </div>
                 </div>
-
-            </div>
+                {/* Event -4 */}
+                <div className="event-4 event">
+                    <div className='event-name'>Event 4</div>
+                    <div className="event-image">
+                        <img src={event1} alt="" />
+                    </div>
+                    <div className="buttons">
+                        <button className="register">Register</button>
+                        <button className="explore">Explore</button>
+                    </div>
+                </div>
+              </div>
         </div>
     </div>
   )
 }
 
-export default ClashCarnival
+export default CivilExpo
