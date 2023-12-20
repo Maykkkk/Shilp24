@@ -20,8 +20,8 @@ function Home() {
           <h2 className='text-light m-0 p-0'>Civil Engineering Society</h2>
           </div>
         </div>
-        <div className="container" id='competitions'><Shilp/></div>
-        <div className="container" id='competitions'>
+          <Shilp/>
+        <div className="container" id='gallery'>
           <ImageGallery></ImageGallery>
         </div>
         <div className="container-about-events-footer">

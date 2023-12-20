@@ -1,5 +1,5 @@
 import '../links/css/clashCarnival.css'
-import event1 from '../links/img/Event 1.png'
+import event1 from '../links/img/Events/1.png'
 
 function ClashCarnival() {
   return (

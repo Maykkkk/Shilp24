@@ -1,14 +1,14 @@
 import React from 'react'
 import '../links/css/about.css'
-import logo from '../links/img/AIPL_SESSION__1_-removebg-preview 3.png'
+import CES from '../links/img/AIPL_SESSION__1_-removebg-preview 3.png'
 
 function About() {
   return (
     <div className='about'>
         <div className="left">
-            <div className="title">About <span><br /></span>CES</div>
+            <div className="title">About <span><br /></span> CES</div>
             <div className="logo">
-                <img src={logo} alt="" />
+                <img src={CES} alt="" />
             </div>
         </div>
         <div className="right">
