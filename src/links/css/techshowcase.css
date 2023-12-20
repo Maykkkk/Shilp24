@@ -1,26 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,700&display=swap');
 
 
-.clashCarnival{
-    background-image: url(../img/Clubs.png);
-    height: 100%;
+.techshowcase{
+    height: 40%;
     width: 100%;
-    padding: 20vh 5vw 10vh 5vw;
-    margin-bottom: 3vw;
+    padding:0 5vw 0vw 5vw;
+    margin-bottom: -5vw;
 }
 .main{
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(251.9deg, rgba(76, 18, 77, 0.65) -6.07%, rgba(13, 4, 27, 0.65) 47.04%, rgba(70, 18, 72, 0.65) 86.81%);
     border-radius: 50px;
 }
-.heading{
+.techshowcase .main .heading{
     color: #D12156;
     font-size: 7.7vw;
     font-weight: 700;
     line-height: 11vw;
     font-family: 'Poppins', sans-serif;
 }
-.carnival-gallery{
+.tech-gallery{
     margin-top: 2vw;
     display: flex;
     justify-content:space-around;
@@ -33,7 +32,7 @@
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
 }
-.clashCarnival .main img{
+.techshowcase .main img{
     margin-top: 0.7vw;
     margin-bottom: 2vw;
     height: 20vw;
@@ -82,12 +81,12 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .clashCarnival .main img{
+    .techshowcase .main img{
         height: 30vw;
         width: 25vw;
         margin-top: 3vw;
     }
-    .carnival-gallery{
+    .tech-gallery{
         margin-top: 6vw;
     }
     .register{
@@ -98,79 +97,77 @@
     }   
 }
 @media screen and (max-width:525px){
-    .carnival-gallery{
+    .tech-gallery{
         display: grid;
         grid-template-rows: 43vh 43vh;
         grid-template-columns:55vw 45vw;
         align-items: center;
     }
-    .clashCarnival .main img{
+    .techshowcase .main img{
         height: 35vw;
         width: 35vw;
     }
-    .clashCarnival .register{
+    .techshowcase .register{
         width: 15vw;
         font-size: 2.2vw;
     }
-    .clashCarnival .explore{
+    .techshowcase .explore{
         width: 15vw;
         font-size: 2.2vw;
     }
-    .clashCarnival .event-1{
+    .techshowcase .event-1{
         padding-right: 10vw;
     }
-    .clashCarnival .event-1 .register{
+    .techshowcase .event-1 .register{
         margin-left: 5vw;
     }
-    .clashCarnival .event-1 .explore{
+    .techshowcase .event-1 .explore{
         margin-right: 6vw;
     }
-    .clashCarnival .event-3{
+    .techshowcase .event-3{
         margin-left: 30vw;
-    }
-    .clashCarnival .event-3{
         margin-right: -10vw;
     }
 }
 @media screen and (max-width:360px){
-    .clashCarnival{
-        margin-top: 10vw;
+    .techshowcase{
+        margin-bottom: 20vw;
     }
-    .clashCarnival .main{
-        height: 125vh;
+    .techshowcase .main{
+        height: 100%;
     }
-    .clashCarnival .heading{
-        padding-top: 10vw;
+    .techshowcase .heading{
+        padding-top: 2vw;
         font-size: 10vw;
     }
-    .carnival-gallery{
+    .tech-gallery{
         display: flex;
         flex-direction: column;
     }
-    .carnival-gallery .event .event-name{
-        margin-top: 7vw;
+    .tech-gallery .event-name{
+        padding-top: 10vw;
         font-size: 6vw;
     }
-    .clashCarnival .event-1{
+    .techshowcase .event-1{
         padding: 0;
     }
-    .clashCarnival .event-3{
+    .techshowcase .event-3{
         margin: 0;
     }
-    .clashCarnival .main img{
+    .techshowcase .main img{
         margin-top: 2vw;
         height: 35vw;
         width: 40vw;
     }
-    .clashCarnival .buttons{
+    .techshowcase .buttons{
         margin-bottom: 5vw;
         display: flex;
     }
-    .clashCarnival .register{
+    .techshowcase .register{
         font-size: 2.8vw;
         width: 18vw;
     }
-    .clashCarnival .explore{
+    .techshowcase .explore{
         margin-left: 2.2vw;
         font-size: 2.8vw;
         width: 18vw;

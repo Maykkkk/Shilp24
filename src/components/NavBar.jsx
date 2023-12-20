@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
-        <nav className="navbar navbar-dark navbar-expand-lg  fixed-top">
+        <nav className="navbar navbar-dark navbar-expand-lg ">
             <a className="navbar-brand mx-1 py-auto" href="#home">
                 <img src={CES} alt="SHILP logo" width="64px" />
             </a>
@@ -14,19 +14,19 @@ function NavBar() {
             <div className="collapse navbar-collapse justify-content-center">
                 <ul className="navbar-nav ">
                     <li className="nav-item px-2 mx-2">
-                        <a className="nav-link" aria-current="page" href="#home">Home</a>
+                        <Link className="nav-link" aria-current="page" to='/'>Home</Link>
                     </li>
                     <li className="nav-item px-2 mx-2">
-                        <a className="nav-link" href="#competitions">Competitions</a>
+                        <Link className="nav-link" to='/competitions'>Competitions</Link>
                     </li>
                     <li className="nav-item px-2 mx-2">
-                        <a className="nav-link" href="#guests">Guests</a>
+                        <Link className="nav-link" to='/guests'>Guests</Link>
                     </li>
                     <li className="nav-item px-2 mx-2">
                         <Link className="nav-link" to='/events'>Events</Link>
                     </li>
                     <li className="nav-item px-2 mx-2">
-                        <a className="nav-link" href="#contacts">Contacts</a>
+                    <Link className="nav-link" to='/contacts'>Contacts</Link>
                     </li>
                 </ul>
             </div>

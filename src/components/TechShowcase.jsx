@@ -1,14 +1,14 @@
-import '../links/css/clashCarnival.css'
+import '../links/css/techshowcase.css'
 import event1 from '../links/img/Event 1.png'
 
-function ClashCarnival() {
+function TechShowcase() {
   return (
-    <div className='clashCarnival'>
+    <div className='techshowcase'>
         <div className="main">
             <div className="heading">
-                CLASH CARNIVAL
+                TECH SHOWCASE
             </div>
-            <div className="carnival-gallery">
+            <div className="tech-gallery">
                 {/* Event-1 */}
                 <div className="event-1 event">
                     <div className='event-name'>Event 1</div>
@@ -49,4 +49,4 @@ function ClashCarnival() {
   )
 }
 
-export default ClashCarnival
+export default TechShowcase
