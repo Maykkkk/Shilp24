@@ -1,5 +1,15 @@
+.navbar{
+    position: absolute;
+    top: 0;left: 0;
+}
 .nav-item{
     font-size: 30px;
     font-weight: 600;
     color: white;
+}
+
+@media screen and (max-width:991px){
+    .navbar-nav{
+        background-color: rgba(0, 0, 0, 0.9);;
+    }
 }

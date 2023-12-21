@@ -17,21 +17,51 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 3.5vh;
+    line-height: 5vh;
     /* text-align: justify; */
     color: #F8F8F8;
     flex: 1 1 300px;
-    
 }
 
 .shilp_logo{
     flex: 0 0 auto; /* Prevent image from stretching */
     margin-right: 20px;
-    
+   
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .contain {
+        display: flex;
+        flex-direction: row; /* Stack elements in a column */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .shilp-logo,
+    .description {
+        flex: 0 0 auto; /* Reset flex properties to default */
+        width: auto; /* Reset width */
+        text-align: left; /* Align text to the left */
+        margin-bottom: 0px; /* Remove margin between image and text */
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .shilp-logo {
+        margin-bottom: 48px; /* Add spacing below the centered image */
+    }
+
+    .description{
+        width: 100%;
+        font-size: 2.5vw;
+        line-height: 4vw;
+    }
 }
 
 .shilp-logo img{
     width: 400px;
+    padding-top: 36px;
 }
-

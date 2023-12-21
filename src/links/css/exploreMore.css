@@ -52,7 +52,7 @@
     margin-bottom: 3vw;
 }
 
-@media screen and (max-width: 968px){
+/* @media screen and (max-width: 968px){
     .events .heading a{
         font-size: 9vw;
     }
@@ -69,8 +69,8 @@
         height: 25vw;
         width: 24vw;
     }
-}
-@media screen and (max-width: 485px){
+} */
+/* @media screen and (max-width: 485px){
     .events .heading{
         margin-top: 15vw;
     }
@@ -87,10 +87,15 @@
     .events .event a{
         font-size: 4vw;
     }
-}
-@media screen and (max-width: 360px) {
+} */
+@media screen and (max-width: 1200px) {
     .events{
         height: 80vh;   
+    }
+    .events .event-gallery{
+        margin: 11vw 3vw 0vw 0vw;
+        display: grid;
+        grid-template-columns: 43vw 43vw;
     }
     .events .heading{
         margin-top: 30vw;

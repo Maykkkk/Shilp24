@@ -1,22 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-
-.events{
-    width: 100%;
-    height: 100vh;
-    color: white;
-}
-.events .heading{
-    margin-top: 1.5vw;
-    font-size: 4vw;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-@media screen and (max-width: 360px) {
-    .events{
-        height: 80vh;   
-    }
-    
+.Container{
+    height: 320vh;width: 100%;
+    padding-top: 6vw;
+    background-image: url(../img/Clubs\ \(1\).png);
+    background-size: 100% 220vh;
+    background-repeat: no-repeat;
 }

@@ -1,3 +1,4 @@
+import '../links/css/imageGallery.css';
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,7 +17,9 @@ import image4 from '../links/img/galleryPhoto/4.jpg'
 // import image5 from '../Images/GalleryPhoto/4.jpg'
 const ImageGallery = () => {
     return (
-        <div>
+        <div className='imageGallery'>
+
+            <h2 className='subtitle'>SHILP<br />Through the years</h2>
 
             <Swiper
                   data-aos="fade-down"
@@ -29,8 +32,8 @@ const ImageGallery = () => {
                     "--swiper-navigation-color": "#fff",
                     "--swiper-navigation-size": "25px",
                     "--swiper-animation-speed": "8000",
-                    width:'75%',
-                    height:'75%',
+                    width:'70%',
+                    height:'70%',
                     marginBottom:'8px'
                 }}
   
