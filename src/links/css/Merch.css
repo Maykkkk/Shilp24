@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;700;&display=swap');
+
 .merch-container {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -8,30 +10,39 @@
     padding-top: 7vw;
     color: rgb(215, 213, 213);
     height: auto;
-   }
+}
    
-   .shop-item {
+.shop-item {
     display: inline-block;
     width: 300px;
     margin: 10px;
     padding: 20px;
-    
-   }
-   
-   button {
-    background-image: url(../img/Rectangle\ 224.png);
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-   
-   }
-   
-   /* button:hover {
-    background-color: #0056b3;
-   } */
+}
 
+.buy-button {
+   background-image: url(../img/Rectangle\ 224.png);
+   color: white;
+
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+
+   padding: 8px 16px;
+   border: none;
+   cursor: pointer;
+   border-radius: 5px;
+   outline: none;
+   background-color: transparent;
+
+   transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+   
+.buy-button:hover {
+   background-color: white;
+   outline: 1px solid white;
+   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+   
+   
 .top{
     font-weight: 600;
     font-size: 4vw;
@@ -45,6 +56,13 @@
 
 .price{
     background-image: url(../img/Rectangle\ 254.png);
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.8vh;
+
+    color: #000000;
+
     margin-top: 1.5vw;
     height: 4vh;
     display: flex;
