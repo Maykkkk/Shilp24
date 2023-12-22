@@ -8,6 +8,7 @@
     margin-left: 4%;
     margin-right: 4%;
    height: 100vh;
+   
 }
 
 
@@ -38,6 +39,7 @@
         flex-direction: row; /* Stack elements in a column */
         align-items: center;
         justify-content: center;
+        margin-bottom: 20%;
     }
 
     .shilp-logo,

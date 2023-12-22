@@ -4,6 +4,7 @@ import Events from './pages/events';
 import Competitions from "./pages/competitions";
 import Guests from "./pages/guests";
 import Contacts from "./pages/contacts";
+import Store from "./pages/Store";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/guests" element={<Guests />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/store" element={<Store />} />
       </Routes>
     </BrowserRouter>
   );
