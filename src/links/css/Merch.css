@@ -10,13 +10,16 @@
     padding-top: 7vw;
     color: rgb(215, 213, 213);
     height: auto;
+    border-radius: 3vw;
+    padding-bottom: 10vw;
 }
    
 .shop-item {
     display: inline-block;
     width: 300px;
-    margin: 10px;
+    margin: 48px;
     padding: 20px;
+    /* margin-right: 4vw; */
 }
 
 .buy-button {
@@ -25,11 +28,10 @@
 
    font-family: 'Poppins', sans-serif;
    font-weight: 700;
-
    padding: 8px 16px;
    border: none;
    cursor: pointer;
-   border-radius: 5px;
+   border-radius: 0.5vw;
    outline: none;
    background-color: transparent;
 
@@ -69,5 +71,19 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 2vw;
+    border-radius: 0.5vw;
+}
+
+
+.strike{
+    text-decoration: line-through;
+    margin-left: 0.5vw;
+    font-weight: 400
+}
+
+@media screen and (max-width:800px) {
+    .buy-button{
+        border-radius: 1.5vw;
+    }
     
 }

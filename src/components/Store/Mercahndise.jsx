@@ -11,21 +11,21 @@ function Merch() {
       <div className="shop-item">
         <h2>T-shirt 1</h2>
         <img className="merch-img" src={tshirt} alt=""/>
-        <p className='price'>INR 700 900</p>
+        <p className='price'>INR 700 <span className='strike'>900</span></p>
         <button className='buy-button'>Buy Now</button>
       </div>
 
       <div className="shop-item">
         <h2>T-shirt 2</h2>
         <img className="merch-img" src={tshirt} alt=""/>
-        <p className='price'>INR 700 900</p>
+        <p className='price'>INR 700 <span className='strike'>900</span></p>
         <button className='buy-button'>Buy Now</button>
       </div>
 
       <div className="shop-item">
         <h2>Hoodie</h2>
         <img className="merch-img" src={hoodie} alt=""/>
-        <p className='price'>INR 1000 1200</p>
+        <p className='price'>INR 1000 <span className='strike'>1200</span></p>
         <button className='buy-button'>Buy Now</button>
       </div>
 
