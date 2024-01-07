@@ -1,0 +1,91 @@
+.outer-body{
+    background: rgba(54, 24, 68, 1);
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 20vh;
+    padding: 4vw;
+}
+.outer-body .inner-body{
+    background: rgb(0, 0, 0, 0.4);
+    padding: 9vh 6vw 0 6vw;
+    font-weight: 700;
+    font-size:1.5vw;
+    height: 85vh;
+    text-align: justify;
+    color: white;
+}
+.accommodationPolicies-inner-body{
+    font-weight: 350 !important;
+    height: 100vh !important;
+}
+.accommodationPolicies-outer-body{
+    height: 120vh;
+}
+.accommodationPolicies-inner-body span{
+    font-weight: 700 !important;
+}
+.instructions-inner-body{
+    font-weight: 350 !important;
+    height: 140vh !important;
+}
+.instructions-outer-body{
+    height: 160vh !important;
+}
+.faq-outer-body, .reaching-outer-body{
+    height: 100% !important;
+}
+.reaching-inner-body{
+    height: 100% !important;
+    padding-bottom: 45vh !important;
+    font-weight: 400 !important;
+}
+.reaching-inner-body span{
+    font-weight: 700 !important;
+}
+
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed{
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    padding: 5vh 0 5vh 5vh;
+    background: rgb(33, 15, 42);
+    color: white;
+    font-size: 3.2vh;
+    font-weight: 700;
+}
+.accordion-button::after {
+    color: white;
+    background-image: url('../img/arrow-down-short.svg') !important;
+    margin-right: 1vh;
+}
+.accordion-body{
+    background: rgb(33, 15, 42);
+    color: white;
+    text-align: justify;
+    font-size: 2.5vh;
+}
+.accordion-flush .accordion-item{
+    background: rgba(54, 24, 68, 1);
+    border: none !important;
+}
+.contact-inner-body{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    background: rgba(54, 24, 68, 1) !important;
+    padding: 0 !important;
+}
+.contact-inner-body .contact{
+    margin: 4vh;
+    background: rgb(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-inner-body .contact a{
+    text-decoration: none;
+    color: white;
+    margin-top: 1vh;
+    margin-bottom: -1.5vh;
+}
