@@ -30,8 +30,9 @@
     color: rgba(255, 255, 255, 1);
     font-weight: bold;
     font-size: 1.8vw;
-    background: rgba(209, 33, 86, 1);
-    height: 5vw;
+    min-height: 5vw;
+    max-height: 100%;
+    margin-left: 2vw;
 }
 .footer{
     margin-top: 90vh;

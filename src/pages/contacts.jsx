@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 function contacts() {
   return (
     <div className='App'>
-    <div className='body'>
+    <div className='body' id='contact'>
       <div><NavBar/></div>
       <div className='top'>Contact Us</div>
       <div className='details topp'>

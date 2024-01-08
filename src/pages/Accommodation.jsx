@@ -16,7 +16,8 @@ function Accommodation() {
     const [onButton, setOnButton] = useState("aboutUs")
     
     const buttonStyle = {
-        backgroundColor: "rgba(209, 33, 86, 1)"
+        backgroundColor: "rgba(209, 33, 86, 1)",
+        fontSize:"1.8vw"
     }
 
   return (

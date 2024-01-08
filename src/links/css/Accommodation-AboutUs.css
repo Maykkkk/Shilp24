@@ -1,47 +1,20 @@
 .outer-body{
     background: rgba(54, 24, 68, 1);
     width: 95%;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 100%;
     margin: auto;
     margin-top: 20vh;
     padding: 4vw;
 }
 .outer-body .inner-body{
     background: rgb(0, 0, 0, 0.4);
-    padding: 9vh 6vw 0 6vw;
+    padding: 9vh 6vw 6vw 6vw;
     font-weight: 700;
-    font-size:1.5vw;
-    height: 85vh;
+    min-height: 85vh;
+    max-height:100%;
     text-align: justify;
     color: white;
-}
-.accommodationPolicies-inner-body{
-    font-weight: 350 !important;
-    height: 100vh !important;
-}
-.accommodationPolicies-outer-body{
-    height: 120vh;
-}
-.accommodationPolicies-inner-body span{
-    font-weight: 700 !important;
-}
-.instructions-inner-body{
-    font-weight: 350 !important;
-    height: 140vh !important;
-}
-.instructions-outer-body{
-    height: 160vh !important;
-}
-.faq-outer-body, .reaching-outer-body{
-    height: 100% !important;
-}
-.reaching-inner-body{
-    height: 100% !important;
-    padding-bottom: 45vh !important;
-    font-weight: 400 !important;
-}
-.reaching-inner-body span{
-    font-weight: 700 !important;
 }
 
 .accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed{
@@ -50,7 +23,6 @@
     padding: 5vh 0 5vh 5vh;
     background: rgb(33, 15, 42);
     color: white;
-    font-size: 3.2vh;
     font-weight: 700;
 }
 .accordion-button::after {
@@ -62,7 +34,6 @@
     background: rgb(33, 15, 42);
     color: white;
     text-align: justify;
-    font-size: 2.5vh;
 }
 .accordion-flush .accordion-item{
     background: rgba(54, 24, 68, 1);

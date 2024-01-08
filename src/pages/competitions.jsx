@@ -8,7 +8,7 @@ import '../links/css/Competition.css'
 function competitions() {
   return (
     <div className='App'>
-    <div className='body'>
+    <div className='body' id='competition'>
     <NavBar/>
     <div className='cards'>
     <EventCard
