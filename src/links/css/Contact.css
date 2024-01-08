@@ -1,0 +1,40 @@
+.body{
+    background-image: url(../img/Clubs.png);
+}
+
+.top{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: red;
+    height: 4vw;
+    font-weight: 800;
+    font-size: 5vw;
+    padding-top: 4vw;
+    padding-bottom: 8vw;
+    margin-bottom: 4vw;
+}
+
+
+.details{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    border: 1px white solid;
+    border-radius: 8px;
+    margin-bottom: 0.5vw;
+    
+}
+
+.col2{
+    
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.Contacts{
+    margin-bottom: 18vw;
+}

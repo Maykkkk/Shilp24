@@ -16,9 +16,9 @@
    
 .shop-item {
     display: inline-block;
-    width: 300px;
-    margin: 48px;
-    padding: 20px;
+    width: 30vw;
+    margin: 40px;
+    padding: 3vw;
     /* margin-right: 4vw; */
 }
 
@@ -84,6 +84,16 @@
 @media screen and (max-width:800px) {
     .buy-button{
         border-radius: 1.5vw;
+    }
+
+    .price{
+        font-weight: 700;
+        display: flex;
+        font-size: medium;
+    }
+
+    .strike{
+        display: none;
     }
     
 }
