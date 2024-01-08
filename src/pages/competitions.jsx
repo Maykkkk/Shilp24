@@ -7,6 +7,7 @@ import '../links/css/Competition.css'
 
 function competitions() {
   return (
+    <div className='App'>
     <div className='body'>
     <NavBar/>
     <div className='cards'>
@@ -48,6 +49,7 @@ function competitions() {
     />
     </div>
     <Footer/>
+    </div>
     </div>
   )
 }

@@ -7,10 +7,11 @@ import Footer from '../components/Footer'
 
 function contacts() {
   return (
+    <div className='App'>
     <div className='body'>
       <div><NavBar/></div>
       <div className='top'>Contact Us</div>
-      <div className='details'>
+      <div className='details topp'>
         <div className='col2'>Name</div>
         <div className='col2'>Mail</div>
         <div className='col2'>Phone No.</div>
@@ -74,6 +75,7 @@ function contacts() {
       </Link>
       </div>
       <Footer/>
+    </div>
     </div>
   )
 }

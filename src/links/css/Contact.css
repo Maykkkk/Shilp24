@@ -22,7 +22,7 @@
     justify-content: space-between;
     margin-left: 15vw;
     margin-right: 15vw;
-    border: 1px white solid;
+    border: 1px rgb(44, 42, 42) solid;
     border-radius: 8px;
     margin-bottom: 0.5vw;
     
@@ -38,3 +38,4 @@
 .Contacts{
     margin-bottom: 18vw;
 }
+
