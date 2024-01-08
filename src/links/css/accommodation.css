@@ -1,0 +1,38 @@
+.accommodation-heading{
+    background: rgba(17, 4, 20, 1);
+    width: 95%;
+    margin: auto;
+    margin-top: 15vh;
+    color: white;
+    border-radius: 50px;
+    padding:1vw 0 1vw 0;
+}
+.accommodation-heading h1{
+    font-weight: 800;
+    font-size: 5vw;
+}
+.accommodation-heading span{
+    color: rgba(209, 33, 86, 1);
+}
+.accommodation-tabs{
+    background: rgba(17, 4, 20, 1);
+    width: 95%;
+    margin: auto;
+    margin-top: 10vh;
+    border-radius: 50px;
+    padding: 15vh 3vw 8vh 7vw;
+}
+.accommodation-tabs .buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.buttons .btn{
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    font-size: 1.8vw;
+    background: rgba(209, 33, 86, 1);
+    height: 5vw;
+}
+.footer{
+    margin-top: 90vh;
+}

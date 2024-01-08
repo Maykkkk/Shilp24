@@ -16,56 +16,56 @@ function contacts() {
         <div className='col2'>Phone No.</div>
       </div>
       <div className='Contacts'>
-      <Link to={""}>
+      <Link to={""} style={{textDecoration:'none'}}>
+      <div className='details' >
+        <div className='col2' >Abhishek</div>
+        <div className='col2'>iabhiishek10@gmail.com</div>
+        <div className='col2'>7390947049</div>
+      </div>
+      </Link>
+      <Link to={""} style={{textDecoration:'none'}} >
       <div className='details' style={{textDecoration:'none'}}>
         <div className='col2' >Abhishek</div>
         <div className='col2'>iabhiishek10@gmail.com</div>
         <div className='col2'>7390947049</div>
       </div>
       </Link>
-      <Link to={""}>
+      <Link to={""} style={{textDecoration:'none'}}>
       <div className='details' style={{textDecoration:'none'}}>
         <div className='col2' >Abhishek</div>
         <div className='col2'>iabhiishek10@gmail.com</div>
         <div className='col2'>7390947049</div>
       </div>
       </Link>
-      <Link to={""}>
+      <Link to={""} style={{textDecoration:'none'}}>
       <div className='details' style={{textDecoration:'none'}}>
         <div className='col2' >Abhishek</div>
         <div className='col2'>iabhiishek10@gmail.com</div>
         <div className='col2'>7390947049</div>
       </div>
       </Link>
-      <Link to={""}>
+      <Link to={""} style={{textDecoration:'none'}}>
       <div className='details' style={{textDecoration:'none'}}>
         <div className='col2' >Abhishek</div>
         <div className='col2'>iabhiishek10@gmail.com</div>
         <div className='col2'>7390947049</div>
       </div>
       </Link>
-      <Link to={""}>
+      <Link to={""} style={{textDecoration:'none'}}>
       <div className='details' style={{textDecoration:'none'}}>
         <div className='col2' >Abhishek</div>
         <div className='col2'>iabhiishek10@gmail.com</div>
         <div className='col2'>7390947049</div>
       </div>
       </Link>
-      <Link to={""}>
+      <Link to={""} style={{textDecoration:'none'}}>
       <div className='details' style={{textDecoration:'none'}}>
         <div className='col2' >Abhishek</div>
         <div className='col2'>iabhiishek10@gmail.com</div>
         <div className='col2'>7390947049</div>
       </div>
       </Link>
-      <Link to={""}>
-      <div className='details' style={{textDecoration:'none'}}>
-        <div className='col2' >Abhishek</div>
-        <div className='col2'>iabhiishek10@gmail.com</div>
-        <div className='col2'>7390947049</div>
-      </div>
-      </Link>
-      <Link to={""}>
+      <Link to={""} style={{textDecoration:'none'}}>
       <div className='details' style={{textDecoration:'none'}}>
         <div className='col2' >Abhishek</div>
         <div className='col2'>iabhiishek10@gmail.com</div>

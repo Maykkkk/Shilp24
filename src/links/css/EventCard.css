@@ -29,6 +29,7 @@
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 500ms ease;
+    
   }
   
   .card:hover,
@@ -39,10 +40,12 @@
   .card-content {
     --padding: 1.5rem;
     padding: var(--padding);
+    color: white;
     background: linear-gradient(
       hsl(0 0% 0% / 0),
       hsl(20 0% 0% / 0.3) 20%,
       hsl(0 0% 0% / 1)
+    
     );
   }
   

@@ -31,6 +31,9 @@ function NavBar() {
                     <li className="nav-item px-2 mx-2">
                     <Link className="nav-link" to='/store'>Store</Link>
                     </li>
+                    <li className="nav-item px-2 mx-2">
+                    <Link className="nav-link" to='/accommodations'>Accommodations</Link>
+                    </li>
                 </ul>
             </div>
         </nav>
