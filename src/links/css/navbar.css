@@ -7,9 +7,3 @@
     font-weight: 600;
     color: white;
 }
-
-@media screen and (max-width:1264px){
-    .navbar-nav{
-        background-color: rgba(0, 0, 0, 0.9);;
-    }
-}

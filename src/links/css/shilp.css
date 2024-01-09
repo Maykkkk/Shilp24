@@ -25,7 +25,7 @@
     flex: 1 1 300px;
 }
 
-.shilp_logo{
+.shilp-logo{
     flex: 0 0 auto; /* Prevent image from stretching */
     margin-right: 20px;
    
@@ -66,4 +66,15 @@
 .shilp-logo img{
     width: 400px;
     padding-top: 36px;
+}
+
+@media screen and (max-width: 500px){
+    .description{
+        margin-top: -3vh;
+        font-size: 3.5vw;
+        line-height: 8vw;
+    }
+    .shilp-logo img{
+        width: 75vw;
+    }
 }

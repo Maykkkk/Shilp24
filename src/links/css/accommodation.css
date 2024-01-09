@@ -20,20 +20,35 @@
     margin: auto;
     margin-top: 10vh;
     border-radius: 50px;
-    padding: 15vh 3vw 8vh 7vw;
+    padding: 15vh 3vw 8vh 3vw;
 }
 .accommodation-tabs .buttons{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .buttons .btn{
+    margin: 1vw;
     color: rgba(255, 255, 255, 1);
     font-weight: bold;
-    font-size: 1.8vw;
+    font-size: 2.3vw;
     min-height: 5vw;
     max-height: 100%;
-    margin-left: 2vw;
 }
 .footer{
     margin-top: 90vh;
+}
+@media screen and (max-width: 1200px){
+    .accommodation-heading h1{
+        font-size: 8vw;
+    }
+    .accommodation-tabs .buttons{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 50% 50%;
+    }
+    .buttons .btn{
+        font-size: 3.5vw;
+        padding-bottom: 1vw;
+    }
+    
 }

@@ -38,4 +38,23 @@
 .Contacts{
     margin-bottom: 18vw;
 }
+#mobile-email{
+    display: none;
+}
+
+@media screen and (max-width: 560px){
+    .details{
+        margin-left: 2vw;margin-right: 2vw;
+    }
+    .Contacts{
+        width: 100%;
+    }
+    #desktop-email{
+        display: none;
+    }
+    #mobile-email{
+        display: block;
+    }
+    
+}
 

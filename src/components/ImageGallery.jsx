@@ -19,7 +19,7 @@ const ImageGallery = () => {
     return (
         <div className='imageGallery'>
 
-            <h2 className='subtitle'>SHILP<br />Through the years</h2>
+            <h2 className='subtitle '>SHILP<br />Through the years</h2>
 
             <Swiper
                   data-aos="fade-down"
