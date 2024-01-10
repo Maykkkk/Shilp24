@@ -1,9 +1,11 @@
 import React from 'react'
 import '../../links/css/Accommodation-AboutUs.css'
+import Zoom from 'react-reveal/Zoom';
 
 function ContactUs() {
   return (
     <div className='outer-body contact-outer-body'>
+        <Zoom>
         <div className=" contact-inner-body inner-body">
             <div className="name1 contact fs-5">
                 AMAN SRIVASTAVA <br />
@@ -26,6 +28,7 @@ function ContactUs() {
                 +91 6207 191 509
             </div>
         </div>
+        </Zoom>
     </div>
   )
 }

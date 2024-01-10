@@ -1,10 +1,11 @@
 import "../links/css/navbar.css";
 import SHILP from "../links/img/SHILP.png";
 import { Link } from "react-router-dom";
+import Fade from 'react-reveal/Fade';
 
 function NavBar() {
     return (
-        <nav className="navbar navbar-dark navbar-expand-lg ">
+        <nav className="navbar navbar-dark navbar-expand-xl ">
             <a className="navbar-brand mx-1 py-auto" href="#home">
                 <img src={SHILP} alt="SHILP logo" width="64px" />
             </a>
@@ -33,6 +34,9 @@ function NavBar() {
                     </li>
                     <li className="nav-item px-2 mx-2">
                     <Link className="nav-link" to='/accommodations'>Accommodations</Link>
+                    </li>
+                    <li className="nav-item px-2 mx-2">
+                    <Link className="nav-link" to='/media'>Media</Link>
                     </li>
                 </ul>
             </div>

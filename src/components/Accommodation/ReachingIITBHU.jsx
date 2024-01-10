@@ -1,9 +1,11 @@
 import React from 'react'
 import '../../links/css/Accommodation-AboutUs.css'
+import Zoom from 'react-reveal/Zoom';
 
 function ReachingIITBHU() {
   return (
     <div className='outer-body reaching-outer-body'>
+        <Zoom>
         <div className="inner-body reaching-inner-body fs-5 fw-normal">
             Getting to IIT BHU is facilitated by convenient transportation options in Varanasi. The city is well-connected by air, rail, and road. Here's a guide to reaching IIT BHU from various parts of the country. <br />
             <br />
@@ -47,6 +49,7 @@ function ReachingIITBHU() {
             <br />
             Choose the mode of transportation that best suits your preferences and schedule, ensuring a smooth journey to IIT BHU from various parts of the country. <br />
         </div>
+        </Zoom>
     </div>
   )
 }

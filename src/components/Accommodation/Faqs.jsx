@@ -1,8 +1,11 @@
 import '../../links/css/Accommodation-AboutUs.css'
+import Zoom from 'react-reveal/Zoom';
 
 function AllCollapseExample(){
   return (
+    <Zoom>
     <div className="outer-body faq-outer-body">
+        
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -126,6 +129,7 @@ function AllCollapseExample(){
                 </div>
             </div>
     </div>
+    </Zoom>
   );
 }
 export default AllCollapseExample;

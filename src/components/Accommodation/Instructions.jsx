@@ -1,9 +1,11 @@
 import React from 'react'
 import '../../links/css/Accommodation-AboutUs.css'
+import Zoom from 'react-reveal/Zoom';
 
 function Instructions() {
   return (
     <div className='outer-body instructions-outer-body'>
+        <Zoom>
         <div className="inner-body instructions-inner-body fs-5 fw-normal">
             1. All guests carrying electronic items of any kind will have to declare them at the IIT BHU  main gate through a 'Gate Pass'. The belongings will also be checked on the way out of IIT BHU along with the 'Gate Pass', failing to do so will result in the belongings being impounded. <br /><br />
             2. All guests will be provided with a mattress. SHILP will not provide mattress cover, blankets, or pillows. The guests are encouraged to arrange them on their own (if required). <br /><br />
@@ -15,6 +17,7 @@ function Instructions() {
             8.All guests are required to maintain the decorum and cleanliness of the campus, and follow the rules of the campus at all times. <br /><br />
             9. SHILP 2024 and IIT BHU will not be responsible for any mishaps that occur through the duration of stay for Techfest 2024. <br /><br />
         </div>
+        </Zoom>
     </div>
   )
 }

@@ -9,6 +9,7 @@ import Instructions from '../components/Accommodation/Instructions'
 import Faqs from '../components/Accommodation/Faqs'
 import ReachingIITBHU from '../components/Accommodation/ReachingIITBHU'
 import ContactUs from '../components/Accommodation/ContactUs'
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -23,9 +24,11 @@ function Accommodation() {
     <div className="App">
         <div className="body">
         <NavBar></NavBar>
+        <Fade top>
         <div className="accommodation-heading">
             <h1><span>ACCOMMODATION</span> AT <div className="desktop-view">SHILP IIT BHU</div></h1>
         </div>
+        </Fade>
         <div className="accommodation-tabs">
             <div className="buttons">    
                 <button className='btn' style={onButton==="aboutUs"? buttonStyle:{backgroundColor:"rgba(54, 24, 68, 1)"}} onClick={()=>setOnButton("aboutUs")}>About Us</button>
@@ -51,7 +54,9 @@ function Accommodation() {
                 null
             }
         </div>
+        <Fade bottom>
         <Footer className='footer'></Footer>
+        </Fade>
         </div>
     </div>
   )
