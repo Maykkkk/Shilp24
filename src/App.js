@@ -6,7 +6,7 @@ import Guests from "./pages/guests";
 import Contacts from "./pages/contacts";
 import Store from "./pages/Store";
 import Accommodation from "./pages/Accommodation";
-import Media from "./pages/media";
+import Team from "./pages/team";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -21,7 +21,7 @@ function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/store" element={<Store />} />
         <Route path="/accommodations" element={<Accommodation/>}></Route>
-        <Route path='/media' element={<Media/>}></Route>
+        <Route path='/team' element={<Team/>}></Route>
       </Routes>
     </BrowserRouter>
   );
