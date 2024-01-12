@@ -135,9 +135,9 @@ function media() {
                   </div>
                 </div>
                 <ul className="sci">
-                  <li><a href="#"><FaLinkedin /></a></li>
-                  <li><a href="#"><FaLinkedin /></a></li>
-                  <li><a href="#"><FaLinkedin /></a></li>
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
                 </ul>
               </div>
 
@@ -151,9 +151,9 @@ function media() {
                   </div>
                 </div>
                 <ul className="sci">
-                  <li><a href="#"><FaLinkedin /></a></li>
-                  <li><a href="#"><FaLinkedin /></a></li>
-                  <li><a href="#"><FaLinkedin /></a></li>
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
                 </ul>
               </div>
               
@@ -168,9 +168,9 @@ function media() {
                   </div>
                 </div>
                 <ul className="sci">
-                  <li><a href="#"><FaLinkedin /></a></li>
-                  <li><a href="#"><FaLinkedin /></a></li>
-                  <li><a href="#"><FaLinkedin /></a></li>
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
                 </ul>
               </div>
             </div>
@@ -194,9 +194,9 @@ function media() {
                   </div>
                 </div>
                 <ul className="sci">
-                  <li><a href="#"><FaLinkedin /></a></li>
-                  <li><a href="#"><FaLinkedin /></a></li>
-                  <li><a href="#"><FaLinkedin /></a></li>
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
                 </ul>
               </div>
             </div>
