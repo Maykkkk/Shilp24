@@ -1,0 +1,100 @@
+.outer-body{
+    background: rgba(54, 24, 68, 1);
+    width: 95%;
+    min-height: 100vh;
+    max-height: 100%;
+    margin: auto;
+    margin-top: 20vh;
+    padding: 4vw;
+}
+.outer-body .inner-body{
+    background: rgb(0, 0, 0, 0.4);
+    padding: 9vh 6vw 6vw 6vw;
+    font-weight: 700;
+    min-height: 85vh;
+    max-height:100%;
+    text-align: justify;
+    color: white;
+}
+
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed{
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    padding: 5vh 0 5vh 5vh;
+    background: rgb(33, 15, 42);
+    color: white;
+    font-weight: 700;
+}
+.accordion-button::after {
+    color: white;
+    background-image: url('../img/arrow-down-short.svg') !important;
+    margin-right: 1vh;
+}
+.accordion-body{
+    background: rgb(33, 15, 42);
+    color: white;
+    text-align: justify;
+}
+.accordion-flush .accordion-item{
+    background: rgba(54, 24, 68, 1);
+    border: none !important;
+}
+.contact-inner-body{
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    background: rgba(54, 24, 68, 1) !important;
+    padding: 0 !important;
+}
+.contact-inner-body .contact{
+    margin: 2vw;
+    background: rgb(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-inner-body .contact a{
+    text-decoration: none;
+    color: white;
+    margin-top: 1vh;
+    margin-bottom: -1.5vh;
+}
+
+@media screen and (max-width: 970px) {
+    .contact-inner-body{
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        background: rgba(54, 24, 68, 1) !important;
+        padding: 0 !important;
+    }
+    .outer-body .contact-outer-body{
+        height: 100% !important;
+    }
+    .contact-inner-body .contact{
+        margin: 2vw;
+        margin-top: 6vw;
+        background: rgb(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3vw;
+    }
+    .contact-inner-body .contact a{
+        text-decoration: none;
+        color: white;
+        margin-top: 1vh;
+        margin-bottom: -1.5vh;
+    }
+    
+}
+@media screen and (max-width: 456px) {
+    .contact-inner-body .contact a{
+        font-size: 4vw;
+    }
+}
