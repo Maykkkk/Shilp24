@@ -1,0 +1,7 @@
+CREATE DATABASE Shilp24;
+
+CREATE TABLE users (
+    email VARCHAR(255) PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    pass_hash CHAR(60) NOT NULL
+);

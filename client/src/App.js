@@ -8,6 +8,8 @@ import Store from "./pages/Store";
 import Accommodation from "./pages/Accommodation";
 import Team from "./pages/team";
 import Media from "./pages/media";
+import LoginPage from "./pages/loginPage";
+import RegisterPage from "./pages/registerPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -24,6 +26,8 @@ function App() {
         <Route path="/accommodations" element={<Accommodation/>}></Route>
         <Route path='/team' element={<Team/>}></Route>
         <Route path="/media" element = {<Media/>}></Route>
+        <Route path="/login" element = {<LoginPage/>}></Route>
+        <Route path="/register" element = {<RegisterPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );
