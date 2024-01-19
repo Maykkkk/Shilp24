@@ -5,8 +5,10 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
+import teamPhotos from "./teamPhotos";
 
 function media() {
+
   return (
     <div className="App">
       <div className="body">
@@ -26,7 +28,8 @@ function media() {
               <div className="team-card">
                 <div className="team-content">
                   <div className="imgBx">
-                    <img src="" alt="ProfilePhoto" />
+                    
+                    <img src={teamPhotos.president} alt="ProfilePhoto" />
                   </div>
                   <div className="contentBx">
                     <h3>Name</h3>
@@ -52,7 +55,7 @@ function media() {
                 <div className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.conveynor} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -70,12 +73,28 @@ function media() {
             {/* Co-Conveynor */}
             <div>
               <Fade right>
-              <h1>Co-Conveynor</h1>
+              <h1>Co-Conveynors</h1>
               <div className="team-container">
                 <div className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.coConveynor1} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                    <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                    <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                    <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.coConveynor2} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -102,7 +121,7 @@ function media() {
               <div className="team-card">
                 <div className="team-content">
                   <div className="imgBx">
-                    <img src="" alt="ProfilePhoto" />
+                    <img src={teamPhotos.techAdvisor} alt="ProfilePhoto" />
                   </div>
                   <div className="contentBx">
                     <h3>Name</h3>
@@ -121,14 +140,14 @@ function media() {
           {/* Events-Advisor */}
           <div className="team-title" id="eventAdvisor">
             <Fade left>
-            <h1>Events-Advisor</h1>
+            <h1>Events-Advisors</h1>
             </Fade>
             <Fade right>
             <div className="team-container">
               <div className="team-card">
                 <div className="team-content">
                   <div className="imgBx">
-                    <img src="" alt="ProfilePhoto" />
+                    <img src={teamPhotos.eventsAdvisor1} alt="ProfilePhoto" />
                   </div>
                   <div className="contentBx">
                     <h3>Name</h3>
@@ -144,7 +163,7 @@ function media() {
               <div className="team-card">
                 <div className="team-content">
                   <div className="imgBx">
-                    <img src="" alt="ProfilePhoto" />
+                    <img src={teamPhotos.eventsAdvisor2} alt="ProfilePhoto" />
                   </div>
                   <div className="contentBx">
                     <h3>Name</h3>
@@ -161,7 +180,7 @@ function media() {
               <div className="team-card">
                 <div className="team-content">
                   <div className="imgBx">
-                    <img src="" alt="ProfilePhoto" />
+                    <img src={teamPhotos.eventsAdvisor3} alt="ProfilePhoto" />
                   </div>
                   <div className="contentBx">
                     <h3>Name</h3>
@@ -187,7 +206,7 @@ function media() {
               <div className="team-card">
                 <div className="team-content">
                   <div className="imgBx">
-                    <img src="" alt="ProfilePhoto" />
+                    <img src={teamPhotos.publicityAdvisor} alt="ProfilePhoto" />
                   </div>
                   <div className="contentBx">
                     <h3>Name</h3>
@@ -212,7 +231,7 @@ function media() {
                 <div className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.techHead} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -261,7 +280,7 @@ function media() {
                 <div className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.marketingHead1} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -277,7 +296,7 @@ function media() {
                 <div className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.marketingHead2} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -293,7 +312,23 @@ function media() {
                 <div className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.marketingHead3} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                    <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                    <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                    <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.marketingHead4} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -374,7 +409,7 @@ function media() {
                 <div className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.eventsHead1} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -390,7 +425,7 @@ function media() {
                 <div className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.eventsHead2} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -406,7 +441,39 @@ function media() {
                 <div className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.eventsHead3} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                    <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                    <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                    <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.eventsHead4} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                    <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                    <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                    <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                  </ul>
+                </div>                
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.eventsHead5} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -486,7 +553,7 @@ function media() {
               <div className="team-card">
                 <div className="team-content">
                   <div className="imgBx">
-                    <img src="" alt="ProfilePhoto" />
+                    <img src={teamPhotos.prHead1} alt="ProfilePhoto" />
                   </div>
                   <div className="contentBx">
                     <h3>Name</h3>
@@ -498,6 +565,55 @@ function media() {
                   <li><a href="#"><FaInstagram className="instagram" /></a></li>
                 </ul>
               </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.prHead2} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.prHead3} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.prHead4} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                </ul>
+              </div>
+              
             </div>
             </Fade>
 
@@ -531,7 +647,39 @@ function media() {
               <div className="team-card">
                 <div className="team-content">
                   <div className="imgBx">
-                    <img src="" alt="ProfilePhoto" />
+                    <img src={teamPhotos.designContentHead1} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.designContentHead2} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.designContentHead3} alt="ProfilePhoto" />
                   </div>
                   <div className="contentBx">
                     <h3>Name</h3>
@@ -576,7 +724,39 @@ function media() {
               <div className="team-card">
                 <div className="team-content">
                   <div className="imgBx">
-                    <img src="" alt="ProfilePhoto" />
+                    <img src={teamPhotos.publicityHead1} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.publicityHead2} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                  <li><a href="#"><FaLinkedin className="linkedIn" /></a></li>
+                  <li><a href="#"><FaFacebook className="facebook" /></a></li>
+                  <li><a href="#"><FaInstagram className="instagram" /></a></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.publicityHead3} alt="ProfilePhoto" />
                   </div>
                   <div className="contentBx">
                     <h3>Name</h3>

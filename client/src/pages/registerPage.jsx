@@ -17,8 +17,6 @@ function LoginPage() {
                 <NavBar></NavBar>
 
                 <Register />
-
-                <Footer></Footer>
             </div>
         </div>
     );   

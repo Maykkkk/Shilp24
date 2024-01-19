@@ -39,11 +39,14 @@
 .team-container{
     position: relative;
     z-index: 1;
+    width: 85%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 40px 0;
+    margin-top: 40px;
+    margin-bottom:40px;
 }
 .team-container .team-card{
     position: relative;
@@ -137,7 +140,7 @@
     min-height: 100vh;
 }
 
-#conveyners,#president,#techAdvisor,#eventAdvisor,#publicityAdvisor{
+#conveyners,#president,#eventAdvisor,#publicityAdvisor{
     flex-direction: row;
     justify-content: space-evenly;
 }

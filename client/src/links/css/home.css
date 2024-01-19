@@ -40,7 +40,9 @@
 }
 
 .primary{
-    color: #d800d2;
+    background: linear-gradient(45deg,#d800d2,rgb(66, 3, 154),#d800d2,rgb(66, 3, 154),#d800d2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container-about-events-footer{
