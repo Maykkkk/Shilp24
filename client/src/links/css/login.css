@@ -19,6 +19,15 @@
     background-position: center;
     border-radius: 20px;
     margin-top: 2vh;
+    box-shadow: 10px 10px 5px 5px rgb(0, 0, 0);
+}
+.loginContainer::before{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    height:100% ;width: 100%;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    border-radius: 20px;
 }
 
 .loginContainer .content{
