@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import shilp from "../../links/img/SHILP.png"
 import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";

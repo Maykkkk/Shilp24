@@ -1,6 +1,6 @@
 import React from 'react'
 import '../links/css/innovationOdyssey.css'
-import Zoom from 'react-reveal/Zoom';
+// import Zoom from 'react-reveal/Zoom';
 import LightSpeed from 'react-reveal/LightSpeed';
 
 function InnovationOdyssey() {

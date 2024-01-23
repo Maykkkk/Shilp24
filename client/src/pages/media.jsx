@@ -1,7 +1,7 @@
 import React from 'react'
 import '../links/css/home.css'
 import '../links/css/media.css'
-import demo from '../links/img/Events/3.png'
+// import demo from '../links/img/Events/3.png'
 
 function media() {
   return (
