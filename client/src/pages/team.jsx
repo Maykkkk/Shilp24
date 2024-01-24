@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { useMotionValue, useTransform, motion } from "framer-motion";
 
 
-function media() {
+function Media() {
   const [cardState,setCardState] = useState([
     {id:"president",x:useMotionValue(0),y:useMotionValue(0)},
     {id:"conveynor",x:useMotionValue(0),y:useMotionValue(0)},
@@ -1053,4 +1053,4 @@ function media() {
   );
 }
 
-export default media;
+export default Media;
