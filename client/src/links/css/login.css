@@ -1,9 +1,7 @@
 .background{
-    position: absolute;
-    top: 0;left: 0;
-    z-index: -1;
     background-position: center;
-    height: 100vh;width: 100%;
+    min-height: 100vh;width: 100%;
+    max-height: 100%;
     background: url("../img/login-register.jpg") no-repeat center;
     background-size: cover;
 }
@@ -127,13 +125,13 @@ transition: 0.3s;
     border-bottom-right-radius: 20px;
 }
 .form-box h2{
-    font-size: 2.5vw;
+    font-size: 40px;
     font-weight: 800;
     text-align: center;
     color: #d800d2;
 }
 .loginContainer .login .form-box .input-box label{
-    font-size: 1.5vw;
+    font-size: 18px;
     font-weight: 600;
 }
 .loginContainer .login .form-box .input-box .input span{
@@ -174,4 +172,45 @@ transition: 0.3s;
 .btn-success{
     width: 80%;
     background:#6809a3 !important;
+}
+
+@media screen and (max-width: 1153px) {
+    .loginContainer .content{
+        display: none;
+    }
+    .background{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .loginContainer{
+        position: relative;
+        top: 0;left: 0;
+        transform: translateX(0) translateY(0) translateZ(100px) rotateX(0deg) rotateY(0deg) !important;
+        height: 70vh;
+        width: 50%;
+        display: block;
+        margin:auto;
+        font-size: 2.9vh;
+    }
+    .loginContainer .login{
+        width: 100%;
+    }
+    .loginContainer .login label{
+        color: black;
+        font-weight: 800;
+    }
+}
+@media screen and (max-width: 550px){
+    .loginContainer .login .form-box .input-box label{
+        font-size: 15px;
+    }
+    .form-box h2{
+        font-size: 30px;
+        color: #ff0000;
+    }
+    .loginContainer{
+        font-size:18px;
+    }
 }
