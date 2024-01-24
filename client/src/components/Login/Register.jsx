@@ -6,12 +6,18 @@ import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
 import "../../links/css/login.css"
+import { useMotionValue, useTransform, motion } from "framer-motion";
 
 // import { GoogleLogin } from 'react-google-login';
 
 
 
 function Login() {
+
+    const x = useMotionValue(-542);
+  const y = useMotionValue(-238);
+  const rotateX= useTransform(y,[-338,-138],[20,-20]);
+  const rotateY= useTransform(x,[-642,-442],[-20,20]);
     
     const [email, setEmail] = useState([]);
     const [username, setUsername] = useState([]);
@@ -41,8 +47,14 @@ function Login() {
 
     return(
         <>
-            <div className="background"></div>
-            <div className="loginContainer">
+            <div className="background" style={{perspective: 2000}}>
+            <motion.div className="loginContainer"
+                style={{x,y,rotateX,rotateY,z:100}}
+                drag= {true}
+                dragElastic={0.18} 
+                dragConstraints={{top: -238, left: -541, right: -541, bottom: -238}} 
+                whileTap={{cursor: "grabbing"}}
+            >
                 <div className="content">
                     <img src={shilp} alt="" />
                     <div className="text-sci">
@@ -89,6 +101,7 @@ function Login() {
                         </form>
                 </div>
                 </div>
+            </motion.div>
             </div>
         </>
     );
