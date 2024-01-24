@@ -40,9 +40,6 @@ function NavBar() {
                     <Link className="nav-link" to='/team'>Team</Link>
                     </li>
                     <li className="nav-item px-2 mx-2">
-                    <Link className="nav-link" to='https://www.youtube.com/watch?v=xvFZjo5PgG0'>Media</Link>
-                    </li>
-                    <li className="nav-item px-2 mx-2">
                         <Link className="nav-link" to='/login'>Login</Link>
                     </li>
                     <li className="nav-item px-2 mx-2">

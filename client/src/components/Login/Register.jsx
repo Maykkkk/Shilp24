@@ -76,17 +76,17 @@ function Login() {
                             <h2>Register</h2>
                             <div className="input-box">
                                 <div className="input mt-2">
-                                    <span><i class='bx bxs-envelope'></i></span>
+                                    <span><i className='bx bxs-envelope'></i></span>
                                     <input type="email" name='email' className='form-submit' placeholder='Email Id' required onChange={e => setEmail(e.target.value)}/>
                                     <label htmlFor="email">Email</label>
                                 </div>
                                 <div className="input mt-2">
-                                    <span><i class='bx bxs-user'></i></span>
+                                    <span><i className='bx bxs-user'></i></span>
                                     <input type="text" name="username" className='form-submit' placeholder='Username' required onChange={e => setUsername(e.target.value)}/>
                                     <label htmlFor="username">Username</label>
                                 </div>
                                 <div className="input mt-2">
-                                    <span><i class='bx bxs-lock-alt'></i></span>
+                                    <span><i className='bx bxs-lock-alt'></i></span>
                                     <input type="password" name="password" className='form-submit' placeholder='Password' required onChange={e => setPassword(e.target.value)}/>
                                     <label htmlFor="password">Password</label>
                                 </div>

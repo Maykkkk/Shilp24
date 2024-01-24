@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{ useState } from "react";
 import "../links/css/home.css";
 import "../links/css/team.css";
 import NavBar from "../components/NavBar";
@@ -12,7 +12,7 @@ import { useMotionValue, useTransform, motion } from "framer-motion";
 
 function Media() {
   const [cardState,setCardState] = useState([
-    {id:"president",x:useMotionValue(0),y:useMotionValue(0)},
+    {id:"president",x : useMotionValue(0),y:useMotionValue(0)},
     {id:"conveynor",x:useMotionValue(0),y:useMotionValue(0)},
     {id:"coConveynor1",x:useMotionValue(0),y:useMotionValue(0)},
     {id:"coConveynor2",x:useMotionValue(0),y:useMotionValue(0)},

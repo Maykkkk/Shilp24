@@ -1,6 +1,7 @@
 .navbar{
     position: absolute;
     top: 0;left: 0;
+    background: #310751;
 }
 .nav-item{
     font-size: 2vw;

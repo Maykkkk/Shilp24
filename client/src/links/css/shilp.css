@@ -5,10 +5,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5%;
-    margin-left: 4%;
-    margin-right: 4%;
+    padding: 0 4%;
    height: 100vh;
-   
+   background-image: url('../img/Clubs\ \(1\).png');
 }
 
 
