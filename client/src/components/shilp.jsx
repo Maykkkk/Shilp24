@@ -1,6 +1,6 @@
 import React from "react";
 import '../links/css/shilp.css'
-import shilp_logo from '../links/img/Shilp Logo.png'
+import shilp_logo from '../links/img/Shilp_Logo_Final_2-removebg-preview 1.png'
 
 function Shilp() {
     return (

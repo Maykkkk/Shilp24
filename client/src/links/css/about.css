@@ -3,7 +3,6 @@
 
 .about{
     height: 100vh;
-    width: 100%;
     display: grid;
     grid-template-columns: 37vw 54vw;
     color: white;

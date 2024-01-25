@@ -11,13 +11,13 @@ function Home() {
     <div className="App">
       <div className="body">
         <NavBar></NavBar>
-        <div className="d-flex align-items-center justify-content-center" id='home'>
-          <div id="title" className='hero-section'>
-            <h1 className='m-0 p-0 '>
-              <span className="primary x">SHILP </span> 
-              <span className="text-light">IIT BHU</span>
-              </h1>
-            <h2 className='text-light m-0 p-0'>Civil Engineering Society</h2>
+        <div className="container d-flex align-items-center justify-content-center" id='home'>
+          <div id="title" className=''>
+          <h1 className='m-0 p-0 '>
+            <span className="primary x">SHILP </span> 
+            <span className="text-light">IIT BHU</span>
+            </h1>
+          <h2 className='text-light m-0 p-0'>Civil Engineering Society</h2>
           </div>
         </div>
           <Shilp/>

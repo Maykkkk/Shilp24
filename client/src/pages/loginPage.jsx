@@ -9,7 +9,7 @@ import NavBar from '../components/NavBar';
 function LoginPage() {
     return (
         <div className="App">
-            <div className="body">
+            <div className="body loginPage">
                 <NavBar></NavBar>
 
                 <Login className="loginComponent"/>
