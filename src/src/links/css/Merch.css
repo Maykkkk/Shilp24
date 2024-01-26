@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;700;&display=swap');
+
+.merch-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 8vw;
+    background-image: url(../img/Group\ 7275.png);
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-top: 7vw;
+    color: rgb(215, 213, 213);
+    height: auto;
+    border-radius: 3vw;
+    padding-bottom: 10vw;
+}
+   
+.shop-item {
+    display: inline-block;
+    width: 30vw;
+    margin: 40px;
+    padding: 3vw;
+    /* margin-right: 4vw; */
+}
+
+.buy-button {
+   background-image: url(../img/Rectangle\ 224.png);
+   color: white;
+
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+   padding: 8px 16px;
+   border: none;
+   cursor: pointer;
+   border-radius: 0.5vw;
+   outline: none;
+   background-color: transparent;
+
+   transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+   
+.buy-button:hover {
+   background-color: white;
+   outline: 1px solid white;
+   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+   
+   
+.top{
+    font-weight: 600;
+    font-size: 4vw;
+    color: red;
+}
+
+.merch-img{
+    width: 14vw;
+    margin-top: 1vw;
+}
+
+.price{
+    background-image: url(../img/Rectangle\ 254.png);
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.8vh;
+
+    color: #000000;
+
+    margin-top: 1.5vw;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vw;
+    border-radius: 0.5vw;
+}
+
+
+.strike{
+    text-decoration: line-through;
+    margin-left: 0.5vw;
+    font-weight: 400
+}
+
+@media screen and (max-width:800px) {
+    .buy-button{
+        border-radius: 1.5vw;
+    }
+
+    .price{
+        font-weight: 700;
+        display: flex;
+        font-size: medium;
+    }
+
+    .strike{
+        display: none;
+    }
+    
+}

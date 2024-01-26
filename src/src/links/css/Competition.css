@@ -1,0 +1,12 @@
+#competition{
+    background-image: url(../img/Clubs.png);
+    color: red;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3vw; /* Adjust as needed */
+    margin: 10vw;
+}
+
