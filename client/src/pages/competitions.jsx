@@ -10,6 +10,7 @@ function competitions() {
     <div className='App'>
     <div className='body' id='competition'>
     <NavBar/>
+    
     <div className='cards'>
     <EventCard
       name="civil Explo"

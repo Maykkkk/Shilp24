@@ -7,6 +7,8 @@ import CivilExpo from '../components/CivilExpo';
 import ClashCarnival from '../components/ClashCarnival';
 import Footer from '../components/Footer';
 import Fade from 'react-reveal/Fade';
+
+
 function events() {
   return (
     <div className="App">
