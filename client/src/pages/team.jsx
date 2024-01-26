@@ -360,7 +360,7 @@ function Media() {
                 className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.techExecutive1} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -382,7 +382,7 @@ function Media() {
                 className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.techExecutive2} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>
@@ -404,7 +404,7 @@ function Media() {
                 className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src="" alt="ProfilePhoto" />
+                      <img src={teamPhotos.techExecutive3} alt="ProfilePhoto" />
                     </div>
                     <div className="contentBx">
                       <h3>Name</h3>

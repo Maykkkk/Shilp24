@@ -31,6 +31,9 @@ const teamPhotos ={
     prHead3 : "./TeamPhotos/III Year/PRATHAM CHAUDHARY _ PR HEAD .jpg",
     prHead4 : "./TeamPhotos/III Year/SUMANA SREE II PR HEAD.jpg",
     techHead : "./TeamPhotos/III Year/MAYANK MANI NATH GUPTA _ TECH HEAD.png",
+    techExecutive1: "./TeamPhotos/II Year/SUMIT DUTTA _ TECH TEAM EXECUTIVE.jpg",
+    techExecutive2:"./TeamPhotos/II Year/ABHIJEET SUNIL MANKANI _ TECH TEAM EXECUTIVE.png",
+    techExecutive3:"./TeamPhotos/II Year/abhishek shukla _ Tech Team Executive.png",
 
 
 };
