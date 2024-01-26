@@ -6,12 +6,18 @@ import { IoLogoYoutube } from "react-icons/io5";
 import "../../links/css/login.css"
 import shilp from "../../links/img/SHILP.png"
 import { Link } from "react-router-dom";
+import { useMotionValue, useTransform, motion } from "framer-motion";
 
 // import { GoogleLogin } from 'react-google-login';
 
 
 
 function Login() {
+
+    const x = useMotionValue(-542);
+  const y = useMotionValue(-298);
+  const rotateX= useTransform(y,[-338,-138],[20,-20]);
+  const rotateY= useTransform(x,[-642,-442],[-20,20]);
     
     const [email, setEmail] = useState([]);
     const [password, setPassword] = useState([]);
@@ -39,8 +45,14 @@ function Login() {
 
     return(
         <>
-        <div className="background"></div>
-        <div className="loginContainer">
+        <div className="background" style={{perspective:2000}}>
+        <motion.div
+              style={window.innerWidth >= 1000? {x,y,rotateX,rotateY,z:100}:{}}
+              drag= {true}
+              dragElastic={0.18} 
+              dragConstraints={{top: -238, left: -542, right: -542, bottom: -238}} 
+              whileTap={{cursor: "grabbing"}}
+              className="loginContainer">
             <div className="content">
                 <img src={shilp} alt="" />
                 <div className="text-sci">
@@ -63,12 +75,12 @@ function Login() {
                         <h2>Sign In</h2>
                         <div className="input-box">
                             <div className="input mt-2">
-                                <span><i class='bx bxs-envelope'></i></span>
+                                <span><i className='bx bxs-envelope'></i></span>
                                 <input type="email" name='email' className='form-submit' placeholder='Email Id' onChange={e => setEmail(e.target.value)}/>
                                 <label htmlFor="email">Email</label>
                             </div>
                             <div className="input mt-2">
-                                <span><i class='bx bxs-lock-alt'></i></span>
+                                <span><i className='bx bxs-lock-alt'></i></span>
                                 <input type="password" name="password" className='form-submit' placeholder='Password' onChange={e => setPassword(e.target.value)}/>
                                 <label htmlFor="password">Password</label>
                             </div>
@@ -84,6 +96,7 @@ function Login() {
                     </form>
                 </div>
             </div>
+        </motion.div>
         </div>
         </>
     );

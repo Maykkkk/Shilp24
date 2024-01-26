@@ -5,19 +5,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5%;
-    margin-left: 4%;
-    margin-right: 4%;
+    padding: 0 4%;
    height: 100vh;
-   align-items: center;
-   margin-bottom: 6vw;
-   
-}
-
-@media screen and (min-width:1200px) {
-    .shilp-logo img{
-        width: 32vw;
-        height: 00px;
-    } 
+   background-image: url('../img/Clubs\ \(1\).png');
 }
 
 
@@ -37,14 +27,8 @@
 .shilp-logo{
     flex: 0 0 auto; /* Prevent image from stretching */
     margin-right: 20px;
-    
+   
 }
-.shilp-logo img{
-    width: 32vw;
-    height: auto;
-} 
-
-
 
 
 
@@ -54,7 +38,7 @@
         flex-direction: row; /* Stack elements in a column */
         align-items: center;
         justify-content: center;
-        margin-bottom: 35vw;
+        margin-bottom: 20%;
     }
 
     .shilp-logo,
@@ -74,22 +58,24 @@
     .description{
         width: 100%;
         font-size: 2.5vw;
-        /* line-height: 4vw; */
+        line-height: 4vw;
     }
 }
 
 .shilp-logo img{
-    /* width: 400px; */
-    padding-top: 36px;
+    width: 32vw;
+    height: auto;
 }
 
 @media screen and (max-width: 500px){
     .description{
-        margin-top: -3vh;
-        font-size: 3.5vw;
+        margin-top: -30vw;
+        font-size: 3.4vw;
         line-height: 8vw;
     }
     .shilp-logo img{
-        width: 75vw;
+        margin-top: -10vh;
+        width: 40vw;
+        height: 40vw;
     }
 }
