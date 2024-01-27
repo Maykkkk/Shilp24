@@ -1,0 +1,9 @@
+.navbar{
+    position: absolute;
+    top: 0;left: 0;
+}
+.nav-item{
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: white;
+}

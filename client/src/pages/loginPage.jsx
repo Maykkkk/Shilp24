@@ -10,7 +10,7 @@ import NavBar from '../components/NavBar';
 const LoginPage = ({ setAuth, isAuth }) => {
     return (
         <div className="App">
-            <div className="body loginPage">
+            <div className="body">
                 <NavBar setAuth={setAuth} isAuth={isAuth} />
 
                 <Login className="loginComponent" setAuth={setAuth} />
