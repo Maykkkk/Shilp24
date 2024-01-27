@@ -12,7 +12,8 @@
 
 .body{
     background-color: #271e29;
-    overflow: hidden;
+    overflow-x: hidden;
+    
 }
 
 .container{
@@ -57,18 +58,21 @@
 @media screen and (max-width: 500px) {
     .container-about-events-footer{
         background-size: 100% 30%;
-        background-position-y: 9.7vh;
+        background-position-y: 23vh;
     } 
     #title h1{
-        font-size: 12vw;
+        font-size: 22vw;
         font-weight: 700;
     }
     #title h2{
-        font-size: 6vw;
+        font-size: 7vw;
         font-weight: 600;
     }
     .container:first-of-type{
         height: 30vh;
+    }
+    #home{
+        height: 70vh;
     }
 }
 
@@ -76,4 +80,8 @@
     position: relative;
     height: 100vh;
     width: 100%;
+}
+
+.Bottom{
+    position: relative;
 }

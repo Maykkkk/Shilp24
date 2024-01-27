@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 37vw 54vw;
     color: white;
+    margin-top: 20vh;
     margin-right: 4%;
     padding: 0 15px;
 }

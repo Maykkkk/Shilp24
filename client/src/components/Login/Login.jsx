@@ -86,12 +86,12 @@ const Login = ({ setAuth }) => {
                             <h2>Sign In</h2>
                             <div className="input-box">
                                 <div className="input mt-2">
-                                    <span><i classNameName='bx bxs-envelope'></i></span>
+                                    <span><i className='bx bxs-envelope'></i></span>
                                     <input type="email" name='email' className='form-submit' placeholder='Email Id' onChange={e => setEmail(e.target.value)} />
                                     <label htmlFor="email">Email</label>
                                 </div>
                                 <div className="input mt-2">
-                                    <span><i clName='bx bxs-lock-alt'></i></span>
+                                    <span><i className='bx bxs-lock-alt'></i></span>
                                     <input type="password" name="password" className='form-submit' placeholder='Password' onChange={e => setPassword(e.target.value)} />
                                     <label htmlFor="password">Password</label>
                                 </div>

@@ -8,6 +8,7 @@
     padding: 0 4%;
    height: 100vh;
    background-image: url('../img/Clubs\ \(1\).png');
+   background-size: 100% 100%;
 }
 
 
@@ -68,14 +69,17 @@
 }
 
 @media screen and (max-width: 500px){
+    .contain{
+         background-size: 100% 100%;
+    }
     .description{
-        margin-top: -30vw;
-        font-size: 3.4vw;
+        margin-top: -35vw;
+        font-size: 4.4vw;
         line-height: 8vw;
     }
     .shilp-logo img{
         margin-top: -10vh;
-        width: 40vw;
-        height: 40vw;
+        width: 80vw;
+        height: 80vw;
     }
 }

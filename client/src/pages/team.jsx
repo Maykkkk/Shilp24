@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 import { useMotionValue, useTransform, motion } from "framer-motion";
 
-const team = ({setAuth, isAuth}) => {
+const Team = ({setAuth, isAuth}) => {
   const [cardState,setCardState] = useState([
     {id:"president",x : useMotionValue(0),y:useMotionValue(0)},
     {id:"conveynor",x:useMotionValue(0),y:useMotionValue(0)},
@@ -1054,4 +1054,4 @@ const team = ({setAuth, isAuth}) => {
   );
 }
 
-export default team;
+export default Team;

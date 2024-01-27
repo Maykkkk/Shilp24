@@ -1,8 +1,10 @@
 .footer{
-    position: relative;
-    bottom: 0;left: 0;
+    position: absolute;
+    bottom: -60vh;
+    left: 0;
     width: 100%;
-    height: 18vw;
+    min-height: 18vw;
+    max-height: 100%;
     padding-bottom: 1vw;
     background: url(../img/footer\ bg.png);
     background-size: cover;
@@ -103,22 +105,57 @@
 }
 
 @media screen and (max-width:505px){
+    .footer{
+        min-height: 20vw;
+    }
+    .footer .mail-section .mail a{
+        font-size: 3vw;
+    }
+    .footer .subscription .subscribe{
+        font-size: 2.5vw;
+    }
+    .footer .subscription input{
+        width: 90%;
+        height: 4vw;
+        font-size: 3.6vw;
+    }
+    .footer .subscription input::placeholder{
+        font-size: 3vw;
+    }
     .footer .mail-section .mail{
         margin-top: -1.3vh;
+    }
+    .footer .connect .text{
+        font-size: 3vw;
     }
     .footer .connect .social-media-icons{
         margin-top: -0.5vh;
     }
+    .footer .connect .social-media-icons a{
+        font-size: 3.8vw;
+    }
 }
 
 /* -----------MOBILE VIEW----------- */
-@media screen and (max-width:371px){
+@media screen and (max-width:400px){
+    .footer .line{
+        margin-top: 1vh !important;
+    }
     .footer{
         overflow: hidden;
+        min-height: 25vw;
+        max-height: 100%;
+        grid-template-columns: 28vw 0.1vw 40vw 0.1vw 31vw;
+        bottom: -40vh;
     }
     .footer .image .chineseTemple{
         display: block;
         margin: auto;
+        height: 16vw;
+    }
+    .footer .mail-section .mail a{
+        font-size: 3.3vw;
+        font-weight: 600;
     }
     .footer .image .temple{
         display: none;
@@ -126,46 +163,53 @@
     .text{
         display: none;
     }
-
+    
     .footer .subscription .subscribe{
         display: none;
     }
     .footer .subscription .subscribe-mobile{
         display: block;
+        font-size: 2.7vw;
         
     }
     .footer .subscription img{
-        height: 7vw;
+        height: 10vw;
     }
 
     .footer .subscription input{
         border: 1.6px solid white;
-        width: 23vw;
+        height: 6vw;
+        width: 90%;
     }
     .footer .subscription input::placeholder{
         color: white;
-        font-size: 1.7vw;
+        font-size: 3vw;
         opacity: 0.8;
     }
 
     .footer .connect .mobile-text{
         display: block;
         margin-top: 0vh;
+        padding-left: 5px;
         color: white;
-        font-size: 2.5vw;
-        font-weight: 700;
+        font-size: 4vw;
+        font-weight: 600;
     }
     .footer .connect img{
-        margin-top: -0.8vw;
+        margin-top: -2vw;
+        height: 13vw;
     }
     .footer .connect .social-media-icons{
         margin-top: -2vh;
     }
+    .footer .connect .social-media-icons a{
+        font-size: 3.8vw;
+    }
     .footer .line{
         margin-top: 0;
         margin-bottom: 0;
-        height: 100%;
-        padding-left: 3px;
+        height: 98%;
+        padding-left: 2px;
     }
 }
 @media screen and (max-width:273px){

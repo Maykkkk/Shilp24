@@ -23,7 +23,9 @@ const Home = ({setAuth, isAuth}) => {
           <About/>
           <ExploreMore/>
         </div>
-        <Footer />
+        <div className="Bottom">
+          <Footer />
+        </div>
       </div>
     </div>
   );
