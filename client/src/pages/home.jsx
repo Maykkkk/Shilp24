@@ -6,11 +6,11 @@ import Shilp from '../components/shilp';
 import About from '../components/About';
 import ExploreMore from '../components/ExploreMore';
 
-function Home() {
+const Home = ({setAuth, isAuth}) => {
   return (
     <div className="App">
       <div className="body">
-        <NavBar></NavBar>
+        <NavBar setAuth={setAuth} isAuth={isAuth} ></NavBar>
         <div className="container d-flex align-items-center justify-content-center" id='home'>
           <div id="title" className=''>
           <h1 className='m-0 p-0 '>

@@ -10,17 +10,17 @@ import Footer from '../components/Footer';
 
 
 
-function LoginPage() {
+const RegisterPage = ({setAuth, isAuth}) => {
     return (
         <div className="App">
             <div className="body">
-                <NavBar></NavBar>
+                <NavBar setAuth={setAuth} isAuth={isAuth} />
 
-                <Register />
+                <Register setAuth={setAuth}/>
             </div>
             <Footer/>
         </div>
     );   
 }
 
-export default LoginPage;
+export default RegisterPage;

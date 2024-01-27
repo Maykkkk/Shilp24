@@ -5,11 +5,11 @@ import EventCard from '../components/EventCard'
 import '../links/css/Competition.css'
 
 
-function competitions() {
+const competitions = ({setAuth, isAuth}) => {
   return (
     <div className='App'>
     <div className='body' id='competition'>
-    <NavBar/>
+    <NavBar setAuth={setAuth} isAuth={isAuth} />
     <div className='cards'>
     <EventCard
       name="civil Explo"

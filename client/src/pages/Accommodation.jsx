@@ -13,7 +13,7 @@ import Fade from 'react-reveal/Fade';
 
 
 
-function Accommodation() {
+const Accommodation = ({setAuth, isAuth}) => {
     const [onButton, setOnButton] = useState("aboutUs")
     
     const buttonStyle = {
@@ -23,7 +23,7 @@ function Accommodation() {
   return (
     <div className="App">
         <div className="body">
-        <NavBar></NavBar>
+        <NavBar setAuth={setAuth} isAuth={isAuth} ></NavBar>
         <Fade top>
         <div className="accommodation-heading">
             <h1><span>ACCOMMODATION</span> AT <div className="desktop-view">SHILP IIT BHU</div></h1>

@@ -8,12 +8,13 @@ import Fade from "react-reveal/Fade";
 import teamPhotos from "./teamPhotos";
 import { Link } from "react-router-dom";
 
-function media() {
+const team = ({setAuth, isAuth}) => {
 
   return (
     <div className="App">
       <div className="body">
-        <NavBar></NavBar>
+        <NavBar setAuth={setAuth} isAuth={isAuth} />
+
         <div className="shilp-team">
           <Fade top>
           <header className="team-header">
@@ -801,4 +802,4 @@ function media() {
   );
 }
 
-export default media;
+export default team;

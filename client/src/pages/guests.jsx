@@ -1,6 +1,6 @@
 import React from 'react'
 
-function guests() {
+const guests = ({setAuth, isAuth}) => {
   return (
     <div>guests</div>
   )
