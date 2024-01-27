@@ -58,8 +58,8 @@
 }
 @media screen and (max-width: 500px) {
     .container-about-events-footer{
-        background-size: 200%;
-        background-position-y:20vh;
+        background-size: 222%;
+        background-position-y:18vh;
         background-position-x: -20vw;
         background-image: url(../img/Technec\ BGtechnex_bg.svg);
     } 
