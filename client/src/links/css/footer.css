@@ -146,7 +146,7 @@
         min-height: 25vw;
         max-height: 100%;
         grid-template-columns: 28vw 0.1vw 40vw 0.1vw 31vw;
-        bottom: -40vh;
+        bottom: -15vh;
     }
     .footer .image .chineseTemple{
         display: block;
