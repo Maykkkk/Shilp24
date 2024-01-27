@@ -11,6 +11,7 @@
 }
 
 .body{
+    position: relative;
     background-color: #271e29;
     overflow-x: hidden;
     
@@ -57,8 +58,10 @@
 }
 @media screen and (max-width: 500px) {
     .container-about-events-footer{
-        background-size: 100% 30%;
-        background-position-y: 23vh;
+        background-size: 200%;
+        background-position-y:20vh;
+        background-position-x: -20vw;
+        background-image: url(../img/Technec\ BGtechnex_bg.svg);
     } 
     #title h1{
         font-size: 22vw;
