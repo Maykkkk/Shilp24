@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-
-import "./App.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
 import Home from "./pages/home";
 import Events from "./pages/events";
 import Competitions from "./pages/competitions";
@@ -10,73 +11,60 @@ import Store from "./pages/Store";
 import Accommodation from "./pages/Accommodation";
 import Team from "./pages/team";
 import Media from "./pages/media";
-import LoginPage from "./pages/loginPage";
-import RegisterPage from "./pages/registerPage";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-
-  const checkAuth = async() =>{
-      try {
-        const respose = await fetch("https://shilp24-iitbhu.el.r.appspot.com/is-verify", {
-          method: "GET",
-          headers: { token: localStorage.token }
-        });
-  
-        const parseRes = await respose.json();
-  
-        if(parseRes === true){
-          setIsAuthenticated(true);
-        }else{
-          setIsAuthenticated(false);
-        }
-      } catch (error) {
-        console.error(error.message);
-      }
-  }
-
   useEffect(() => {
-    checkAuth();
-  });
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsAuthenticated(true);
+      } else {
+        setIsAuthenticated(false);
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Home setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/events" element={<Events setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/competitions" element={<Competitions setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/guests" element={<Guests setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/contacts" element={<Contacts setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/store" element={<Store setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/accommodations" element={<Accommodation setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
-        <Route exact path="/team" element={<Team setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
-        <Route exact path="/media" element={<Media setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
+        <Route path="/" element={<Home setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
+        <Route path="/events" element={<Events setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
+        <Route path="/competitions" element={<Competitions setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
+        <Route path="/guests" element={<Guests setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
+        <Route path="/contacts" element={<Contacts setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
+        <Route path="/store" element={<Store setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
+        <Route path="/accommodations" element={<Accommodation setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
+        <Route path="/team" element={<Team setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
+        <Route path="/media" element={<Media setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
 
         {/* Auth */}
         <Route
-          exact
-          path="/login"
+          path="/SignInPage"
           element={
             !isAuthenticated ? (
-              <LoginPage setAuth={setIsAuthenticated} />
+              <SignInPage setAuth={setIsAuthenticated} />
             ) : (
               <Navigate to="/" />
             )
           }
-        ></Route>
+        />
         <Route
-          exact
-          path="/register"
+          path="/SignUpPage"
           element={
             !isAuthenticated ? (
-              <RegisterPage setAuth={setIsAuthenticated} />
+              <SignUpPage setAuth={setIsAuthenticated} />
             ) : (
               <Navigate to="/" />
             )
           }
-        ></Route>
+        />
       </Routes>
     </BrowserRouter>
   );

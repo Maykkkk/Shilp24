@@ -51,14 +51,14 @@ const NavBar = ({ isAuth, setAuth }) => {
                         </li>
                         {!isAuth ? <>
                             <li className="nav-item px-2 mx-2">
-                                <Link className="nav-link" to='/login'>Login</Link>
+                                <Link className="nav-link" to='/SignInPage'>Login</Link>
                             </li>
                             <li className="nav-item px-2 mx-2">
-                                <Link className="nav-link" to='/register'>Register</Link>
+                                <Link className="nav-link" to='/SignUpPage'>Register</Link>
                             </li>
                         </> :
                             <li className="nav-item px-2 mx-2">
-                                <button className="nav-link" to='/register' onClick={e => { onLogout(e) }}>Logout</button>
+                                <button className="nav-link" to='/SignUp' onClick={e => { onLogout(e) }}>Logout</button>
                             </li>
                         }
                     </ul>
