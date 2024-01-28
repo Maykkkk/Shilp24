@@ -174,6 +174,9 @@
     .team-title::after{
         display: none;
     }
+    .team-title::before{
+        clip-path: circle(5% at right 80%);
+    }
     .team-header h1{
         font-size: 10vw;
     }
