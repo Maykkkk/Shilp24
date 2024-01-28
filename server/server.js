@@ -23,5 +23,5 @@ app.use("/userData", userData);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log('listening on port 5000');
+    console.log(`listening on port ${PORT}`);
 });
