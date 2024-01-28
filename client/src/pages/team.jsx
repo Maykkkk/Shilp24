@@ -135,9 +135,11 @@ const Team = ({setAuth, isAuth}) => {
             <div>
               <h1>Marketing Executives</h1>
               <div className="team-container">
-              <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
-              <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
-              <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
+              <TeamCard Name="Aditya Maurya" ProfilePhoto={teamPhotos.marketingExecutive1} />
+              <TeamCard Name="Divyanshu Gupta" ProfilePhoto={teamPhotos.marketingExecutive2} />
+              <TeamCard Name="Mugdha Chaturvedi" ProfilePhoto={teamPhotos.marketingExecutive3} />
+              <TeamCard Name="Prakhar Srivastava" ProfilePhoto={teamPhotos.marketingExecutive4} />
+              <TeamCard Name="Utkarsh Singh" ProfilePhoto={teamPhotos.marketingExecutive5} />
               </div>
             </div>
             </Fade>
@@ -149,10 +151,11 @@ const Team = ({setAuth, isAuth}) => {
             <div>
               <h1>Event Heads</h1>
               <div className="team-container">
-              <TeamCard Name="Param Srivastava" ProfilePhoto={teamPhotos.eventsHead1} />
-              <TeamCard Name="Prachi Priya" ProfilePhoto={teamPhotos.eventsHead2} />
-              <TeamCard Name="Pratik Nand" ProfilePhoto={teamPhotos.eventsHead3} />
-              <TeamCard Name="Radhia Singh Rajawat" ProfilePhoto={teamPhotos.eventsHead4} />
+              <TeamCard Name="Devesh Sindhi" ProfilePhoto={teamPhotos.eventsHead1} />
+              <TeamCard Name="Param Srivastava" ProfilePhoto={teamPhotos.eventsHead2} />
+              <TeamCard Name="Prachi Priya" ProfilePhoto={teamPhotos.eventsHead3} />
+              <TeamCard Name="Pratik Nand" ProfilePhoto={teamPhotos.eventsHead4} />
+              <TeamCard Name="Radhika Singh Rajawat" ProfilePhoto={teamPhotos.eventsHead5} />
               </div>
             </div>
             </Fade>
@@ -161,9 +164,16 @@ const Team = ({setAuth, isAuth}) => {
             <div>
               <h1>Event Executives</h1>
               <div className="team-container">
-              <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
-              <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
-              <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
+              <TeamCard Name="Aman Mani Shandilya" ProfilePhoto={teamPhotos.eventsExecutive1} />
+              <TeamCard Name="Arpit Gupta" ProfilePhoto={teamPhotos.eventsExecutive2} />
+              <TeamCard Name="Aryan CHaudhary" ProfilePhoto={teamPhotos.eventsExecutive3} />
+              <TeamCard Name="Aryan Maurya" ProfilePhoto={teamPhotos.eventsExecutive4} />
+              <TeamCard Name="Navneet Pandey" ProfilePhoto={teamPhotos.eventsExecutive5} />
+              <TeamCard Name="Piyush Kumar" ProfilePhoto={teamPhotos.eventsExecutive6} />
+              <TeamCard Name="Shefali Jaiswal" ProfilePhoto={teamPhotos.eventsExecutive7} />
+              <TeamCard Name="Shinjan Tyagi" ProfilePhoto={teamPhotos.eventsExecutive8} />
+              <TeamCard Name="Sumit Sahu" ProfilePhoto={teamPhotos.eventsExecutive9} />
+              <TeamCard Name="Supriya Sinha" ProfilePhoto={teamPhotos.eventsExecutive10} />
               </div>
             </div>
             </Fade>
@@ -174,17 +184,23 @@ const Team = ({setAuth, isAuth}) => {
             <Fade left>
             <h1>Public Relations Head</h1>
             <div className="team-container">
-            <TeamCard Name="Nishkarsh Sharma" ProfilePhoto={teamPhotos.prHead1} />
-            <TeamCard Name="Pratham Chaudhary" ProfilePhoto={teamPhotos.prHead2} />
-            <TeamCard Name="Sumana Sree" ProfilePhoto={teamPhotos.prHead3} />
-              
+            <TeamCard Name="Ayush Sahu" ProfilePhoto={teamPhotos.prHead1} />
+            <TeamCard Name="Nishkarsh Sharma" ProfilePhoto={teamPhotos.prHead2} />
+            <TeamCard Name="Pratham Chaudhary" ProfilePhoto={teamPhotos.prHead3} />
+            <TeamCard Name="Sumana Sree" ProfilePhoto={teamPhotos.prHead4} />
             </div>
             </Fade>
 
             <Fade right>
             <h1>Public Relations Executives</h1>
             <div className="team-container">
-            <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
+            <TeamCard Name="Aakash Srivastava" ProfilePhoto={teamPhotos.prExecutive1} />
+            <TeamCard Name="Abhay Raj Singh" ProfilePhoto={teamPhotos.prExecutive2} />
+            <TeamCard Name="Harsh Pant" ProfilePhoto={teamPhotos.prExecutive3} />
+            <TeamCard Name="Naisarg Raj Pandey" ProfilePhoto={teamPhotos.prExecutive4} />
+            <TeamCard Name="Reshma Khatoon" ProfilePhoto={teamPhotos.prExecutive5} />
+            <TeamCard Name="Vipul Ahlawat" ProfilePhoto={teamPhotos.prExecutive6} />
+            <TeamCard Name="Virat Patel" ProfilePhoto={teamPhotos.prExecutive7} />
             </div>
             </Fade>
           </div>
@@ -203,7 +219,13 @@ const Team = ({setAuth, isAuth}) => {
             <Fade right>
             <h1>Design and Content Executives</h1>
             <div className="team-container">
-            <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
+            <TeamCard Name="Archit Thakur" ProfilePhoto={teamPhotos.designContentExecutive1} />
+            <TeamCard Name="Avdhesh" ProfilePhoto={teamPhotos.designContentExecutive2} />
+            <TeamCard Name="Jatin Sharma" ProfilePhoto={teamPhotos.designContentExecutive3} />
+            <TeamCard Name="Nitin" ProfilePhoto={teamPhotos.designContentExecutive4} />
+            <TeamCard Name="Parna Malik" ProfilePhoto={teamPhotos.designContentExecutive5} />
+            <TeamCard Name="Saloni Sharma" ProfilePhoto={teamPhotos.designContentExecutive6} />
+            <TeamCard Name="Satyam Chaurasiya" ProfilePhoto={teamPhotos.designContentExecutive7} />
             </div>
             </Fade>
           </div>
@@ -226,6 +248,9 @@ const Team = ({setAuth, isAuth}) => {
             <TeamCard Name="Ayush Kumar" ProfilePhoto={teamPhotos.publicityExecutive2} />
             <TeamCard Name="Ayush Raj" ProfilePhoto={teamPhotos.publicityExecutive3} />
             <TeamCard Name="Deepak Yadav" ProfilePhoto={teamPhotos.publicityExecutive4} />
+            <TeamCard Name="Jatin Singh" ProfilePhoto={teamPhotos.publicityExecutive5} />
+            <TeamCard Name="Manvendra Saraswat" ProfilePhoto={teamPhotos.publicityExecutive6} />
+            <TeamCard Name="Shikha Kaloniya" ProfilePhoto={teamPhotos.publicityExecutive7} />
             </div>
             </Fade>
           </div>

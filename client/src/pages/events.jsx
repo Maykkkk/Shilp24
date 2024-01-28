@@ -12,7 +12,7 @@ import Fade from 'react-reveal/Fade';
 const events = ({ setAuth, isAuth }) => {
   return (
     <div className="App">
-      <div className="body">
+      <div className="body events-body">
         <NavBar setAuth={setAuth} isAuth={isAuth} />
         <InnovationOdyssey />
         <div className="Container">
