@@ -4,7 +4,7 @@
 }
 .events-body{
     background-image: url(../img/Clubs\ \(1\).png);
-    background-position-y: 12vh;
-    background-size: 300% 50%;
-    background-repeat: repeat-y;
+    background-position-y: 20vh;
+    background-size: 300% 100%;
+    background-repeat: no-repeat;
 }

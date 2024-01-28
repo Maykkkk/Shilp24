@@ -10,6 +10,7 @@
     margin-top: 10vh;
     border-radius: 50px;
     padding-bottom: 1vw;
+    border-top:4px solid rgba(255, 255, 255, 0.06);
 }
 .innovation-odyssey .heading{
     font-family: 'Inter', sans-serif;
