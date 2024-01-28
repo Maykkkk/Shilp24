@@ -20,7 +20,7 @@ function App() {
 
   const checkAuth = async() =>{
       try {
-        const respose = await fetch("http://localhost:5000/auth/is-verify", {
+        const respose = await fetch("https://shilp24-iitbhu.el.r.appspot.com/is-verify", {
           method: "GET",
           headers: { token: localStorage.token }
         });
