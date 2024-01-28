@@ -160,23 +160,27 @@ const Team = ({setAuth, isAuth}) => {
             </div>
             </Fade>
 
-            <Fade right>
             <div>
+              <Fade right>
               <h1>Event Executives</h1>
+              </Fade>
               <div className="team-container">
-              <TeamCard Name="Aman Mani Shandilya" ProfilePhoto={teamPhotos.eventsExecutive1} />
-              <TeamCard Name="Arpit Gupta" ProfilePhoto={teamPhotos.eventsExecutive2} />
-              <TeamCard Name="Aryan CHaudhary" ProfilePhoto={teamPhotos.eventsExecutive3} />
-              <TeamCard Name="Aryan Maurya" ProfilePhoto={teamPhotos.eventsExecutive4} />
-              <TeamCard Name="Navneet Pandey" ProfilePhoto={teamPhotos.eventsExecutive5} />
-              <TeamCard Name="Piyush Kumar" ProfilePhoto={teamPhotos.eventsExecutive6} />
-              <TeamCard Name="Shefali Jaiswal" ProfilePhoto={teamPhotos.eventsExecutive7} />
-              <TeamCard Name="Shinjan Tyagi" ProfilePhoto={teamPhotos.eventsExecutive8} />
-              <TeamCard Name="Sumit Sahu" ProfilePhoto={teamPhotos.eventsExecutive9} />
-              <TeamCard Name="Supriya Sinha" ProfilePhoto={teamPhotos.eventsExecutive10} />
+                <Fade right>
+                  <TeamCard Name="Aman Mani Shandilya" ProfilePhoto={teamPhotos.eventsExecutive1} />
+                  <TeamCard Name="Arpit Gupta" ProfilePhoto={teamPhotos.eventsExecutive2} />
+                  <TeamCard Name="Aryan CHaudhary" ProfilePhoto={teamPhotos.eventsExecutive3} />
+                  <TeamCard Name="Aryan Maurya" ProfilePhoto={teamPhotos.eventsExecutive4} />
+                  <TeamCard Name="Navneet Pandey" ProfilePhoto={teamPhotos.eventsExecutive5} />
+                </Fade>
+                <Fade right>
+                  <TeamCard Name="Piyush Kumar" ProfilePhoto={teamPhotos.eventsExecutive6} />
+                  <TeamCard Name="Shefali Jaiswal" ProfilePhoto={teamPhotos.eventsExecutive7} />
+                  <TeamCard Name="Shinjan Tyagi" ProfilePhoto={teamPhotos.eventsExecutive8} />
+                  <TeamCard Name="Sumit Sahu" ProfilePhoto={teamPhotos.eventsExecutive9} />
+                  <TeamCard Name="Supriya Sinha" ProfilePhoto={teamPhotos.eventsExecutive10} />
+                </Fade>
               </div>
             </div>
-            </Fade>
           </div>
 
           {/* PR Heads*/}
