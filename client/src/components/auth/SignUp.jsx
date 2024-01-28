@@ -28,11 +28,9 @@ const SignUp = () => {
   const SignUp = async (e) => {
     e.preventDefault();
     try {
-      // Create user with email and password
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Store additional user information in Firestore
       const userDocRef = doc(firestore, 'users', user.uid);
       await setDoc(userDocRef, { username: username, email: email });
 
@@ -43,24 +41,6 @@ const SignUp = () => {
   };
 
   return (
-    // <div className="sign-in-container">
-    //   <form onSubmit={signUp}>
-    //     <h1>Create Account</h1>
-    //     <input
-    //       type="email"
-    //       placeholder="Enter your email"
-    //       value={email}
-    //       onChange={(e) => setEmail(e.target.value)}
-    //     ></input>
-    //     <input
-    //       type="password"
-    //       placeholder="Enter your password"
-    //       value={password}
-    //       onChange={(e) => setPassword(e.target.value)}
-    //     ></input>
-    //     <button type="submit">Sign Up</button>
-    //   </form>
-    // </div>
     <>
     <div className="background" style={{perspective: 2000}}>
     <motion.div className="loginContainer"
@@ -109,11 +89,6 @@ const SignUp = () => {
                     <div className="input mt-2">
                         <input type="submit" className='btn btn-success' value="Submit" />
                     </div>
-                    {/* {LoginFailure ?
-                        <Alert severity="error" className='mt-2'>{FailureMessage}</Alert>
-                        :
-                        <></>
-                    } */}
                     <div className="log-to-register">
                         <p>Already Registered? <Link to="/SignIn" className='register-link'>Login here!</Link></p>
                     </div>

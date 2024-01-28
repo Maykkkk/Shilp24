@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { useMotionValue, useTransform, motion } from "framer-motion";
 
 const Team = ({setAuth, isAuth}) => {
-  const [cardState,setCardState] = useState([
+  const [cardState] = useState([
     {id:"president",x : useMotionValue(0),y:useMotionValue(0)},
     {id:"conveynor",x:useMotionValue(0),y:useMotionValue(0)},
     {id:"coConveynor1",x:useMotionValue(0),y:useMotionValue(0)},
@@ -26,7 +26,7 @@ const Team = ({setAuth, isAuth}) => {
     {id:"techExecutive2",x:useMotionValue(0),y:useMotionValue(0)},
     {id:"techExecutive3",x:useMotionValue(0),y:useMotionValue(0)},
   ]);
-  const [rotateState,setRotateState] = useState([
+  const [rotateState] = useState([
     {id:"president", rotateX:useTransform(cardState[0].y,[-100,100],[70,-70]), rotateY:useTransform(cardState[0].x,[100,-100],[70,-70]),},
     {id:"conveynor", rotateX:useTransform(cardState[1].y,[-100,100],[70,-70]), rotateY:useTransform(cardState[1].x,[100,-100],[70,-70]),},
     {id:"coConveynor1", rotateX:useTransform(cardState[2].y,[-100,100],[70,-70]), rotateY:useTransform(cardState[2].x,[100,-100],[70,-70]),},

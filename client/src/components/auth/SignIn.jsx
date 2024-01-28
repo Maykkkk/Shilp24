@@ -24,25 +24,19 @@ const SignIn = ({setAuth}) => {
    const SignIn = async (e) => {
     e.preventDefault();
     try {
-      // Attempt to sign in with the provided credentials
       await signInWithEmailAndPassword(auth, email, password);
 
-      // If successful, update authentication status and navigate to the home page
       setAuth(true);
       navigate("/");
     } catch (error) {
-      // If login fails, handle the error (e.g., display an error message)
       console.log(error.code, error.message);
 
       if (error.message === 'auth/invalid-credential') {
-        // Provide user-friendly message for invalid email or user not found
         alert('Invalid email or user not found. Please register first.');
         navigate("/SignUp");
       } else if (error.message === 'auth/wrong-password') {
-        // Provide user-friendly message for wrong password
         alert('Incorrect password. Please try again.');
       } else {
-        // For other errors, log the error to the console
         console.error(error);
       }
     }
@@ -94,11 +88,6 @@ const SignIn = ({setAuth}) => {
                             <div className="input mt-2">
                                 <input type="submit" className='btn btn-success' value="Submit" />
                             </div>
-                            {/* {LoginFailure ?
-                                <Alert severity="error" className='mt-2'>{FailureMessage}</Alert>
-                                :
-                                <></>
-                            } */}
                             <div className="log-to-register">
                                 <p>Don't have an account? <Link to="/SignUp" className='register-link'>Register here!</Link></p>
                             </div>
@@ -108,24 +97,6 @@ const SignIn = ({setAuth}) => {
             </motion.div>
         </div>
         </>
-    // <div className="sign-in-container">
-    //   <form onSubmit={signIn}>
-    //     <h1>Log In to your Account</h1>
-    //     <input
-    //       type="email"
-    //       placeholder="Enter your email"
-    //       value={email}
-    //       onChange={(e) => setEmail(e.target.value)}
-    //     ></input>
-    //     <input
-    //       type="password"
-    //       placeholder="Enter your password"
-    //       value={password}
-    //       onChange={(e) => setPassword(e.target.value)}
-    //     ></input>
-    //     <button type="submit">Log In</button>
-    //   </form>
-    // </div>
   );
 };
 
