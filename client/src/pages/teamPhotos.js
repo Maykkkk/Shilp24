@@ -31,9 +31,22 @@ const teamPhotos ={
     prHead3 : "./TeamPhotos/III Year/PRATHAM CHAUDHARY _ PR HEAD .jpg",
     prHead4 : "./TeamPhotos/III Year/SUMANA SREE II PR HEAD.jpg",
     techHead : "./TeamPhotos/III Year/MAYANK MANI NATH GUPTA _ TECH HEAD.png",
+
+    //Executives
     techExecutive1: "./TeamPhotos/II Year/SUMIT DUTTA _ TECH TEAM EXECUTIVE.jpg",
     techExecutive2:"./TeamPhotos/II Year/ABHIJEET SUNIL MANKANI _ TECH TEAM EXECUTIVE.png",
     techExecutive3:"./TeamPhotos/II Year/abhishek shukla _ Tech Team Executive.png",
+
+    marketingExecutive1:"",
+    prExecutive1:"./TeamPhotos/II Year/AAKASH SRIVASTAVA _ PUBLIC RELATIONS EXECUTIVE .jpg",
+    prExecutive2:"./TeamPhotos/II Year/ABHAY RAJ SINGH _ PUBLIC RELATIONS EXECUTIVE.jpg",
+
+    publicityExecutive1:"./TeamPhotos/II Year/ANURAG PRAKASH _ PUBLICITY EXECUTIVE_.jpg",
+    publicityExecutive2:"/TeamPhotos/II Year/Ayush Kumar _ Publicity Executive.jpg",
+    publicityExecutive3:"/TeamPhotos/II Year/Ayush Raj _ _ Publicity Executive_.jpg",
+    publicityExecutive4:"/TeamPhotos/II Year/DEEPAK YADAV _ PUBLICITY EXECUTIVE_.jpg",
+
+
 
 
 };
