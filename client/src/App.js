@@ -13,33 +13,20 @@ import Media from "./pages/media";
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { auth } from "./firebase";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-
-  const checkAuth = async() =>{
-      try {
-        const respose = await fetch("http://localhost:5000/auth/is-verify", {
-          method: "GET",
-          headers: { token: localStorage.token }
-        });
-  
-        const parseRes = await respose.json();
-  
-        if(parseRes === true){
-          setIsAuthenticated(true);
-        }else{
-          setIsAuthenticated(false);
-        }
-      } catch (error) {
-        console.error(error.message);
-      }
-  }
-
   useEffect(() => {
-    checkAuth();
-  });
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsAuthenticated(true);
+      } else {
+        setIsAuthenticated(false);
+      }
+    })
+  }, []);
 
   return (
     <BrowserRouter>
