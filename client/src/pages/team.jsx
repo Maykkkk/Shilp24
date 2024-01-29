@@ -20,30 +20,20 @@ const Team = ({setAuth, isAuth}) => {
             <h1>Meet our Team</h1>
           </header>
           </Fade>
-          <div className="team-title" id="president">
+          <div className="team-title" id="conveynor">
             <Fade left>
-            <h1>PRESIDENT(Students), CES</h1>
+            <h1>Conveynor</h1>
             </Fade>
             <Fade right>
             <div className="team-container">
               <div style={{perspective: 2000}}>
-                <TeamCard Name="Ayush Sinha" ProfilePhoto={teamPhotos.president} />
-              </div>
+              <TeamCard Name="Ashutosh Gupta" ProfilePhoto={teamPhotos.conveynor} />              </div>
             </div>
             </Fade>
           </div>
 
           {/* Conveynors */}
-          <div className="team-title" id="conveyners">
-            {/* Conveynor */}
-            <div>
-              <Fade left>
-              <h1>Conveynor</h1>
-              <div className="team-container">
-                <TeamCard Name="Ashutosh Gupta" ProfilePhoto={teamPhotos.conveynor} />
-              </div>
-              </Fade>
-            </div>
+          <div className="team-title" id="coConveyners">
             {/* Co-Conveynor */}
             <div>
               <Fade right>
@@ -248,11 +238,11 @@ const Team = ({setAuth, isAuth}) => {
             <Fade right>
             <h1>Publicity Executives</h1>
             <div className="team-container">
-            <TeamCard Name="Anurag Prakash" ProfilePhoto={teamPhotos.publicityExecutive1} />
+            <TeamCard Name="Anurag Prakash" ProfilePhoto={teamPhotos.publicityExecutive1} style={{objectFit:"contain", transform:"scale(1.5)", top:"40px"}}/>
             <TeamCard Name="Ayush Kumar" ProfilePhoto={teamPhotos.publicityExecutive2} />
             <TeamCard Name="Ayush Raj" ProfilePhoto={teamPhotos.publicityExecutive3} />
             <TeamCard Name="Deepak Yadav" ProfilePhoto={teamPhotos.publicityExecutive4} />
-            <TeamCard Name="Jatin Singh" ProfilePhoto={teamPhotos.publicityExecutive5} />
+            <TeamCard Name="Jatin Singh" ProfilePhoto={teamPhotos.publicityExecutive5} style={{objectFit:"contain", transform:"scale(1.5)", top:"40px"}}/>
             <TeamCard Name="Manvendra Saraswat" ProfilePhoto={teamPhotos.publicityExecutive6} />
             <TeamCard Name="Shikha Kaloniya" ProfilePhoto={teamPhotos.publicityExecutive7} />
             </div>

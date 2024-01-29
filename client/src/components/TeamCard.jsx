@@ -4,7 +4,7 @@ import { useMotionValue, useTransform, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 
-function TeamCard({Name, ProfilePhoto, LinkedIn, Facebook, Instagram}) {
+function TeamCard({Name, ProfilePhoto, style,LinkedIn, Facebook, Instagram}) {
 
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -21,7 +21,7 @@ function TeamCard({Name, ProfilePhoto, LinkedIn, Facebook, Instagram}) {
                 className="team-card">
                   <div className="team-content">
                     <div className="imgBx">
-                      <img src={ProfilePhoto} alt="ProfilePhoto" />
+                      <img src={ProfilePhoto} alt="ProfilePhoto" style={style}/>
                     </div>
                     <div className="contentBx">
                       <h3>{Name}</h3>

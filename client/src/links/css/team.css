@@ -140,7 +140,7 @@
     min-height: 100vh;
 }
 
-#conveyners,#president,#eventAdvisor,#publicityAdvisor{
+#coConveyners,#eventAdvisor,#publicityAdvisor{
     flex-direction: row;
     justify-content: space-evenly;
 }
