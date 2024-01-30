@@ -1,20 +1,25 @@
 import '../links/css/home.css';
 import NavBar from '../components/NavBar';
-import Hero from '../components/Hero';
 import ImageGallery from '../components/ImageGallery';
 import Footer from '../components/Footer';
 import Shilp from '../components/shilp';
 import About from '../components/About';
 import ExploreMore from '../components/ExploreMore';
-import ParticleBackground from '../components/ParticleBackground';
 
-const Home = ({setAuth, isAuth}) => {
+function Home() {
   return (
     <div className="App">
       <div className="body">
-      <ParticleBackground/>
-        <NavBar setAuth={setAuth} isAuth={isAuth} ></NavBar>
-          <Hero/>
+        <NavBar></NavBar>
+        <div className="container d-flex align-items-center justify-content-center" id='home'>
+          <div id="title" className=''>
+          <h1 className='m-0 p-0 '>
+            <span className="primary x">SHILP </span> 
+            <span className="text-light">IIT BHU</span>
+            </h1>
+          <h2 className='text-light m-0 p-0'>Civil Engineering Society</h2>
+          </div>
+        </div>
           <Shilp/>
         <div className="container" id='gallery'>
           <ImageGallery></ImageGallery>
@@ -23,9 +28,7 @@ const Home = ({setAuth, isAuth}) => {
           <About/>
           <ExploreMore/>
         </div>
-        <div className="Bottom">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </div>
   );

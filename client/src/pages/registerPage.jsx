@@ -5,20 +5,22 @@ import React from 'react';
 import Register from '../components/Login/Register';
 
 import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 
 
 
-const RegisterPage = ({setAuth, isAuth}) => {
+function LoginPage() {
     return (
         <div className="App">
             <div className="body">
-                <NavBar setAuth={setAuth} isAuth={isAuth} />
+                <NavBar></NavBar>
 
-                <Register setAuth={setAuth}/>
+                <Register />
             </div>
+            <Footer/>
         </div>
     );   
 }
 
-export default RegisterPage;
+export default LoginPage;

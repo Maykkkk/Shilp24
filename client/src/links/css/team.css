@@ -30,7 +30,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(rgb(233, 31, 48),rgb(216, 193, 219));
-    clip-path: circle(10% at left 25%);
+    clip-path: circle(20% at left 15%);
     z-index: 0;
 }
 .team-title h1{
@@ -140,7 +140,7 @@
     min-height: 100vh;
 }
 
-#coConveyners,#eventAdvisor,#publicityAdvisor{
+#conveyners,#president,#eventAdvisor,#publicityAdvisor{
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -173,9 +173,6 @@
 @media screen and (max-width: 625px){
     .team-title::after{
         display: none;
-    }
-    .team-title::before{
-        clip-path: circle(5% at right 80%);
     }
     .team-header h1{
         font-size: 10vw;

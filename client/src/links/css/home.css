@@ -11,14 +11,12 @@
 }
 
 .body{
-    position: relative;
-    background-color: #271e29;
-    overflow-x: hidden;
-    
+    background: #271e29;
+    /* overflow: hidden; */
 }
 
 .container{
-    background-color: #271e29;
+    background: #271e29;
     width: 100%
 }
 @media screen and (min-width: 600px) {
@@ -42,7 +40,7 @@
 }
 
 .primary{
-    background: linear-gradient(45deg,#d800d2,rgb(66, 3, 154),#d800d2,rgb(66, 3, 154),#d800d2,white);
+    background: linear-gradient(45deg,#d800d2,rgb(66, 3, 154),#d800d2,rgb(66, 3, 154),#d800d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -58,33 +56,18 @@
 }
 @media screen and (max-width: 500px) {
     .container-about-events-footer{
-        background-size: 222%;
-        background-position-y:18vh;
-        background-position-x: -20vw;
-        background-image: url(../img/Technec\ BGtechnex_bg.png);
+        background-size: 100% 30%;
+        background-position-y: 9.7vh;
     } 
     #title h1{
-        font-size: 22vw;
+        font-size: 12vw;
         font-weight: 700;
     }
     #title h2{
-        font-size: 7vw;
+        font-size: 6vw;
         font-weight: 600;
     }
     .container:first-of-type{
         height: 30vh;
     }
-    #home{
-        height: 70vh;
-    }
-}
-
-#home{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-}
-
-.Bottom{
-    position: relative;
 }

@@ -3,44 +3,110 @@ import "../links/css/home.css";
 import "../links/css/team.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 import teamPhotos from "./teamPhotos";
-import TeamCard from "../components/TeamCard";
+import { Link } from "react-router-dom";
 
-const Team = ({setAuth, isAuth}) => {
+function media() {
 
   return (
     <div className="App">
       <div className="body">
-        <NavBar setAuth={setAuth} isAuth={isAuth} />
-
+        <NavBar></NavBar>
         <div className="shilp-team">
           <Fade top>
           <header className="team-header">
             <h1>Meet our Team</h1>
           </header>
           </Fade>
-          <div className="team-title" id="conveynor">
+          <div className="team-title" id="president">
             <Fade left>
-            <h1>Conveynor</h1>
+            <h1>PRESIDENT(Students), CES</h1>
             </Fade>
             <Fade right>
             <div className="team-container">
-              <div style={{perspective: 2000}}>
-              <TeamCard Name="Ashutosh Gupta" ProfilePhoto={teamPhotos.conveynor} />              </div>
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    
+                    <img src={teamPhotos.president} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
             </div>
             </Fade>
           </div>
 
           {/* Conveynors */}
-          <div className="team-title" id="coConveyners">
+          <div className="team-title" id="conveyners">
+            {/* Conveynor */}
+            <div>
+              <Fade left>
+              <h1>Conveynor</h1>
+              <div className="team-container">
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.conveynor} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                    <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+              </div>
+              </Fade>
+            </div>
             {/* Co-Conveynor */}
             <div>
               <Fade right>
               <h1>Co-Conveynors</h1>
               <div className="team-container">
-                <TeamCard Name="Kanhaiya Kumar" ProfilePhoto={teamPhotos.coConveynor1} />
-                <TeamCard Name="Nandini" ProfilePhoto={teamPhotos.coConveynor2} />
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.coConveynor1} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.coConveynor2} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
               </div>
               </Fade>
             </div>
@@ -53,7 +119,21 @@ const Team = ({setAuth, isAuth}) => {
             </Fade>
             <Fade right>
             <div className="team-container">
-              <TeamCard Name="Jeevesh Garg" ProfilePhoto={teamPhotos.techAdvisor} />
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.techAdvisor} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
             </div>
             </Fade>
           </div>
@@ -65,9 +145,54 @@ const Team = ({setAuth, isAuth}) => {
             </Fade>
             <Fade right>
             <div className="team-container">
-              <TeamCard Name="Anup Tiwari" ProfilePhoto={teamPhotos.eventsAdvisor1} />
-              <TeamCard Name="Navvay Dhingra" ProfilePhoto={teamPhotos.eventsAdvisor2} />
-              <TeamCard Name="Pawan Kumar" ProfilePhoto={teamPhotos.eventsAdvisor3} />
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.eventsAdvisor1} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.eventsAdvisor2} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+              
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.eventsAdvisor3} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
             </div>
             </Fade>
           </div>
@@ -79,7 +204,21 @@ const Team = ({setAuth, isAuth}) => {
             </Fade>
             <Fade right>
             <div className="team-container">
-              <TeamCard Name="Assim Ujjwal" ProfilePhoto={teamPhotos.publicityAdvisor} />
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.publicityAdvisor} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
             </div>
             </Fade>
           </div>
@@ -90,7 +229,21 @@ const Team = ({setAuth, isAuth}) => {
             <div>
               <h1>Tech Head</h1> {/*Tech Head */}
               <div className="team-container">
-              <TeamCard Name="Mayank Mani Nath Gupta" ProfilePhoto={teamPhotos.techHead} />
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.techHead} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
               </div>
             </div>
             </Fade>
@@ -99,9 +252,21 @@ const Team = ({setAuth, isAuth}) => {
             <div>
               <h1>Tech Executives</h1> {/*Tech Executive */}
               <div className="team-container">
-                <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
-                <TeamCard Name="Abhijeet" ProfilePhoto={teamPhotos.techExecutive2}/>
-                <TeamCard Name="Abhishek" ProfilePhoto={teamPhotos.techExecutive3}/>
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src="" alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
               </div>
             </div>
             </Fade>
@@ -113,10 +278,69 @@ const Team = ({setAuth, isAuth}) => {
             <div>
               <h1>Marketing Heads</h1>
               <div className="team-container">
-                <TeamCard Name="Aman Srivastava" ProfilePhoto={teamPhotos.marketingHead1} />
-                <TeamCard Name="Mithilesh K" ProfilePhoto={teamPhotos.marketingHead2} />
-                <TeamCard Name="Prakhar Yadav" ProfilePhoto={teamPhotos.marketingHead3} />
-                <TeamCard Name="Priyaranjan Kumar Khan" ProfilePhoto={teamPhotos.marketingHead4} />
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.marketingHead1} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.marketingHead2} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.marketingHead3} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.marketingHead4} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
               </div>
             </div>
             </Fade>
@@ -125,11 +349,53 @@ const Team = ({setAuth, isAuth}) => {
             <div>
               <h1>Marketing Executives</h1>
               <div className="team-container">
-              <TeamCard Name="Aditya Maurya" ProfilePhoto={teamPhotos.marketingExecutive1} />
-              <TeamCard Name="Divyanshu Gupta" ProfilePhoto={teamPhotos.marketingExecutive2} />
-              <TeamCard Name="Mugdha Chaturvedi" ProfilePhoto={teamPhotos.marketingExecutive3} />
-              <TeamCard Name="Prakhar Srivastava" ProfilePhoto={teamPhotos.marketingExecutive4} />
-              <TeamCard Name="Utkarsh Singh" ProfilePhoto={teamPhotos.marketingExecutive5} />
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src="" alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src="" alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src="" alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
               </div>
             </div>
             </Fade>
@@ -141,36 +407,143 @@ const Team = ({setAuth, isAuth}) => {
             <div>
               <h1>Event Heads</h1>
               <div className="team-container">
-              <TeamCard Name="Devesh Sindhi" ProfilePhoto={teamPhotos.eventsHead1} />
-              <TeamCard Name="Param Srivastava" ProfilePhoto={teamPhotos.eventsHead2} />
-              <TeamCard Name="Prachi Priya" ProfilePhoto={teamPhotos.eventsHead3} />
-              <TeamCard Name="Pratik Nand" ProfilePhoto={teamPhotos.eventsHead4} />
-              <TeamCard Name="Radhika Singh Rajawat" ProfilePhoto={teamPhotos.eventsHead5} />
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.eventsHead1} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.eventsHead2} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.eventsHead3} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.eventsHead4} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>                
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src={teamPhotos.eventsHead5} alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
               </div>
             </div>
             </Fade>
 
+            <Fade right>
             <div>
-              <Fade right>
               <h1>Event Executives</h1>
-              </Fade>
               <div className="team-container">
-                <Fade right>
-                  <TeamCard Name="Aman Mani Shandilya" ProfilePhoto={teamPhotos.eventsExecutive1} />
-                  <TeamCard Name="Arpit Gupta" ProfilePhoto={teamPhotos.eventsExecutive2} />
-                  <TeamCard Name="Aryan CHaudhary" ProfilePhoto={teamPhotos.eventsExecutive3} />
-                  <TeamCard Name="Aryan Maurya" ProfilePhoto={teamPhotos.eventsExecutive4} />
-                  <TeamCard Name="Navneet Pandey" ProfilePhoto={teamPhotos.eventsExecutive5} />
-                </Fade>
-                <Fade right>
-                  <TeamCard Name="Piyush Kumar" ProfilePhoto={teamPhotos.eventsExecutive6} />
-                  <TeamCard Name="Shefali Jaiswal" ProfilePhoto={teamPhotos.eventsExecutive7} />
-                  <TeamCard Name="Shinjan Tyagi" ProfilePhoto={teamPhotos.eventsExecutive8} />
-                  <TeamCard Name="Sumit Sahu" ProfilePhoto={teamPhotos.eventsExecutive9} />
-                  <TeamCard Name="Supriya Sinha" ProfilePhoto={teamPhotos.eventsExecutive10} />
-                </Fade>
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src="" alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src="" alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
+
+                <div className="team-card">
+                  <div className="team-content">
+                    <div className="imgBx">
+                      <img src="" alt="ProfilePhoto" />
+                    </div>
+                    <div className="contentBx">
+                      <h3>Name</h3>
+                    </div>
+                  </div>
+                  <ul className="sci">
+                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  </ul>
+                </div>
               </div>
             </div>
+            </Fade>
           </div>
 
           {/* PR Heads*/}
@@ -178,23 +551,91 @@ const Team = ({setAuth, isAuth}) => {
             <Fade left>
             <h1>Public Relations Head</h1>
             <div className="team-container">
-            <TeamCard Name="Ayush Sahu" ProfilePhoto={teamPhotos.prHead1} />
-            <TeamCard Name="Nishkarsh Sharma" ProfilePhoto={teamPhotos.prHead2} />
-            <TeamCard Name="Pratham Chaudhary" ProfilePhoto={teamPhotos.prHead3} />
-            <TeamCard Name="Sumana Sree" ProfilePhoto={teamPhotos.prHead4} />
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.prHead1} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.prHead2} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.prHead3} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.prHead4} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+              
             </div>
             </Fade>
 
             <Fade right>
             <h1>Public Relations Executives</h1>
             <div className="team-container">
-            <TeamCard Name="Aakash Srivastava" ProfilePhoto={teamPhotos.prExecutive1} />
-            <TeamCard Name="Abhay Raj Singh" ProfilePhoto={teamPhotos.prExecutive2} />
-            <TeamCard Name="Harsh Pant" ProfilePhoto={teamPhotos.prExecutive3} />
-            <TeamCard Name="Naisarg Raj Pandey" ProfilePhoto={teamPhotos.prExecutive4} />
-            <TeamCard Name="Reshma Khatoon" ProfilePhoto={teamPhotos.prExecutive5} />
-            <TeamCard Name="Vipul Ahlawat" ProfilePhoto={teamPhotos.prExecutive6} />
-            <TeamCard Name="Virat Patel" ProfilePhoto={teamPhotos.prExecutive7} />
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src="" alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
             </div>
             </Fade>
           </div>
@@ -204,22 +645,74 @@ const Team = ({setAuth, isAuth}) => {
             <Fade left>
             <h1>Design and Content Heads</h1>
             <div className="team-container">
-            <TeamCard Name="Ankit Kumar" ProfilePhoto={teamPhotos.designContentHead1} />
-            <TeamCard Name="Ashwani Kumar Sharma" ProfilePhoto={teamPhotos.designContentHead2} />
-            <TeamCard Name="Mansi Pandharpure" ProfilePhoto={teamPhotos.designContentHead3} />
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.designContentHead1} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.designContentHead2} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.designContentHead3} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
             </div>
             </Fade>
 
             <Fade right>
             <h1>Design and Content Executives</h1>
             <div className="team-container">
-            <TeamCard Name="Archit Thakur" ProfilePhoto={teamPhotos.designContentExecutive1} />
-            <TeamCard Name="Avdhesh" ProfilePhoto={teamPhotos.designContentExecutive2} />
-            <TeamCard Name="Jatin Sharma" ProfilePhoto={teamPhotos.designContentExecutive3} />
-            <TeamCard Name="Nitin" ProfilePhoto={teamPhotos.designContentExecutive4} />
-            <TeamCard Name="Parna Malik" ProfilePhoto={teamPhotos.designContentExecutive5} />
-            <TeamCard Name="Saloni Sharma" ProfilePhoto={teamPhotos.designContentExecutive6} />
-            <TeamCard Name="Satyam Chaurasiya" ProfilePhoto={teamPhotos.designContentExecutive7} />
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src="" alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
             </div>
             </Fade>
           </div>
@@ -229,22 +722,74 @@ const Team = ({setAuth, isAuth}) => {
             <Fade left>
             <h1>Publicity Head</h1>
             <div className="team-container">
-            <TeamCard Name="Akhand Pratap Yadav" ProfilePhoto={teamPhotos.publicityHead1} />
-            <TeamCard Name="Anchal Ganguli" ProfilePhoto={teamPhotos.publicityHead2} />
-            <TeamCard Name="Manvi Srivastava" ProfilePhoto={teamPhotos.publicityHead3} />
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.publicityHead1} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.publicityHead2} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
+
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src={teamPhotos.publicityHead3} alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
             </div>
             </Fade>
 
             <Fade right>
             <h1>Publicity Executives</h1>
             <div className="team-container">
-            <TeamCard Name="Anurag Prakash" ProfilePhoto={teamPhotos.publicityExecutive1} style={{objectFit:"contain", transform:"scale(1.5)", top:"40px"}}/>
-            <TeamCard Name="Ayush Kumar" ProfilePhoto={teamPhotos.publicityExecutive2} />
-            <TeamCard Name="Ayush Raj" ProfilePhoto={teamPhotos.publicityExecutive3} />
-            <TeamCard Name="Deepak Yadav" ProfilePhoto={teamPhotos.publicityExecutive4} />
-            <TeamCard Name="Jatin Singh" ProfilePhoto={teamPhotos.publicityExecutive5} style={{objectFit:"contain", transform:"scale(1.5)", top:"40px"}}/>
-            <TeamCard Name="Manvendra Saraswat" ProfilePhoto={teamPhotos.publicityExecutive6} />
-            <TeamCard Name="Shikha Kaloniya" ProfilePhoto={teamPhotos.publicityExecutive7} />
+              <div className="team-card">
+                <div className="team-content">
+                  <div className="imgBx">
+                    <img src="" alt="ProfilePhoto" />
+                  </div>
+                  <div className="contentBx">
+                    <h3>Name</h3>
+                  </div>
+                </div>
+                <ul className="sci">
+                <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
+                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                </ul>
+              </div>
             </div>
             </Fade>
           </div>
@@ -256,4 +801,4 @@ const Team = ({setAuth, isAuth}) => {
   );
 }
 
-export default Team;
+export default media;

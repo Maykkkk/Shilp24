@@ -3,7 +3,7 @@ import '../links/css/home.css'
 import '../links/css/media.css'
 // import demo from '../links/img/Events/3.png'
 
-const media = ({setAuth, isAuth}) => {
+function media() {
   return (
     <div className='App'>
         <div className="body">
