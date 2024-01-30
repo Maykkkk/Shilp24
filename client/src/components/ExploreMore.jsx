@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../links/css/exploreMore.css'
 import event1 from '../links/img/Events/1.png'
 import event2 from '../links/img/Events/2.png'
@@ -9,7 +10,7 @@ function ExploreMore() {
   return (
     <div className='events'>
         <div className="heading">
-        <a href ="#competitions" > Explore More </a> 
+        <a href ="#competitions" > Events </a> 
         </div>
 
         <div className="event-gallery">
@@ -38,6 +39,9 @@ function ExploreMore() {
             </a>
           </div>
         </div>
+        <div className="exploreMore">
+          <Link to="/events">Explore More !</Link>
+          </div>
     </div>
   )
 }

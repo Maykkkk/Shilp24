@@ -49,16 +49,19 @@
     color: white;
     font-size: 2vw;
     font-weight: 500;
-    margin-bottom: 3vw;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 1100px){
     .events .heading a{
-        font-size: 9vw;
+        font-size: 7vw;
+    }
+    .events .exploreMore a{
+        font-size: 3.5vw;
+        margin-bottom: 6vw;
     }
     .events .event a{
-        font-size: 4vw;
-        margin-bottom: 6vw;
+        font-size: 3vw;
     }
     .events .event-gallery{
         margin: 11vw 3vw 0vw 3vw;
@@ -66,8 +69,8 @@
         grid-template-columns: 43vw 43vw;
     }
     .events .event-gallery img{
-        height: 25vw;
-        width: 25vw;
+        height: 20vw;
+        width: 20vw;
     }
 
 }
@@ -75,6 +78,9 @@
 @media screen and (max-width: 775px){
     .events .heading a{
         font-size: 10vw;
+    }
+    .events .exploreMore a{
+        font-size: 8vw;
     }
     .events .event a{
         font-size: 6vw;
@@ -123,6 +129,9 @@
     .events .heading a{
         font-size: 12vw;
     }
+    .events .exploreMore a{
+        font-size: 8vw;
+    }
     .events .event img{
         height: 37vw;
         width: 37vw;
@@ -136,4 +145,18 @@
         margin-bottom: 20vw;
     }
     
+}
+.exploreMore:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.exploreMore a{
+    text-decoration: none;
+    color: white;
+    border: 3px solid rgba(255, 255, 255, 0.462);
+    font-size: 3vw;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: linear-gradient(45deg,rgb(98, 41, 115),rgb(246, 202, 202));
 }
