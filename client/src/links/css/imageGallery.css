@@ -2,12 +2,26 @@
 .imageGallery{
     margin-top: 5vh;
     margin-bottom: 5vh;
+    z-index: 99;
 }
 
 .subtitle{
     color: #9b7fae;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 6vw;
+    font-size: 5vw;
+    position: relative;  
     margin-bottom: 5vh;
+}
+@media screen and (max-width: 600px) {
+    .imageGallery{
+        margin-top: 20vh;
+    }
+    .subtitle{
+        font-size: 9.7vw;
+    }
+    .mySwiper2 img{
+        height: 40vh;
+    }
+    
 }

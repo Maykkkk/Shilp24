@@ -6,17 +6,18 @@ import NavBar from '../components/NavBar';
 
 
 
-function LoginPage() {
+
+const LoginPage = ({ setAuth, isAuth }) => {
     return (
         <div className="App">
-            <div className="body loginPage">
-                <NavBar></NavBar>
+            <div className="body">
+                <NavBar setAuth={setAuth} isAuth={isAuth} />
 
-                <Login className="loginComponent"/>
+                <Login className="loginComponent" setAuth={setAuth} />
 
             </div>
         </div>
-    );   
+    );
 }
 
 export default LoginPage;

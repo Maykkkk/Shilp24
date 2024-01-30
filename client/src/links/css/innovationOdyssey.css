@@ -10,6 +10,7 @@
     margin-top: 10vh;
     border-radius: 50px;
     padding-bottom: 1vw;
+    border-top:4px solid rgba(255, 255, 255, 0.06);
 }
 .innovation-odyssey .heading{
     font-family: 'Inter', sans-serif;
@@ -22,16 +23,17 @@
 .innovation-odyssey .heading span{
     color: rgba(209, 33, 86, 1);
 }
-.innovation-odyssey .description{
+.innovation-odyssey .desc{
     font-size: 1.7vw;
+    color: white;
 }
 
 @media screen and (max-width:800px) {
     .innovation-odyssey .heading{
         font-size: 4.8vw;
     }
-    .innovation-odyssey .description{
-        font-size: 2vw;
+    .innovation-odyssey .desc{
+        font-size: 3.5vw;
     }
 }
 @media screen and (max-width:360px) {
@@ -42,7 +44,7 @@
         margin-top: -12vw;
         display: block;
     }
-    .innovation-odyssey .description{
+    .innovation-odyssey .desc{
         margin-top: 15vw;
         font-size: 4vw;
     }

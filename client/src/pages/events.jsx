@@ -7,21 +7,23 @@ import CivilExpo from '../components/CivilExpo';
 import ClashCarnival from '../components/ClashCarnival';
 import Footer from '../components/Footer';
 import Fade from 'react-reveal/Fade';
-function events() {
+
+
+const events = ({ setAuth, isAuth }) => {
   return (
     <div className="App">
-        <div className="body">
-          <NavBar></NavBar>
-          <InnovationOdyssey/>
-          <div className="Container">
-            <TechShowcase></TechShowcase>
-            <CivilExpo></CivilExpo>
-          </div>
-          <ClashCarnival></ClashCarnival>
-          <Fade bottom>
-          <Footer></Footer>
-          </Fade>
+      <div className="body events-body">
+        <NavBar setAuth={setAuth} isAuth={isAuth} />
+        <InnovationOdyssey />
+        <div className="Container">
+          <TechShowcase></TechShowcase>
+          <CivilExpo></CivilExpo>
         </div>
+        <ClashCarnival></ClashCarnival>
+        <Fade bottom>
+          <Footer></Footer>
+        </Fade>
+      </div>
     </div>
   )
 }

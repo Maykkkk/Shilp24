@@ -4,11 +4,13 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import InnovationInStyle from '../components/innovationInStyle';
 import Merch from '../components/Store/Mercahndise';
-function Store() {
+
+
+const Store = ({setAuth, isAuth}) => {
   return (
     <div className="App">
-        <div className="body">
-          <NavBar></NavBar>
+        <div className="body"><NavBar setAuth={setAuth} isAuth={isAuth} />
+
           
           <div className="Container">
           <InnovationInStyle/>
