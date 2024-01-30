@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+*{
+    -ms-overflow-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #d800d2;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.body{
+    position: relative;
+    background-color: #271e29;
+    overflow-x: hidden;
+    
+}
+
+.container{
+    background-color: #271e29;
+    width: 100%
+}
+@media screen and (min-width: 600px) {
+    .container{
+        height: 100vh;
+    }
+}
+
+#title{
+    /* padding: auto; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+#title h1{
+    font-size: 18vh;
+    font-weight: 700;
+}
+#title h2{
+    font-size: 6vh;
+    font-weight: 600;
+}
+
+.primary{
+    background: linear-gradient(45deg,#d800d2,rgb(66, 3, 154),#d800d2,rgb(66, 3, 154),#d800d2,white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container-about-events-footer{
+    height: 250vh;
+    width: 100%;
+    background-image: url(../img/Technec\ BGtechnex_bg.png);
+    background-size: 100% 75%;
+    background-repeat: no-repeat;
+    background-position-y:40vh ;
+    position: relative;
+}
+@media screen and (max-width: 500px) {
+    .container-about-events-footer{
+        background-size: 222%;
+        background-position-y:18vh;
+        background-position-x: -20vw;
+        background-image: url(../img/Technec\ BGtechnex_bg.png);
+    } 
+    #title h1{
+        font-size: 22vw;
+        font-weight: 700;
+    }
+    #title h2{
+        font-size: 7vw;
+        font-weight: 600;
+    }
+    .container:first-of-type{
+        height: 30vh;
+    }
+    #home{
+        height: 70vh;
+    }
+}
+
+#home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.Bottom{
+    position: relative;
+}
