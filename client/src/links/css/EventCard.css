@@ -25,12 +25,13 @@
     background-image: url(https://media.contentapi.ea.com/content/dam/eacom/images/2020/09/ea-featured-image-ea-desktop-beta.jpg.adapt.crop191x100.1200w.jpg);
     background-size: cover;
     padding: 10rem 0 0;
-    max-width: 35ch;
+    width: 25vw;
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 500ms ease;
     
   }
+
   
   .card:hover,
   .card:focus-within {
@@ -111,6 +112,7 @@
     background-color: var(--clr-accent-400);
     padding: 0.5em 1.25em;
     border-radius: 0.25rem;
+    margin: 1vw;
   }
   
   .button:hover,
@@ -134,3 +136,15 @@
     }
   }
   
+
+  @media screen and (max-width:950px){
+    .card{
+      width:40vw;
+    }
+  }
+
+  @media screen and (max-width:680px){
+    .card{
+      width:80vw;
+    }
+  }

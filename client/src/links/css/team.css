@@ -42,6 +42,7 @@
     width: 85%;
     margin: auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -140,11 +141,6 @@
     min-height: 100vh;
 }
 
-#coConveyners,#eventAdvisor,#publicityAdvisor{
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
 .sci .linkedIn:hover{
     color: #0077b5;
     transform: scale(1.2);
@@ -159,8 +155,8 @@
     border-radius: 15px 15px 15px 15px;
     transform: scale(1.2);
 }
-.sci .facebook:hover{
-    color: 	#1877F2;
+.sci .gmail:hover{
+    color: 	red;
     transform: scale(1.2);
 }
 

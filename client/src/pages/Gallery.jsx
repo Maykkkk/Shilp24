@@ -1,0 +1,77 @@
+import '../links/css/home.css';
+import '../links/css/gallery.css';
+import NavBar from '../components/NavBar';
+import image1 from '../links/img/galleryPhoto/1.jpg'
+import image2 from '../links/img/galleryPhoto/2.jpg'
+import image3 from '../links/img/galleryPhoto/3.jpg'
+import image4 from '../links/img/galleryPhoto/4.jpg'
+import Footer from '../components/Footer';
+
+
+function Gallery() {
+    return (
+        <div className="App">
+            <div className="body gallery-body">
+                <NavBar />
+                
+                <div className="gallerycontain">
+                    <div className='imgGallery'>
+                        <div>
+                        <img  className='galimg'src={image1}/>
+                        </div>
+
+                        <div>
+                        <img  className='galimg'src={image2}/>
+                        </div>
+                        <div>
+                        <img className='galimg' src={image3}/>
+                        </div>
+
+                        <div>
+                        <img  className='galimg'src={image4}/>
+                        </div>
+                        <div>
+                        <img  className='galimg'src={image2}/>
+                        </div>
+
+                        <div>
+                        <img  className='galimg'src={image3}/>
+                        </div>
+                        <div>
+                        <img  className='galimg'src={image4}/>
+                        </div>
+
+                        <div>
+                        <img  className='galimg'src={image1}/>
+                        </div>
+
+                        <div>
+                        <img className='galimg' src={image2}/>
+                        </div>
+                        <div>
+                        <img  className='galimg'src={image3}/>
+                        </div>
+
+                        <div>
+                        <img  className='galimg'src={image4}/>
+                        </div><div>
+                        <img  className='galimg'src={image1}/>
+                        </div>
+                        
+
+                        <div>
+                        <img  className='galimg'src={image1}/>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                
+                    <Footer/>
+                
+            </div>
+        </div>
+    )
+}
+
+export default Gallery

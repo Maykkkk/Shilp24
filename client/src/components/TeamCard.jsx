@@ -1,10 +1,11 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 import { useMotionValue, useTransform, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 
-function TeamCard({Name, ProfilePhoto, style,LinkedIn, Facebook, Instagram}) {
+function TeamCard({Name, ProfilePhoto, style, LinkedIn, Gmail, Instagram}) {
 
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -28,9 +29,9 @@ function TeamCard({Name, ProfilePhoto, style,LinkedIn, Facebook, Instagram}) {
                     </div>
                   </div>
                   <ul className="sci">
-                  <li><Link to=""><FaLinkedin className="linkedIn" /></Link></li>
-                    <li><Link to=""><FaFacebook className="facebook" /></Link></li>
-                    <li><Link to=""><FaInstagram className="instagram" /></Link></li>
+                  <li><Link to={LinkedIn}><FaLinkedin className="linkedIn" /></Link></li>
+                    <li><Link to={Gmail}><BiLogoGmail className='gmail'/></Link></li>
+                    <li><Link to={Instagram}><FaInstagram className="instagram" /></Link></li>
                   </ul>
                 </motion.div>
   )

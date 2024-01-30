@@ -13,6 +13,9 @@ function EventCard(props) {
                 <Link to=""  className="button">
                     Learn More
                 </Link>
+                <Link to=""  className="button">
+                    Register
+                </Link>
             </div>
         </div >
     )

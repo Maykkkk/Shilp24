@@ -175,6 +175,7 @@ transition: 0.3s;
 }
 
 @media screen and (max-width: 1153px) {
+    
     .loginContainer .content{
         display: none;
     }
@@ -189,7 +190,6 @@ transition: 0.3s;
         top: 0;left: 0;
         transform: translateX(0) translateY(0) translateZ(100px) rotateX(0deg) rotateY(0deg) !important;
         height: 70vh;
-        width: 50%;
         display: block;
         margin:auto;
         font-size: 2.9vh;
