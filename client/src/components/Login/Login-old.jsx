@@ -6,36 +6,49 @@ import { IoLogoYoutube } from "react-icons/io5";
 import Alert from '@mui/material/Alert';
 import "../../links/css/login.css"
 import shilp from "../../links/img/SHILP.png"
+import { Link, useNavigate } from "react-router-dom";
 import { useMotionValue, useTransform, motion } from "framer-motion";
 
-import { signInWithPopup } from 'firebase/auth';
-import { auth, provider } from '../../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase';
 
 
 const Login = ({ setAuth }) => {
+    const navigate = useNavigate();
+
+
     const x = useMotionValue(-542);
     const y = useMotionValue(-285);
     const rotateX = useTransform(y, [-338, -138], [20, -20]);
     const rotateY = useTransform(x, [-642, -442], [-20, 20]);
 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [FailureMessage, setFailureMessage] = useState("");
     const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
     const onFormSubmit = async e => {
         e.preventDefault();
         try {
-            setSubmitButtonDisabled(true)
-            signInWithPopup(auth, provider)
-                .then((data) => {
-                    console.log(data)
-                    localStorage.setItem("displayName", data.user.displayName);
-                    localStorage.setItem("photoURL", data.user.photoURL);
-                    localStorage.setItem("UID", data.user.uid);
-                }
-                ).catch((error) => {
-                    setFailureMessage(error.message);
-                })
+            if (!email || !password) {
+                setFailureMessage("Missing Credentials");
+                return;
+            }
+            setFailureMessage("")
 
+            setSubmitButtonDisabled(true)
+            signInWithEmailAndPassword(auth, email, password)
+                .then(async (res) => {
+                    // const user = res.user;
+                    setAuth(true)
+                    navigate("/")
+                }).catch((err) => {
+                    if (err.message === "Firebase: Error (auth/invalid-credential).") {
+                        setFailureMessage("Incorrect Email or Password");
+                    } else {
+                        setFailureMessage(err.message)
+                    }
+                });
         } catch (error) {
             console.error(error.message);
         }
@@ -73,14 +86,30 @@ const Login = ({ setAuth }) => {
                         <div className="form-box">
                             <form className='form' onSubmit={onFormSubmit}>
                                 <h2>Sign In</h2>
+                                <div className="input-box">
+                                    <div className="input mt-2">
+                                        <span><i className='bx bxs-envelope'></i></span>
+                                        <input type="email" name='email' className='form-submit' placeholder='Email Id' onChange={e => setEmail(e.target.value)} />
+                                        <label htmlFor="email">Email</label>
+                                    </div>
+                                    <div className="input mt-2">
+                                        <span><i className='bx bxs-lock-alt'></i></span>
+                                        <input type="password" name="password" className='form-submit' placeholder='Password' onChange={e => setPassword(e.target.value)} />
+                                        <label htmlFor="password">Password</label>
+                                    </div>
+                                </div>
+
                                 <div className="input mt-2">
-                                    <input type="submit" className='btn btn-success' value="Submit" disabled={submitButtonDisabled} />
+                                    <input type="submit" className='btn btn-success' value="Submit" />
                                 </div>
                                 {FailureMessage ?
                                     <Alert severity="error" className='mt-2'>{FailureMessage}</Alert>
                                     :
                                     <></>
                                 }
+                                <div className="log-to-register">
+                                    <p>Don't have an account? <Link to="/register" className='register-link'>Register here!</Link></p>
+                                </div>
                             </form>
                         </div>
                     </div>

@@ -7,7 +7,9 @@ const NavBar = ({ isAuth, setAuth }) => {
 
     const onLogout = e => {
         e.preventDefault();
-        localStorage.removeItem('token');
+        localStorage.removeItem("displayName");
+        localStorage.removeItem("photoURL");
+        localStorage.removeItem("UID");
         setAuth(false);
 
     }
@@ -53,17 +55,12 @@ const NavBar = ({ isAuth, setAuth }) => {
                             <Link className="nav-link" to='/gallery'>Gallery</Link>
                         </li>
 
-                        {!isAuth ? <>
-                            <li className="nav-item px-2 mx-2">
-                                <Link className="nav-link" to='/login'>Login</Link>
-                            </li>
-                            <li className="nav-item px-2 mx-2">
-                                <Link className="nav-link" to='/register'>Register</Link>
-                            </li>
-                        </> :
+                        {isAuth ? <>
                             <li className="nav-item px-2 mx-2">
                                 <button className="nav-link" to='/register' onClick={e => { onLogout(e) }}>Logout</button>
                             </li>
+                            <img src={localStorage.getItem("photoURL")} alt="Profile Pic" className="ProfilePic" />
+                        </> : <></>
                         }
                     </ul>
                 </div>

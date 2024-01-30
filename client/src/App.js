@@ -32,16 +32,147 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Home setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/events" element={<Events setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/competitions" element={<Competitions setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/guests" element={<Guests setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/contacts" element={<Contacts setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/store" element={<Store setAuth={setIsAuthenticated} isAuth={isAuthenticated} />} />
-        <Route exact path="/accommodations" element={<Accommodation setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
-        <Route exact path="/team" element={<Team setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
-        <Route exact path="/media" element={<Media setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
-        <Route exact path="/gallery" element={<Gallery setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
+        <Route
+          exact
+          path="/"
+          element={
+            isAuthenticated ? (
+              <Home
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+
+        <Route
+          exact
+          path="/events"
+          element={
+            isAuthenticated ? (
+              <Events
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/competitions"
+          element={
+            isAuthenticated ? (
+              <Competitions
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/guests"
+          element={
+            isAuthenticated ? (
+              <Guests
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/contacts"
+          element={
+            isAuthenticated ? (
+              <Contacts
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/store"
+          element={
+            isAuthenticated ? (
+              <Store
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/accommodations"
+          element={
+            isAuthenticated ? (
+              <Accommodation
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        ></Route>
+        <Route
+          exact
+          path="/team"
+          element={
+            isAuthenticated ? (
+              <Team
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        ></Route>
+        <Route
+          exact
+          path="/media"
+          element={
+            isAuthenticated ? (
+              <Media
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        ></Route>
+        <Route
+          exact
+          path="/gallery"
+          element={
+            isAuthenticated ? (
+              <Gallery
+                setAuth={setIsAuthenticated}
+                isAuth={isAuthenticated}
+              />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        ></Route>
 
         {/* Auth */}
         <Route

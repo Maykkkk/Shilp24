@@ -13,62 +13,62 @@ function Gallery() {
         <div className="App">
             <div className="body gallery-body">
                 <NavBar />
-                
+
                 <div className="gallerycontain">
                     <div className='imgGallery'>
                         <div>
-                        <img  className='galimg'src={image1}/>
+                            <img className='galimg' src={image1} alt='' />
                         </div>
 
                         <div>
-                        <img  className='galimg'src={image2}/>
+                            <img className='galimg' src={image2} alt='' />
                         </div>
                         <div>
-                        <img className='galimg' src={image3}/>
-                        </div>
-
-                        <div>
-                        <img  className='galimg'src={image4}/>
-                        </div>
-                        <div>
-                        <img  className='galimg'src={image2}/>
+                            <img className='galimg' src={image3} alt='' />
                         </div>
 
                         <div>
-                        <img  className='galimg'src={image3}/>
+                            <img className='galimg' src={image4} alt='' />
                         </div>
                         <div>
-                        <img  className='galimg'src={image4}/>
-                        </div>
-
-                        <div>
-                        <img  className='galimg'src={image1}/>
+                            <img className='galimg' src={image2} alt='' />
                         </div>
 
                         <div>
-                        <img className='galimg' src={image2}/>
+                            <img className='galimg' src={image3} alt='' />
                         </div>
                         <div>
-                        <img  className='galimg'src={image3}/>
+                            <img className='galimg' src={image4} alt='' />
                         </div>
 
                         <div>
-                        <img  className='galimg'src={image4}/>
+                            <img className='galimg' src={image1} alt='' />
+                        </div>
+
+                        <div>
+                            <img className='galimg' src={image2} alt='' />
+                        </div>
+                        <div>
+                            <img className='galimg' src={image3} alt='' />
+                        </div>
+
+                        <div>
+                            <img className='galimg' src={image4} alt='' />
                         </div><div>
-                        <img  className='galimg'src={image1}/>
+                            <img className='galimg' src={image1} alt='' />
                         </div>
-                        
+
 
                         <div>
-                        <img  className='galimg'src={image1}/>
+                            <img className='galimg' src={image1} alt='' />
                         </div>
 
-                        
+
                     </div>
                 </div>
-                
-                    <Footer/>
-                
+
+                <Footer />
+
             </div>
         </div>
     )
