@@ -20,6 +20,9 @@ const Team = ({setAuth, isAuth}) => {
             <h1>Meet our Team</h1>
           </header>
           </Fade>
+
+          {/* Conveynors */}
+          
           <div className="team-title" id="conveynor">
             <Fade left>
             <h1>Conveynor</h1>
@@ -32,18 +35,17 @@ const Team = ({setAuth, isAuth}) => {
             </Fade>
           </div>
 
-          {/* Conveynors */}
-          <div className="team-title" id="coConveyners">
+          <div className="team-title" id="coConveynor">
             {/* Co-Conveynor */}
-            <div>
-              <Fade right>
-              <h1>Co-Conveynors</h1>
-              <div className="team-container">
-                <TeamCard Name="Kanhaiya Kumar" ProfilePhoto={teamPhotos.coConveynor1} />
-                <TeamCard Name="Nandini" ProfilePhoto={teamPhotos.coConveynor2} />
-              </div>
-              </Fade>
+            <Fade left>
+            <h1>Co-Conveynor</h1>
+            </Fade>
+            <Fade right>
+            <div className="team-container">
+              <TeamCard Name="Kanhaiya Kumar" ProfilePhoto={teamPhotos.coConveynor1} />
+              <TeamCard Name="Nandini Bhimsaria" ProfilePhoto={teamPhotos.coConveynor2} />
             </div>
+            </Fade>
           </div>
 
           {/* Tech Advisors */}

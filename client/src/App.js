@@ -12,6 +12,7 @@ import Team from "./pages/team";
 import Media from "./pages/media";
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";
+import Gallery from "./pages/Gallery";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { auth } from "./firebase";
 
@@ -40,6 +41,7 @@ function App() {
         <Route exact path="/accommodations" element={<Accommodation setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
         <Route exact path="/team" element={<Team setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
         <Route exact path="/media" element={<Media setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
+        <Route exact path="/gallery" element={<Gallery setAuth={setIsAuthenticated} isAuth={isAuthenticated} />}></Route>
 
         {/* Auth */}
         <Route

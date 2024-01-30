@@ -18,7 +18,7 @@ const Register = ({ setAuth }) => {
     const navigate = useNavigate();
 
     const x = useMotionValue(-542);
-    const y = useMotionValue(-298);
+    const y = useMotionValue(-285);
     const rotateX = useTransform(y, [-338, -138], [20, -20]);
     const rotateY = useTransform(x, [-642, -442], [-20, 20]);
 
@@ -71,7 +71,7 @@ const Register = ({ setAuth }) => {
                     style={window.innerWidth >= 1000 ? { x, y, rotateX, rotateY, z: 100 } : {}}
                     drag={true}
                     dragElastic={0.18}
-                    dragConstraints={{ top: -238, left: -541, right: -541, bottom: -238 }}
+                    dragConstraints={{ top: -285, left: -541, right: -541, bottom: -285 }}
                     whileTap={{ cursor: "grabbing" }}
                 >
                     <div className="content">

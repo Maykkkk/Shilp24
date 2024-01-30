@@ -51,15 +51,15 @@
     height: 250vh;
     width: 100%;
     background-image: url(../img/Technec\ BGtechnex_bg.png);
-    background-size: 100% 75%;
+    background-size: 100% 45%;
     background-repeat: no-repeat;
-    background-position-y:40vh ;
+    background-position-y:0vh ;
     position: relative;
 }
 @media screen and (max-width: 500px) {
     .container-about-events-footer{
-        background-size: 222%;
-        background-position-y:18vh;
+        background-size: 200% 50%;
+        background-position-y:0vh;
         background-position-x: -20vw;
         background-image: url(../img/Technec\ BGtechnex_bg.png);
     } 

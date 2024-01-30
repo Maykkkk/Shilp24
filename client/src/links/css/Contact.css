@@ -1,5 +1,6 @@
 #contact{
     background-image: url(../img/Clubs.png);
+    height: 100vh;
 }
 
 .top{
@@ -87,15 +88,17 @@
 }
 
 .Contacts{
-    margin-bottom: 18vw;
+    margin-bottom: 10vw;
 }
 #mobile-email{
     display: none;
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 620px){
     .details{
-        margin-left: 2vw;margin-right: 2vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-bottom: 3vw;
     }
     .Contacts{
         width: 100%;
