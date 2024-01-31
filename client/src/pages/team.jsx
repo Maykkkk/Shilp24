@@ -7,12 +7,12 @@ import Fade from "react-reveal/Fade";
 import teamPhotos from "./teamPhotos";
 import TeamCard from "../components/TeamCard";
 
-const Team = ({ AllAuth }) => {
+const Team = ({ setAuth, isAuth }) => {
 
   return (
     <div className="App">
       <div className="body">
-        <NavBar AllAuth={AllAuth} />
+        <NavBar setAuth={setAuth} isAuth={isAuth} />
 
         <div className="shilp-team">
           <Fade top>

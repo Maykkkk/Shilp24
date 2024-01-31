@@ -8,11 +8,11 @@ import image4 from '../links/img/galleryPhoto/4.jpg'
 import Footer from '../components/Footer';
 
 
-function Gallery({ AllAuth }) {
+function Gallery() {
     return (
         <div className="App">
             <div className="body gallery-body">
-                <NavBar AllAuth={AllAuth} />
+                <NavBar />
 
                 <div className="gallerycontain">
                     <div className='imgGallery'>

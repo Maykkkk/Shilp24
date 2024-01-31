@@ -7,12 +7,12 @@ import Footer from '../components/Footer'
 import { MdEmail } from "react-icons/md";
 import Fade from 'react-reveal/Fade';
 
-const contacts = ({ AllAuth }) => {
+const contacts = ({ setAuth, isAuth }) => {
   return (
     <div className='App'>
       <div className='body' id='contact'>
         <div>
-          <NavBar AllAuth={AllAuth} />
+          <NavBar setAuth={setAuth} isAuth={isAuth} />
         </div>
         <Fade top>
           <div className='top'>Contact Us</div>
