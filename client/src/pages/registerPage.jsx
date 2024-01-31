@@ -9,16 +9,16 @@ import NavBar from '../components/NavBar';
 
 
 
-const RegisterPage = ({setAuth, isAuth}) => {
+const RegisterPage = ({ AllAuth }) => {
     return (
         <div className="App">
             <div className="body">
-                <NavBar setAuth={setAuth} isAuth={isAuth} />
+                <NavBar AllAuth={AllAuth} />
 
-                <Register setAuth={setAuth}/>
+                <Register AllAuth={AllAuth} />
             </div>
         </div>
-    );   
+    );
 }
 
 export default RegisterPage;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const guests = ({setAuth, isAuth}) => {
+const guests = ({ AllAuth }) => {
   return (
     <div>guests</div>
   )

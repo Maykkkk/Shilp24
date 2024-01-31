@@ -7,13 +7,13 @@ import NavBar from '../components/NavBar';
 
 
 
-const LoginPage = ({ setAuth, isAuth }) => {
+const LoginPage = ({ AllAuth }) => {
     return (
         <div className="App">
             <div className="body">
-                <NavBar setAuth={setAuth} isAuth={isAuth} />
+                <NavBar AllAuth={AllAuth} />
 
-                <Login className="loginComponent" setAuth={setAuth} />
+                <Login className="loginComponent" AllAuth={AllAuth} />
 
             </div>
         </div>
