@@ -1,0 +1,23 @@
+/* .pdf-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.pdf-div{
+    position: absolute;
+    border: 10px solid black;
+    top: 5%;left: 50%;
+    transform: translate(-50%,-10%);
+    height: 90vh;
+    z-index:9;
+    overflow-y: scroll;
+    margin-top: 50px;
+}
+.pdf-div::-webkit-scrollbar {
+    width: 60px;
+}
+.canvas.react-pdf__Page__canvas{
+    margin-bottom: 50px;
+    border: 1px solid black;
+} */

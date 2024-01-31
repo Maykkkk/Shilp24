@@ -1,0 +1,10 @@
+.Container{
+    height: 100%;width: 100%;
+    padding-top: 6vw;
+}
+.events-body{
+    background-image: url(../img/Clubs\ \(1\).png);
+    background-position-y: 20vh;
+    background-size: 300% 100%;
+    background-repeat: no-repeat;
+}

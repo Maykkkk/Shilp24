@@ -1,0 +1,29 @@
+#competition{
+    background-image: url(../img/Clubs.png);
+    color: red;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3vw; /* Adjust as needed */
+    margin: 10vw;
+}
+
+@media screen and (max-width:950px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4vw; /* Adjust as needed */
+        margin: 10vw;
+    }
+}
+
+@media screen and (max-width:680px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5vw; /* Adjust as needed */
+        margin: 10vw;
+    }
+}

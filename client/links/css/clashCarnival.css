@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,700&display=swap');
+
+
+.clashCarnival{
+    height: 100%;
+    width: 100%;
+    padding: 20vh 5vw 10vh 5vw;
+    margin-bottom: 3vw;
+}
+.main{
+    min-height: 100vh;
+    max-height: 100%;
+    padding-bottom: 50px;
+    background: linear-gradient(251.9deg, rgba(76, 18, 77, 0.65) -6.07%, rgba(13, 4, 27, 0.65) 47.04%, rgba(70, 18, 72, 0.65) 86.81%);
+    border-radius: 50px;
+    border-top:4px solid rgba(255, 255, 255, 0.06);
+}
+.heading{
+    color: #D12156;
+    font-size: 7.7vw;
+    font-weight: 700;
+    line-height: 11vw;
+    font-family: 'Poppins', sans-serif;
+}
+.clashCarnival .carnival-gallery{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .carnival-gallery{
+        margin-top: 6vw;
+    }  
+}
+@media screen and (max-width:525px){
+    .carnival-gallery{
+        display: grid;
+        grid-template-rows: 43vh 43vh;
+        grid-template-columns:55vw 45vw;
+        align-items: center;
+    }
+}
+@media screen and (max-width:360px){
+    .clashCarnival{
+        margin-top: 10vw;
+    }
+    .clashCarnival .main{
+        height: 100%;
+    }
+    .carnival-gallery{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
