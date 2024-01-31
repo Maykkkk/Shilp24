@@ -1,8 +1,11 @@
 import React from 'react'
+import EmptyNote from '../components/EmptyNote'
 
 const guests = ({ AllAuth }) => {
   return (
-    <div>guests</div>
+    <div>
+      <EmptyNote/>
+    </div>
   )
 }
 

@@ -10,7 +10,7 @@ function Shilp() {
                 <img src={shilp_logo}  alt=""/>
             </div>
             <div className="description">
-                Shilp, the annual fest by the Civil Engineering Society, is a dynamic celebration of creativity and innovation in the field. Serving as a pivotal platform, Shilp fosters collaboration, promotes innovation, and values inclusivity. Beyond a mere event, Shilp's significance lies in its commitment to inspiring a culture of learning, pushing boundaries, and preparing participants for the professional world. With a focus on both technical and soft skills, Shilp stands as a vibrant testament to the values that drive the civil engineering community forward, shaping the next generation of engineers to embrace challenges and contribute meaningfully to the field.
+            Shilp, the annual fest by the Civil Engineering Society, is a dynamic celebration promoting creativity, innovation, and inclusivity. It serves as a platform for learning, collaboration, and professional preparation, emphasizing both technical and soft skills. Shilp reflects the values propelling the civil engineering community forward, shaping the next generation to embrace challenges and contribute meaningfully to the field.
             </div>
         </div>
 

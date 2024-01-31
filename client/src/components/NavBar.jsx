@@ -78,7 +78,7 @@ const NavBar = ({ AllAuth }) => {
 										? " active"
 										: "")
 								}
-								to="https://www.youtube.com/watch?v=xvFZjo5PgG0"
+								to="guests"
 							>
 								Guests
 							</Link>
@@ -156,7 +156,7 @@ const NavBar = ({ AllAuth }) => {
 										? " active"
 										: "")
 								}
-								to="https://www.youtube.com/watch?v=xvFZjo5PgG0"
+								to="/media"
 							>
 								Media
 							</Link>

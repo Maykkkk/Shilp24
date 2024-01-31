@@ -3,8 +3,10 @@
     margin-top: 5vh;
     margin-bottom: 5vh;
     z-index: 99;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
 .subtitle{
     color: #9b7fae;
     font-family: 'Montserrat', sans-serif;
