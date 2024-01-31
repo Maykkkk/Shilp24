@@ -15,24 +15,24 @@ function CivilExpo() {
 
                 {/* Event-1 */}
                 <Fade left>
-                <EventCard className="eventCard"/>
+                <EventCard name="BUILD VISION EXPO" className="eventCard"/>
                 </Fade>
 
                 {/* Event-2 */}
                 <Fade right>
-                <EventCard className="eventCard"/>
+                <EventCard name="InsightRise Symposium" className="eventCard"/>
                 </Fade>
               </div>
               <div className="expo-gallery-row2">
 
                 {/* Event -3 */}
                 <Fade left>
-                <EventCard className="eventCard"/>
+                <EventCard name="BUILD VISION EXPO" className="eventCard"/>
                 </Fade>
 
                 {/* Event -4 */}
                 <Fade right>
-                <EventCard className="eventCard"/>
+                <EventCard name="3 Minute Thesis" className="eventCard"/>
                 </Fade>
               </div>
         </div>

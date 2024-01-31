@@ -14,17 +14,17 @@ function ClashCarnival() {
             <div className="carnival-gallery">
                 {/* Event-1 */}
                 <Fade left>
-                <EventCard className="eventCard"/>
+                <EventCard name = "Case Clash" className="eventCard"/>
                 </Fade>
 
                 {/* Event-2 */}
                 <Fade bottom>
-                <EventCard className="eventCard"/>
+                <EventCard name="Surveyor's Hunt" className="eventCard"/>
                 </Fade>
 
                 {/* Event -3 */}
                 <Fade right>
-                <EventCard className="eventCard"/>
+                <EventCard name="Feast For Brains" className="eventCard"/>
                 </Fade>
 
             </div>

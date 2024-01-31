@@ -1,8 +1,16 @@
 import React from "react";
 import "../links/css/EventCard.css";
 import { Link } from "react-router-dom";
+// import { pdfjs } from 'react-pdf';
+import '../links/css/pdf.css'
+
+// pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+//     'pdfjs-dist/build/pdf.worker.min.js',
+//     import.meta.url,
+//   ).toString();
 
 function EventCard(props) {
+    
     return (
         <div className="card" >
             <div className="card-content">
@@ -10,8 +18,8 @@ function EventCard(props) {
                 <p className="card-body">
                     {props.details}
                 </p>
-                <Link to=""  className="button">
-                    Learn More
+                <Link target="_blank" to={`/pdfs/${props.name}.pdf`}  className="button">
+                    Explore
                 </Link>
                 <Link to=""  className="button">
                     Register

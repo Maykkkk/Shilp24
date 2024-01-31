@@ -1,131 +1,92 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
-import Alert from "@mui/material/Alert";
-import "../../links/css/login.css";
-import shilp from "../../links/img/SHILP.png";
+import Alert from '@mui/material/Alert';
+import "../../links/css/login.css"
+import shilp from "../../links/img/SHILP.png"
 import { useMotionValue, useTransform, motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
-import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "../../firebase";
+import { signInWithPopup } from 'firebase/auth';
+import { auth, provider } from '../../firebase';
 
-const Login = ({ AllAuth }) => {
-	const setAuth = AllAuth.setAuth;
-	const navigate = useNavigate();
-	const x = useMotionValue(-542);
-	const y = useMotionValue(-285);
-	const rotateX = useTransform(y, [-338, -138], [20, -20]);
-	const rotateY = useTransform(x, [-642, -442], [-20, 20]);
 
-	const [FailureMessage, setFailureMessage] = useState("");
-	const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+const Login = ({ setAuth }) => {
+    const x = useMotionValue(-542);
+    const y = useMotionValue(-285);
+    const rotateX = useTransform(y, [-338, -138], [20, -20]);
+    const rotateY = useTransform(x, [-642, -442], [-20, 20]);
 
-	const onFormSubmit = async (e) => {
-		e.preventDefault();
-		try {
-			setSubmitButtonDisabled(true);
-			signInWithPopup(auth, provider)
-				.then((data) => {
-					setAuth(true);
-					localStorage.setItem("displayName", data.user.displayName);
-					localStorage.setItem("email", data.user.email);
-					localStorage.setItem("photoURL", data.user.photoURL);
-					localStorage.setItem("UID", data.user.uid);
-					navigate("../");
-				})
-				.catch((error) => {
-					setFailureMessage(error.message);
-				});
-		} catch (error) {
-			console.error(error.message);
-		}
-		setSubmitButtonDisabled(false);
-	};
+    const [FailureMessage, setFailureMessage] = useState("");
+    const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-	return (
-		<>
-			<div className="background" style={{ perspective: 2000 }}>
-				<motion.div
-					style={
-						window.innerWidth >= 1000
-							? { x, y, rotateX, rotateY, z: 100 }
-							: {}
-					}
-					drag={true}
-					dragElastic={0.18}
-					dragConstraints={{
-						top: -285,
-						left: -542,
-						right: -542,
-						bottom: -285,
-					}}
-					whileTap={{ cursor: "grabbing" }}
-					className="loginContainer"
-				>
-					<div className="content">
-						<img src={shilp} alt="" />
-						<div className="text-sci">
-							<h2>
-								Welcome! <br />
-								<span>
-									To the <span>Shilp</span> Website
-								</span>
-							</h2>
+    const onFormSubmit = async e => {
+        e.preventDefault();
+        try {
+            setSubmitButtonDisabled(true)
+            signInWithPopup(auth, provider)
+                .then((data) => {
+                    console.log(data)
+                    localStorage.setItem("displayName", data.user.displayName);
+                    localStorage.setItem("photoURL", data.user.photoURL);
+                    localStorage.setItem("UID", data.user.uid);
+                }
+                ).catch((error) => {
+                    setFailureMessage(error.message);
+                })
 
-							<div className="social-icons">
-								<a href="https://www.linkedin.com/company/civil-engineering-society-iit-bhu/">
-									<FaLinkedin className="linkedIn" />
-								</a>
-								<a href="https://www.instagram.com/ces_iitbhu/">
-									<FaInstagram
-										className="instagram"
-										style={{ margin: "0 0 0 1vw" }}
-									/>
-								</a>
-								<a href="https://www.facebook.com/groups/157760987681133/">
-									<FaSquareFacebook
-										className="facebook"
-										style={{ margin: "0 0 0 1vw" }}
-									/>
-								</a>
-								<a href="https://www.youtube.com">
-									<IoLogoYoutube
-										className="youtube"
-										style={{ margin: "0 0 0 1vw" }}
-									/>
-								</a>
-							</div>
-						</div>
-					</div>
+        } catch (error) {
+            console.error(error.message);
+        }
+        setSubmitButtonDisabled(false)
+    }
 
-					<div className="login">
-						<div className="form-box">
-							<form className="form" onSubmit={onFormSubmit}>
-								<h2>Sign In</h2>
-								<div className="input mt-2">
-									<input
-										type="submit"
-										className="btn btn-success"
-										value="Submit"
-										disabled={submitButtonDisabled}
-									/>
-								</div>
-								{FailureMessage ? (
-									<Alert severity="error" className="mt-2">
-										{FailureMessage}
-									</Alert>
-								) : (
-									<></>
-								)}
-							</form>
-						</div>
-					</div>
-				</motion.div>
-			</div>
-		</>
-	);
-};
+
+    return (
+        <>
+            <div className="background" style={{ perspective: 2000 }}>
+                <motion.div
+                    style={window.innerWidth >= 1000 ? { x, y, rotateX, rotateY, z: 100 } : {}}
+                    drag={true}
+                    dragElastic={0.18}
+                    dragConstraints={{ top: -285, left: -542, right: -542, bottom: -285 }}
+                    whileTap={{ cursor: "grabbing" }}
+                    className="loginContainer">
+                    <div className="content">
+                        <img src={shilp} alt="" />
+                        <div className="text-sci">
+                            <h2>Welcome! <br /><span>To the <span>Shilp</span> Website</span></h2>
+
+
+                            <div className="social-icons">
+                                <a href="https://www.linkedin.com/company/civil-engineering-society-iit-bhu/"><FaLinkedin className='linkedIn' /></a>
+                                <a href="https://www.instagram.com/ces_iitbhu/"><FaInstagram className='instagram' style={{ margin: "0 0 0 1vw" }} /></a>
+                                <a href="https://www.facebook.com/groups/157760987681133/"><FaSquareFacebook className='facebook' style={{ margin: "0 0 0 1vw" }} /></a>
+                                <a href="https://www.youtube.com"><IoLogoYoutube className='youtube' style={{ margin: "0 0 0 1vw" }} /></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className='login'>
+                        <div className="form-box">
+                            <form className='form' onSubmit={onFormSubmit}>
+                                <h2>Sign In</h2>
+                                <div className="input mt-2">
+                                    <input type="submit" className='btn btn-success' value="Submit" disabled={submitButtonDisabled} />
+                                </div>
+                                {FailureMessage ?
+                                    <Alert severity="error" className='mt-2'>{FailureMessage}</Alert>
+                                    :
+                                    <></>
+                                }
+                            </form>
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
+        </>
+    );
+}
 export default Login;
