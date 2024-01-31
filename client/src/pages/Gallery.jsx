@@ -1,10 +1,10 @@
 import '../links/css/home.css';
 import '../links/css/gallery.css';
 import NavBar from '../components/NavBar';
-import image1 from '../links/img/galleryPhoto/1.jpg'
-import image2 from '../links/img/galleryPhoto/2.jpg'
-import image3 from '../links/img/galleryPhoto/3.jpg'
-import image4 from '../links/img/galleryPhoto/4.jpg'
+import image1 from '../links/img/galleryPhoto/1.webp'
+import image2 from '../links/img/galleryPhoto/2.webp'
+import image3 from '../links/img/galleryPhoto/3.webp'
+import image4 from '../links/img/galleryPhoto/4.webp'
 import Footer from '../components/Footer';
 
 

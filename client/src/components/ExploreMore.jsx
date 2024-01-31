@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../links/css/exploreMore.css'
-import event1 from '../links/img/Events/1.png'
-import event2 from '../links/img/Events/2.png'
-import event3 from '../links/img/Events/3.png'
-import event4 from '../links/img/Events/4.png'
+import event1 from '../links/img/Events/1 (1).webp'
+import event2 from '../links/img/Events/2 (1).webp'
+import event3 from '../links/img/Events/3 (1).webp'
+import event4 from '../links/img/Events/4 (1).webp'
 
 function ExploreMore() {
   return (

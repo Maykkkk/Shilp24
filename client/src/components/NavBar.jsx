@@ -31,7 +31,7 @@ const NavBar = ({ isAuth, setAuth }) => {
                             <Link className="nav-link" to='/competitions'>Competitions</Link>
                         </li>
                         <li className="nav-item px-2 mx-2">
-                            <Link className="nav-link" to='https://www.youtube.com/watch?v=xvFZjo5PgG0'>Guests</Link>
+                            <Link className="nav-link" to='guests'>Guests</Link>
                         </li>
                         <li className="nav-item px-2 mx-2">
                             <Link className="nav-link" to='/events'>Events</Link>
@@ -49,7 +49,7 @@ const NavBar = ({ isAuth, setAuth }) => {
                             <Link className="nav-link" to='/team'>Team</Link>
                         </li>
                         <li className="nav-item px-2 mx-2">
-                            <Link className="nav-link" to='https://www.youtube.com/watch?v=xvFZjo5PgG0'>Media</Link>
+                            <Link className="nav-link" to='/media'>Media</Link>
                         </li>
                         <li className="nav-item px-2 mx-2">
                             <Link className="nav-link" to='/gallery'>Gallery</Link>

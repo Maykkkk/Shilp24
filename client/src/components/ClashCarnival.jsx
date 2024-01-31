@@ -1,5 +1,5 @@
 import '../links/css/clashCarnival.css'
-import event1 from '../links/img/Events/1.png'
+import event1 from '../links/img/Events/1 (1).webp'
 import Fade from 'react-reveal/Fade';
 
 function ClashCarnival() {

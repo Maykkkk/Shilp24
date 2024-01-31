@@ -1,0 +1,12 @@
+.headTop{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: red;
+    height: 4vw;
+    font-weight: 800 !important;
+    font-size: 7vw !important;
+    padding-top: 2vw;
+    padding-bottom: 8vw;
+    margin-bottom: 4vw;
+}
