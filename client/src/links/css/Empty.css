@@ -1,9 +1,10 @@
 .headTop{
-    height: auto;
+    position: absolute;
+    top: 0;left: 0;
     display: flex;
     justify-content: center;
     color: red;
-    height: 4vw;
+    height: 100vh;
     font-weight: 800 !important;
     font-size: 7vw !important;
     padding-top: 2vw;

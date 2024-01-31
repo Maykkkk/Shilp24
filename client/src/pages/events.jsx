@@ -18,8 +18,8 @@ const events = ({ setAuth, isAuth }) => {
         <div className="Container">
           <TechShowcase></TechShowcase>
           <CivilExpo></CivilExpo>
+          <ClashCarnival></ClashCarnival>
         </div>
-        <ClashCarnival></ClashCarnival>
         <Fade bottom>
           <Footer></Footer>
         </Fade>

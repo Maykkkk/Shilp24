@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar'
 import '../links/css/Contact.css'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
-// import { MdEmail } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 import Fade from 'react-reveal/Fade';
 
 const contacts = ({ setAuth, isAuth }) => {
@@ -17,35 +17,79 @@ const contacts = ({ setAuth, isAuth }) => {
         <Fade top>
           <div className='top'>Contact Us</div>
         </Fade>
-        <div className='outer-body contact-outer-body'>
-          {/* <Zoom> */}
-          <div className=" contact-inner-body inner-body">
-            <div className="name1 contact fs-5">
-              Aman Srivastava<br />
-              <Link to="mailto:aman.srivastava.civ21@itbhu.ac.in">aman.srivastava.civ21@itbhu.ac.in</Link><br />
-              +91 96251 67658
-            </div>
-            <div className="name2 contact fs-5">
-              Anchal Ganguli<br />
-              <Link to="mailto:anchal.ganguly.civ21@itbhu.ac.in">anchal.ganguly.civ21@itbhu.ac.in</Link><br />
-              +91 8765522325
-            </div>
-            <div className="name3 contact fs-5">
-              Manvi Srivastava<br />
-              <Link to="mailto:manvi.srivastava.civ21@itbhu.ac.in">manvi.srivastava.civ21@itbhu.ac.in</Link><br />
-              +91 9696220428
-            </div>
-            <div className="name4 contact fs-5">
-              Akhand Pratap Yadav<br />
-              <Link to="mailto:prakhar.yadav.civ21@itbhu.ac.in">prakhar.yadav.civ21@itbhu.ac.in</Link><br />
-              +91 6207 191 509
-            </div>
-          </div>
-          {/* </Zoom> */}
+        <div className='details topp'>
+          <div className='col2'>Name</div>
+          <div className='col2'>Mail</div>
+          <div className='col2'>Phone No.</div>
         </div>
-        
+        <div className='Contacts'>
+          <Link to={""} style={{ textDecoration: 'none' }}>
+            <div className='details s-no1' >
+              <div className='col2' >Abhishek</div>
+              <div className='col2' id='desktop-email'>iabhiishek10@gmail.com</div>
+              <div className="col2" id='mobile-email'><MdEmail /></div>
+              <div className='col2'>7390947049</div>
+            </div>
+          </Link>
+          <Link to={""} style={{ textDecoration: 'none' }} >
+            <div className='details s-no2' style={{ textDecoration: 'none' }}>
+              <div className='col2' >Abhishek</div>
+              <div className='col2' id='desktop-email'>iabhiishek10@gmail.com</div>
+              <div className="col2" id='mobile-email'><MdEmail /></div>
+              <div className='col2'>7390947049</div>
+            </div>
+          </Link>
+          <Link to={""} style={{ textDecoration: 'none' }}>
+            <div className='details s-no3' style={{ textDecoration: 'none' }}>
+              <div className='col2' >Abhishek</div>
+              <div className='col2' id='desktop-email'>iabhiishek10@gmail.com</div>
+              <div className="col2" id='mobile-email'><MdEmail /></div>
+              <div className='col2'>7390947049</div>
+            </div>
+          </Link>
+          <Link to={""} style={{ textDecoration: 'none' }}>
+            <div className='details s-no4' style={{ textDecoration: 'none' }}>
+              <div className='col2' >Abhishek</div>
+              <div className='col2' id='desktop-email'>iabhiishek10@gmail.com</div>
+              <div className="col2" id='mobile-email'><MdEmail /></div>
+              <div className='col2'>7390947049</div>
+            </div>
+          </Link>
+          <Link to={""} style={{ textDecoration: 'none' }}>
+            <div className='details s-no5' style={{ textDecoration: 'none' }}>
+              <div className='col2' >Abhishek</div>
+              <div className='col2' id='desktop-email'>iabhiishek10@gmail.com</div>
+              <div className="col2" id='mobile-email'><MdEmail /></div>
+              <div className='col2'>7390947049</div>
+            </div>
+          </Link>
+          <Link to={""} style={{ textDecoration: 'none' }}>
+            <div className='details s-no6' style={{ textDecoration: 'none' }}>
+              <div className='col2' >Abhishek</div>
+              <div className='col2' id='desktop-email'>iabhiishek10@gmail.com</div>
+              <div className="col2" id='mobile-email'><MdEmail /></div>
+              <div className='col2'>7390947049</div>
+            </div>
+          </Link>
+          <Link to={""} style={{ textDecoration: 'none' }}>
+            <div className='details s-no7' style={{ textDecoration: 'none' }}>
+              <div className='col2' >Abhishek</div>
+              <div className='col2' id='desktop-email'>iabhiishek10@gmail.com</div>
+              <div className="col2" id='mobile-email'><MdEmail /></div>
+              <div className='col2'>7390947049</div>
+            </div>
+          </Link>
+          <Link to={""} style={{ textDecoration: 'none' }}>
+            <div className='details s-no8' style={{ textDecoration: 'none' }}>
+              <div className='col2' >Abhishek</div>
+              <div className='col2' id='desktop-email'>iabhiishek10@gmail.com</div>
+              <div className="col2" id='mobile-email'><MdEmail /></div>
+              <div className='col2'>7390947049</div>
+            </div>
+          </Link>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }
