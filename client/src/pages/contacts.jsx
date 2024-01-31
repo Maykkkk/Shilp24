@@ -22,22 +22,22 @@ const contacts = ({ setAuth, isAuth }) => {
           <div className=" contact-inner-body inner-body">
             <div className="name1 contact fs-5">
               Aman Srivastava<br />
-              <a href="mailto:aman.srivastava.civ21@itbhu.ac.in">aman.srivastava.civ21@itbhu.ac.in</a><br />
+              <Link to="mailto:aman.srivastava.civ21@itbhu.ac.in">aman.srivastava.civ21@itbhu.ac.in</Link><br />
               +91 96251 67658
             </div>
             <div className="name2 contact fs-5">
               Anchal Ganguli<br />
-              <a href="mailto:anchal.ganguly.civ21@itbhu.ac.in">anchal.ganguly.civ21@itbhu.ac.in</a><br />
+              <Link to="mailto:anchal.ganguly.civ21@itbhu.ac.in">anchal.ganguly.civ21@itbhu.ac.in</Link><br />
               +91 8765522325
             </div>
             <div className="name3 contact fs-5">
               Manvi Srivastava<br />
-              <a href="mailto:manvi.srivastava.civ21@itbhu.ac.in">manvi.srivastava.civ21@itbhu.ac.in</a><br />
+              <Link to="mailto:manvi.srivastava.civ21@itbhu.ac.in">manvi.srivastava.civ21@itbhu.ac.in</Link><br />
               +91 9696220428
             </div>
             <div className="name4 contact fs-5">
               Akhand Pratap Yadav<br />
-              <a href="mailto:prakhar.yadav.civ21@itbhu.ac.in">prakhar.yadav.civ21@itbhu.ac.in</a><br />
+              <Link to="mailto:prakhar.yadav.civ21@itbhu.ac.in">prakhar.yadav.civ21@itbhu.ac.in</Link><br />
               +91 6207 191 509
             </div>
           </div>
