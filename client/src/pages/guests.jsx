@@ -10,8 +10,8 @@ const guests = ({ AllAuth }) => {
 			<div className="body">
 				<NavBar AllAuth={AllAuth} />
 				<EmptyNote />
-				<Footer />
 			</div>
+			<Footer />
 		</div>
 	);
 };

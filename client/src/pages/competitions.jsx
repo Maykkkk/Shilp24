@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../links/css/Competition.css";
 import EmptyNote from "../components/EmptyNote";
+import Fade from "react-reveal/Fade";
 
 const competitions = ({ AllAuth }) => {
 	return (
@@ -48,7 +49,9 @@ const competitions = ({ AllAuth }) => {
     />
     </div> */}
 				<EmptyNote />
-				<Footer />
+				<Fade bottom>
+					<Footer></Footer>
+				</Fade>
 			</div>
 		</div>
 	);

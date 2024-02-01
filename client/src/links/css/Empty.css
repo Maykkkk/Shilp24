@@ -6,8 +6,7 @@
 }
 .headTop{
     display: flex;
-    position: absolute;
-    top: 50%;
+    align-items: center;
     justify-content: center;
     background: linear-gradient(45deg,#d80000,rgb(66, 3, 154),#d80000,rgb(66, 3, 154),#d80000,white);
     -webkit-background-clip: text;
@@ -15,5 +14,5 @@
     width: 100%;
     height: 100vh;
     font-weight: 800 !important;
-    font-size: 7vw !important;
+    font-size: 10vw !important;
 }
