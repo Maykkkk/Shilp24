@@ -22,12 +22,17 @@ const Profile = ({ AllAuth }) => {
 			if (docSnap.exists()) {
 				const data = docSnap.data();
 				if (data.Events) {
+					// console.log(data)
 					setRegisteredEvents(data.Events);
 				}
+				setMobile(data.Mobile);
+				setCollege(data.College);
+				setReferralCode(data.Referral);
+				setYear(data.Year);
 			} else {
 			}
 		});
-	});
+	}, []);
 
 	const onFormSubmit = async (e) => {
 		e.preventDefault();
@@ -39,6 +44,7 @@ const Profile = ({ AllAuth }) => {
 				College: college,
 				Year: year,
 				Referral: referralCode,
+				Events: RegisteredEvents,
 			};
 			if (!data.Mobile || !data.College || !data.Year) {
 				setFailureMessage("Fill All Details");
@@ -81,6 +87,7 @@ const Profile = ({ AllAuth }) => {
 					<input
 						type="text"
 						name="mobile"
+						defaultValue={mobile}
 						onChange={(e) => {
 							setMobile(e.target.value);
 						}}
@@ -89,6 +96,7 @@ const Profile = ({ AllAuth }) => {
 					<input
 						type="text"
 						name="college"
+						defaultValue={college}
 						onChange={(e) => {
 							setCollege(e.target.value);
 						}}
@@ -97,6 +105,7 @@ const Profile = ({ AllAuth }) => {
 					<input
 						type="text"
 						name="year"
+						defaultValue={year}
 						onChange={(e) => {
 							setYear(e.target.value);
 						}}
@@ -106,6 +115,7 @@ const Profile = ({ AllAuth }) => {
 					<input
 						type="text"
 						name="referralCode"
+						defaultValue={referralCode}
 						onChange={(e) => {
 							setReferralCode(e.target.value);
 						}}
