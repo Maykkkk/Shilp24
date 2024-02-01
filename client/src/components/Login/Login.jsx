@@ -7,6 +7,7 @@ import Alert from "@mui/material/Alert";
 import "../../links/css/login.css";
 import shilp from "../../links/img/SHILP.png";
 import { useMotionValue, useTransform, motion } from "framer-motion";
+import GoogleButton from "react-google-button";
 
 import { signInWithPopup } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
@@ -25,8 +26,7 @@ const Login = ({ AllAuth }) => {
 	const [FailureMessage, setFailureMessage] = useState("");
 	const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-	const onFormSubmit = async (e) => {
-		e.preventDefault();
+	const onFormSubmit = async () => {
 		try {
 			setSubmitButtonDisabled(true);
 			signInWithPopup(auth, provider)
@@ -119,24 +119,14 @@ const Login = ({ AllAuth }) => {
 
 					<div className="login">
 						<div className="form-box">
-							<form className="form" onSubmit={onFormSubmit}>
-								<h2>Sign In</h2>
-								<div className="input mt-2">
-									<input
-										type="submit"
-										className="btn btn-success"
-										value="Submit"
-										disabled={submitButtonDisabled}
-									/>
-								</div>
-								{FailureMessage ? (
-									<Alert severity="error" className="mt-2">
-										{FailureMessage}
-									</Alert>
-								) : (
-									<></>
-								)}
-							</form>
+							<GoogleButton
+								onClick={() => {
+									onFormSubmit();
+								}}
+								style={{
+								background: "#000",
+								}}
+							/>
 						</div>
 					</div>
 				</motion.div>
