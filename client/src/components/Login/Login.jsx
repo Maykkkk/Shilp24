@@ -27,7 +27,8 @@ const Login = ({ AllAuth }) => {
 	const [FailureMessage, setFailureMessage] = useState("");
 	const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-	const onFormSubmit = async () => {
+	const onFormSubmit = async (e) => {
+		e.preventDefault();
 		try {
 			setSubmitButtonDisabled(true);
 			signInWithPopup(auth, provider)
@@ -136,7 +137,7 @@ const Login = ({ AllAuth }) => {
 									onFormSubmit();
 								}}
 								style={{
-								background: "#000",
+									background: "#000",
 								}}
 							/>
 						</div>
