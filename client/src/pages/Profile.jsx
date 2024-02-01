@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 
 import Alert from "@mui/material/Alert";
 // import { updateProfile } from "firebase/auth";
 import { db } from "../firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc } from "firebase/firestore";
 
 const Profile = ({ AllAuth }) => {
 	const [FailureMessage, setFailureMessage] = useState("");
@@ -14,6 +14,18 @@ const Profile = ({ AllAuth }) => {
 	const [year, setYear] = useState("");
 	const [college, setCollege] = useState("");
 	const [referralCode, setReferralCode] = useState("");
+	const [RegisteredEvents, setRegisteredEvents] = useState([]);
+
+	useEffect(() => {
+		const docRef = doc(db, "RegistredEvents", localStorage.getItem("UID"));
+		getDoc(docRef).then((docSnap) => {
+			if (docSnap.exists()) {
+				const data = docSnap.data();
+				setRegisteredEvents(data.RegisteredEvents);
+			} else {
+			}
+		});
+	});
 
 	const onFormSubmit = async (e) => {
 		e.preventDefault();
@@ -108,6 +120,19 @@ const Profile = ({ AllAuth }) => {
 						<></>
 					)}
 				</form>
+
+				<table>
+					<tr>
+						<th>Events Registered</th>
+					</tr>
+					{RegisteredEvents.map((event, i) => {
+						return (
+							<tr key={i}>
+								<td>{event}</td>
+							</tr>
+						);
+					})}
+				</table>
 			</div>
 		</div>
 	);

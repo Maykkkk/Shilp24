@@ -104,11 +104,13 @@ const NavBar = ({ AllAuth }) => {
 										Logout
 									</button>
 								</li>
-								<img
-									src={localStorage.getItem("photoURL")}
-									alt="Profile Pic"
-									className="ProfilePic"
-								/>
+								<Link className="nav-link" to="/profile">
+									<img
+										src={localStorage.getItem("photoURL")}
+										alt="Profile Pic"
+										className="ProfilePic"
+									/>
+								</Link>
 							</>
 						) : (
 							<></>
