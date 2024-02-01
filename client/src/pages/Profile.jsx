@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "../components/NavBar";
-import { updateProfile } from "firebase/auth";
-import { auth, db } from "../firebase";
+// import { updateProfile } from "firebase/auth";
+import { db } from "../firebase";
 import { doc, setDoc } from "firebase/firestore";
 
 const Profile = ({ AllAuth }) => {
