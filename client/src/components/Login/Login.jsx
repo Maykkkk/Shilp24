@@ -3,7 +3,6 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
-import Alert from "@mui/material/Alert";
 import "../../links/css/login.css";
 import shilp from "../../links/img/SHILP.png";
 import { useMotionValue, useTransform, motion } from "framer-motion";
@@ -24,11 +23,9 @@ const Login = ({ AllAuth }) => {
 	const rotateX = useTransform(y, [-338, -138], [20, -20]);
 	const rotateY = useTransform(x, [-642, -442], [-20, 20]);
 
-	const [FailureMessage, setFailureMessage] = useState("");
 	const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-	const onFormSubmit = async (e) => {
-		e.preventDefault();
+	const onFormSubmit = async () => {
 		try {
 			setSubmitButtonDisabled(true);
 			signInWithPopup(auth, provider)
@@ -63,15 +60,16 @@ const Login = ({ AllAuth }) => {
 							navigate("/profile");
 						}
 					});
+					setSubmitButtonDisabled(false);
 					setAuth(true);
 				})
 				.catch((error) => {
-					setFailureMessage(error.message);
+					console.log(error.message);
 				});
 		} catch (error) {
 			console.error(error.message);
+			setSubmitButtonDisabled(false);
 		}
-		setSubmitButtonDisabled(false);
 	};
 
 	return (
@@ -133,6 +131,7 @@ const Login = ({ AllAuth }) => {
 					<div className="login">
 						<div className="form-box">
 							<GoogleButton
+								disabled={submitButtonDisabled}
 								onClick={() => {
 									onFormSubmit();
 								}}
