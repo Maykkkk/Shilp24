@@ -6,19 +6,30 @@
 	padding-bottom: 0px;
 	z-index: 9999999;
 }
+.navbar-brand img{
+	position: absolute;
+	top: 0;left: 0;
+	height: 70px;
+	width: 70px;
+}
 .nav-item {
 	font-size: 1.1vw;
 	font-weight: 600;
 	color: white;
+	margin: 0;
+	display: flex;
+	justify-content: center;
 }
+
 .navbar-toggler {
 	margin-right: 15px;
 }
 
 .ProfilePic {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	justify-content: center;
 }
 
 @media screen and (max-width: 1200px) {
