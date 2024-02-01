@@ -17,11 +17,13 @@ const Profile = ({ AllAuth }) => {
 	const [RegisteredEvents, setRegisteredEvents] = useState([]);
 
 	useEffect(() => {
-		const docRef = doc(db, "RegistredEvents", localStorage.getItem("UID"));
+		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
 		getDoc(docRef).then((docSnap) => {
 			if (docSnap.exists()) {
 				const data = docSnap.data();
-				setRegisteredEvents(data.RegisteredEvents);
+				if (data.Events) {
+					setRegisteredEvents(data.Events);
+				}
 			} else {
 			}
 		});
@@ -39,14 +41,15 @@ const Profile = ({ AllAuth }) => {
 				Referral: referralCode,
 			};
 			if (!data.Mobile || !data.college || !data.year) {
-				// Alert Missing Details
+				setFailureMessage("Fill All Details");
 				return;
 			}
-			const docRef = await setDoc(
+			await setDoc(
 				doc(db, "userProfile", localStorage.getItem("UID")),
 				data
 			);
 		} catch (e) {
+			setFailureMessage(e.message);
 			console.error("Error adding document: ", e.message);
 		}
 	};

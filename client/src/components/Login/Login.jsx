@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = ({ AllAuth }) => {
 	const setAuth = AllAuth.setAuth;
+	const setIsProf = AllAuth.setIsProf;
 	const navigate = useNavigate();
 
 	const x = useMotionValue(-542);
@@ -39,15 +40,26 @@ const Login = ({ AllAuth }) => {
 
 					const docRef = doc(
 						db,
-						"RegistredEvents",
+						"userProfile",
 						localStorage.getItem("UID")
 					);
-					getDoc(docRef).then((docSnap) => {
+					getDoc(docRef).then(async (docSnap) => {
 						if (!docSnap.exists()) {
 							const sendData = {
 								uid: data.user.uid,
-								Email: data.user.displayName,
+								Email: data.user.email,
+								Name: data.user.displayName,
 							};
+							await setDoc(
+								doc(
+									db,
+									"userProfile",
+									localStorage.getItem("UID")
+								),
+								sendData
+							);
+							setIsProf(false);
+							navigate("/profile");
 						}
 					});
 					setAuth(true);
