@@ -23,10 +23,10 @@
 
 @media screen and (max-width: 1200px) {
 	.navbar{
-		background: #310751e1;
+		background: #310751;
 	}
 	.nav-item {
-		font-size: 21px;
+		font-size: 18px;
 	}
 	.navbar-collapse{
 		height: 100dvh;

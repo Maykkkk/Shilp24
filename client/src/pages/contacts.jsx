@@ -59,8 +59,8 @@ const contacts = ({ AllAuth }) => {
 					</div>
 					{/* </Zoom> */}
 				</div>
+				<Footer />
 			</div>
-			<Footer />
 		</div>
 	);
 };

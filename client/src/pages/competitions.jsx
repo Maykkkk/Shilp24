@@ -8,7 +8,7 @@ import Fade from "react-reveal/Fade";
 const competitions = ({ AllAuth }) => {
 	return (
 		<div className="App">
-			<div className="body" id="competition">
+			<div className="body">
 				<NavBar AllAuth={AllAuth} />
 				{/* <div className='cards'>
     <EventCard
