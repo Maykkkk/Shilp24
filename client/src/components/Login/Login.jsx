@@ -9,7 +9,8 @@ import shilp from "../../links/img/SHILP.png";
 import { useMotionValue, useTransform, motion } from "framer-motion";
 
 import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "../../firebase";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { auth, provider, db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 
 const Login = ({ AllAuth }) => {
@@ -34,6 +35,21 @@ const Login = ({ AllAuth }) => {
 					localStorage.setItem("displayName", data.user.displayName);
 					localStorage.setItem("photoURL", data.user.photoURL);
 					localStorage.setItem("UID", data.user.uid);
+					localStorage.setItem("email", data.user.email);
+
+					const docRef = doc(
+						db,
+						"RegistredEvents",
+						localStorage.getItem("UID")
+					);
+					getDoc(docRef).then((docSnap) => {
+						if (!docSnap.exists()) {
+							const sendData = {
+								uid: data.user.uid,
+								Email: data.user.displayName,
+							};
+						}
+					});
 					setAuth(true);
 				})
 				.catch((error) => {

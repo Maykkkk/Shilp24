@@ -2,6 +2,8 @@ import "../links/css/navbar.css";
 import SHILP from "../links/img/SHILP.png";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 
 const NavBar = ({ AllAuth }) => {
 	const isAuth = AllAuth.isAuth;
@@ -9,10 +11,13 @@ const NavBar = ({ AllAuth }) => {
 
 	const onLogout = (e) => {
 		e.preventDefault();
-		localStorage.removeItem("displayName");
-		localStorage.removeItem("photoURL");
-		localStorage.removeItem("UID");
-		setAuth(false);
+		signOut(auth).then(() => {
+			localStorage.removeItem("displayName");
+			localStorage.removeItem("photoURL");
+			localStorage.removeItem("UID");
+			localStorage.removeItem("email");
+			setAuth(false);
+		});
 	};
 	return (
 		<Fade top>
@@ -113,7 +118,13 @@ const NavBar = ({ AllAuth }) => {
 								</Link>
 							</>
 						) : (
-							<></>
+							<>
+								<li className="nav-item px-2 mx-2">
+									<Link className="nav-link" to="/login">
+										Sign In
+									</Link>
+								</li>
+							</>
 						)}
 					</ul>
 				</div>

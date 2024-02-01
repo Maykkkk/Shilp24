@@ -33,45 +33,39 @@ function App() {
 		auth.onAuthStateChanged((user) => {
 			console.log(user);
 			if (user) {
+				const docRef = doc(
+					db,
+					"userProfile",
+					localStorage.getItem("UID")
+				);
+				getDoc(docRef).then((docSnap) => {
+					if (docSnap.exists()) {
+						const userData = docSnap.data();
+						if (
+							userData.Email &&
+							userData.Mobile &&
+							userData.College &&
+							userData.Year
+						) {
+							setIsProfileComplete(true);
+						} else {
+							setIsProfileComplete(false);
+						}
+					} else {
+						setIsProfileComplete(false);
+					}
+				});
 				setIsAuthenticated(true);
 			} else {
 				setIsAuthenticated(false);
 			}
 		});
-		// const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
-		// getDoc(docRef).then((docSnap) => {
-		// 	if (docSnap.exists()) {
-		// 		const userData = docSnap.data();
-		// 		if (
-		// 			userData.Email &&
-		// 			userData.Mobile &&
-		// 			userData.College &&
-		// 			userData.Year
-		// 		) {
-		// 			setIsProfileComplete(true);
-		// 		} else {
-		// 			setIsProfileComplete(false);
-		// 		}
-		// 	} else {
-		// 		setIsProfileComplete(false);
-		// 	}
-		// });
 	}, []);
 
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route
-					exact
-					path="/"
-					element={
-						isAuthenticated ? (
-							<Home AllAuth={AllAuth} />
-						) : (
-							<Navigate to="/login" />
-						)
-					}
-				/>
+				<Route exact path="/" element={<Home AllAuth={AllAuth} />} />
 
 				<Route
 					exact
