@@ -1,15 +1,15 @@
-import React from 'react'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
-import '../links/css/Competition.css'
-import EmptyNote from '../components/EmptyNote'
+import React from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import "../links/css/Competition.css";
+import EmptyNote from "../components/EmptyNote";
 
-const competitions = ({setAuth, isAuth}) => {
-  return (
-    <div className='App'>
-    <div className='body' id='competition'>
-    <NavBar setAuth={setAuth} isAuth={isAuth} />
-    {/* <div className='cards'>
+const competitions = ({ AllAuth }) => {
+	return (
+		<div className="App">
+			<div className="body" id="competition">
+				<NavBar AllAuth={AllAuth} />
+				{/* <div className='cards'>
     <EventCard
       name="civil Explo"
       details="civil ka kuch kaam hota hai"
@@ -47,11 +47,11 @@ const competitions = ({setAuth, isAuth}) => {
       details="big data machine learning modi ji"
     />
     </div> */}
-    <EmptyNote/>
-    <Footer/>
-    </div>
-    </div>
-  )
-}
+				<EmptyNote />
+				<Footer />
+			</div>
+		</div>
+	);
+};
 
-export default competitions
+export default competitions;

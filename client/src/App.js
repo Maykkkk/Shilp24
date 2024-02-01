@@ -15,11 +15,12 @@ import LoginPage from "./pages/loginPage";
 import Gallery from "./pages/Gallery";
 import Profile from "./pages/Profile";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { auth } from "./firebase";
+import { auth, db } from "./firebase";
+import { doc, getDoc } from "firebase/firestore";
 
 function App() {
-	const [isAuthenticated, setIsAuthenticated] = useState(false);
-	const [isProfileComplete, setIsProfileComplete] = useState(false);
+	const [isAuthenticated, setIsAuthenticated] = useState(true);
+	const [isProfileComplete, setIsProfileComplete] = useState(true);
 
 	const AllAuth = {
 		setAuth: setIsAuthenticated,
@@ -35,6 +36,24 @@ function App() {
 				setIsAuthenticated(true);
 			} else {
 				setIsAuthenticated(false);
+			}
+		});
+		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
+		getDoc(docRef).then((docSnap) => {
+			if (docSnap.exists()) {
+				const userData = docSnap.data();
+				if (
+					userData.Email &&
+					userData.Mobile &&
+					userData.College &&
+					userData.Year
+				) {
+					setIsProfileComplete(true);
+				} else {
+					setIsProfileComplete(false);
+				}
+			} else {
+				setIsProfileComplete(false);
 			}
 		});
 	}, []);
