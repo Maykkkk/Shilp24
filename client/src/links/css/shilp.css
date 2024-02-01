@@ -4,11 +4,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5%;
     padding: 0 4%;
    height: 100vh;
    background-image: url('../img/Clubs\ \(1\).png');
    background-size: 100% 100%;
+   align-items: center;
 }
 
 

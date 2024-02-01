@@ -21,11 +21,24 @@ const Team = ({AllAuth}) => {
             </header>
           </Fade>
 
+          <div className="team-title" id="convenor">
+            <Fade left>
+              <h1>CES Vice President</h1>
+            </Fade>
+            <Fade right>
+              <div className="team-container">
+                <div style={{ perspective: 2000 }}>
+                  <TeamCard Name="Ayush Sinha" ProfilePhoto={teamPhotos.president} />
+                </div>
+              </div>
+            </Fade>
+          </div>
+
           {/* Conveynors */}
 
-          <div className="team-title" id="conveynor">
+          <div className="team-title" id="convenor">
             <Fade left>
-              <h1>Conveynor</h1>
+              <h1>convenor</h1>
             </Fade>
             <Fade right>
               <div className="team-container">
@@ -39,7 +52,7 @@ const Team = ({AllAuth}) => {
           <div className="team-title" id="coConveynor">
             {/* Co-Conveynor */}
             <Fade left>
-              <h1>Co-Conveynor</h1>
+              <h1>Co-Convenor</h1>
             </Fade>
             <Fade right>
               <div className="team-container">

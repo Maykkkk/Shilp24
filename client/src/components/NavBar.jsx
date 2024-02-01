@@ -95,6 +95,11 @@ const NavBar = ({ AllAuth }) => {
 								Gallery
 							</Link>
 						</li>
+						<li className="nav-item px-2 mx-2">
+							<Link className="nav-link" to="https://docs.google.com/forms/u/1/d/1L8DOBUhyZBMO3t7PxJue6VR8y6G2K7M5v_WsYcewWHs/edit?usp=sharing_eip_m&ts=65b66063">
+								CA
+							</Link>
+						</li>
 
 						{isAuth ? (
 							<>
