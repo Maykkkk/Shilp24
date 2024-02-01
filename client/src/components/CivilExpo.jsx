@@ -11,7 +11,7 @@ function CivilExpo() {
                 CIVIL EXPO
             </div>
             </Fade>
-            <div className="expo-gallery-row1 cards">
+            <div className="expo-gallery-row1">
 
                 {/* Event-1 */}
                 <Fade left>

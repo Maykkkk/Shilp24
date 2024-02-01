@@ -1,10 +1,10 @@
 .navbar {
-	position: absolute;
+	position:fixed !important;
 	top: 0;
-	left: 0;
 	width: 100%;
 	background: #310751;
 	padding-bottom: 0px;
+	z-index: 9999999;
 }
 .nav-item {
 	font-size: 1.1vw;

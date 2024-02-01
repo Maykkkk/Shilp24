@@ -6,10 +6,13 @@
     width: 80%;
     margin: auto;
     padding: 0 5vw 1vw 5vw;
+    position: relative;
 }
 
 .civilexpo .main{
     max-height: 100%;
+    width: 100%;
+    margin: auto;
     background: linear-gradient(251.9deg, rgba(76, 18, 77, 0.65) -6.07%, rgba(13, 4, 27, 0.65) 47.04%, rgba(70, 18, 72, 0.65) 86.81%);
     border-radius: 50px;
     border-top:4px solid rgba(255, 255, 255, 0.06);
@@ -25,34 +28,29 @@
     line-height: 11vw;
     font-family: 'Poppins', sans-serif;
 }
+.civilexpo .main .eventCard{
+    max-width: 60% !important;
+    margin: auto;
+    overflow: hidden;
+}
 .civilexpo .main .expo-gallery-row1{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 0;padding: 0;
+    margin: 0;padding: 0 10px;
     margin-top: 50px;
 }
 .civilexpo .main .expo-gallery-row2{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 0;padding: 0;
 }
-.card{
-    margin: 20px;
-}
-
 @media screen and (max-width:900px){
     .civilexpo{
         height: 100%;
     }
-}
-@media screen and (max-width: 1000px) {
-    .civilexpo .main .card{
-        width: 90%;
-    }
-    
 }
 @media screen and (max-width:525px){
     .civilexpo{
@@ -65,10 +63,20 @@
         margin-bottom: 16vw;
     }
 }
-@media screen and (max-width:360px){
-    .civilexpo{
-        height: 100%;
-        width: 80%;
+@media screen and (max-width:470px){
+    .civilexpo .main .card{
+        width: 100%;
+        margin: auto;
+        margin: 20px auto;
+    }
+    .civilexpo .main .card .card-content{
+        padding-left: 0;
+    }
+    .civilexpo .main .card h2{
+        margin-left: 0;
+        font-size: 18px;
+        display: flex;
+        flex-wrap: wrap;
     }
     .civilexpo .main .heading{
         padding-top: 8vw;

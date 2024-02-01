@@ -1,13 +1,19 @@
-.headTop{
-    position: absolute;
-    top: 0;left: 0;
+.emptynote{
+    height: 100vh;
     display: flex;
     justify-content: center;
-    color: red;
+    align-items: center;
+}
+.headTop{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    justify-content: center;
+    background: linear-gradient(45deg,#d80000,rgb(66, 3, 154),#d80000,rgb(66, 3, 154),#d80000,white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
     height: 100vh;
     font-weight: 800 !important;
     font-size: 7vw !important;
-    padding-top: 2vw;
-    padding-bottom: 8vw;
-    margin-bottom: 4vw;
 }
