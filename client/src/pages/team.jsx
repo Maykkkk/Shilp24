@@ -21,7 +21,7 @@ const Team = ({AllAuth}) => {
             </header>
           </Fade>
 
-          <div className="team-title" id="convenor">
+          {/* <div className="team-title" id="convenor">
             <Fade left>
               <h1>CES Vice President</h1>
             </Fade>
@@ -32,7 +32,7 @@ const Team = ({AllAuth}) => {
                 </div>
               </div>
             </Fade>
-          </div>
+          </div> */}
 
           {/* Conveynors */}
 
