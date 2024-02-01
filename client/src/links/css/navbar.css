@@ -2,7 +2,7 @@
 	position:fixed !important;
 	top: 0;
 	width: 100%;
-	background: #310751;
+	background: #310751f4;
 	padding-bottom: 0px;
 	z-index: 9999999;
 }
@@ -22,7 +22,13 @@
 }
 
 @media screen and (max-width: 1200px) {
+	.navbar{
+		background: #310751e1;
+	}
 	.nav-item {
-		font-size: 20px;
+		font-size: 21px;
+	}
+	.navbat-collapse{
+		height: 100vh;
 	}
 }

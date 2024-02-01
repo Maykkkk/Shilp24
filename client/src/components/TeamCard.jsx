@@ -3,6 +3,8 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { useMotionValue, useTransform, motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import '../links/css/teamCard.css'
+
 
 
 function TeamCard({Name, ProfilePhoto, style, LinkedIn, Gmail, Instagram}) {

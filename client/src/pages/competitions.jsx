@@ -3,11 +3,12 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import '../links/css/Competition.css'
 import EmptyNote from '../components/EmptyNote'
+import Fade from 'react-reveal/Fade';
 
 const competitions = ({setAuth, isAuth}) => {
   return (
     <div className='App'>
-    <div className='body' id='competition'>
+    <div className='body'>
     <NavBar setAuth={setAuth} isAuth={isAuth} />
     {/* <div className='cards'>
     <EventCard
@@ -48,7 +49,9 @@ const competitions = ({setAuth, isAuth}) => {
     />
     </div> */}
     <EmptyNote/>
-    <Footer/>
+    <Fade bottom>
+          <Footer></Footer>
+        </Fade>
     </div>
     </div>
   )

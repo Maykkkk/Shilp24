@@ -10,8 +10,8 @@ const guests = ({setAuth, isAuth}) => {
       <div className="body">
         <NavBar setAuth={setAuth} isAuth={isAuth} />
         <EmptyNote/>
-        <Footer/>
       </div>
+      <Footer/>
     </div>
   )
 }

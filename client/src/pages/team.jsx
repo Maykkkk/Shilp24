@@ -30,7 +30,8 @@ const Team = ({ setAuth, isAuth }) => {
             <Fade right>
               <div className="team-container">
                 <div style={{ perspective: 2000 }}>
-                  <TeamCard Name="Ashutosh Gupta" ProfilePhoto={teamPhotos.conveynor} />              </div>
+                  <TeamCard Name="Ashutosh Gupta" ProfilePhoto={teamPhotos.conveynor} />
+                </div>
               </div>
             </Fade>
           </div>

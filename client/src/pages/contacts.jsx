@@ -43,9 +43,8 @@ const contacts = ({ setAuth, isAuth }) => {
           </div>
           {/* </Zoom> */}
         </div>
-        
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }
