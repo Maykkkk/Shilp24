@@ -40,7 +40,7 @@ const Profile = ({ AllAuth }) => {
 				Year: year,
 				Referral: referralCode,
 			};
-			if (!data.Mobile || !data.college || !data.year) {
+			if (!data.Mobile || !data.College || !data.Year) {
 				setFailureMessage("Fill All Details");
 				return;
 			}
