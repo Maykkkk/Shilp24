@@ -1,3 +1,6 @@
+.gallerycontain{
+    margin-top: 20vh;
+}
 .imgGallery img{
     width:28vw;
 }
