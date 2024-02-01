@@ -29,6 +29,6 @@
 		font-size: 21px;
 	}
 	.navbar-collapse{
-		height: 100vh;
+		height: 100dvh;
 	}
 }
