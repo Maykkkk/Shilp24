@@ -1,10 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../links/css/exploreMore.css'
-import techShowcase from '../links/img/TechShowcase.jpg'
-import civilExpo from '../links/img/civilExpo.jpg'
-import clashCarnival from '../links/img/clashCarnival.jpg'
-
+import event2 from '../links/img/InsightRise Symposium.webp'
+import Buildin from '../links/img/Building Vision Expo.webp'
+import event3 from '../links/img/BridgeIt.webp'
 
 function ExploreMore() {
   return (
@@ -16,19 +15,19 @@ function ExploreMore() {
         <div className="event-gallery">
           <div className="event">
             <Link to="/events">
-              <img src={techShowcase} alt="" />
+              <img src={event2} alt="" />
               <br />TechShowcase
             </Link>
           </div>
           <div className="event">
             <Link to="/events">
-              <img src={civilExpo} alt="" />
+              <img src={event3} alt="" />
               <br />Civil Expo
             </Link>
           </div>
           <div className="event">
             <Link to="/events">
-              <img src={clashCarnival} alt="" />
+              <img src={Buildin} alt="" />
               <br />Clash Carnival
             </Link>
           </div>
