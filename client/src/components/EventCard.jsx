@@ -51,7 +51,7 @@ function EventCard(props) {
 		<div
 			className="card"
 			style={{
-				backgroundImage: `url("./EventPhotos/${props.name}.jpg")`,
+				backgroundImage: `url("./EventPhotos/${props.name}.webp")`,
 			}}
 		>
 			<div className="card-content">
