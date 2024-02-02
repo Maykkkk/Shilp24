@@ -6,7 +6,7 @@ function AccommodationPolicies() {
   return (
     <div className='outer-body accommodationPolicies-outer-body'>
         <Zoom>
-        <div className="inner-body accommodationPolicies-inner-body fs-5 fw-normal">
+        <div className="inner-body accommodationPolicies-inner-body">
           Would be released soon ...
         </div>
         </Zoom>
