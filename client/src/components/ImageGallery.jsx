@@ -10,10 +10,10 @@ import "swiper/css/mousewheel"
 import "swiper/css/thumbs";
 import "swiper/css/free-mode";
 import { Navigation, EffectFade, FreeMode, Thumbs, Autoplay } from "swiper/modules";
-import image1 from '../links/img/galleryPhoto/1.webp'
-import image2 from '../links/img/galleryPhoto/2.webp'
-import image3 from '../links/img/galleryPhoto/3.webp'
-import image4 from '../links/img/galleryPhoto/4.webp'
+import image1 from '../links/img/galleryPhoto/1.jpg'
+import image2 from '../links/img/galleryPhoto/2.jpg'
+import image3 from '../links/img/galleryPhoto/3.jpg'
+import image4 from '../links/img/galleryPhoto/4.jpg'
 // import image5 from '../Images/GalleryPhoto/4.jpg'
 const ImageGallery = () => {
     return (

@@ -23,7 +23,6 @@
 
 .card {
 	color: var(--clr-neutral-100);
-	background-image: url(https://media.contentapi.ea.com/content/dam/eacom/images/2020/09/ea-featured-image-ea-desktop-beta.jpg.adapt.crop191x100.1200w.jpg);
 	background-size: cover;
 	padding: 10rem 0 0;
 	width: 25vw;

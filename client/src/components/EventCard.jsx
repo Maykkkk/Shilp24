@@ -47,7 +47,7 @@ function EventCard(props) {
 	};
 
 	return (
-		<div className="card">
+		<div className="card" style={{backgroundImage:`url("./EventPhotos/${props.name}.jpg")`}}>
 			<div className="card-content">
 				<h2 className="card-title">{props.name}</h2>
 				<p className="card-body">{props.details}</p>

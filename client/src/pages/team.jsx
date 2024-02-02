@@ -38,7 +38,7 @@ const Team = ({AllAuth}) => {
 
           <div className="team-title" id="convenor">
             <Fade left>
-              <h1>convenor</h1>
+              <h1>Convenor</h1>
             </Fade>
             <Fade right>
               <div className="team-container">

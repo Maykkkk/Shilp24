@@ -36,7 +36,7 @@ function TechShowcase({ AllAuth, RegisteredEvents }) {
 					{/* Event -3 */}
 					<Fade right>
 						<EventCard
-							name="bridgeit_"
+							name="bridgeIt"
 							className="eventCard"
 							AllAuth={AllAuth}
 							RegisteredEvents={RegisteredEvents}
