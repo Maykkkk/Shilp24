@@ -17,7 +17,7 @@ import Profile from "./pages/Profile";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { auth, db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
