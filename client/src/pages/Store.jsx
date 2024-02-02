@@ -32,7 +32,7 @@ const Store = ({ AllAuth }) => {
 				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"#271e29"}}>
 					<ParticleBackground />
 					<PacmanLoader
-						color="white"
+						color="#36d7b7"
 						loading={loading}
 						cssOverride={override}
 						size={50}
