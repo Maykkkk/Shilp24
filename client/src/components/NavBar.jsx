@@ -1,6 +1,6 @@
 import "../links/css/navbar.css";
 import SHILP from "../links/img/SHILP.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
@@ -8,6 +8,7 @@ import { auth } from "../firebase";
 const NavBar = ({ AllAuth }) => {
 	const isAuth = AllAuth.isAuth;
 	const setAuth = AllAuth.setAuth;
+	const location = useLocation();
 
 	const onLogout = (e) => {
 		e.preventDefault();
@@ -43,7 +44,10 @@ const NavBar = ({ AllAuth }) => {
 					<ul className="navbar-nav ">
 						<li className="nav-item px-2 mx-2">
 							<Link
-								className="nav-link active"
+								className={
+									"nav-link" +
+									(location.pathname === "/" ? " active" : "")
+								}
 								aria-current="page"
 								to="/"
 							>
@@ -51,52 +55,127 @@ const NavBar = ({ AllAuth }) => {
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="/competitions">
+							<Link
+								className={
+									"nav-link" +
+									(location.pathname === "/competitions"
+										? " active"
+										: "")
+								}
+								to="/competitions"
+							>
 								Competitions
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="/guests">
+							<Link
+								className={
+									"nav-link" +
+									(location.pathname === "/guests"
+										? " active"
+										: "")
+								}
+								to="/guests"
+							>
 								Guests
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="/events">
+							<Link
+								className={
+									"nav-link" +
+									(location.pathname === "/events"
+										? " active"
+										: "")
+								}
+								to="/events"
+							>
 								Events
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="/contacts">
+							<Link
+								className={
+									"nav-link" +
+									(location.pathname === "/contacts"
+										? " active"
+										: "")
+								}
+								to="/contacts"
+							>
 								Contacts
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="/store">
+							<Link
+								className={
+									"nav-link" +
+									(location.pathname === "/store"
+										? " active"
+										: "")
+								}
+								to="/store"
+							>
 								Store
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="/accommodations">
+							<Link
+								className={
+									"nav-link" +
+									(location.pathname === "/accommodations"
+										? " active"
+										: "")
+								}
+								to="/accommodations"
+							>
 								Accommodations
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="/team">
+							<Link
+								className={
+									"nav-link" +
+									(location.pathname === "/team"
+										? " active"
+										: "")
+								}
+								to="/team"
+							>
 								Team
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="/media">
+							<Link
+								className={
+									"nav-link" +
+									(location.pathname === "/media"
+										? " active"
+										: "")
+								}
+								to="/media"
+							>
 								Media
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="/gallery">
+							<Link
+								className={
+									"nav-link" +
+									(location.pathname === "/gallery"
+										? " active"
+										: "")
+								}
+								to="/gallery"
+							>
 								Gallery
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
-							<Link className="nav-link" to="https://docs.google.com/forms/u/1/d/1L8DOBUhyZBMO3t7PxJue6VR8y6G2K7M5v_WsYcewWHs/edit?usp=sharing_eip_m&ts=65b66063">
+							<Link
+								className="nav-link"
+								to="https://docs.google.com/forms/u/1/d/1L8DOBUhyZBMO3t7PxJue6VR8y6G2K7M5v_WsYcewWHs/edit?usp=sharing_eip_m&ts=65b66063"
+							>
 								CA
 							</Link>
 						</li>
@@ -106,7 +185,6 @@ const NavBar = ({ AllAuth }) => {
 								<li className="nav-item px-2 mx-2">
 									<button
 										className="nav-link"
-										to="/register"
 										onClick={(e) => {
 											onLogout(e);
 										}}
@@ -114,7 +192,15 @@ const NavBar = ({ AllAuth }) => {
 										Logout
 									</button>
 								</li>
-								<Link className="nav-link" to="/profile">
+								<Link
+									className={
+										"nav-link" +
+										(location.pathname === "/profile"
+											? " active"
+											: "")
+									}
+									to="/profile"
+								>
 									<img
 										src={localStorage.getItem("photoURL")}
 										alt="Profile Pic"
@@ -125,7 +211,15 @@ const NavBar = ({ AllAuth }) => {
 						) : (
 							<>
 								<li className="nav-item px-2 mx-2">
-									<Link className="nav-link" to="/login">
+									<Link
+										className={
+											"nav-link" +
+											(location.pathname === "/login"
+												? " active"
+												: "")
+										}
+										to="/login"
+									>
 										Sign In
 									</Link>
 								</li>
