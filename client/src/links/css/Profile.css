@@ -16,7 +16,7 @@
   }
 
 
- @media screen and (max-width:1000px) {
+  @media screen and (max-width:1000px) {
     .card{
       margin: auto;
       width: 75vw;
