@@ -157,3 +157,7 @@
 .events .event-gallery img{
 	box-shadow: 2px 2px 2px black;
 }
+.events .event-gallery img:hover{
+	transition: 1s;
+	box-shadow: 5px 5px 2px black;
+}
