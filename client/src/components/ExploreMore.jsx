@@ -1,10 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../links/css/exploreMore.css'
-import bridgeIt from '../links/img/bridgeIt.webp'
 import event2 from '../links/img/InsightRise Symposium.webp'
 import Buildin from '../links/img/Building Vision Expo.webp'
-
+import event3 from '../links/img/BridgeIt.webp'
 
 function ExploreMore() {
   return (
@@ -22,7 +21,7 @@ function ExploreMore() {
           </div>
           <div className="event">
             <Link to="/events">
-              <img src={bridgeIt} alt="" />
+              <img src={event3} alt="" />
               <br />Civil Expo
             </Link>
           </div>
