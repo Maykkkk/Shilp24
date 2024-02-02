@@ -155,8 +155,8 @@ const Profile = ({ AllAuth }) => {
 			<section className="h-100" style={{ backgroundColor: 'black' }}>
 				<MDBContainer className="py-5 h-100">
 					<MDBRow className="justify-content-center align-items-center h-100">
-						<MDBCol lg="6" className="mb-4 mb-lg-0" style={{marginTop:"5vh"}}>
-							<MDBCard className="mb-3" style={{ borderRadius: '.5rem' }}>
+						<MDBCol lg="6" className="mb-4 mb-lg-0" style={{marginTop:"10vh"}}>
+							<MDBCard className="profile-card mb-3" style={{ borderRadius: '.5rem' }}>
 								<MDBRow className="g-0">
 									<MDBCol md="4" className="gradient-custom text-center text-white"
 										style={{ borderTopLeftRadius: '.5rem', borderBottomLeftRadius: '.5rem' }}>
@@ -249,7 +249,7 @@ const Profile = ({ AllAuth }) => {
 
 											<table>
 					<tr>
-						<th>Events Registered</th>
+						<th style={{fontSize:"25px"}}>Events Registered</th>
 					</tr>
 					{RegisteredEvents.map((event, i) => {
 						return (
