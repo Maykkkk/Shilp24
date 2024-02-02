@@ -363,7 +363,12 @@ const Profile = ({ AllAuth }) => {
 
 													<table>
 														<tr>
-															<th>
+															<th
+																style={{
+																	fontSize:
+																		"25px",
+																}}
+															>
 																Events
 																Registered
 															</th>
