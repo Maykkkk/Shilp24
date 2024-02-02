@@ -64,7 +64,7 @@ const NavBar = ({ AllAuth }) => {
 								}
 								to="/competitions"
 							>
-								Competitions
+								Workshops
 							</Link>
 						</li>
 						<li className="nav-item px-2 mx-2">
