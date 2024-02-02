@@ -125,12 +125,6 @@ const Login = ({ AllAuth }) => {
 										style={{ margin: "0 0 0 1vw" }}
 									/>
 								</a>
-								<a href="https://www.youtube.com">
-									<IoLogoYoutube
-										className="youtube"
-										style={{ margin: "0 0 0 1vw" }}
-									/>
-								</a>
 							</div>
 						</div>
 					</div>
