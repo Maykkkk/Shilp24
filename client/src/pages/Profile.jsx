@@ -1,24 +1,13 @@
 import React, { useEffect, useState } from "react";
-import "../links/css/Profile.css";
+import '../links/css/Profile.css'
 import NavBar from "../components/NavBar";
 // import Footer from "../components/Footer";
-import {
-	MDBCol,
-	MDBContainer,
-	MDBRow,
-	MDBCard,
-	MDBCardText,
-	MDBCardBody,
-	MDBCardImage,
-	MDBTypography,
-	MDBIcon,
-} from "mdb-react-ui-kit";
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
 
 import Alert from "@mui/material/Alert";
 // import { updateProfile } from "firebase/auth";
 import { db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
-import { toast } from "react-toastify";
 
 const Profile = ({ AllAuth }) => {
 	const [FailureMessage, setFailureMessage] = useState("");
@@ -67,12 +56,10 @@ const Profile = ({ AllAuth }) => {
 			await setDoc(
 				doc(db, "userProfile", localStorage.getItem("UID")),
 				data
-			).then(() => {
-				toast.success("Profile updated successfully!");
-			});
+			);
 		} catch (e) {
 			setFailureMessage(e.message);
-			toast.error("Error adding document: " + e.message);
+			console.error("Error adding document: ", e.message);
 		}
 	};
 
@@ -165,262 +152,133 @@ const Profile = ({ AllAuth }) => {
 			</div> */}
 			<div>
 				<form onSubmit={onFormSubmit}>
-					<section
-						className="vh-100"
-						style={{ backgroundColor: "black" }}
-					>
-						<MDBContainer className="py-5 h-100">
-							<MDBRow className="justify-content-center align-items-center h-100">
-								<MDBCol lg="6" className="mb-4 mb-lg-0">
-									<MDBCard
-										className="mb-3"
-										style={{ borderRadius: ".5rem" }}
-									>
-										<MDBRow className="g-0">
-											<MDBCol
-												md="4"
-												className="gradient-custom text-center text-white"
-												style={{
-													borderTopLeftRadius:
-														".5rem",
-													borderBottomLeftRadius:
-														".5rem",
-												}}
-											>
-												<MDBCardImage
-													src={localStorage.getItem(
-														"photoURL"
-													)}
-													alt="Avatar"
-													className="my-5 rounded "
-													style={{ width: "80px" }}
-													fluid
-												/>
-												<MDBTypography tag="h5">
-													{localStorage.getItem(
-														"displayName"
-													)}
-												</MDBTypography>
-												{/* <MDBCardText>Web Designer</MDBCardText> */}
-												<MDBIcon far icon="edit mb-5" />
-											</MDBCol>
-											<MDBCol md="8">
-												<MDBCardBody className="p-4">
-													<MDBTypography tag="h6">
-														Email
-													</MDBTypography>
-													<MDBCardText className="text-muted">
-														{localStorage.getItem(
-															"email"
-														)}
-													</MDBCardText>
-													<hr className="mt-0 mb-4" />
-													<MDBRow className="pt-1">
-														{/* <MDBCol size="6" className="mb-3">
+			<section className="h-100" style={{ backgroundColor: 'black'}}>
+				<MDBContainer className="py-5 h-100">
+					<MDBRow className="justify-content-center align-items-center h-100">
+						<MDBCol lg="6" className="mb-4 mb-lg-0" style={{marginTop:"10vh"}}>
+							<MDBCard className="mb-3 profile-card" style={{ borderRadius: '.5rem' }}>
+								<MDBRow className="g-0">
+									<MDBCol md="4" className="gradient-custom text-center text-white"
+										style={{ borderTopLeftRadius: '.5rem', borderBottomLeftRadius: '.5rem' }}>
+										<MDBCardImage src={localStorage.getItem("photoURL")}
+											alt="Avatar" className="my-5 rounded " style={{ width: '80px' }} fluid />
+										<MDBTypography tag="h5">{localStorage.getItem("displayName")}
+										</MDBTypography>
+										{/* <MDBCardText>Web Designer</MDBCardText> */}
+										<MDBIcon far icon="edit mb-5" />
+									</MDBCol>
+									<MDBCol md="8">
+										<MDBCardBody className="p-4">
+										<MDBTypography tag="h6">Email</MDBTypography>
+										<MDBCardText className="text-muted">{localStorage.getItem("email")}</MDBCardText>
+											<hr className="mt-0 mb-4" />
+											<MDBRow className="pt-1">
+												{/* <MDBCol size="6" className="mb-3">
                         <MDBTypography tag="h6">Email</MDBTypography>
                         <MDBCardText className="text-muted">info@example.com</MDBCardText>
                       </MDBCol> */}
-														<MDBCol
-															size="6"
-															className="mb-3"
-														>
-															<MDBTypography tag="h6">
-																Phone
-															</MDBTypography>
-															<MDBCardText className="text-muted">
-																<input
-																	type="text"
-																	name="mobile"
-																	defaultValue={
-																		mobile
-																	}
-																	onChange={(
-																		e
-																	) => {
-																		setMobile(
-																			e
-																				.target
-																				.value
-																		);
-																	}}
-																></input>
-															</MDBCardText>
-														</MDBCol>
-														<MDBCol
-															size="6"
-															className="mb-3"
-														>
-															<MDBTypography tag="h6">
-																College
-															</MDBTypography>
-															<MDBCardText className="text-muted">
-																<input
-																	type="text"
-																	name="college"
-																	defaultValue={
-																		college
-																	}
-																	onChange={(
-																		e
-																	) => {
-																		setCollege(
-																			e
-																				.target
-																				.value
-																		);
-																	}}
-																></input>
-															</MDBCardText>
-														</MDBCol>
-													</MDBRow>
+												<MDBCol size="6" className="mb-3">
+													<MDBTypography tag="h6">Phone</MDBTypography>
+													<MDBCardText className="text-muted">
+														<input
+															type="text"
+															name="mobile"
+															defaultValue={mobile}
+															onChange={(e) => {
+																setMobile(e.target.value);
+															}}></input></MDBCardText>
+												</MDBCol>
+												<MDBCol size="6" className="mb-3">
+													<MDBTypography tag="h6">College</MDBTypography>
+													<MDBCardText className="text-muted">
+														<input
+															type="text"
+															name="college"
+															defaultValue={college}
+															onChange={(e) => {
+																setCollege(e.target.value);
+															}}
+														></input></MDBCardText>
+												</MDBCol>
+											</MDBRow>
 
-													{/* <MDBTypography tag="h6">Information</MDBTypography> */}
-													<hr className="mt-0 mb-4" />
-													<MDBRow className="pt-1">
-														<MDBCol
-															size="6"
-															className="mb-3"
-														>
-															<MDBTypography tag="h6">
-																Year
-															</MDBTypography>
-															<MDBCardText className="text-muted">
-																<input
-																	type="text"
-																	name="year"
-																	defaultValue={
-																		year
-																	}
-																	onChange={(
-																		e
-																	) => {
-																		setYear(
-																			e
-																				.target
-																				.value
-																		);
-																	}}
-																></input>
-															</MDBCardText>
-														</MDBCol>
-														<MDBCol
-															size="6"
-															className="mb-3"
-														>
-															<MDBTypography tag="h6">
-																Referral Code
-															</MDBTypography>
-															<MDBCardText className="text-muted">
-																<input
-																	type="text"
-																	name="referralCode"
-																	defaultValue={
-																		referralCode
-																	}
-																	onChange={(
-																		e
-																	) => {
-																		setReferralCode(
-																			e
-																				.target
-																				.value
-																		);
-																	}}
-																></input>
-															</MDBCardText>
-														</MDBCol>
+											{/* <MDBTypography tag="h6">Information</MDBTypography> */}
+											<hr className="mt-0 mb-4" />
+											<MDBRow className="pt-1">
+												<MDBCol size="6" className="mb-3">
+													<MDBTypography tag="h6">Year</MDBTypography>
+													<MDBCardText className="text-muted">
+														<input
+															type="text"
+															name="year"
+															defaultValue={year}
+															onChange={(e) => {
+																setYear(e.target.value);
+															}}
+														></input></MDBCardText>
+												</MDBCol>
+												<MDBCol size="6" className="mb-3">
+													<MDBTypography tag="h6">Referral Code</MDBTypography>
+													<MDBCardText className="text-muted">
+														<input
+															type="text"
+															name="referralCode"
+															defaultValue={referralCode}
+															onChange={(e) => {
+																setReferralCode(e.target.value);
+															}}
+														></input></MDBCardText>
+												</MDBCol>
 
-														<MDBCol
-															size="6"
-															className="mb-3"
-														>
-															{/* <MDBTypography tag="h6">Phone</MDBTypography> */}
-															<MDBCardText className="text-muted">
-																<input
-																	type="submit"
-																	className="btn btn-outline-dark"
-																	value={
-																		isProf
-																			? "Save Changes"
-																			: "Complete Profile"
-																	}
-																/>
-																{FailureMessage ? (
-																	<Alert
-																		severity="error"
-																		className="mt-2"
-																	>
-																		{
-																			FailureMessage
-																		}
-																	</Alert>
-																) : (
-																	<></>
-																)}
-															</MDBCardText>
-														</MDBCol>
-													</MDBRow>
+												<MDBCol size="6" className="mb-3">
+													{/* <MDBTypography tag="h6">Phone</MDBTypography> */}
+													<MDBCardText className="text-muted"><input
+														type="submit"
+														className="btn btn-outline-dark"
+														value={isProf ? "Save Changes" : "Complete Profile"}
+													/>
+														{FailureMessage ? (
+															<Alert severity="error" className="mt-2">
+																{FailureMessage}
+															</Alert>
+														) : (
+															<></>
+														)}</MDBCardText>
+												</MDBCol>
+											</MDBRow>
 
-													<table>
-														<tr>
-															<th
-																style={{
-																	fontSize:
-																		"25px",
-																}}
-															>
-																Events
-																Registered
-															</th>
+											<table>
+												<tr>
+													<th style={{fontSize:"25px"}}>Events Registered</th>
+												</tr>
+												{RegisteredEvents.map((event, i) => {
+													return (
+														<tr key={i}>
+															<td>{event}</td>
 														</tr>
-														{RegisteredEvents.map(
-															(event, i) => {
-																return (
-																	<tr key={i}>
-																		<td>
-																			{
-																				event
-																			}
-																		</td>
-																	</tr>
-																);
-															}
-														)}
-													</table>
+													);
+												})}
+											</table>
 
-													<div className="d-flex justify-content-start">
-														<a href="#!">
-															<MDBIcon
-																fab
-																icon="facebook me-3"
-																size="lg"
-															/>
-														</a>
-														<a href="#!">
-															<MDBIcon
-																fab
-																icon="twitter me-3"
-																size="lg"
-															/>
-														</a>
-														<a href="#!">
-															<MDBIcon
-																fab
-																icon="instagram me-3"
-																size="lg"
-															/>
-														</a>
-													</div>
-												</MDBCardBody>
-											</MDBCol>
-										</MDBRow>
-									</MDBCard>
-								</MDBCol>
-							</MDBRow>
-						</MDBContainer>
-					</section>
-				</form>
+
+
+
+											<div className="d-flex justify-content-start">
+												<a href="#!"><MDBIcon fab icon="facebook me-3" size="lg" /></a>
+												<a href="#!"><MDBIcon fab icon="twitter me-3" size="lg" /></a>
+												<a href="#!"><MDBIcon fab icon="instagram me-3" size="lg" /></a>
+											</div>
+										</MDBCardBody>
+									</MDBCol>
+								</MDBRow>
+							</MDBCard>
+						</MDBCol>
+					</MDBRow>
+				</MDBContainer>
+			</section>
+			</form>
 			</div>
+
 		</div>
 	);
 };
