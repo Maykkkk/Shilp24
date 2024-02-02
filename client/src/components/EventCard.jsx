@@ -50,6 +50,37 @@ function EventCard(props) {
 		});
 	};
 
+	const UnRegisterEvent = async (EventId) => {
+		let data;
+		if (!isProf) {
+			navigate("../profile");
+			return;
+		}
+		if (RegisteredEvents.includes(props.name)) {
+			return;
+		}
+		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
+		getDoc(docRef).then(async (docSnap) => {
+			if (docSnap.exists()) {
+				data = docSnap.data();
+				if (data.Events) {
+					if (!data.Events.includes(EventId)) {
+						data.Events.push(EventId);
+					}
+				} else {
+					data.Events = [EventId];
+				}
+			}
+
+			await setDoc(
+				doc(db, "userProfile", localStorage.getItem("UID")),
+				data
+			).then(() => {
+				setIsRegistered(true);
+				toast.success("Successfully registered for Event: " + EventId);
+			});
+		});
+	};
 	return (
 		<div
 			className="card"
