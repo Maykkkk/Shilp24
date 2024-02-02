@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 // import { Link } from 'react-router-dom'
 import NavBar from "../components/NavBar";
 import "../links/css/Contact.css";
@@ -6,10 +6,40 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 // import { MdEmail } from "react-icons/md";
 import Fade from "react-reveal/Fade";
+import PacmanLoader from "react-spinners/PacmanLoader";
+import ParticleBackground from "../components/ParticleBackground";
 
-const contacts = ({ AllAuth }) => {
+const override = {
+	display: "block",
+	margin: "0 auto",
+	borderColor: "red",
+  };
+
+const Contacts = ({ AllAuth }) => {
+
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 1000);
+	}, []);
+
 	return (
 		<div className="App">
+			{loading ? (
+				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"#271e29"}}>
+					<ParticleBackground />
+					<PacmanLoader
+						color="#36d7b7"
+						loading={loading}
+						cssOverride={override}
+						size={50}
+						aria-label="Loading Spinner"
+						data-testid="loader"
+					/>
+				</div>
+			) : 
 			<div className="body" id="contact">
 				<div>
 					<NavBar AllAuth={AllAuth} />
@@ -61,8 +91,9 @@ const contacts = ({ AllAuth }) => {
 				</div>
 				<Footer />
 			</div>
+			}
 		</div>
 	);
 };
 
-export default contacts;
+export default Contacts;

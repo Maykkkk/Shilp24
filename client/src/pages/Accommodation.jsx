@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../links/css/home.css";
 import "../links/css/accommodation.css";
 import NavBar from "../components/NavBar";
@@ -10,9 +10,25 @@ import Faqs from "../components/Accommodation/Faqs";
 import ReachingIITBHU from "../components/Accommodation/ReachingIITBHU";
 import ContactUs from "../components/Accommodation/ContactUs";
 import Fade from "react-reveal/Fade";
+import ParticleBackground from "../components/ParticleBackground";
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+const override = {
+	display: "block",
+	margin: "0 auto",
+	borderColor: "red",
+  };
 
 const Accommodation = ({ AllAuth }) => {
 	const [onButton, setOnButton] = useState("aboutUs");
+
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 1000);
+	}, []);
 
 	const buttonStyle = {
 		backgroundColor: "rgba(209, 33, 86, 1)",
@@ -20,6 +36,19 @@ const Accommodation = ({ AllAuth }) => {
 
 	return (
 		<div className="App">
+			{loading ? (
+				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"#271e29"}}>
+					<ParticleBackground />
+					<PacmanLoader
+						color="#36d7b7"
+						loading={loading}
+						cssOverride={override}
+						size={50}
+						aria-label="Loading Spinner"
+						data-testid="loader"
+					/>
+				</div>
+			) : 
 			<div className="body">
 				<NavBar AllAuth={AllAuth} />
 				<Fade top>
@@ -117,6 +146,7 @@ const Accommodation = ({ AllAuth }) => {
 					<Footer className="footer"></Footer>
 				</Fade>
 			</div>
+			}
 		</div>
 	);
 };

@@ -1,7 +1,7 @@
 .profile-card{
-  width: 50vw;
-  max-width: 100%;
- padding: 0;
+    width: 50vw;
+    max-width: 100%;
+   padding: 0 !important;
 }
 
 .gradient-custom {
