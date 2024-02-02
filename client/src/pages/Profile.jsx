@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import '../links/css/Profile.css'
 import NavBar from "../components/NavBar";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
+import Fade from "react-reveal/Fade";
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
 
 import Alert from "@mui/material/Alert";
 // import { updateProfile } from "firebase/auth";
 import { db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
+// import { Fade } from "@mui/material";
 
 const Profile = ({ AllAuth }) => {
 	const [FailureMessage, setFailureMessage] = useState("");
@@ -65,6 +67,8 @@ const Profile = ({ AllAuth }) => {
 
 	return (
 		<div>
+		<div className="App">
+				<div className="body">
 			<NavBar AllAuth={AllAuth}></NavBar>
 			{/* <h1>Profile</h1>
 			<div>
@@ -150,10 +154,10 @@ const Profile = ({ AllAuth }) => {
 					})}
 				</table>
 			</div> */}
-			<div>
+			
 				<form onSubmit={onFormSubmit}>
-			<section className="h-100" style={{ backgroundColor: 'black'}}>
-				<MDBContainer className="py-5 h-100">
+			<section className="h-100" style={{ backgroundColor: '#271e29'}}>
+				<MDBContainer className="py-5 h-110">
 					<MDBRow className="justify-content-center align-items-center h-100">
 						<MDBCol lg="6" className="mb-4 mb-lg-0" style={{marginTop:"10vh"}}>
 							<MDBCard className="mb-3 profile-card" style={{ borderRadius: '.5rem' }}>
@@ -277,8 +281,11 @@ const Profile = ({ AllAuth }) => {
 				</MDBContainer>
 			</section>
 			</form>
+			<Fade bottom>
+						<Footer className="footer"></Footer>
+					</Fade>
+				</div>
 			</div>
-
 		</div>
 	);
 };
