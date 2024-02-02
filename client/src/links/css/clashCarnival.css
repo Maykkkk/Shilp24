@@ -29,6 +29,7 @@
 }
 .card{
     margin: 20px;
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1000px) {

@@ -74,9 +74,9 @@
         font-size: 7vw;
         font-weight: 600;
     }
-    .container:first-of-type{
+/*     .container:first-of-type{
         height: 30vh;
-    }
+    } */
     #home{
         height: 70vh;
     }

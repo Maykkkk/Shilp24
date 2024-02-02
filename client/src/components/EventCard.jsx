@@ -52,7 +52,7 @@ function EventCard(props) {
 
 	const UnRegisterEvent = async (EventId) => {
 		let data;
-		let events;
+		// let events;
 		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
 		getDoc(docRef).then(async (docSnap) => {
 			if (docSnap.exists()) {
