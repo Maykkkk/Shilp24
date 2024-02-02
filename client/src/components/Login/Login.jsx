@@ -19,7 +19,7 @@ const Login = ({ AllAuth }) => {
 	const navigate = useNavigate();
 
 	const x = useMotionValue(-542);
-	const y = useMotionValue(-285);
+	const y = useMotionValue(-255);
 	const rotateX = useTransform(y, [-338, -138], [20, -20]);
 	const rotateY = useTransform(x, [-642, -442], [-20, 20]);
 
@@ -77,7 +77,7 @@ const Login = ({ AllAuth }) => {
 			<div className="background" style={{ perspective: 2000 }}>
 				<motion.div
 					style={
-						window.innerWidth >= 1000
+						window.innerWidth >= 1400
 							? { x, y, rotateX, rotateY, z: 100 }
 							: {}
 					}
