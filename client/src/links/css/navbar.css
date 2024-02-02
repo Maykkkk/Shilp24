@@ -43,4 +43,13 @@
 	.navbar-collapse{
 		height: 100dvh;
 	}
+	.nav-link{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.ProfilePic{
+		display: flex;
+		margin: auto;
+	}
 }
