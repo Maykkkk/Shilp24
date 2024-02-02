@@ -1,5 +1,6 @@
 @media screen and (max-width: 1153px){
     .team-card{
+        display: block;
         transform: translateX(0) translateY(0) translateZ(100px) rotateX(0deg) rotateY(0deg) !important;
     }
 }
