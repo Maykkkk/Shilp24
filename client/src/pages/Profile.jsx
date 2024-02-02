@@ -152,7 +152,7 @@ const Profile = ({ AllAuth }) => {
 			</div> */}
 			<div>
 				<form onSubmit={onFormSubmit}>
-			<section className="vh-100" style={{ backgroundColor: 'black' }}>
+			<section className="h-100" style={{ backgroundColor: 'black' }}>
 				<MDBContainer className="py-5 h-100">
 					<MDBRow className="justify-content-center align-items-center h-100">
 						<MDBCol lg="6" className="mb-4 mb-lg-0">
