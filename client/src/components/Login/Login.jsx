@@ -81,7 +81,9 @@ const Login = ({ AllAuth }) => {
 							? { x, y, rotateX, rotateY, z: 100 }
 							: {}
 					}
-					drag={true}
+					drag={
+						window.innerWidth >= 1400?true:false
+					}
 					dragElastic={0.18}
 					dragConstraints={{
 						top: -285,
