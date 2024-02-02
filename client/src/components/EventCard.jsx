@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../links/css/pdf.css";
 import { getDoc, setDoc, doc } from "@firebase/firestore";
 import { db } from "../firebase";
+import { toast } from "react-toastify";
 
 // pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 //     'pdfjs-dist/build/pdf.worker.min.js',
@@ -42,8 +43,10 @@ function EventCard(props) {
 			await setDoc(
 				doc(db, "userProfile", localStorage.getItem("UID")),
 				data
-			);
-			setIsRegistered(true);
+			).then(() => {
+				setIsRegistered(true);
+				toast.success("Successfully registered for Event: " + EventId);
+			});
 		});
 	};
 
