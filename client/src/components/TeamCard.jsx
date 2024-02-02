@@ -21,7 +21,10 @@ function TeamCard({Name, ProfilePhoto, style, LinkedIn, Gmail, Instagram}) {
                     ? { x, y, rotateX, rotateY, z: 100 }
                     : {}
                 }
-                drag
+                drag={
+                  window.innerWidth >= 1000
+                    ?true:false
+                }
                 dragElastic={0.18}
                 dragConstraints={{top: 0, left: 0, right: 0, bottom: 0}}
                 whileTap={{cursor:"grabbing"}} 
