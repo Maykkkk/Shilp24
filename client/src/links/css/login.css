@@ -205,6 +205,15 @@ transition: 0.3s;
         font-size: 30px;
         color: #ff0000;
     }
+    .loginContainer .content .text-sci h2{
+        font-size: 7vw;
+    }
+    .loginContainer .content .text-sci h2 span{
+        font-size: 3.5vw;
+    }
+    .loginContainer .content .text-sci .social-icons a{
+        font-size: 3.5vw;
+    }
     .loginContainer{
         font-size:18px;
     }
