@@ -15,14 +15,16 @@ function EventCard(props) {
 	const navigate = useNavigate();
 	const isProf = props.AllAuth.isProf;
 	const RegisteredEvents = props.RegisteredEvents;
-	const [isRegistered, setIsRegistered] = useState(
-		RegisteredEvents.includes(props.name)
-	);
+	const [isRegistred, setIsRegistered] = useState(false);
+	console.log(props.name, RegisteredEvents.includes(props.name));
 
 	const RegisterEvent = async (EventId) => {
 		let data;
 		if (!isProf) {
 			navigate("../profile");
+			return;
+		}
+		if (RegisteredEvents.includes(props.name)) {
 			return;
 		}
 		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
@@ -60,12 +62,19 @@ function EventCard(props) {
 				</Link>
 				<p
 					to=""
-					className={"button" + (isRegistered ? " registered" : "")}
+					className={
+						"button" +
+						(RegisteredEvents.includes(props.name) || isRegistred
+							? " registered"
+							: "")
+					}
 					onClick={() => {
 						RegisterEvent(props.name);
 					}}
 				>
-					{isRegistered ? "Registered" : "Register"}
+					{RegisteredEvents.includes(props.name) || isRegistred
+						? "Registered"
+						: "Register"}
 				</p>
 			</div>
 		</div>
