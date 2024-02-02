@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
-import { toast } from "react-toastify";
 
 const NavBar = ({ AllAuth }) => {
 	const isAuth = AllAuth.isAuth;
@@ -18,7 +17,6 @@ const NavBar = ({ AllAuth }) => {
 			localStorage.removeItem("photoURL");
 			localStorage.removeItem("UID");
 			localStorage.removeItem("email");
-			toast("Logged Out");
 			setAuth(false);
 		});
 	};

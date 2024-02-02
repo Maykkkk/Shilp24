@@ -12,7 +12,6 @@ import { signInWithPopup } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, provider, db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 const Login = ({ AllAuth }) => {
 	const setAuth = AllAuth.setAuth;
@@ -63,12 +62,6 @@ const Login = ({ AllAuth }) => {
 					});
 					setSubmitButtonDisabled(false);
 					setAuth(true);
-					toast.success(
-						<div>
-							{"Signed In!"} <br />
-							{"Welcome " + localStorage.getItem("displayName")}
-						</div>
-					);
 				})
 				.catch((error) => {
 					console.log(error.message);
@@ -88,7 +81,7 @@ const Login = ({ AllAuth }) => {
 							? { x, y, rotateX, rotateY, z: 100 }
 							: {}
 					}
-					drag={window.innerWidth >= 1400 ? true : false}
+					drag={window.innerWidth >= 1400?true:false}
 					dragElastic={0.18}
 					dragConstraints={{
 						top: -285,
@@ -122,6 +115,12 @@ const Login = ({ AllAuth }) => {
 								<a href="https://www.facebook.com/groups/157760987681133/">
 									<FaSquareFacebook
 										className="facebook"
+										style={{ margin: "0 0 0 1vw" }}
+									/>
+								</a>
+								<a href="https://www.youtube.com">
+									<IoLogoYoutube
+										className="youtube"
 										style={{ margin: "0 0 0 1vw" }}
 									/>
 								</a>

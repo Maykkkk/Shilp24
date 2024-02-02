@@ -14,7 +14,7 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
   }
-.card-body .row{
+  .card-body .row{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -22,6 +22,7 @@
 .card-body .row .col-6{
     width: 100%;
 }
+
 
   @media screen and (max-width:1000px) {
     .profile-card{

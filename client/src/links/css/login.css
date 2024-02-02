@@ -201,10 +201,6 @@ transition: 0.3s;
     .loginContainer .login .form-box .input-box label{
         font-size: 15px;
     }
-    .form-box h2{
-        font-size: 30px;
-        color: #ff0000;
-    }
     .loginContainer .content .text-sci h2{
         font-size: 7vw;
     }
@@ -214,7 +210,13 @@ transition: 0.3s;
     .loginContainer .content .text-sci .social-icons a{
         font-size: 3.5vw;
     }
+    
+    .form-box h2{
+        font-size: 30px;
+        color: #ff0000;
+    }
     .loginContainer{
         font-size:18px;
     }
 }
+
