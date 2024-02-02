@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../links/css/exploreMore.css'
-import event1 from '../links/img/Events/1 (1).webp'
-import event2 from '../links/img/Events/2 (1).webp'
-import event3 from '../links/img/Events/3 (1).webp'
-import event4 from '../links/img/Events/4 (1).webp'
+import techShowcase from '../links/img/TechShowcase.jpg'
+import civilExpo from '../links/img/civilExpo.jpg'
+import clashCarnival from '../links/img/clashCarnival.jpg'
+
 
 function ExploreMore() {
   return (
@@ -15,29 +15,29 @@ function ExploreMore() {
 
         <div className="event-gallery">
           <div className="event">
-            <a href="#events">
-              <img src={event1} alt="" />
-              <br />Event 1
-            </a>
+            <Link to="/events">
+              <img src={techShowcase} alt="" />
+              <br />TechShowcase
+            </Link>
           </div>
           <div className="event">
-            <a href="#events">
-              <img src={event2} alt="" />
-              <br />Event 2
-            </a>
+            <Link to="/events">
+              <img src={civilExpo} alt="" />
+              <br />Civil Expo
+            </Link>
           </div>
           <div className="event">
-            <a href="#events">
-              <img src={event3} alt="" />
-              <br />Event 3
-            </a>
+            <Link to="/events">
+              <img src={clashCarnival} alt="" />
+              <br />Clash Carnival
+            </Link>
           </div>
-          <div className="event">
-            <a href="#events">
+          {/* <div className="event">
+            <Link to="/events">
               <img src={event4} alt="" />
               <br />Event 4
-            </a>
-          </div>
+            </Link>
+          </div> */}
         </div>
         <div className="exploreMore">
           <Link to="/events">Explore More !</Link>
