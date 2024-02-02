@@ -28,10 +28,10 @@ const Team = ({AllAuth}) => {
   return (
     <div className="App">
       {loading ? (
-				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"#271e29"}}>
+				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"black"}}>
 					<ParticleBackground />
 					<PacmanLoader
-						color="#36d7b7"
+						color="white"
 						loading={loading}
 						cssOverride={override}
 						size={50}

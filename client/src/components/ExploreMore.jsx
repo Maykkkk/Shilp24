@@ -2,8 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import '../links/css/exploreMore.css'
 import techShowcase from '../links/img/TechShowcase.jpg'
-import civilExpo from '../links/img/civilExpo.jpg'
-import clashCarnival from '../links/img/clashCarnival.jpg'
+import bridgeIt from '../links/img/bridgeIt.webp'
+import Buildin from '../links/img/Building Vision Expo.webp'
 
 
 function ExploreMore() {
@@ -22,13 +22,13 @@ function ExploreMore() {
           </div>
           <div className="event">
             <Link to="/events">
-              <img src={civilExpo} alt="" />
+              <img src={bridgeIt} alt="" />
               <br />Civil Expo
             </Link>
           </div>
           <div className="event">
             <Link to="/events">
-              <img src={clashCarnival} alt="" />
+              <img src={Buildin} alt="" />
               <br />Clash Carnival
             </Link>
           </div>
