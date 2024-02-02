@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../links/css/Profile.css'
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
 
 import Alert from "@mui/material/Alert";
@@ -150,6 +150,8 @@ const Profile = ({ AllAuth }) => {
 					})}
 				</table>
 			</div> */}
+			<div>
+				<form onSubmit={onFormSubmit}>
 			<section className="vh-100" style={{ backgroundColor: 'black' }}>
 				<MDBContainer className="py-5 h-100">
 					<MDBRow className="justify-content-center align-items-center h-100">
@@ -274,6 +276,8 @@ const Profile = ({ AllAuth }) => {
 					</MDBRow>
 				</MDBContainer>
 			</section>
+			</form>
+			</div>
 
 		</div>
 	);
