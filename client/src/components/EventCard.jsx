@@ -52,23 +52,15 @@ function EventCard(props) {
 
 	const UnRegisterEvent = async (EventId) => {
 		let data;
-		if (!isProf) {
-			navigate("../profile");
-			return;
-		}
-		if (RegisteredEvents.includes(props.name)) {
-			return;
-		}
+		let events;
 		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
 		getDoc(docRef).then(async (docSnap) => {
 			if (docSnap.exists()) {
 				data = docSnap.data();
 				if (data.Events) {
-					if (!data.Events.includes(EventId)) {
-						data.Events.push(EventId);
+					if (data.Events.includes(EventId)) {
+						data.Events.splice(data.Events.indexOf(EventId), 1);
 					}
-				} else {
-					data.Events = [EventId];
 				}
 			}
 
@@ -76,8 +68,8 @@ function EventCard(props) {
 				doc(db, "userProfile", localStorage.getItem("UID")),
 				data
 			).then(() => {
-				setIsRegistered(true);
-				toast.success("Successfully registered for Event: " + EventId);
+				setIsRegistered(false);
+				toast.error("Successfully Unregistered from Event: " + EventId);
 			});
 		});
 	};
@@ -115,7 +107,7 @@ function EventCard(props) {
 				</p>
 				{RegisteredEvents.includes(props.name) || isRegistred ? (
 					<p
-						className="button"
+						className="button unregister"
 						onClick={() => {
 							UnRegisterEvent(props.name);
 						}}

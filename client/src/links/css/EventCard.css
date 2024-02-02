@@ -3,6 +3,7 @@
 	--clr-neutral-100: hsl(0, 0%, 100%);
 	--clr-accent-400: hsl(142, 90%, 61%);
 	--clr-registered: hsla(142, 90%, 61%, 0.445);
+	--clr-unregister: hsl(0, 81%, 56%);
 }
 
 *,
@@ -120,6 +121,10 @@
 .button.registered {
 	cursor: default;
 	background-color: var(--clr-registered) !important;
+}
+
+.button.unregister {
+	background-color: var(--clr-unregister);
 }
 
 .card-body {
