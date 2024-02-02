@@ -16,7 +16,11 @@ function TeamCard({Name, ProfilePhoto, style, LinkedIn, Gmail, Instagram}) {
 
   return (
     <motion.div 
-                style={{x,y,rotateX,rotateY,z:100}}
+                style={
+                  window.innerWidth >= 1000
+                    ? { x, y, rotateX, rotateY, z: 100 }
+                    : {}
+                }
                 drag
                 dragElastic={0.18}
                 dragConstraints={{top: 0, left: 0, right: 0, bottom: 0}}
