@@ -9,7 +9,10 @@
 ::-webkit-scrollbar {
     display: none;
 }
-
+.home-body{
+    position: relative;
+    background-color: #271e29;
+}
 .body{
     position: relative;
     background-color: #271e29;

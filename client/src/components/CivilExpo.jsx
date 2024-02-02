@@ -13,7 +13,7 @@ function CivilExpo({ AllAuth, RegisteredEvents }) {
 					{/* Event-1 */}
 					<Fade left>
 						<EventCard
-							name="BUILD VISION EXPO"
+							name="Build Vision Exp"
 							className="eventCard"
 							AllAuth={AllAuth}
 							RegisteredEvents={RegisteredEvents}

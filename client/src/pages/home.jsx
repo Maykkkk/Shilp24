@@ -11,7 +11,7 @@ import ParticleBackground from "../components/ParticleBackground";
 const Home = ({ AllAuth }) => {
 	return (
 		<div className="App">
-			<div className="body">
+			<div className="home-body">
 				<ParticleBackground />
 				<NavBar AllAuth={AllAuth} />
 				<Hero />
