@@ -38,16 +38,42 @@ function EventCard(props) {
 				} else {
 					data.Events = [EventId];
 				}
+				await setDoc(
+					doc(db, "userProfile", localStorage.getItem("UID")),
+					data
+				).then(() => {
+					setIsRegistered(true);
+					toast.success(
+						"Successfully registered for Event: " + EventId
+					);
+				});
 			}
-
-			await setDoc(
-				doc(db, "userProfile", localStorage.getItem("UID")),
-				data
-			).then(() => {
-				setIsRegistered(true);
-				toast.success("Successfully registered for Event: " + EventId);
-			});
 		});
+
+		const docEvent = doc(db, EventId, localStorage.getItem("UID"));
+		getDoc(docEvent)
+			.then(async (docSnap) => {
+				let eventData;
+				if (docSnap.exists()) {
+					eventData = docSnap.data();
+				}
+				if (!eventData) {
+					eventData = {
+						uid: localStorage.getItem("UID"),
+						paid: false,
+						isRegistred: true,
+					};
+				} else {
+					eventData.isRegistred = true;
+				}
+				await setDoc(
+					doc(db, EventId, localStorage.getItem("UID")),
+					eventData
+				);
+			})
+			.catch((error) => {
+				console.log(error.message);
+			});
 	};
 
 	const UnRegisterEvent = async (EventId) => {
@@ -72,6 +98,25 @@ function EventCard(props) {
 				toast.error("Successfully Unregistered from Event: " + EventId);
 			});
 		});
+
+		const docEvent = doc(db, EventId, localStorage.getItem("UID"));
+		getDoc(docEvent)
+			.then(async (docSnap) => {
+				let eventData;
+				if (docSnap.exists()) {
+					eventData = docSnap.data();
+				}
+				if (eventData) {
+					eventData.isRegistred = false;
+				}
+				await setDoc(
+					doc(db, EventId, localStorage.getItem("UID")),
+					eventData
+				);
+			})
+			.catch((error) => {
+				console.log(error.message);
+			});
 	};
 	return (
 		<div
