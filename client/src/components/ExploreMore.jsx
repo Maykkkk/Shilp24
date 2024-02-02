@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../links/css/exploreMore.css'
-import techShowcase from '../links/img/TechShowcase.jpg'
 import bridgeIt from '../links/img/bridgeIt.webp'
+import event2 from '../links/img/InsightRise Symposium.webp'
 import Buildin from '../links/img/Building Vision Expo.webp'
 
 
@@ -16,7 +16,7 @@ function ExploreMore() {
         <div className="event-gallery">
           <div className="event">
             <Link to="/events">
-              <img src={techShowcase} alt="" />
+              <img src={event2} alt="" />
               <br />TechShowcase
             </Link>
           </div>
