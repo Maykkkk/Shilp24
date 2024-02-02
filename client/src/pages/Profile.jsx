@@ -155,7 +155,7 @@ const Profile = ({ AllAuth }) => {
 			<section className="h-100" style={{ backgroundColor: 'black' }}>
 				<MDBContainer className="py-5 h-100">
 					<MDBRow className="justify-content-center align-items-center h-100">
-						<MDBCol lg="6" className="mb-4 mb-lg-0">
+						<MDBCol lg="6" className="mb-4 mb-lg-0" style={{marginTop:"5vh"}}>
 							<MDBCard className="mb-3" style={{ borderRadius: '.5rem' }}>
 								<MDBRow className="g-0">
 									<MDBCol md="4" className="gradient-custom text-center text-white"
