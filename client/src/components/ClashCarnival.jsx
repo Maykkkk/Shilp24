@@ -13,7 +13,7 @@ function ClashCarnival({ AllAuth, RegisteredEvents }) {
 					{/* Event-1 */}
 					<Fade left>
 						<EventCard
-							name="Case Clash"
+							name="Feast for Brains"
 							className="eventCard"
 							AllAuth={AllAuth}
 							RegisteredEvents={RegisteredEvents}
@@ -23,17 +23,7 @@ function ClashCarnival({ AllAuth, RegisteredEvents }) {
 					{/* Event-2 */}
 					<Fade bottom>
 						<EventCard
-							name="Surveyor's Hunt"
-							className="eventCard"
-							AllAuth={AllAuth}
-							RegisteredEvents={RegisteredEvents}
-						/>
-					</Fade>
-
-					{/* Event -3 */}
-					<Fade right>
-						<EventCard
-							name="Feast For Brains"
+							name="Capture the Snap"
 							className="eventCard"
 							AllAuth={AllAuth}
 							RegisteredEvents={RegisteredEvents}

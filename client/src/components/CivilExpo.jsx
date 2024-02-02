@@ -13,7 +13,7 @@ function CivilExpo({ AllAuth, RegisteredEvents }) {
 					{/* Event-1 */}
 					<Fade left>
 						<EventCard
-							name="Build Vision Exp"
+							name="Building Vision Expo"
 							className="eventCard"
 							AllAuth={AllAuth}
 							RegisteredEvents={RegisteredEvents}
@@ -23,7 +23,7 @@ function CivilExpo({ AllAuth, RegisteredEvents }) {
 					{/* Event-2 */}
 					<Fade right>
 						<EventCard
-							name="InsightRise Symposium"
+							name="Case Clash"
 							className="eventCard"
 							AllAuth={AllAuth}
 							RegisteredEvents={RegisteredEvents}
@@ -34,7 +34,7 @@ function CivilExpo({ AllAuth, RegisteredEvents }) {
 					{/* Event -3 */}
 					<Fade left>
 						<EventCard
-							name="BUILD VISION EXPO"
+							name="Surveyor's Hunt"
 							className="eventCard"
 							AllAuth={AllAuth}
 							RegisteredEvents={RegisteredEvents}
@@ -44,7 +44,7 @@ function CivilExpo({ AllAuth, RegisteredEvents }) {
 					{/* Event -4 */}
 					<Fade right>
 						<EventCard
-							name="3 Minute Thesis"
+							name="BridgeIt"
 							className="eventCard"
 							AllAuth={AllAuth}
 							RegisteredEvents={RegisteredEvents}

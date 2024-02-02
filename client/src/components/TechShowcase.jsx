@@ -36,7 +36,17 @@ function TechShowcase({ AllAuth, RegisteredEvents }) {
 					{/* Event -3 */}
 					<Fade right>
 						<EventCard
-							name="bridgeIt"
+							name="InsightRise Symposium"
+							className="eventCard"
+							AllAuth={AllAuth}
+							RegisteredEvents={RegisteredEvents}
+						/>
+					</Fade>
+
+					{/* Event -4 */}
+					<Fade right>
+						<EventCard
+							name="3 Minute Thesis"
 							className="eventCard"
 							AllAuth={AllAuth}
 							RegisteredEvents={RegisteredEvents}
