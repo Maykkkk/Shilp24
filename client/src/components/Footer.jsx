@@ -7,7 +7,6 @@ import shilp from '../links/img/shilpp3-modified_auto_x2-removebg-preview 1.png'
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
-import { IoLogoYoutube } from "react-icons/io5";
 
 function Footer() {
   return (
@@ -19,7 +18,7 @@ function Footer() {
                 <img className='chineseTemple' src={chineseTemple} alt="" />
             </div>
             <div className="mail">
-                <a href="mailto:shilp@itbhu.ac.in">shilp@itbhu.ac.in</a>
+                <a href="mailto:shilp@itbhu.ac.in">shilp@iitbhu.ac.in</a>
             </div>
         </div>
         {/* --------------- */}
@@ -54,7 +53,7 @@ function Footer() {
                 <a href="https://www.linkedin.com/company/civil-engineering-society-iit-bhu/"><FaLinkedin className='linkedIn'/></a>
                 <a href="https://www.instagram.com/ces_iitbhu/"><FaInstagram className='instagram' style={{margin:"0 0 0 1vw"}}/></a>
                 <a href="https://www.facebook.com/groups/157760987681133/"><FaSquareFacebook className='facebook' style={{margin:"0 0 0 1vw"}}/></a>
-                <a href="https://www.youtube.com"><IoLogoYoutube className='youtube' style={{margin:"0 0 0 1vw"}}/></a>
+                
             </div>
         </div>
         {/* -------------- */}

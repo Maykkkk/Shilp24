@@ -31,7 +31,7 @@ const Contacts = ({ AllAuth }) => {
 				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"#271e29"}}>
 					<ParticleBackground />
 					<PacmanLoader
-						color="white"
+						color="#36d7b7"
 						loading={loading}
 						cssOverride={override}
 						size={50}
@@ -59,7 +59,7 @@ const Contacts = ({ AllAuth }) => {
 							<br />
 							+91 96251 67658
 						</div>
-						<div className="name2 contact fs-5">
+						{/* <div className="name2 contact fs-5">
 							Anchal Ganguli
 							<br />
 							<Link to="mailto:anchal.ganguly.civ21@itbhu.ac.in">
@@ -67,8 +67,8 @@ const Contacts = ({ AllAuth }) => {
 							</Link>
 							<br />
 							+91 8765522325
-						</div>
-						<div className="name3 contact fs-5">
+						</div> */}
+						{/* <div className="name3 contact fs-5">
 							Manvi Srivastava
 							<br />
 							<Link to="mailto:manvi.srivastava.civ21@itbhu.ac.in">
@@ -76,7 +76,7 @@ const Contacts = ({ AllAuth }) => {
 							</Link>
 							<br />
 							+91 9696220428
-						</div>
+						</div> */}
 						<div className="name4 contact fs-5">
 							Akhand Pratap Yadav
 							<br />

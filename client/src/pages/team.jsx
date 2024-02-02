@@ -31,7 +31,7 @@ const Team = ({AllAuth}) => {
 				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"black"}}>
 					<ParticleBackground />
 					<PacmanLoader
-						color="white"
+						color="#36d7b7"
 						loading={loading}
 						cssOverride={override}
 						size={50}
@@ -110,7 +110,7 @@ const Team = ({AllAuth}) => {
             </Fade>
             <Fade right>
               <div className="team-container">
-                <TeamCard Name="Anup Tiwari" ProfilePhoto={teamPhotos.eventsAdvisor1} />
+                {/* <TeamCard Name="Anup Tiwari" ProfilePhoto={teamPhotos.eventsAdvisor1} /> */}
                 <TeamCard Name="Navvay Dhingra" ProfilePhoto={teamPhotos.eventsAdvisor2} />
                 <TeamCard Name="Pawan Kumar" ProfilePhoto={teamPhotos.eventsAdvisor3} />
               </div>

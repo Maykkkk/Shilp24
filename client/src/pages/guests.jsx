@@ -24,7 +24,7 @@ const Guests = ({ AllAuth }) => {
 			<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"black"}}>
 				<ParticleBackground />
 				<PacmanLoader
-					color="white"
+					color="#36d7b7"
 					loading={loading}
 					size={50}
 					aria-label="Loading Spinner"

@@ -154,3 +154,6 @@
 		width: 80vw;
 	}
 }
+.events .event-gallery img{
+	box-shadow: 2px 2px 2px black;
+}
