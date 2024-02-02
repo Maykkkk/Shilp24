@@ -16,7 +16,6 @@ function EventCard(props) {
 	const isProf = props.AllAuth.isProf;
 	const RegisteredEvents = props.RegisteredEvents;
 	const [isRegistred, setIsRegistered] = useState(false);
-	console.log(props.name, RegisteredEvents.includes(props.name));
 
 	const RegisterEvent = async (EventId) => {
 		let data;
@@ -49,7 +48,12 @@ function EventCard(props) {
 	};
 
 	return (
-		<div className="card" style={{backgroundImage:`url("./EventPhotos/${props.name}.jpg")`}}>
+		<div
+			className="card"
+			style={{
+				backgroundImage: `url("./EventPhotos/${props.name}.jpg")`,
+			}}
+		>
 			<div className="card-content">
 				<h2 className="card-title">{props.name}</h2>
 				<p className="card-body">{props.details}</p>
