@@ -19,7 +19,7 @@ function Footer() {
                 <img className='chineseTemple' src={chineseTemple} alt="" />
             </div>
             <div className="mail">
-                <a href="mailto:shilp@itbhu.ac.in">shilp@itbhu.ac.in</a>
+                <a href="mailto:shilp@itbhu.ac.in">shilp@iitbhu.ac.in</a>
             </div>
         </div>
         {/* --------------- */}
