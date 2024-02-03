@@ -98,7 +98,7 @@ const Contacts = [
     Designation:"PR Advisors",
     data:[{
       url:"./TeamPhotos/IV Year/Aditya Sharma PR Advisor.webp",
-      Name:"Palak Agarwal",
+      Name:"Aditya Sharma",
       Email:"",
       Instagram:"",
       Linkedin:"",
