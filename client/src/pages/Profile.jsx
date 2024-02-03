@@ -19,7 +19,6 @@ import Alert from "@mui/material/Alert";
 // import { updateProfile } from "firebase/auth";
 import { db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
 
 import { toast } from "react-toastify";
 // import { Fade } from "@mui/material";
@@ -28,7 +27,6 @@ const Profile = ({ AllAuth }) => {
 	const [FailureMessage, setFailureMessage] = useState("");
 	const isProf = AllAuth.isProf;
 	const setIsProf = AllAuth.setIsProf;
-	const navigate = useNavigate();
 
 	const [mobile, setMobile] = useState("");
 	const [year, setYear] = useState("");
