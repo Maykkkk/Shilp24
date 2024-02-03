@@ -19,11 +19,16 @@ import Alert from "@mui/material/Alert";
 // import { updateProfile } from "firebase/auth";
 import { db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
+
+import { toast } from "react-toastify";
 // import { Fade } from "@mui/material";
 
 const Profile = ({ AllAuth }) => {
 	const [FailureMessage, setFailureMessage] = useState("");
 	const isProf = AllAuth.isProf;
+	const setIsProf = AllAuth.setIsProf;
+	const navigate = useNavigate();
 
 	const [mobile, setMobile] = useState("");
 	const [year, setYear] = useState("");
@@ -74,7 +79,10 @@ const Profile = ({ AllAuth }) => {
 			await setDoc(
 				doc(db, "userProfile", localStorage.getItem("UID")),
 				data
-			);
+			).then(() => {
+				toast.success("Profile Successfully Updated!");
+				setIsProf(true);
+			});
 		} catch (e) {
 			setFailureMessage(e.message);
 			console.error("Error adding document: ", e.message);
