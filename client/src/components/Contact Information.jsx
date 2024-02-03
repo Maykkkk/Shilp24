@@ -87,7 +87,7 @@ const Contacts = [
     Designation:"Publicity Advisors",
     data:[{
       url:"./TeamPhotos/IV Year/Assim Ujjwal _ Publicity Advisor.webp",
-      Name:"Palak Agarwal",
+      Name:"Assim Ujjwal",
       Email:"",
       Instagram:"",
       Linkedin:"",
