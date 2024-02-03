@@ -4,10 +4,10 @@ import "../links/css/team.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Fade from "react-reveal/Fade";
-import teamPhotos from "./teamPhotos";
 import TeamCard from "../components/TeamCard";
 import ParticleBackground from "../components/ParticleBackground";
 import PacmanLoader from "react-spinners/PacmanLoader";
+import Contacts from "../components/Contact Information"
 
 const override = {
 	display: "block",
@@ -63,9 +63,52 @@ const Team = ({AllAuth}) => {
             </Fade>
           </div> */}
 
+          {
+            Contacts.map((e)=>{
+              console.log(e)
+              return(
+                <div className="team-title" id="coConveynor" key={e.id}>
+                  {/* Co-Conveynor */}
+                  <Fade left>
+                    <h1>{e.Designation}</h1>
+                  </Fade>
+                  <Fade right>
+                    <div className="team-container">
+                      {e.data.map((f)=>{
+                        console.log(f.Name)
+                        return f.Name === "Anurag Prakash"|| f.Name ==="Anshika Singh" || f.Name==="Pratik Nand" ? 
+                      (
+                        <TeamCard 
+                        Name={f.Name} 
+                        ProfilePhoto={f.url} 
+                        LinkedIn={f.Linkedin} 
+                        Gmail={f.Email} 
+                        Instagram={f.Instagram} 
+                        style={{ objectFit: "contain", transform: "scale(1.5)", top: "40px" }}/>
+                      )
+                      :
+                      (
+                          <TeamCard 
+                          Name={f.Name} 
+                          ProfilePhoto={f.url} 
+                          LinkedIn={f.Linkedin} 
+                          Gmail={f.Email} 
+                          Instagram={f.Instagram} 
+                          />
+                          )
+                        })}
+                    </div>
+                  </Fade>
+                </div>
+              )
+            })
+
+          }
+
+
           {/* Conveynors */}
 
-          <div className="team-title" id="convenor">
+          {/* <div className="team-title" id="convenor">
             <Fade left>
               <h1>Convenor</h1>
             </Fade>
@@ -79,7 +122,7 @@ const Team = ({AllAuth}) => {
           </div>
 
           <div className="team-title" id="coConveynor">
-            {/* Co-Conveynor */}
+            // Co-Conveynor 
             <Fade left>
               <h1>Co-Convenor</h1>
             </Fade>
@@ -89,10 +132,10 @@ const Team = ({AllAuth}) => {
                 <TeamCard Name="Nandini Bhimsaria" ProfilePhoto={teamPhotos.coConveynor2} />
               </div>
             </Fade>
-          </div>
+          </div> */}
 
           {/* Tech Advisors */}
-          <div className="team-title" id="techAdvisor">
+          {/* <div className="team-title" id="techAdvisor">
             <Fade left>
               <h1>Tech Advisor</h1>
             </Fade>
@@ -103,34 +146,34 @@ const Team = ({AllAuth}) => {
             </Fade>
           </div>
 
-          {/* Events-Advisor */}
-          <div className="team-title" id="eventAdvisor">
+          // {/* Events-Advisor */}
+          {/* <div className="team-title" id="eventAdvisor">
             <Fade left>
               <h1>Events-Advisors</h1>
             </Fade>
             <Fade right>
               <div className="team-container">
-                {/* <TeamCard Name="Anup Tiwari" ProfilePhoto={teamPhotos.eventsAdvisor1} /> */}
+                <TeamCard Name="Anup Tiwari" ProfilePhoto={teamPhotos.eventsAdvisor1} />
                 <TeamCard Name="Navvay Dhingra" ProfilePhoto={teamPhotos.eventsAdvisor2} />
                 <TeamCard Name="Pawan Kumar" ProfilePhoto={teamPhotos.eventsAdvisor3} />
               </div>
             </Fade>
           </div>
 
-          {/* Design Head */}
+          Design Head
           <div className="team-title" id="designHead">
             <Fade left>
               <h1>Design Advisors</h1>
             </Fade>
             <Fade right>
               <div className="team-container">
-                <TeamCard Name="Kanhaiya Kumar" ProfilePhoto={teamPhotos.designHead1} />
-                <TeamCard Name="Palak Agarwal" ProfilePhoto={teamPhotos.designHead2} />
+                <TeamCard Name="Kanhaiya Kumar" ProfilePhoto={teamPhotos.designAdvisor1} />
+                <TeamCard Name="Palak Agarwal" ProfilePhoto={teamPhotos.designAdvisor2} />
               </div>
             </Fade>
           </div>
 
-          {/* Publicity Advisors */}
+          Publicity Advisors
           <div className="team-title" id="publicityAdvisor">
             <Fade left>
               <h1>Publicity Advisor</h1>
@@ -142,7 +185,7 @@ const Team = ({AllAuth}) => {
             </Fade>
           </div>
 
-          {/* PR Advisors */}
+          PR Advisors
           <div className="team-title" id="prAdvisor">
             <Fade left>
               <h1>PR Advisor</h1>
@@ -154,11 +197,11 @@ const Team = ({AllAuth}) => {
             </Fade>
           </div>
 
-          {/* Tech Head & Executives */}
+          Tech Head & Executives
           <div className="team-title" id="tech">
             <Fade left>
               <div>
-                <h1>Tech Head</h1> {/*Tech Head */}
+                <h1>Tech Head</h1> Tech Head
                 <div className="team-container">
                   <TeamCard Name="Mayank Mani Nath Gupta" ProfilePhoto={teamPhotos.techHead} />
                 </div>
@@ -167,7 +210,7 @@ const Team = ({AllAuth}) => {
 
             <Fade right>
               <div>
-                <h1>Tech Executives</h1> {/*Tech Executive */}
+                <h1>Tech Executives</h1> Tech Executive
                 <div className="team-container">
                   <TeamCard Name="Sumit Dutta" ProfilePhoto={teamPhotos.techExecutive1} />
                   <TeamCard Name="Abhijeet" ProfilePhoto={teamPhotos.techExecutive2} />
@@ -177,7 +220,7 @@ const Team = ({AllAuth}) => {
             </Fade>
           </div>
 
-          {/* Marketing */}
+          Marketing
           <div className="team-title" id="marketing">
             <Fade left>
               <div>
@@ -206,13 +249,13 @@ const Team = ({AllAuth}) => {
             </Fade>
           </div>
 
-          {/* Event Heads*/}
+          Event Heads
           <div className="team-title" id="events">
             <Fade left>
               <div>
                 <h1>Event Heads</h1>
                 <div className="team-container">
-                  {/* <TeamCard Name="Devesh Sindhi" ProfilePhoto={teamPhotos.eventsHead1} /> */}
+                  <TeamCard Name="Devesh Sindhi" ProfilePhoto={teamPhotos.eventsHead1} />
                   <TeamCard Name="Param Srivastava" ProfilePhoto={teamPhotos.eventsHead2} />
                   <TeamCard Name="Prachi Priya" ProfilePhoto={teamPhotos.eventsHead3} />
                   <TeamCard Name="Pratik Nand" ProfilePhoto={teamPhotos.eventsHead4} style={{ objectFit: "contain", transform: "scale(1.5)", top: "40px" }}/>
@@ -245,7 +288,7 @@ const Team = ({AllAuth}) => {
             </div>
           </div>
 
-          {/* PR Heads*/}
+          PR Heads
           <div className="team-title" id="pr">
             <Fade left>
               <h1>Public Relations Head</h1>
@@ -266,12 +309,12 @@ const Team = ({AllAuth}) => {
                 <TeamCard Name="Naisarg Raj Pandey" ProfilePhoto={teamPhotos.prExecutive4} />
                 <TeamCard Name="Reshma Khatoon" ProfilePhoto={teamPhotos.prExecutive5} />
                 <TeamCard Name="Vipul Ahlawat" ProfilePhoto={teamPhotos.prExecutive6} />
-                {/* <TeamCard Name="Virat Patel" ProfilePhoto={teamPhotos.prExecutive7} /> */}
+                {/* <TeamCard Name="Virat Patel" ProfilePhoto={teamPhotos.prExecutive7} /> 
               </div>
             </Fade>
           </div>
 
-          {/* Design & Content Heads*/}
+          Design & Content Heads
           <div className="team-title" id="design&content">
             <Fade left>
               <h1>Design and Content Heads</h1>
@@ -296,7 +339,7 @@ const Team = ({AllAuth}) => {
             </Fade>
           </div>
 
-          {/* Publicity Head */}
+          Publicity Head
           <div className="team-title" id="publicity">
             <Fade left>
               <h1>Publicity Head</h1>
@@ -317,11 +360,11 @@ const Team = ({AllAuth}) => {
                 <TeamCard Name="Ayush Raj" ProfilePhoto={teamPhotos.publicityExecutive3} />
                 <TeamCard Name="Deepak Yadav" ProfilePhoto={teamPhotos.publicityExecutive4} />
                 {/* <TeamCard Name="Jatin Singh" ProfilePhoto={teamPhotos.publicityExecutive5} style={{ objectFit: "contain", transform: "scale(1.5)", top: "40px" }} />
-                <TeamCard Name="Manvendra Saraswat" ProfilePhoto={teamPhotos.publicityExecutive6} /> */}
+                <TeamCard Name="Manvendra Saraswat" ProfilePhoto={teamPhotos.publicityExecutive6} /> 
                 <TeamCard Name="Shikha Kaloniya" ProfilePhoto={teamPhotos.publicityExecutive7} />
               </div>
-            </Fade>
-          </div>
+            </Fade> 
+          </div> */}
         </div>
 
         <Footer></Footer>

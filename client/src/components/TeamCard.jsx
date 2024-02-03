@@ -39,7 +39,7 @@ function TeamCard({Name, ProfilePhoto, style, LinkedIn, Gmail, Instagram}) {
                   </div>
                   <ul className="sci">
                   <li><Link to={LinkedIn}><FaLinkedin className="linkedIn" /></Link></li>
-                    <li><Link to={Gmail}><BiLogoGmail className='gmail'/></Link></li>
+                    <li><button onClick={() => window.location = {Gmail}} style={{background:"transparent", border:"none", fontSize:"27px", color:"white"}}><BiLogoGmail className='gmail'/></button></li>
                     <li><Link to={Instagram}><FaInstagram className="instagram" /></Link></li>
                   </ul>
                 </motion.div>

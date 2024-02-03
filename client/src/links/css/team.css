@@ -106,6 +106,7 @@
     bottom: 10%;
     left: 16%;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 .team-container .team-card .sci li{
