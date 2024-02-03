@@ -117,6 +117,19 @@ const Team = ({AllAuth}) => {
             </Fade>
           </div>
 
+          {/* Design Head */}
+          <div className="team-title" id="designHead">
+            <Fade left>
+              <h1>Design Advisors</h1>
+            </Fade>
+            <Fade right>
+              <div className="team-container">
+                <TeamCard Name="Kanhaiya Kumar" ProfilePhoto={teamPhotos.designHead1} />
+                <TeamCard Name="Palak Agarwal" ProfilePhoto={teamPhotos.designHead2} />
+              </div>
+            </Fade>
+          </div>
+
           {/* Publicity Advisors */}
           <div className="team-title" id="publicityAdvisor">
             <Fade left>
@@ -125,6 +138,18 @@ const Team = ({AllAuth}) => {
             <Fade right>
               <div className="team-container">
                 <TeamCard Name="Assim Ujjwal" ProfilePhoto={teamPhotos.publicityAdvisor} />
+              </div>
+            </Fade>
+          </div>
+
+          {/* PR Advisors */}
+          <div className="team-title" id="prAdvisor">
+            <Fade left>
+              <h1>PR Advisor</h1>
+            </Fade>
+            <Fade right>
+              <div className="team-container">
+                <TeamCard Name="Aditya Sharma" ProfilePhoto={teamPhotos.prAdvisor} />
               </div>
             </Fade>
           </div>
@@ -162,6 +187,7 @@ const Team = ({AllAuth}) => {
                   <TeamCard Name="Mithilesh K" ProfilePhoto={teamPhotos.marketingHead2} />
                   <TeamCard Name="Prakhar Yadav" ProfilePhoto={teamPhotos.marketingHead3} />
                   <TeamCard Name="Priyaranjan Kumar Khan" ProfilePhoto={teamPhotos.marketingHead4} />
+                  <TeamCard Name="Suyash Vijay" ProfilePhoto={teamPhotos.marketingHead5} />
                 </div>
               </div>
             </Fade>
@@ -186,11 +212,12 @@ const Team = ({AllAuth}) => {
               <div>
                 <h1>Event Heads</h1>
                 <div className="team-container">
-                  <TeamCard Name="Devesh Sindhi" ProfilePhoto={teamPhotos.eventsHead1} />
+                  {/* <TeamCard Name="Devesh Sindhi" ProfilePhoto={teamPhotos.eventsHead1} /> */}
                   <TeamCard Name="Param Srivastava" ProfilePhoto={teamPhotos.eventsHead2} />
                   <TeamCard Name="Prachi Priya" ProfilePhoto={teamPhotos.eventsHead3} />
-                  <TeamCard Name="Pratik Nand" ProfilePhoto={teamPhotos.eventsHead4} />
+                  <TeamCard Name="Pratik Nand" ProfilePhoto={teamPhotos.eventsHead4} style={{ objectFit: "contain", transform: "scale(1.5)", top: "40px" }}/>
                   <TeamCard Name="Radhika Singh Rajawat" ProfilePhoto={teamPhotos.eventsHead5} />
+                  <TeamCard Name="Ayush Sahu" ProfilePhoto={teamPhotos.eventsHead6} />
                 </div>
               </div>
             </Fade>
@@ -239,7 +266,7 @@ const Team = ({AllAuth}) => {
                 <TeamCard Name="Naisarg Raj Pandey" ProfilePhoto={teamPhotos.prExecutive4} />
                 <TeamCard Name="Reshma Khatoon" ProfilePhoto={teamPhotos.prExecutive5} />
                 <TeamCard Name="Vipul Ahlawat" ProfilePhoto={teamPhotos.prExecutive6} />
-                <TeamCard Name="Virat Patel" ProfilePhoto={teamPhotos.prExecutive7} />
+                {/* <TeamCard Name="Virat Patel" ProfilePhoto={teamPhotos.prExecutive7} /> */}
               </div>
             </Fade>
           </div>
@@ -277,6 +304,8 @@ const Team = ({AllAuth}) => {
                 <TeamCard Name="Akhand Pratap Yadav" ProfilePhoto={teamPhotos.publicityHead1} />
                 <TeamCard Name="Anchal Ganguli" ProfilePhoto={teamPhotos.publicityHead2} />
                 <TeamCard Name="Manvi Srivastava" ProfilePhoto={teamPhotos.publicityHead3} />
+                <TeamCard Name="Vishu Raj" ProfilePhoto={teamPhotos.publicityHead4} />
+                <TeamCard Name="Anshika Singh" ProfilePhoto={teamPhotos.publicityHead5} style={{ objectFit: "contain", transform: "scale(1.5)", top: "40px" }}/>
               </div>
             </Fade>
 
@@ -287,8 +316,8 @@ const Team = ({AllAuth}) => {
                 <TeamCard Name="Ayush Kumar" ProfilePhoto={teamPhotos.publicityExecutive2} />
                 <TeamCard Name="Ayush Raj" ProfilePhoto={teamPhotos.publicityExecutive3} />
                 <TeamCard Name="Deepak Yadav" ProfilePhoto={teamPhotos.publicityExecutive4} />
-                <TeamCard Name="Jatin Singh" ProfilePhoto={teamPhotos.publicityExecutive5} style={{ objectFit: "contain", transform: "scale(1.5)", top: "40px" }} />
-                <TeamCard Name="Manvendra Saraswat" ProfilePhoto={teamPhotos.publicityExecutive6} />
+                {/* <TeamCard Name="Jatin Singh" ProfilePhoto={teamPhotos.publicityExecutive5} style={{ objectFit: "contain", transform: "scale(1.5)", top: "40px" }} />
+                <TeamCard Name="Manvendra Saraswat" ProfilePhoto={teamPhotos.publicityExecutive6} /> */}
                 <TeamCard Name="Shikha Kaloniya" ProfilePhoto={teamPhotos.publicityExecutive7} />
               </div>
             </Fade>

@@ -8,7 +8,10 @@ const teamPhotos ={
     eventsAdvisor1:"./TeamPhotos/IV Year/ANUP TIWARI II EVENTS ADVISOR.webp",
     eventsAdvisor2:"./TeamPhotos/IV Year/NAVVAY DHINGRA _ EVENTS.webp",
     eventsAdvisor3:"./TeamPhotos/IV Year/Pawan Kumar events advisor part 4.webp",
+    
     publicityAdvisor:"./TeamPhotos/IV Year/Assim Ujjwal _ Publicity Advisor.webp",
+
+    prAdvisor:"./TeamPhotos/IV Year/Aditya Sharma PR Advisor.webp",
 
     // Heads
     eventsHead1 : "./TeamPhotos/III Year/IMG-20231015-WA0003.webp",
@@ -16,15 +19,22 @@ const teamPhotos ={
     eventsHead3 : "./TeamPhotos/III Year/PRACHI PRIYA _ EVENTS HEAD.webp",
     eventsHead4 : "./TeamPhotos/III Year/Pratik Nand _ Events Head.webp",
     eventsHead5 : "./TeamPhotos/III Year/Radhika Singh Rajawat _ Events Head.webp",
-    
+    eventsHead6 : "./TeamPhotos/III Year/AYUSH SAHU _ PR HEAD.webp",
+
+    designHead1:"./TeamPhotos/IV Year/Kanhaiya Kumar _ Co-Convener.webp",
+    designHead2 :"/TeamPhotos/IV Year/PALAK AGRAWAL __ DESIGN ADVISOR.webp",
+
     publicityHead1 : "./TeamPhotos/III Year/AKHAND PRATAP YADAV _ PUBLICITY HEAD.webp",
     publicityHead2 : "./TeamPhotos/III Year/ANCHAL GANGULY _ PUBLICITY HEAD.webp",
     publicityHead3 : "./TeamPhotos/III Year/MANVI SRIVASTAVA _ PUBLICITY HEAD.webp",
-    
+    publicityHead4 :"./TeamPhotos/III Year/VISHU RAJ __ PUBLICITY HEAD.webp",
+    publicityHead5 : "./TeamPhotos/III Year/ANSHIKA SINGH__ PUBLI HEAD.webp",
+
     marketingHead1 : "./TeamPhotos/III Year/Aman Srivastava _ MARKETING HEAD.webp",
     marketingHead2 : "./TeamPhotos/III Year/MITHILESH K _ MARKETING HEAD.webp",
     marketingHead3 : "./TeamPhotos/III Year/PRAKHAR YADAV _ MARKETING HEAD.webp",
     marketingHead4 : "./TeamPhotos/III Year/PRIYARANJAN KUMAR KHAN _ MARKETING HEAD.webp",
+    marketingHead5 : "./TeamPhotos/III Year/Suyash Vijay __ Marketing Head.webp",
     
     designContentHead1 : "./TeamPhotos/III Year/Ankit Kumar _ Content Head.webp",
     designContentHead2 : "./TeamPhotos/III Year/ASHWANI KUMAR SHARMA ll DESIGN HEAD.webp",
