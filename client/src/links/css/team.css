@@ -59,6 +59,7 @@
     border-radius: 15px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     backdrop-filter: blur(10px);
     transition: 1s;
@@ -102,12 +103,10 @@
     margin: 2opx 0 10px;
 }
 .team-container .team-card .sci{
-    position: absolute;
-    bottom: 10%;
-    left: 16%;
+    padding-left: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .team-container .team-card .sci li{
     list-style: none;
