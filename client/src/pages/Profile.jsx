@@ -51,11 +51,9 @@ const Profile = ({ AllAuth }) => {
 
 	const onFormSubmit = async (e) => {
 		e.preventDefault();
+		setFailureMessage("");
 		try {
-			if (!referralCode) {
-				setReferralCode("");
-			}
-			const data = {
+			let data = {
 				uid: localStorage.getItem("UID"),
 				Email: localStorage.getItem("email"),
 				Mobile: mobile,
@@ -64,6 +62,11 @@ const Profile = ({ AllAuth }) => {
 				Referral: referralCode,
 				Events: RegisteredEvents,
 			};
+			if (!referralCode) {
+				data.Referral = "";
+			}
+
+			console.log(data);
 			if (!data.Mobile || !data.College || !data.Year) {
 				setFailureMessage("Fill All Details");
 				return;
