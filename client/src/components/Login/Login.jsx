@@ -12,6 +12,7 @@ import { signInWithPopup } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, provider, db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = ({ AllAuth }) => {
 	const setAuth = AllAuth.setAuth;
@@ -60,6 +61,12 @@ const Login = ({ AllAuth }) => {
 							navigate("/profile");
 						}
 					});
+					toast.success(
+						<div>
+							{"Succesfully Logged In!"} <br />{" "}
+							{"Welcome " + localStorage.getItem("displayName")}
+						</div>
+					);
 					setSubmitButtonDisabled(false);
 					setAuth(true);
 				})
@@ -81,7 +88,7 @@ const Login = ({ AllAuth }) => {
 							? { x, y, rotateX, rotateY, z: 100 }
 							: {}
 					}
-					drag={window.innerWidth >= 1400?true:false}
+					drag={window.innerWidth >= 1400 ? true : false}
 					dragElastic={0.18}
 					dragConstraints={{
 						top: -285,

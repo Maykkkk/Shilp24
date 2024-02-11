@@ -33,6 +33,7 @@ const Profile = ({ AllAuth }) => {
 	const [college, setCollege] = useState("");
 	const [referralCode, setReferralCode] = useState("");
 	const [RegisteredEvents, setRegisteredEvents] = useState([]);
+	const [isIITBHUser, setIsIITBHUser] = useState(false);
 
 	useEffect(() => {
 		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
@@ -50,6 +51,7 @@ const Profile = ({ AllAuth }) => {
 			} else {
 			}
 		});
+		setIsIITBHUser(localStorage.getItem("email").endsWith("itbhu.ac.in"));
 	}, []);
 
 	const onFormSubmit = async (e) => {
@@ -396,6 +398,10 @@ const Profile = ({ AllAuth }) => {
 																	Registered
 																</th>
 															</tr>
+															<tr>
+																<th> Events</th>
+																<th>Fees</th>
+															</tr>
 															{RegisteredEvents.map(
 																(event, i) => {
 																	return (
@@ -409,12 +415,44 @@ const Profile = ({ AllAuth }) => {
 																					event
 																				}
 																			</td>
+																			<td>
+																				{isIITBHUser ? (
+																					<>
+																						<strike>
+																							49
+																						</strike>
+																						&nbsp;
+																						0
+																					</>
+																				) : (
+																					<>
+																						49
+																					</>
+																				)}
+																			</td>
 																		</tr>
 																	);
 																}
 															)}
+															{RegisteredEvents.length ? (
+																<>
+																	<tr>
+																		<th>
+																			Total
+																		</th>
+																		<th>
+																			{99 +
+																				49 *
+																					(isIITBHUser
+																						? 0
+																						: RegisteredEvents.length)}
+																		</th>
+																	</tr>
+																</>
+															) : (
+																<></>
+															)}
 														</table>
-
 														<div className="d-flex justify-content-start">
 															<a href="#!">
 																<MDBIcon
@@ -447,6 +485,7 @@ const Profile = ({ AllAuth }) => {
 							</MDBContainer>
 						</section>
 					</form>
+
 					<Fade bottom>
 						<Footer className="footer"></Footer>
 					</Fade>
