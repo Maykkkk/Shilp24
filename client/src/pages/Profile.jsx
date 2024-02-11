@@ -33,6 +33,7 @@ const Profile = ({ AllAuth }) => {
 	const [college, setCollege] = useState("");
 	const [referralCode, setReferralCode] = useState("");
 	const [RegisteredEvents, setRegisteredEvents] = useState([]);
+	const [RegisteredEventsPaid, setRegisteredEventsPaid] = useState({});
 	const [isIITBHUser, setIsIITBHUser] = useState(false);
 
 	useEffect(() => {
@@ -41,14 +42,27 @@ const Profile = ({ AllAuth }) => {
 			if (docSnap.exists()) {
 				const data = docSnap.data();
 				if (data.Events) {
-					// console.log(data)
 					setRegisteredEvents(data.Events);
+					let paid = {};
+					for (let event of data.Events) {
+						const eventDoc = doc(
+							db,
+							event,
+							localStorage.getItem("UID")
+						);
+						getDoc(eventDoc).then((eventDocSnap) => {
+							if (eventDocSnap.exists()) {
+								const eventData = eventDocSnap.data();
+								paid[event] = eventData.paid;
+							}
+						});
+					}
+					setRegisteredEventsPaid(paid);
 				}
 				setMobile(data.Mobile);
 				setCollege(data.College);
 				setReferralCode(data.Referral);
 				setYear(data.Year);
-			} else {
 			}
 		});
 		setIsIITBHUser(localStorage.getItem("email").endsWith("itbhu.ac.in"));
@@ -401,7 +415,25 @@ const Profile = ({ AllAuth }) => {
 															<tr>
 																<th> Events</th>
 																<th>Fees</th>
+																<th className="px-4">
+																	Paid
+																</th>
 															</tr>
+															{RegisteredEvents.length ? (
+																<>
+																	<tr>
+																		<td>
+																			Registration
+																			Fees
+																		</td>
+																		<td>
+																			99
+																		</td>
+																	</tr>
+																</>
+															) : (
+																<></>
+															)}
 															{RegisteredEvents.map(
 																(event, i) => {
 																	return (
@@ -430,6 +462,13 @@ const Profile = ({ AllAuth }) => {
 																					</>
 																				)}
 																			</td>
+																			<td>
+																				{RegisteredEventsPaid[
+																					event
+																				]
+																					? "✓"
+																					: "✖"}
+																			</td>
 																		</tr>
 																	);
 																}
@@ -453,6 +492,28 @@ const Profile = ({ AllAuth }) => {
 																<></>
 															)}
 														</table>
+
+														<MDBCardText className="text-muted">
+															<a
+																className="btn btn-outline-dark"
+																href="/" // TODO: Put Google Form Link Here
+															>
+																Fee Payment
+															</a>
+															{FailureMessage ? (
+																<Alert
+																	severity="error"
+																	className="mt-2"
+																>
+																	{
+																		FailureMessage
+																	}
+																</Alert>
+															) : (
+																<></>
+															)}
+														</MDBCardText>
+
 														<div className="d-flex justify-content-start">
 															<a href="#!">
 																<MDBIcon
