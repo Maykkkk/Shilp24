@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../links/css/Profile.css";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import Fade from "react-reveal/Fade";
+// import Footer from "../components/Footer";
+// import Fade from "react-reveal/Fade";
 import {
 	MDBCol,
 	MDBContainer,
@@ -547,9 +547,9 @@ const Profile = ({ AllAuth }) => {
 						</section>
 					</form>
 
-					<Fade bottom>
+					{/* <Fade bottom>
 						<Footer className="footer"></Footer>
-					</Fade>
+					</Fade> */}
 				</div>
 			</div>
 		</div>

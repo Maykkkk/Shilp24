@@ -57,10 +57,6 @@
     .events .heading a{
         font-size: 7vw;
     }
-    .events .exploreMore a{
-        font-size: 3.5vw;
-        margin-bottom: 6vw;
-    }
     .events .event a{
         font-size: 3vw;
     }
@@ -77,9 +73,6 @@
 @media screen and (max-width: 775px){
     .events .heading a{
         font-size: 10vw;
-    }
-    .events .exploreMore a{
-        font-size: 8vw;
     }
     .events .event a{
         font-size: 6vw;
@@ -124,9 +117,6 @@
     .events .heading a{
         font-size: 12vw;
     }
-    .events .exploreMore a{
-        font-size: 8vw;
-    }
     .events .event img{
         height: 43vw;
         width: 43vw;
@@ -141,17 +131,7 @@
     }
     
 }
-.exploreMore:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
-    cursor: pointer;
+.exploreMore{
+    margin: auto;
 }
-.exploreMore a{
-    text-decoration: none;
-    color: white;
-    border: 3px solid rgba(255, 255, 255, 0.462);
-    font-size: 3vw;
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: linear-gradient(45deg,rgb(98, 41, 115),rgb(246, 202, 202));
-}
+

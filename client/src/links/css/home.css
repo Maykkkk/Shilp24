@@ -89,5 +89,7 @@
 }
 
 .Bottom{
+    margin-top: 20vh;
+    width: 100%;
     position: relative;
 }
