@@ -3,6 +3,9 @@
     max-width: 100%;
    padding: 0 !important;
 }
+.body{
+  padding-bottom: 15vw;
+}
 
 .gradient-custom {
   /* fallback for old browsers */
