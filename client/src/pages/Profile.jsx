@@ -19,7 +19,7 @@ import Alert from "@mui/material/Alert";
 // import { updateProfile } from "firebase/auth";
 import { db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
-
+import ParticleBackground from "../components/ParticleBackground";
 import { toast } from "react-toastify";
 // import { Fade } from "@mui/material";
 
@@ -106,7 +106,8 @@ const Profile = ({ AllAuth }) => {
 	return (
 		<div>
 			<div className="App">
-				<div className="body">
+				<div className="body profile-body">
+					<ParticleBackground/>
 					<NavBar AllAuth={AllAuth}></NavBar>
 					{/* <h1>Profile</h1>
 			<div>
