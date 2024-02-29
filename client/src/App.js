@@ -11,6 +11,7 @@ import Accommodation from "./pages/Accommodation";
 import Team from "./pages/team";
 import Media from "./pages/media";
 import LoginPage from "./pages/loginPage";
+import Admin from "./pages/admin";
 // import RegisterPage from "./pages/registerPage";
 import Gallery from "./pages/Gallery";
 import Profile from "./pages/Profile";
@@ -191,6 +192,11 @@ function App() {
 							<Navigate to="/" />
 						)
 					}
+				></Route>
+				<Route
+					exact
+					path="/admin"
+					element={<Admin AllAuth={AllAuth} />}
 				></Route>
 			</Routes>
 			<ToastContainer
