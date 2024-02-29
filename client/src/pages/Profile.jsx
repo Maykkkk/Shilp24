@@ -107,7 +107,7 @@ const Profile = ({ AllAuth }) => {
 		<div>
 			<div className="App">
 				<div className="body profile-body">
-					<ParticleBackground/>
+					<ParticleBackground />
 					<NavBar AllAuth={AllAuth}></NavBar>
 					{/* <h1>Profile</h1>
 			<div>
@@ -237,7 +237,14 @@ const Profile = ({ AllAuth }) => {
 															"displayName"
 														)}
 													</MDBTypography>
-													{/* <MDBCardText>Web Designer</MDBCardText> */}
+													<MDBRow className="justify-content-center align-items-center h-100">
+														<MDBCardText>
+															UserId: &nbsp;
+															{localStorage.getItem(
+																"UID"
+															)}
+														</MDBCardText>
+													</MDBRow>
 													<MDBIcon
 														far
 														icon="edit mb-5"
