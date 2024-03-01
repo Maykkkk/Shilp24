@@ -10,14 +10,16 @@ import Footer from "../components/Footer";
 import Fade from "react-reveal/Fade";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ParticleBackground from "../components/ParticleBackground";
+import Button from "../components/Button";
 
 import { doc, getDoc } from "@firebase/firestore";
 import { db } from "../firebase";
 
 
 const override = {
-	display: "block",
-	margin: "0 auto",
+	display: "flex",
+	justifyContent: "center",
+	alignItems: "center",
 	borderColor: "red",
   };
 
@@ -76,9 +78,12 @@ const Events = ({ AllAuth }) => {
 						RegisteredEvents={RegisteredEvents}
 					></ClashCarnival>
 				</div>
-				<Fade bottom>
-					<Footer></Footer>
-				</Fade>
+				<Button name="RULEBOOK" url="/pdfs/RULEBOOK(Main Events).pdf" target="_blank"/>
+				<div className="Bottom">
+					<Fade bottom>
+						<Footer></Footer>
+					</Fade>
+				</div>
 			</div>
 		}
 		</div>

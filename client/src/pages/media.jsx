@@ -9,8 +9,9 @@ import ParticleBackground from "../components/ParticleBackground";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
 const override = {
-	display: "block",
-	margin: "0 auto",
+	display: "flex",
+	justifyContent: "center",
+	alignItems: "center",
 	borderColor: "red",
   };
 

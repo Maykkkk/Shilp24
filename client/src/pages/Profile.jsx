@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../links/css/Profile.css";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import Fade from "react-reveal/Fade";
+// import Footer from "../components/Footer";
+// import Fade from "react-reveal/Fade";
 import {
 	MDBCol,
 	MDBContainer,
@@ -19,7 +19,7 @@ import Alert from "@mui/material/Alert";
 // import { updateProfile } from "firebase/auth";
 import { db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
-
+import ParticleBackground from "../components/ParticleBackground";
 import { toast } from "react-toastify";
 // import { Fade } from "@mui/material";
 
@@ -33,6 +33,8 @@ const Profile = ({ AllAuth }) => {
 	const [college, setCollege] = useState("");
 	const [referralCode, setReferralCode] = useState("");
 	const [RegisteredEvents, setRegisteredEvents] = useState([]);
+	const [RegisteredEventsPaid, setRegisteredEventsPaid] = useState({});
+	const [isIITBHUser, setIsIITBHUser] = useState(false);
 
 	useEffect(() => {
 		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
@@ -40,16 +42,30 @@ const Profile = ({ AllAuth }) => {
 			if (docSnap.exists()) {
 				const data = docSnap.data();
 				if (data.Events) {
-					// console.log(data)
 					setRegisteredEvents(data.Events);
+					let paid = {};
+					for (let event of data.Events) {
+						const eventDoc = doc(
+							db,
+							event,
+							localStorage.getItem("UID")
+						);
+						getDoc(eventDoc).then((eventDocSnap) => {
+							if (eventDocSnap.exists()) {
+								const eventData = eventDocSnap.data();
+								paid[event] = eventData.paid;
+							}
+						});
+					}
+					setRegisteredEventsPaid(paid);
 				}
 				setMobile(data.Mobile);
 				setCollege(data.College);
 				setReferralCode(data.Referral);
 				setYear(data.Year);
-			} else {
 			}
 		});
+		setIsIITBHUser(localStorage.getItem("email").endsWith("itbhu.ac.in"));
 	}, []);
 
 	const onFormSubmit = async (e) => {
@@ -90,7 +106,8 @@ const Profile = ({ AllAuth }) => {
 	return (
 		<div>
 			<div className="App">
-				<div className="body">
+				<div className="body profile-body">
+					<ParticleBackground />
 					<NavBar AllAuth={AllAuth}></NavBar>
 					{/* <h1>Profile</h1>
 			<div>
@@ -220,7 +237,14 @@ const Profile = ({ AllAuth }) => {
 															"displayName"
 														)}
 													</MDBTypography>
-													{/* <MDBCardText>Web Designer</MDBCardText> */}
+													<MDBRow className="justify-content-center align-items-center h-100">
+														<MDBCardText>
+															UserId: &nbsp;
+															{localStorage.getItem(
+																"UID"
+															)}
+														</MDBCardText>
+													</MDBRow>
 													<MDBIcon
 														far
 														icon="edit mb-5"
@@ -396,6 +420,28 @@ const Profile = ({ AllAuth }) => {
 																	Registered
 																</th>
 															</tr>
+															<tr>
+																<th> Events</th>
+																<th>Fees</th>
+																<th className="px-4">
+																	Paid
+																</th>
+															</tr>
+															{RegisteredEvents.length ? (
+																<>
+																	<tr>
+																		<td>
+																			Registration
+																			Fees
+																		</td>
+																		<td>
+																			99
+																		</td>
+																	</tr>
+																</>
+															) : (
+																<></>
+															)}
 															{RegisteredEvents.map(
 																(event, i) => {
 																	return (
@@ -409,11 +455,72 @@ const Profile = ({ AllAuth }) => {
 																					event
 																				}
 																			</td>
+																			<td>
+																				{isIITBHUser ? (
+																					<>
+																						<strike>
+																							49
+																						</strike>
+																						&nbsp;
+																						0
+																					</>
+																				) : (
+																					<>
+																						49
+																					</>
+																				)}
+																			</td>
+																			<td>
+																				{RegisteredEventsPaid[
+																					event
+																				]
+																					? "✓"
+																					: "✖"}
+																			</td>
 																		</tr>
 																	);
 																}
 															)}
+															{RegisteredEvents.length ? (
+																<>
+																	<tr>
+																		<th>
+																			Total
+																		</th>
+																		<th>
+																			{99 +
+																				49 *
+																					(isIITBHUser
+																						? 0
+																						: RegisteredEvents.length)}
+																		</th>
+																	</tr>
+																</>
+															) : (
+																<></>
+															)}
 														</table>
+
+														<MDBCardText className="text-muted">
+															<a
+																className="btn btn-outline-dark"
+																href="/" // TODO: Put Google Form Link Here
+															>
+																Fee Payment
+															</a>
+															{FailureMessage ? (
+																<Alert
+																	severity="error"
+																	className="mt-2"
+																>
+																	{
+																		FailureMessage
+																	}
+																</Alert>
+															) : (
+																<></>
+															)}
+														</MDBCardText>
 
 														<div className="d-flex justify-content-start">
 															<a href="#!">
@@ -447,9 +554,10 @@ const Profile = ({ AllAuth }) => {
 							</MDBContainer>
 						</section>
 					</form>
-					<Fade bottom>
+
+					{/* <Fade bottom>
 						<Footer className="footer"></Footer>
-					</Fade>
+					</Fade> */}
 				</div>
 			</div>
 		</div>

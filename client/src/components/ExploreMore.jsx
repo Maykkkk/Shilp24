@@ -4,6 +4,7 @@ import '../links/css/exploreMore.css'
 import event2 from '../links/img/InsightRise Symposium.webp'
 import Buildin from '../links/img/Building Vision Expo.webp'
 import event3 from '../links/img/BridgeIt.webp'
+import Button from './Button'
 
 function ExploreMore() {
   return (
@@ -39,8 +40,8 @@ function ExploreMore() {
           </div> */}
         </div>
         <div className="exploreMore">
-          <Link to="/events">Explore More !</Link>
-          </div>
+          <Button name="Explore More!" url="/events" target=""/>
+        </div>
     </div>
   )
 }

@@ -91,3 +91,9 @@
         padding-right: 4%;
     }
 }
+@media screen and (max-width:340px) {
+    .about{
+        margin-right:0;
+    }
+    
+}
