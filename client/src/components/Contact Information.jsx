@@ -252,13 +252,6 @@ const Contacts = [
       Instagram:"",
       Linkedin:"",
       MobileNo:""
-    },{
-      url:"./TeamPhotos/III Year/AYUSH SAHU _ PR HEAD.webp",
-      "Name": "Ayush sahu",
-      "Email": "ayush.ssahu.civ21@itbhu.ac.in",
-      "Instagram": "",
-      "Linkedin": "",
-      "MobileNo": "7000387404"
     }]
   },{
     id:12,
