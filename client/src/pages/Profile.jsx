@@ -74,6 +74,7 @@ const Profile = ({ AllAuth }) => {
 		try {
 			let data = {
 				uid: localStorage.getItem("UID"),
+				Name: localStorage.getItem("displayName"),
 				Email: localStorage.getItem("email"),
 				Mobile: mobile,
 				College: college,
