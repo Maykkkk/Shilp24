@@ -4,6 +4,7 @@ import "../links/css/team.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 import TeamCard from "../components/TeamCard";
 import ParticleBackground from "../components/ParticleBackground";
 import PacmanLoader from "react-spinners/PacmanLoader";
@@ -70,10 +71,10 @@ const Team = ({AllAuth}) => {
               return(
                 <div className="team-title" id="coConveynor" key={e.id}>
                   {/* Co-Conveynor */}
-                  <Fade left>
+                  <Zoom>
                     <h1>{e.Designation}</h1>
-                  </Fade>
-                  <Fade right>
+                  </Zoom>
+                  
                     <div className="team-container">
                       {e.data.map((f)=>{
                         console.log(f.Name)
@@ -99,7 +100,7 @@ const Team = ({AllAuth}) => {
                           )
                         })}
                     </div>
-                  </Fade>
+                  
                 </div>
               )
             })
