@@ -408,33 +408,37 @@ const Profile = ({ AllAuth }) => {
 															</MDBCol>
 														</MDBRow>
 
-														<table>
-															<tr>
-																<th
+														<table style={{width:"100%",margin:"0"}}>
+															<tr style={{
+																width:"170%",
+																display:"flex",
+																justifyContent:"center"
+															}}>
+																<th className="fs-2 text"
 																	style={{
 																		fontSize:
 																			"25px",
+																		
 																	}}
 																>
-																	Events
-																	Registered
+																	Dashboard
 																</th>
 															</tr>
 															<tr>
-																<th> Events</th>
-																<th>Fees</th>
-																<th className="px-4">
+																<th className="fs-5 text" style={{border:"2px solid purple"}}> Events</th>
+																<th className="fs-5 text" style={{border:"2px solid purple"}}>Fees</th>
+																<th className="px-4 fs-5 text" style={{border:"2px solid purple"}}>
 																	Paid
 																</th>
 															</tr>
 															{RegisteredEvents.length ? (
 																<>
-																	<tr>
-																		<td>
+																	<tr style={{border:"2px solid purple"}}>
+																		<td style={{border:"2px solid purple",fontWeight:"700"}}>
 																			Registration
 																			Fees
 																		</td>
-																		<td>
+																		<td style={{border:"2px solid purple",fontWeight:"600"}}>
 																			99
 																		</td>
 																	</tr>
@@ -450,12 +454,12 @@ const Profile = ({ AllAuth }) => {
 																				i
 																			}
 																		>
-																			<td>
+																			<td style={{border:"2px solid purple",fontStyle:"italic",fontWeight:"500"}}>
 																				{
 																					event
 																				}
 																			</td>
-																			<td>
+																			<td style={{border:"2px solid purple",fontStyle:"italic",fontWeight:"500"}}>
 																				{isIITBHUser ? (
 																					<>
 																						<strike>
@@ -470,7 +474,7 @@ const Profile = ({ AllAuth }) => {
 																					</>
 																				)}
 																			</td>
-																			<td>
+																			<td style={{border:"2px solid purple"}}>
 																				{RegisteredEventsPaid[
 																					event
 																				]
@@ -483,7 +487,7 @@ const Profile = ({ AllAuth }) => {
 															)}
 															{RegisteredEvents.length ? (
 																<>
-																	<tr>
+																	<tr style={{border:"2px solid purple"}}>
 																		<th>
 																			Total
 																		</th>
@@ -501,7 +505,7 @@ const Profile = ({ AllAuth }) => {
 															)}
 														</table>
 
-														<MDBCardText className="text-muted">
+														<MDBCardText className="text-muted" style={{marginTop:"15px"}}>
 															<a
 																className="btn btn-outline-dark"
 																href="/" // TODO: Put Google Form Link Here
