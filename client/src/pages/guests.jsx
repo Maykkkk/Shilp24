@@ -1,11 +1,12 @@
 import {useState, useEffect} from "react";
-import EmptyNote from "../components/EmptyNote";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import "../links/css/home.css";
+// import GuestCard from "../components/GuestCard";
+import EmptyNote from "../components/EmptyNote";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ParticleBackground from "../components/ParticleBackground";
-
+import '../links/css/home.css';
+import '../links/css/guests.css';
 
 
 const Guests = ({ AllAuth }) => {
@@ -33,12 +34,28 @@ const Guests = ({ AllAuth }) => {
 			</div>
 		) :
 		<div className="App">
+			
 			<div className="body">
+				
 				<NavBar AllAuth={AllAuth} />
+				
+				{/* <div className=" Guesttitle">
+					Our Guests
+				</div>
+				<div className="guestContainer">
+					<h1 className="fs-1">Chief Guest</h1>
+					<div className="guestCards">
+						<GuestCard name="Mr. Guest title" desig="Chaiwala" desc="I'm am a guest" url="./guests/guest.webp"/>
+						<GuestCard name="Mr. Guest title" desig="Chaiwala" desc="I'm am a guest" url="./guests/guest.webp"/>
+					</div>
+					
+				</div>	 */}
 				<EmptyNote />
+
+				<Footer />
 			</div>
-			<Footer />
 		</div>
+		
 		}
 		</>
 	);
