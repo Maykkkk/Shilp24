@@ -29,21 +29,14 @@
 .card-body .row .col-6{
   width: 100%;
 }
-
+.card-text{
+    color:black;
+    height:100% !important;
+}
 
 @media screen and (max-width:1000px) {
   .profile-card{
     margin: auto;
     width: 75vw;
-  }
-  .card-text{
-    color:black;
-    padding: 3px;
-  }
-}
-@media screen and (max-width:421px){
-  .row .card-text{
-    font-size: 3.7dvw;
-    margin-bottom: 2px !important;
   }
 }
