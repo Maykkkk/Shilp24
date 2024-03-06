@@ -1,0 +1,180 @@
+.content {
+  min-height: 80vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Guestcard {
+  margin-top: -10vh;
+  perspective: 150rem;
+  height: 25rem;
+  width: 25rem;
+  position: relative;
+}
+
+.card__side {
+  height: 30rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 25rem;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(black, 0.4);
+}
+
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card__side--back img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;left: 0;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.Guestcard:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+
+.Guestcard:hover .card__side--back {
+  transform: rotateY(0deg);
+}
+
+.card__cont {
+  height: 30rem;
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+}
+.card__cont img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  color: white;
+}
+
+.card__cta p {
+  margin-left: 1rem;
+}
+
+.card__cta p > .space {
+  margin-left: 2rem;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lora:700');
+ body {
+	 background: #fafafa;
+}
+ .card__side {
+	 box-shadow: 2px 2px 20px 0px rgba(50, 50, 50, 0.21);
+	 border: 1px solid #eee;
+}
+ .card__side:before {
+	 content: ' ';
+	 display: block;
+	 position: absolute;
+	 height: 3px;
+	 top: 2%;
+	 left: 2%;
+	 width: 10%;
+	 background: #fff;
+	 transition: width 1s;
+}
+ .card__side:hover::before {
+	 width: 96%;
+}
+ .card__side:after {
+	 content: ' ';
+	 display: block;
+	 position: absolute;
+	 width: 3px;
+	 top: 2%;
+	 left: 2%;
+	 height: 13%;
+	 background: #fff;
+	 transition: height 1s;
+}
+ .card__side:hover::after {
+	 height: 96%;
+}
+
+ .card__side header:before {
+	 content: ' ';
+	 display: block;
+	 position: absolute;
+	 height: 3px;
+	 bottom: 2%;
+	 right: 2%;
+	 width: 3%;
+	 background: #fff;
+	 transition: width 1s;
+}
+ .card__side header:hover::before {
+	 width: 96%;
+}
+ .card__side header:after {
+	 content: ' ';
+	 display: block;
+	 position: absolute;
+	 width: 3px;
+	 bottom: 2%;
+	 right: 2%;
+	 height: 3%;
+	 background: #fff;
+	 transition: height 1s;
+}
+ .card__side header:hover::after {
+	 height: 96%;
+}
+
+.Guesttitle{
+  background: rgb(0, 0, 0, 0.4);
+  width: 95%;
+  margin: auto;
+  border-radius: 50px;
+  margin-top: 10vh;
+  font-size: 10vh;
+  font-weight: 900;
+  color: rgba(209, 33, 86, 1);
+  margin-bottom: 2vh;
+}
+.guestContainer{
+  padding: 3vh;
+  background: linear-gradient(251.9deg, rgba(76, 18, 77, 0.65) -6.07%, rgba(13, 4, 27, 0.65) 47.04%, rgba(70, 18, 72, 0.65) 86.81%);
+  border-top:5px solid rgba(255, 255, 255, 0.06);
+  border-bottom:5px solid rgba(255, 255, 255, 0.06);
+  width: 80%;
+  margin: auto;
+  border-radius: 50px;
+  max-height: 100%;
+}
+.guestContainer h1{
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+.guestCards{
+  height: 100%;width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
