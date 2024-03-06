@@ -44,6 +44,6 @@
 @media screen and (max-width:421px){
   .row .card-text{
     font-size: 3.7dvw;
-    margin-bottom: 2px;
+    margin-bottom: 2px !important;
   }
 }
