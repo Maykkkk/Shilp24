@@ -9,19 +9,20 @@
 .Guestcard {
   margin-top: -10vh;
   perspective: 150rem;
-  height: 25rem;
-  width: 25rem;
+  height: 20rem;
+  width: 20rem;
   position: relative;
 }
 
 .card__side {
-  height: 30rem;
+  
+  height: 25rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
   left: 0;
   margin: auto;
-  width: 25rem;
+  width: 20rem;
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
@@ -32,6 +33,7 @@
   transform: rotateY(180deg);
 }
 .card__side--back img{
+  
   position: absolute;
   height: 100%;
   width: 100%;
@@ -40,7 +42,6 @@
   opacity: 0.3;
   z-index: -1;
 }
-
 .Guestcard:hover .card__side--front {
   transform: rotateY(-180deg);
 }
@@ -50,7 +51,8 @@
 }
 
 .card__cont {
-  height: 30rem;
+  border: 5px solid black;
+  height: 24.5rem;
   display: flex;
   align-items:flex-end;
   justify-content: center;
@@ -87,7 +89,7 @@
 }
  .card__side {
 	 box-shadow: 2px 2px 20px 0px rgba(50, 50, 50, 0.21);
-	 border: 1px solid #eee;
+	 border: 5px solid #d8b053;
 }
  .card__side:before {
 	 content: ' ';
@@ -168,13 +170,27 @@
   border-radius: 50px;
   max-height: 100%;
 }
+.guestContainer .card__cont .name h3{
+  color: rgba(209, 33, 86, 1);
+  font-weight: 700;
+  ;
+}
 .guestContainer h1{
-  color: white;
-  font-family: 'Inter', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
 }
 .guestCards{
   height: 100%;width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 469px){
+  .Guestcard{
+    width: 15rem;
+  }
+  .card__side{
+    width: 15rem;
+  }
 }
