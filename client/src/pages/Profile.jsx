@@ -55,9 +55,9 @@ const Profile = ({ AllAuth }) => {
 								const eventData = eventDocSnap.data();
 								paid[event] = eventData.paid;
 							}
+							setRegisteredEventsPaid(paid);
 						});
 					}
-					setRegisteredEventsPaid(paid);
 				}
 				setMobile(data.Mobile);
 				setCollege(data.College);
