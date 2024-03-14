@@ -1,11 +1,11 @@
 import {useState, useEffect} from "react";
-import EmptyNote from "../components/EmptyNote";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import "../links/css/home.css";
+import GuestCard from "../components/GuestCard";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ParticleBackground from "../components/ParticleBackground";
-
+import '../links/css/home.css';
+import '../links/css/guests.css';
 
 
 const Guests = ({ AllAuth }) => {
@@ -33,12 +33,26 @@ const Guests = ({ AllAuth }) => {
 			</div>
 		) :
 		<div className="App">
+			
 			<div className="body">
+				
 				<NavBar AllAuth={AllAuth} />
-				<EmptyNote />
+				
+				<div className=" Guesttitle">
+					Our Guests
+				</div>
+				<div className="guestContainer">
+					<h1 className="fs-1">Chief Guest</h1>
+					<div className="guestCards">
+						<GuestCard name="Mr. Daljeet Singh" desig="Director, DMRC" desc="Experienced Works Director with a demonstrated history of working in the railroad manufacture industry. Skilled in AutoCAD, Highways, Transportation Planning, Bridge, and Engineering. Strong operations professional graduated from B Tech in civil engg from IIT (BHU) Varanasi." url="./guests/guest.webp"/>
+					</div>
+					
+				</div>	
+
+				<Footer />
 			</div>
-			<Footer />
 		</div>
+		
 		}
 		</>
 	);

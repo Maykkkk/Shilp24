@@ -238,7 +238,7 @@ const Profile = ({ AllAuth }) => {
 															"displayName"
 														)}
 													</MDBTypography>
-													<MDBRow className="justify-content-center align-items-center h-100">
+													<MDBRow className="justify-content-center align-items-center userId">
 														<MDBCardText>
 															UserId: &nbsp;
 															{localStorage.getItem(
