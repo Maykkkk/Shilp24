@@ -7,6 +7,7 @@ import EventCard from "../components/EventCard";
 import Fade from "react-reveal/Fade";
 import ParticleBackground from "../components/ParticleBackground";
 import PacmanLoader from "react-spinners/PacmanLoader";
+// import EventCard from "../components/EventCard";
 
 const override = {
 	display: "flex",
@@ -79,9 +80,9 @@ const Competitions = ({ AllAuth }) => {
     <EventCard
       name="ml related"
       details="big data machine learning modi ji"
-    /> */}
-    </div>
-				<EmptyNote />
+    />
+    </div> */}
+    <EmptyNote/>
 				<Fade bottom>
 					<Footer></Footer>
 				</Fade>

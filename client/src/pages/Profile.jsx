@@ -55,9 +55,9 @@ const Profile = ({ AllAuth }) => {
 								const eventData = eventDocSnap.data();
 								paid[event] = eventData.paid;
 							}
+							setRegisteredEventsPaid(paid);
 						});
 					}
-					setRegisteredEventsPaid(paid);
 				}
 				setMobile(data.Mobile);
 				setCollege(data.College);
@@ -238,7 +238,7 @@ const Profile = ({ AllAuth }) => {
 															"displayName"
 														)}
 													</MDBTypography>
-													<MDBRow className="justify-content-center align-items-center h-100 userId">
+													<MDBRow className="justify-content-center align-items-center userId">
 														<MDBCardText>
 															UserId: &nbsp;
 															{localStorage.getItem(
