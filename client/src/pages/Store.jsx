@@ -5,7 +5,6 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import InnovationInStyle from '../components/innovationInStyle';
 import Merch from '../components/Store/Mercahndise';
-import EmptyNote from "../components/EmptyNote";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ParticleBackground from "../components/ParticleBackground";
 

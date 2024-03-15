@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../links/css/Merch.css';
-import { Link } from 'react-router-dom';
 import front from '../../links/img/Merch Photos/3.png'
 import back from '../../links/img/Merch Photos/6.png'
 

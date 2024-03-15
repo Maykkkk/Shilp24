@@ -3,7 +3,6 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../links/css/Competition.css";
 import EmptyNote from "../components/EmptyNote";
-import EventCard from "../components/EventCard";
 import Fade from "react-reveal/Fade";
 import ParticleBackground from "../components/ParticleBackground";
 import PacmanLoader from "react-spinners/PacmanLoader";
@@ -44,8 +43,8 @@ const Competitions = ({ AllAuth }) => {
 			) : 
 			<div className="body">
 				<NavBar AllAuth={AllAuth} />
-				<div className='cards'>
-    {/* <EventCard
+				{/* <div className='cards'>
+     <EventCard
       name="civil Explo"
       details="civil ka kuch kaam hota hai"
     />
