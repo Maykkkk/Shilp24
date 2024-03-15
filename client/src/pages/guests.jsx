@@ -1,8 +1,7 @@
 import {useState, useEffect} from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-// import GuestCard from "../components/GuestCard";
-import EmptyNote from "../components/EmptyNote";
+import GuestCard from "../components/GuestCard";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ParticleBackground from "../components/ParticleBackground";
 import '../links/css/home.css';
@@ -39,18 +38,16 @@ const Guests = ({ AllAuth }) => {
 				
 				<NavBar AllAuth={AllAuth} />
 				
-				{/* <div className=" Guesttitle">
+				<div className=" Guesttitle">
 					Our Guests
 				</div>
 				<div className="guestContainer">
 					<h1 className="fs-1">Chief Guest</h1>
 					<div className="guestCards">
-						<GuestCard name="Mr. Guest title" desig="Chaiwala" desc="I'm am a guest" url="./guests/guest.webp"/>
-						<GuestCard name="Mr. Guest title" desig="Chaiwala" desc="I'm am a guest" url="./guests/guest.webp"/>
+						<GuestCard name="Mr. Daljeet Singh" desig="Director, DMRC" desc="Experienced Works Director with a demonstrated history of working in the railroad manufacture industry. Skilled in AutoCAD, Highways, Transportation Planning, Bridge, and Engineering. Strong operations professional graduated from B Tech in civil engg from IIT (BHU) Varanasi." url="./guests/guest.webp"/>
 					</div>
 					
-				</div>	 */}
-				<EmptyNote />
+				</div>	
 
 				<Footer />
 			</div>
