@@ -10,7 +10,7 @@ function GuestCard({name,desig, desc, url}) {
 						<div className="card__cont">
                             <img src={url} alt="" />
 							<pre className='name'>
-                                <h3>{`${name}\n${desig}`}</h3>
+                                <>{`${name}\n${desig}`}</>
                             </pre>
 						</div>
 						</div>

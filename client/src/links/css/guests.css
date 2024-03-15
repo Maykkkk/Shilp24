@@ -170,10 +170,11 @@
   border-radius: 50px;
   max-height: 100%;
 }
-.guestContainer .card__cont .name h3{
-  color: rgba(209, 33, 86, 1);
-  font-weight: 700;
-  ;
+.guestContainer .card__cont .name{
+  color: rgb(0, 0, 0);
+  font-weight: bolder !important;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
 }
 .guestContainer h1{
   color: rgb(255, 255, 255);
@@ -192,5 +193,8 @@
   }
   .card__side{
     width: 15rem;
+  }
+  .guestContainer .card__cont .name{
+    font-size: 1.5rem;
   }
 }
