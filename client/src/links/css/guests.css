@@ -1,13 +1,35 @@
 .content {
-  min-height: 80vh;
+  min-height: 70vh;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.guestContainer::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(125, 11, 148),rgb(216, 193, 219));
+  clip-path: circle(20% at right 80%);
+}
+.guest-body::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(233, 31, 48),rgb(216, 193, 219));
+  clip-path: circle(10% at left 25%);
+  z-index: 0;
 }
 
 .Guestcard {
-  margin-top: -10vh;
+  margin-top: -15vh;
   perspective: 150rem;
   height: 20rem;
   width: 20rem;
@@ -77,6 +99,7 @@
 
 .card__cta p {
   margin-left: 1rem;
+  font-size: 1rem;
 }
 
 .card__cta p > .space {
@@ -84,9 +107,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Lora:700');
- body {
-	 background: #fafafa;
-}
+ 
  .card__side {
 	 box-shadow: 2px 2px 20px 0px rgba(50, 50, 50, 0.21);
 	 border: 5px solid #d8b053;
@@ -171,10 +192,13 @@
   max-height: 100%;
 }
 .guestContainer .card__cont .name{
-  color: rgb(0, 0, 0);
-  font-weight: bolder !important;
-  font-size: 2rem;
+  background-color: rgba(0,0,0,0.6);
+  padding: 0;margin: 0;width: 100%;
   font-family: 'Times New Roman', Times, serif;
+}
+.guestContainer .card__cont .name h3{
+  color: rgb(221, 132, 222);
+  font-weight: 700;
 }
 .guestContainer h1{
   color: rgb(255, 255, 255);
@@ -189,12 +213,17 @@
 
 @media screen and (max-width: 469px){
   .Guestcard{
-    width: 15rem;
+    width: 13rem;
+    height: 17rem;
   }
   .card__side{
-    width: 15rem;
+    width: 13rem;
+    height: 17rem;
   }
-  .guestContainer .card__cont .name{
-    font-size: 1.5rem;
+  .card__cont {
+    height: 16.5rem;
+  }
+  .card__cta p{
+    font-size: 0.8rem;
   }
 }
