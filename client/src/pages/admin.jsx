@@ -12,6 +12,8 @@ const Admin = ({ AllAuth }) => {
 	const [userId, setUserId] = useState("");
 	const [isUserData, setIsUserData] = useState(false);
 
+	const [displayName, setDisplayName] = useState("");
+	const [email, setEmail] = useState("");
 	const [mobile, setMobile] = useState("");
 	const [year, setYear] = useState("");
 	const [college, setCollege] = useState("");
@@ -28,6 +30,7 @@ const Admin = ({ AllAuth }) => {
 
 	const fetchUserData = async (e) => {
 		e.preventDefault();
+		setIsUserData(false);
 		const docRef = doc(db, "userProfile", userId);
 		await getDoc(docRef).then(async (docSnap) => {
 			if (docSnap.exists()) {
@@ -47,6 +50,8 @@ const Admin = ({ AllAuth }) => {
 					}
 					setRegisteredEventsPaid(paid);
 				}
+				setDisplayName(data.Name);
+				setEmail(data.Email);
 				setMobile(data.Mobile);
 				setCollege(data.College);
 				setReferralCode(data.Referral);
@@ -96,9 +101,7 @@ const Admin = ({ AllAuth }) => {
 												<input
 													type="text"
 													name="name"
-													value={localStorage.getItem(
-														"displayName"
-													)}
+													value={displayName}
 													disabled
 												></input>
 											</td>
@@ -111,9 +114,7 @@ const Admin = ({ AllAuth }) => {
 												<input
 													type="text"
 													name="email"
-													value={localStorage.getItem(
-														"email"
-													)}
+													value={email}
 													disabled
 												></input>
 											</td>
@@ -127,11 +128,6 @@ const Admin = ({ AllAuth }) => {
 													type="text"
 													name="mobile"
 													defaultValue={mobile}
-													onChange={(e) => {
-														setMobile(
-															e.target.value
-														);
-													}}
 													disabled
 												></input>
 											</td>
@@ -145,11 +141,6 @@ const Admin = ({ AllAuth }) => {
 													type="text"
 													name="college"
 													defaultValue={college}
-													onChange={(e) => {
-														setCollege(
-															e.target.value
-														);
-													}}
 													disabled
 												></input>
 											</td>
@@ -161,9 +152,6 @@ const Admin = ({ AllAuth }) => {
 													type="text"
 													name="year"
 													defaultValue={year}
-													onChange={(e) => {
-														setYear(e.target.value);
-													}}
 													disabled
 												></input>
 											</td>
@@ -178,11 +166,6 @@ const Admin = ({ AllAuth }) => {
 													type="text"
 													name="referralCode"
 													defaultValue={referralCode}
-													onChange={(e) => {
-														setReferralCode(
-															e.target.value
-														);
-													}}
 													disabled
 												></input>
 											</td>
