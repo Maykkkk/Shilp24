@@ -80,8 +80,8 @@ const Competitions = ({ AllAuth }) => {
     <EventCard
       name="ml related"
       details="big data machine learning modi ji"
-    />
-    </div> */}
+    /> */}
+    </div>
     <EmptyNote/>
 				<Fade bottom>
 					<Footer></Footer>
