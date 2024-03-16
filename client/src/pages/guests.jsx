@@ -34,7 +34,7 @@ const Guests = ({ AllAuth }) => {
 		) :
 		<div className="App">
 			
-			<div className="body">
+			<div className="body guest-body">
 				
 				<NavBar AllAuth={AllAuth} />
 				
@@ -42,7 +42,6 @@ const Guests = ({ AllAuth }) => {
 					Our Guests
 				</div>
 				<div className="guestContainer">
-					<h1 className="fs-1">Chief Guest</h1>
 					<div className="guestCards">
 						<GuestCard name="Mr. Daljeet Singh" desig="Director, DMRC" desc="Experienced Works Director with a demonstrated history of working in the railroad manufacture industry. Skilled in AutoCAD, Highways, Transportation Planning, Bridge, and Engineering. Strong operations professional graduated from B Tech in civil engg from IIT (BHU) Varanasi." url="./guests/guest.webp"/>
 					</div>

@@ -44,7 +44,7 @@ const Competitions = ({ AllAuth }) => {
 			<div className="body">
 				<NavBar AllAuth={AllAuth} />
 				{/* <div className='cards'>
-    <EventCard
+     <EventCard
       name="civil Explo"
       details="civil ka kuch kaam hota hai"
     />

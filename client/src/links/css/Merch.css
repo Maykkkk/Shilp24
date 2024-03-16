@@ -12,29 +12,31 @@
     height: auto;
     border-radius: 3vw;
     padding-bottom: 10vw;
+    margin-bottom: 10vw;
 }
    
 .shop-item {
     display: inline-block;
-    width: 30vw;
-    margin: 40px;
-    padding: 3vw;
+    width: 28vw;
+    margin: 5vw;
+    margin-top: 10vw;
+    padding: 2vw;
     /* margin-right: 4vw; */
 }
 
 .buy-button {
    background-image: url(../img/Rectangle\ 224.png);
-   color: white;
+   color: white !important;
 
    font-family: 'Poppins', sans-serif;
    font-weight: 700;
    padding: 8px 16px;
-   border: none;
+   border-color: rgb(67, 20, 117);
    cursor: pointer;
    border-radius: 0.5vw;
    outline: none;
    background-color: transparent;
-
+    width: 18vw;
    transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
    
@@ -46,13 +48,13 @@
    
    
 .top{
-    font-weight: 600;
-    font-size: 4vw;
+    font-weight: 500;
+    font-size: 3.5vw;
     color: red;
 }
 
 .merch-img{
-    width: 14vw;
+    width: 24vw;
     margin-top: 1vw;
 }
 
@@ -64,16 +66,20 @@
     font-size: 2.8vh;
 
     color: #000000;
-
+    width: 18vw;
     margin-top: 1.5vw;
     height: 4vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-bottom: 2vw;
     border-radius: 0.5vw;
 }
 
+.butcontain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .strike{
     text-decoration: line-through;
@@ -84,16 +90,27 @@
 @media screen and (max-width:800px) {
     .buy-button{
         border-radius: 1.5vw;
+        width: 40vw;
+        font-weight: 700;
     }
 
     .price{
         font-weight: 700;
         display: flex;
         font-size: medium;
+        width: 40vw;
     }
 
     .strike{
         display: none;
+    }
+
+    .h2{
+        font-weight: 400;
+    }
+
+    .top{
+        margin-top: 4vw;
     }
     
 }
