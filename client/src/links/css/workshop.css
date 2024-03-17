@@ -30,6 +30,7 @@
     padding: 10vh 5px;
     margin: 10vw;
     background: rgb(46, 21, 58);
+    opacity: 0.8;
     border-top: 5px solid rgba(255, 255, 255, 0.118);
 }
 
