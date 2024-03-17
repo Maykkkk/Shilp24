@@ -1,5 +1,6 @@
 import React from 'react'
 import '../links/css/home.css';
+import Timer from './Timer';
 
 function Hero() {
   return (
@@ -12,6 +13,9 @@ function Hero() {
             <h2 className='text-light mb-0 p-0'>Civil Engineering Society</h2>
           </div>
           <h1 className='' style={{position:"absolute", bottom:"8vh", color:"white"}}>5-7 April, 2024</h1>
+          <div className="clockdiv" style={{color:"white"}}>
+            <Timer />
+          </div>
         </div>
   )
 }
