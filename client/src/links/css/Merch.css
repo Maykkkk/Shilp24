@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;700;&display=swap');
 
 .merch-container {
+    position: relative;
     text-align: center;
     font-family: Arial, sans-serif;
     margin-top: 8vw;

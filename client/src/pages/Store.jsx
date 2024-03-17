@@ -42,6 +42,7 @@ const Store = ({ AllAuth }) => {
 				</div>
 			) : 
 			<div className="body">
+				<ParticleBackground />
 				<NavBar AllAuth={AllAuth} />
 
 				<div className="Container">

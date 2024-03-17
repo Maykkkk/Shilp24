@@ -46,7 +46,7 @@ const Contacts = ({ AllAuth }) => {
 					<NavBar AllAuth={AllAuth} />
 				</div>
 				<Fade top>
-					<div className="top">Contact Us</div>
+					<div className="contactusTop">Contact Us</div>
 				</Fade>
 				<div className="outer-body contact-outer-body">
 					{/* <Zoom> */}
@@ -60,24 +60,20 @@ const Contacts = ({ AllAuth }) => {
 							<br />
 							+91 96251 67658
 						</div>
-						{/* <div className="name2 contact fs-5">
-							Anchal Ganguli
+						 <div className="name2 contact fs-5">
+						 	Mithilesh K
 							<br />
-							<Link to="mailto:anchal.ganguly.civ21@itbhu.ac.in">
-								anchal.ganguly.civ21@itbhu.ac.in
+							<Link to="k.mithilesh.civ21@itbhu.ac.in">
+								k.mithilesh.civ21@itbhu.ac.in
 							</Link>
 							<br />
-							+91 8765522325
-						</div> */}
-						{/* <div className="name3 contact fs-5">
-							Manvi Srivastava
+							+91 6309881816
+						</div>
+						<div className="name3 contact fs-5">
+							Vishu Raj
 							<br />
-							<Link to="mailto:manvi.srivastava.civ21@itbhu.ac.in">
-								manvi.srivastava.civ21@itbhu.ac.in
-							</Link>
-							<br />
-							+91 9696220428
-						</div> */}
+							+91 9065055049
+						</div>
 						<div className="name4 contact fs-5">
 							Akhand Pratap Yadav
 							<br />
