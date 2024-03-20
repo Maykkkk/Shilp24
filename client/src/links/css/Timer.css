@@ -1,0 +1,39 @@
+.timer-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4vw;
+}
+
+.clockdiv {
+    display: flex;
+}
+
+.box {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.box h4, .box .smalltext {
+    color: white;
+    margin: 0;
+}
+
+.smalltext {
+    font-size: 12px;
+}
+
+
+.subhead{
+    font-size:large;
+    padding-top: 20px;
+    font-style: italic;
+}
+
+
+@media screen and (max-width:800px) {
+    .timer-container {
+        margin-top: 8vw;
+    }
+}
