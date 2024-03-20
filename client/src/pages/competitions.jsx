@@ -7,7 +7,7 @@ import EventCard from "../components/EventCard";
 import Fade from "react-reveal/Fade";
 import ParticleBackground from "../components/ParticleBackground";
 import PacmanLoader from "react-spinners/PacmanLoader";
-// import EventCard from "../components/EventCard";
+import WorkshopCard from "../components/WorkshopCard";
 
 const override = {
 	display: "flex",

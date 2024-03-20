@@ -1,0 +1,42 @@
+
+    .workshopHeading{
+        background: linear-gradient(45deg,rgb(70, 30, 88),rgb(26, 13, 32));
+        border-top: 5px solid rgba(255, 255, 255, 0.118);
+        position: relative;
+        height: 13vh;width: 80%;
+        margin: auto;
+        margin-top: 13vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        font-weight: 700;
+        border-radius: 50px;
+        color: #D12156;
+    }
+    .workshopTitle{
+        background: linear-gradient(45deg,#d80032,rgb(121, 3, 154),#d80032,rgb(121, 3, 154),#d80032,rgb(121, 3, 154));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+.cards{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 50px;
+    margin-top: 10vh;
+    padding: 10vh 5px;
+    margin: 10vw;
+    background: rgb(46, 21, 58);
+    opacity: 0.8;
+    border-top: 5px solid rgba(255, 255, 255, 0.118);
+}
+
+@media screen and (max-width: 456px) {
+    .workshopHeading{
+        font-size: 14vw;
+    }
+    
+}
