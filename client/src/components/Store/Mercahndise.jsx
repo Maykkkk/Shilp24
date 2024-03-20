@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../links/css/Merch.css';
-import { Link } from 'react-router-dom';
 import front from '../../links/img/Merch Photos/3.png'
 import back from '../../links/img/Merch Photos/6.png'
 
@@ -24,7 +23,7 @@ function Merch() {
       </div>
 
       <div className='butcontain'>
-      <p className='price'>INR 700 <span className='strike'>900</span></p>
+      <p className='price'>INR 349 <span className='strike'>500</span></p>
       <button className='buy-button'><a href="https://forms.gle/9AtpYj3M2xaNoZL2A" style={{color: 'white', textDecoration: 'none'}}>Buy Now</a></button>
       </div>
 

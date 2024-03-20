@@ -44,19 +44,7 @@ const Competitions = ({ AllAuth }) => {
 			) : 
 			<div className="body">
 				<NavBar AllAuth={AllAuth} />
-				<div className='cards'>
-    {/* <EventCard
-      name="civil Explo"
-      details="civil ka kuch kaam hota hai"
-    />
-    <EventCard
-      name="cp related"
-      details="rating badhao"
-    />
-    <EventCard
-      name="ml related"
-      details="big data machine learning modi ji"
-    />
+				{/* <div className='cards'>
     <EventCard
       name="civil Explo"
       details="civil ka kuch kaam hota hai"
@@ -80,8 +68,20 @@ const Competitions = ({ AllAuth }) => {
     <EventCard
       name="ml related"
       details="big data machine learning modi ji"
-    /> */}
-    </div>
+    />
+    <EventCard
+      name="civil Explo"
+      details="civil ka kuch kaam hota hai"
+    />
+    <EventCard
+      name="cp related"
+      details="rating badhao"
+    />
+    <EventCard
+      name="ml related"
+      details="big data machine learning modi ji"
+    />
+    </div> */}
     <EmptyNote/>
 				<Fade bottom>
 					<Footer></Footer>
