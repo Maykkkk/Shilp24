@@ -174,7 +174,7 @@
 	top: 0;left:0;
 	height: 100%;width: 100%;
 	padding-top: 2vh;
-	background-color: rgba(0, 0, 0, 0.242);
+	background-color: rgba(0, 0, 0, 0.459);
 }
 .detailCard{
 	position: relative;
@@ -185,6 +185,7 @@
 	background: linear-gradient(251.9deg, rgba(76, 18, 77, 0.65) -6.07%, rgba(13, 4, 27, 0.65) 47.04%, rgba(70, 18, 72, 0.65) 86.81%);
     border-radius: 50px;
     border-top:4px solid rgba(255, 255, 255, 0.06);
+	opacity:1;
 }
 .detailCardListItem{
 	margin-top: 20px;

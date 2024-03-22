@@ -29,11 +29,12 @@ function WorkshopCard(props) {
 				<h1>Details</h1>
 				<ul className="detailCardList">
 					<li className="detailCardListItem">An Introductory workshop on Staad PRO with  the practice excersises in between</li>
-					<li className="detailCardListItem"><b>Mr. Kaviyasaran D.</b>, chief engineer and founder of Avi engineering services, who is also an alum of IIT Madras will guide us</li>
+					<li className="detailCardListItem"><b>Mr. Kaviyasaran D.</b> , chief engineer and founder of Avi engineering services, who is also an alum of IIT Madras will guide us</li>
 					<li className="detailCardListItem">It would be a 3-4 hour workshop , Mr Kaviyasaran will teach us from the basics of Staad pro and end it with a project</li>
 					<li className="detailCardListItem"><b>No prior knowledge on Staad Pro is needed</b></li>
 					<li className="detailCardListItem"><b>Prerequisites:</b> Attendees should bring their laptops with Staad pro (student version) pre-installed in it.</li>
 					<li className="detailCardListItem"><b>The price :</b> free with shilp registration fee. Participants have to pay shilp registration fee only</li>
+					<li className="detailCardListItem"><b>Certification will be provided from department of civil engineering, IIT BHU</b></li>
 				</ul>
 			</div>
 		</div>
@@ -43,15 +44,14 @@ function WorkshopCard(props) {
 			<div className="detailCard">
 				<button className="closeButton" onClick={closeBim}><b>X</b></button>
 				<h1>Details</h1>
-				<h6 style={{marginTop:"25vh"}}>Discover BIM in just 1-2 hours. Get a certificate upon completion and Elevate your skills with us!</h6>
-				{/* <ul className="detailCardList">
-					<li className="detailCardListItem">An Introductory workshop on Staad PRO with  the practice excersises in between</li>
-					<li className="detailCardListItem">Kaviyasaran_d, chief engineer and founder of Avi engineering services, who is also an alum of IIT Madras will guide us</li>
-					<li className="detailCardListItem">It would be a 3-4 hour workshop , he will teach us from the basics of Staad pro and end it with a project</li>
-					<li className="detailCardListItem"><b>No prior knowledge on Staad Pro is needed</b></li>
-					<li className="detailCardListItem"><b>Prerequisites:</b> Attendees should bring their laptops with Staad pro (student version) pre-installed in it.</li>
+				<ul className="detailCardList">
+					<li className="detailCardListItem">An Interactive Masterclass on Building Information Modelling</li>
+					<li className="detailCardListItem"><b>Mr. Mohamed Sabith</b>, BIM automation lead at Ramboll, has worked in COWI and L&T previously, will guide us</li>
+					<li className="detailCardListItem">A 1.5 hour workshop, where Introduction to BIM, roadmap to learn and career opportunities will be discussed</li>
+					<li className="detailCardListItem"><b>Prerequisites:</b> there are no prerequisites for the session, just bring your enthusiasm to learn</li>
 					<li className="detailCardListItem"><b>The price :</b> free with shilp registration fee. Participants have to pay shilp registration fee only</li>
-				</ul> */}
+					<li className="detailCardListItem"><b>Certification will be provided from department of civil engineering, IIT BHU</b></li>
+				</ul>
 			</div>
 		</div>
 		}
