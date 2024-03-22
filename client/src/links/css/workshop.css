@@ -26,12 +26,22 @@
     flex-wrap: wrap;
     justify-content: space-around;
     border-radius: 50px;
-    margin-top: 10vh;
     padding: 10vh 5px;
     margin: 10vw;
+    margin-top: 5vh;
     background: rgb(46, 21, 58);
     opacity: 0.8;
     border-top: 5px solid rgba(255, 255, 255, 0.118);
+}
+.workshopPrice{
+    position: relative;
+    margin-top: 5vh;
+    height: 100%;
+    color: rgb(213, 152, 224);
+}
+.workshopPrice span{
+    font-weight: bolder;
+    color: rgb(234, 18, 61);
 }
 
 @media screen and (max-width: 456px) {
