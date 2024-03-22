@@ -29,8 +29,8 @@ function WorkshopCard(props) {
 				<h1>Details</h1>
 				<ul className="detailCardList">
 					<li className="detailCardListItem">An Introductory workshop on Staad PRO with  the practice excersises in between</li>
-					<li className="detailCardListItem">Kaviyasaran_d, chief engineer and founder of Avi engineering services, who is also an alum of IIT Madras will guide us</li>
-					<li className="detailCardListItem">It would be a 3-4 hour workshop , he will teach us from the basics of Staad pro and end it with a project</li>
+					<li className="detailCardListItem"><b>Mr. Kaviyasaran D.</b> , chief engineer and founder of Avi engineering services, who is also an alum of IIT Madras will guide us</li>
+					<li className="detailCardListItem">It would be a 3-4 hour workshop , Mr Kaviyasaran will teach us from the basics of Staad pro and end it with a project</li>
 					<li className="detailCardListItem"><b>No prior knowledge on Staad Pro is needed</b></li>
 					<li className="detailCardListItem"><b>Prerequisites:</b> Attendees should bring their laptops with Staad pro (student version) pre-installed in it.</li>
 					<li className="detailCardListItem"><b>The price :</b> free with shilp registration fee. Participants have to pay shilp registration fee only</li>
