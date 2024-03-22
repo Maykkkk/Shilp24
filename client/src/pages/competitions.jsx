@@ -44,6 +44,7 @@ const Competitions = ({ AllAuth }) => {
             Workshops
           </div>
         </div>
+        <div className="workshopPrice"><h4><span>The price :</span> free with shilp registration fee. Participants have to pay shilp registration fee only</h4></div>
         <div className='cards'>
           <WorkshopCard
             name="STAAD Pro"
