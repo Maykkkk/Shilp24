@@ -3,7 +3,7 @@ import "../links/css/home.css";
 import "../links/css/events.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import InnovationInStyle from '../components/innovationInStyle';
+// import InnovationInStyle from '../components/innovationInStyle';
 import Merch from '../components/Store/Mercahndise';
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ParticleBackground from "../components/ParticleBackground";
@@ -46,7 +46,7 @@ const Store = ({ AllAuth }) => {
 				<NavBar AllAuth={AllAuth} />
 
 				<div className="Container">
-          <InnovationInStyle/>
+          {/* <InnovationInStyle/> */}
           <Merch/>
 				<div>
 					{/* <EmptyNote /> */}
