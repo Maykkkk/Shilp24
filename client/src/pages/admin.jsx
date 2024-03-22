@@ -24,6 +24,8 @@ const Admin = ({ AllAuth }) => {
 	const [RegisteredEvents, setRegisteredEvents] = useState([]);
 	const [RegisteredEventsPaid, setRegisteredEventsPaid] = useState({});
 
+	const [RegisteredWorkshops, setRegisteredWorkshops] = useState([]);
+
 	const onFormSubmit = async (e) => {
 		e.preventDefault();
 		if (Password === masterPass) {
@@ -61,6 +63,7 @@ const Admin = ({ AllAuth }) => {
 				setYear(data.Year);
 				setIsUserData(true);
 				setAccommodationStatus(data.accommodationStatus);
+				setRegisteredWorkshops(data.Workshops);
 			}
 		});
 	};
@@ -84,6 +87,7 @@ const Admin = ({ AllAuth }) => {
 			Year: year,
 			Referral: referralCode,
 			Events: RegisteredEvents,
+			Workshops: RegisteredWorkshops,
 			accommodationStatus: accommodationStatus,
 		};
 		await setDoc(doc(db, "userProfile", userId), data);

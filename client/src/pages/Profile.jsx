@@ -33,6 +33,7 @@ const Profile = ({ AllAuth }) => {
 	const [college, setCollege] = useState("");
 	const [referralCode, setReferralCode] = useState("");
 	const [RegisteredEvents, setRegisteredEvents] = useState([]);
+	const [RegisteredWorkshops, setRegisteredWorkshops] = useState([]);
 	const [RegisteredEventsPaid, setRegisteredEventsPaid] = useState({});
 	const [isIITBHUser, setIsIITBHUser] = useState(false);
 	const [accommodationStatus, setAccommodationStatus] =
@@ -61,6 +62,9 @@ const Profile = ({ AllAuth }) => {
 						});
 					}
 				}
+				if (data.Workshops) {
+					setRegisteredWorkshops(data.Workshops);
+				}
 				setMobile(data.Mobile);
 				setCollege(data.College);
 				setReferralCode(data.Referral);
@@ -84,6 +88,7 @@ const Profile = ({ AllAuth }) => {
 				Year: year,
 				Referral: referralCode,
 				Events: RegisteredEvents,
+				Workshops: RegisteredWorkshops.concat,
 				accommodationStatus: isIITBHUser
 					? "IIT BHU Student"
 					: "Unaccommodated",
