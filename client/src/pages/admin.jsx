@@ -18,6 +18,9 @@ const Admin = ({ AllAuth }) => {
 	const [year, setYear] = useState("");
 	const [college, setCollege] = useState("");
 	const [referralCode, setReferralCode] = useState("");
+	const [accommodationStatus, setAccommodationStatus] =
+		useState("Unaccommodated");
+
 	const [RegisteredEvents, setRegisteredEvents] = useState([]);
 	const [RegisteredEventsPaid, setRegisteredEventsPaid] = useState({});
 
@@ -57,6 +60,7 @@ const Admin = ({ AllAuth }) => {
 				setReferralCode(data.Referral);
 				setYear(data.Year);
 				setIsUserData(true);
+				setAccommodationStatus(data.accommodationStatus);
 			}
 		});
 	};
@@ -69,8 +73,20 @@ const Admin = ({ AllAuth }) => {
 				paid: RegisteredEventsPaid[event],
 				uid: userId,
 			};
-			await setDoc(doc(db, event, userId), data).then(() => {});
+			await setDoc(doc(db, event, userId), data);
 		}
+		const data = {
+			uid: userId,
+			Name: displayName,
+			Email: email,
+			Mobile: mobile,
+			College: college,
+			Year: year,
+			Referral: referralCode,
+			Events: RegisteredEvents,
+			accommodationStatus: accommodationStatus,
+		};
+		await setDoc(doc(db, "userProfile", userId), data);
 		toast.success("Profile Successfully Updated!");
 	};
 	return (
@@ -172,6 +188,34 @@ const Admin = ({ AllAuth }) => {
 										</tr>
 									</table>
 									<form onSubmit={saveDetails}>
+										<label
+											htmlFor="accommodationStatus"
+											style={{ fontWeight: 700 }}
+										>
+											Accommodation Status: &nbsp;
+										</label>
+										<select
+											name="accommodationStatus"
+											value={accommodationStatus}
+											onChange={(e) => {
+												setAccommodationStatus(
+													e.target.value
+												);
+											}}
+										>
+											<option value="Unaccommodated">
+												Unaccommodated
+											</option>
+											<option value="Accommodation">
+												Only Accommodation
+											</option>
+											<option value="Accommodation + Food">
+												Accommodation + Food
+											</option>
+											<option value="IIT BHU Student">
+												IIT BHU Student
+											</option>
+										</select>
 										<table>
 											<tr>
 												<th

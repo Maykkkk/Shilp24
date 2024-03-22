@@ -35,6 +35,8 @@ const Profile = ({ AllAuth }) => {
 	const [RegisteredEvents, setRegisteredEvents] = useState([]);
 	const [RegisteredEventsPaid, setRegisteredEventsPaid] = useState({});
 	const [isIITBHUser, setIsIITBHUser] = useState(false);
+	const [accommodationStatus, setAccommodationStatus] =
+		useState("Unaccommodated");
 
 	useEffect(() => {
 		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
@@ -63,6 +65,7 @@ const Profile = ({ AllAuth }) => {
 				setCollege(data.College);
 				setReferralCode(data.Referral);
 				setYear(data.Year);
+				setAccommodationStatus(data.accommodationStatus);
 			}
 		});
 		setIsIITBHUser(localStorage.getItem("email").endsWith("itbhu.ac.in"));
@@ -81,6 +84,9 @@ const Profile = ({ AllAuth }) => {
 				Year: year,
 				Referral: referralCode,
 				Events: RegisteredEvents,
+				accommodationStatus: isIITBHUser
+					? "IIT BHU Student"
+					: "Unaccommodated",
 			};
 			if (!referralCode) {
 				data.Referral = "";
@@ -628,6 +634,174 @@ const Profile = ({ AllAuth }) => {
 																<></>
 															)}
 														</MDBCardText>
+
+														{isIITBHUser ||
+														accommodationStatus ===
+															"IIT BHU Student" ? (
+															<></>
+														) : (
+															<>
+																<table
+																	style={{
+																		width: "100%",
+																		margin: "0",
+																	}}
+																>
+																	<tr
+																		style={{
+																			width: "170%",
+																			display:
+																				"flex",
+																			justifyContent:
+																				"center",
+																		}}
+																	>
+																		<th
+																			className="fs-2 text"
+																			style={{
+																				fontSize:
+																					"25px",
+																			}}
+																		>
+																			Accommodation
+																		</th>
+																	</tr>
+																	<tr>
+																		<th
+																			className="fs-5 text"
+																			style={{
+																				border: "2px solid purple",
+																			}}
+																		>
+																			Accommodation
+																			Type
+																		</th>
+																		<th
+																			className="fs-5 text"
+																			style={{
+																				border: "2px solid purple",
+																			}}
+																		>
+																			Fees
+																		</th>
+																		<th
+																			className="fs-5 text"
+																			style={{
+																				border: "2px solid purple",
+																			}}
+																		>
+																			Status
+																		</th>
+																	</tr>
+																	<tr
+																		style={{
+																			border: "2px solid purple",
+																		}}
+																	>
+																		<td
+																			style={{
+																				border: "2px solid purple",
+																			}}
+																		>
+																			Only
+																			Accommodation
+																			for
+																			3
+																			days
+																		</td>
+
+																		<td
+																			style={{
+																				border: "2px solid purple",
+																				fontWeight:
+																					"600",
+																			}}
+																		>
+																			499/-
+																		</td>
+																		<td
+																			style={{
+																				border: "2px solid purple",
+																				fontWeight:
+																					"600",
+																			}}
+																		>
+																			{accommodationStatus ===
+																			"Accommodation"
+																				? "✓"
+																				: "✖"}
+																		</td>
+																	</tr>
+																	<tr
+																		style={{
+																			border: "2px solid purple",
+																		}}
+																	>
+																		<td
+																			style={{
+																				border: "2px solid purple",
+																			}}
+																		>
+																			Accommodation+
+																			fooding
+																			for 3 days
+																		</td>
+
+																		<td
+																			style={{
+																				border: "2px solid purple",
+																				fontWeight:
+																					"600",
+																			}}
+																		>
+																			899/-
+																		</td>
+																		<td
+																			style={{
+																				border: "2px solid purple",
+																				fontWeight:
+																					"600",
+																			}}
+																		>
+																			{accommodationStatus ===
+																			"Accommodation + Food"
+																				? "✓"
+																				: "✖"}
+																		</td>
+																	</tr>
+																</table>
+
+																<MDBCardText
+																	className="text-muted"
+																	style={{
+																		marginTop:
+																			"15px",
+																	}}
+																>
+																	<a
+																		className="btn btn-outline-dark"
+																		href="https://forms.gle/7cLuc4N2ty37Gym57"
+																		target="_blank"
+																		rel="noreferrer"
+																	>
+																		Accommodation
+																		Payment
+																	</a>
+																	{FailureMessage ? (
+																		<Alert
+																			severity="error"
+																			className="mt-2"
+																		>
+																			{
+																				FailureMessage
+																			}
+																		</Alert>
+																	) : (
+																		<></>
+																	)}
+																</MDBCardText>
+															</>
+														)}
 
 														<div className="d-flex justify-content-start">
 															<a href="#!">
