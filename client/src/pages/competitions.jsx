@@ -30,7 +30,7 @@ const Competitions = ({ AllAuth }) => {
 			if (docSnap.exists()) {
 				const data = docSnap.data();
 				if (data.Workshops) {
-					setRegisteredWorkshops(data.Events);
+					setRegisteredWorkshops(data.Workshops);
 				}
 			}
 		});

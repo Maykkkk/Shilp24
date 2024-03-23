@@ -71,7 +71,9 @@ const Profile = ({ AllAuth }) => {
 				setReferralCode(data.Referral);
 				setYear(data.Year);
 				setAccommodationStatus(data.accommodationStatus);
-				setPaidRegistration(data.PaidRegistration);
+				if(data.PaidRegistration){
+					setPaidRegistration(data.PaidRegistration);
+				}
 			}
 		});
 		setIsIITBHUser(localStorage.getItem("email").endsWith("itbhu.ac.in"));
@@ -90,11 +92,11 @@ const Profile = ({ AllAuth }) => {
 				Year: year,
 				Referral: referralCode,
 				Events: RegisteredEvents,
-				Workshops: RegisteredWorkshops.concat,
+				Workshops: RegisteredWorkshops,
 				accommodationStatus: isIITBHUser
 					? "IIT BHU Student"
-					: "Unaccommodated",
-				PaidRegistration: paidRegistration,
+					: "accommodationStatus",
+				PaidRegistration: paidRegistration?paidRegistration:"",
 			};
 			if (!referralCode) {
 				data.Referral = "";
