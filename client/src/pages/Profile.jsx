@@ -640,6 +640,72 @@ const Profile = ({ AllAuth }) => {
 															)}
 														</MDBCardText>
 
+														<table
+															style={{
+																width: "100%",
+																margin: "0",
+															}}
+														>
+															<tr
+																style={{
+																	width: "170%",
+																	justifyContent:
+																		"center",
+																}}
+															>
+																<th
+																	className="fs-3 text"
+																	style={{
+																		fontSize:
+																			"25px",
+																	}}
+																>
+																	Workshops
+																</th>
+															</tr>
+															<tr>
+																<th
+																	className="fs-5 text"
+																	style={{
+																		border: "2px solid purple",
+																	}}
+																>
+																	{" "}
+																	Registered
+																	Workshops
+																</th>
+															</tr>
+															{RegisteredWorkshops.map(
+																(
+																	workshop,
+																	i
+																) => {
+																	return (
+																		<tr
+																			key={
+																				i
+																			}
+																		>
+																			<td
+																				style={{
+																					border: "2px solid purple",
+																					fontStyle:
+																						"italic",
+																					fontWeight:
+																						"500",
+																				}}
+																			>
+																				{
+																					workshop
+																				}
+																			</td>
+																		</tr>
+																	);
+																}
+															)}
+														</table>
+														<br />
+
 														{isIITBHUser ||
 														accommodationStatus ===
 															"IIT BHU Student" ? (
@@ -657,12 +723,14 @@ const Profile = ({ AllAuth }) => {
 																			width: "170%",
 																			display:
 																				"flex",
+																			position:
+																				"relative",
 																			justifyContent:
 																				"center",
 																		}}
 																	>
 																		<th
-																			className="fs-2 text"
+																			className="fs-3 text"
 																			style={{
 																				fontSize:
 																					"25px",

@@ -70,7 +70,6 @@ function WorkshopCard(props) {
 				if (!workshopData) {
 					workshopData = {
 						uid: localStorage.getItem("UID"),
-						paid: false,
 						isRegistred: true,
 					};
 				} else {
