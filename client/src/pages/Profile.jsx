@@ -33,6 +33,7 @@ const Profile = ({ AllAuth }) => {
 	const [college, setCollege] = useState("");
 	const [referralCode, setReferralCode] = useState("");
 	const [RegisteredEvents, setRegisteredEvents] = useState([]);
+	const [RegisteredWorkshops, setRegisteredWorkshops] = useState([]);
 	const [RegisteredEventsPaid, setRegisteredEventsPaid] = useState({});
 	const [isIITBHUser, setIsIITBHUser] = useState(false);
 	const [accommodationStatus, setAccommodationStatus] =
@@ -61,6 +62,9 @@ const Profile = ({ AllAuth }) => {
 						});
 					}
 				}
+				if (data.Workshops) {
+					setRegisteredWorkshops(data.Workshops);
+				}
 				setMobile(data.Mobile);
 				setCollege(data.College);
 				setReferralCode(data.Referral);
@@ -84,6 +88,7 @@ const Profile = ({ AllAuth }) => {
 				Year: year,
 				Referral: referralCode,
 				Events: RegisteredEvents,
+				Workshops: RegisteredWorkshops.concat,
 				accommodationStatus: isIITBHUser
 					? "IIT BHU Student"
 					: "Unaccommodated",
@@ -635,6 +640,72 @@ const Profile = ({ AllAuth }) => {
 															)}
 														</MDBCardText>
 
+														<table
+															style={{
+																width: "100%",
+																margin: "0",
+															}}
+														>
+															<tr
+																style={{
+																	width: "170%",
+																	justifyContent:
+																		"center",
+																}}
+															>
+																<th
+																	className="fs-3 text"
+																	style={{
+																		fontSize:
+																			"25px",
+																	}}
+																>
+																	Workshops
+																</th>
+															</tr>
+															<tr>
+																<th
+																	className="fs-5 text"
+																	style={{
+																		border: "2px solid purple",
+																	}}
+																>
+																	{" "}
+																	Registered
+																	Workshops
+																</th>
+															</tr>
+															{RegisteredWorkshops.map(
+																(
+																	workshop,
+																	i
+																) => {
+																	return (
+																		<tr
+																			key={
+																				i
+																			}
+																		>
+																			<td
+																				style={{
+																					border: "2px solid purple",
+																					fontStyle:
+																						"italic",
+																					fontWeight:
+																						"500",
+																				}}
+																			>
+																				{
+																					workshop
+																				}
+																			</td>
+																		</tr>
+																	);
+																}
+															)}
+														</table>
+														<br />
+
 														{isIITBHUser ||
 														accommodationStatus ===
 															"IIT BHU Student" ? (
@@ -652,12 +723,14 @@ const Profile = ({ AllAuth }) => {
 																			width: "170%",
 																			display:
 																				"flex",
+																			position:
+																				"relative",
 																			justifyContent:
 																				"center",
 																		}}
 																	>
 																		<th
-																			className="fs-2 text"
+																			className="fs-3 text"
 																			style={{
 																				fontSize:
 																					"25px",
