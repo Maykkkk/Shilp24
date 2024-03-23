@@ -95,7 +95,7 @@ const Profile = ({ AllAuth }) => {
 				Workshops: RegisteredWorkshops,
 				accommodationStatus: isIITBHUser
 					? "IIT BHU Student"
-					: "accommodationStatus",
+					: accommodationStatus,
 				PaidRegistration: paidRegistration?paidRegistration:"",
 			};
 			if (!referralCode) {
