@@ -26,6 +26,8 @@ const Admin = ({ AllAuth }) => {
 
 	const [RegisteredWorkshops, setRegisteredWorkshops] = useState([]);
 
+	const [paidRegistration, setPaidRegistration] = useState(false);
+
 	const onFormSubmit = async (e) => {
 		e.preventDefault();
 		if (Password === masterPass) {
@@ -64,6 +66,9 @@ const Admin = ({ AllAuth }) => {
 				setIsUserData(true);
 				setAccommodationStatus(data.accommodationStatus);
 				setRegisteredWorkshops(data.Workshops);
+				if (data.hasOwnProperty("PaidRegistration")) {
+					setPaidRegistration(data.PaidRegistration);
+				}
 			}
 		});
 	};
@@ -89,6 +94,7 @@ const Admin = ({ AllAuth }) => {
 			Events: RegisteredEvents,
 			Workshops: RegisteredWorkshops,
 			accommodationStatus: accommodationStatus,
+			PaidRegistration: paidRegistration,
 		};
 		await setDoc(doc(db, "userProfile", userId), data);
 		toast.success("Profile Successfully Updated!");
@@ -243,10 +249,18 @@ const Admin = ({ AllAuth }) => {
 														<td>
 															<input
 																type="checkbox"
-																defaultChecked={
-																	false
-																}
 																name="registration"
+																defaultChecked={
+																	paidRegistration
+																}
+																onChange={(
+																	e
+																) => {
+																	setPaidRegistration(
+																		e.target
+																			.checked
+																	);
+																}}
 															/>
 														</td>
 													</tr>

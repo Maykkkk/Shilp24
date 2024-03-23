@@ -38,6 +38,7 @@ const Profile = ({ AllAuth }) => {
 	const [isIITBHUser, setIsIITBHUser] = useState(false);
 	const [accommodationStatus, setAccommodationStatus] =
 		useState("Unaccommodated");
+	const [paidRegistration, setPaidRegistration] = useState(false);
 
 	useEffect(() => {
 		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
@@ -70,6 +71,7 @@ const Profile = ({ AllAuth }) => {
 				setReferralCode(data.Referral);
 				setYear(data.Year);
 				setAccommodationStatus(data.accommodationStatus);
+				setPaidRegistration(data.PaidRegistration);
 			}
 		});
 		setIsIITBHUser(localStorage.getItem("email").endsWith("itbhu.ac.in"));
@@ -92,6 +94,7 @@ const Profile = ({ AllAuth }) => {
 				accommodationStatus: isIITBHUser
 					? "IIT BHU Student"
 					: "Unaccommodated",
+				PaidRegistration: paidRegistration,
 			};
 			if (!referralCode) {
 				data.Referral = "";
@@ -511,6 +514,15 @@ const Profile = ({ AllAuth }) => {
 																				</>
 																			)}
 																		</td>
+																		<td
+																			style={{
+																				border: "2px solid purple",
+																			}}
+																		>
+																			{paidRegistration
+																				? "✓"
+																				: "✖"}
+																		</td>
 																	</tr>
 																</>
 															) : (
@@ -649,6 +661,8 @@ const Profile = ({ AllAuth }) => {
 															<tr
 																style={{
 																	width: "170%",
+																	display:
+																		"flex",
 																	justifyContent:
 																		"center",
 																}}
@@ -674,6 +688,15 @@ const Profile = ({ AllAuth }) => {
 																	Registered
 																	Workshops
 																</th>
+																<th
+																	className="fs-5 text"
+																	style={{
+																		border: "2px solid purple",
+																	}}
+																>
+																	{" "}
+																	Status
+																</th>
 															</tr>
 															{RegisteredWorkshops.map(
 																(
@@ -698,6 +721,16 @@ const Profile = ({ AllAuth }) => {
 																				{
 																					workshop
 																				}
+																			</td>
+
+																			<td
+																				style={{
+																					border: "2px solid purple",
+																				}}
+																			>
+																				{paidRegistration
+																					? "✓"
+																					: "✖"}
 																			</td>
 																		</tr>
 																	);
