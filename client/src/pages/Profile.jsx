@@ -96,7 +96,7 @@ const Profile = ({ AllAuth }) => {
 				accommodationStatus: isIITBHUser
 					? "IIT BHU Student"
 					: accommodationStatus,
-				PaidRegistration: paidRegistration?paidRegistration:"",
+				PaidRegistration: paidRegistration,
 			};
 			if (!referralCode) {
 				data.Referral = "";
