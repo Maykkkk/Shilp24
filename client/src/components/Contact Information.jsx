@@ -33,7 +33,7 @@ const Contacts = [
   },
   {
     id:3,
-    Designation:"Tech Head",
+    Designation:"Tech Advisor",
     data:[{
       url:"./TeamPhotos/IV Year/JEEVESH GARG _ TECH ADVISOR.webp",
       "Name": "Jeevesh Garg",
@@ -110,7 +110,7 @@ const Contacts = [
     Designation:"Tech Head",
     data:[{
       url:"./TeamPhotos/III Year/MAYANK MANI NATH GUPTA _ TECH HEAD.webp",
-      "Name": " Mani Nath Gupta",
+      "Name": "Mayank Gupta",
       "Email": "mayankmani.nathgupta.cd.civ21@itbhu.ac.in",
       "Instagram": "",
       "Linkedin": "https://www.linkedin.com/in/mynkk",
