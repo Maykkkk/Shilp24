@@ -33,7 +33,7 @@ const Contacts = [
   },
   {
     id:3,
-    Designation:"Tech Head",
+    Designation:"Tech Advisor",
     data:[{
       url:"./TeamPhotos/IV Year/JEEVESH GARG _ TECH ADVISOR.webp",
       "Name": "Jeevesh Garg",
