@@ -441,7 +441,7 @@ const Profile = ({ AllAuth }) => {
 																}}
 															>
 																<th
-																	className="fs-2 text"
+																	className="fs-2 profileHeader"
 																	style={{
 																		fontSize:
 																			"25px",
@@ -452,7 +452,7 @@ const Profile = ({ AllAuth }) => {
 															</tr>
 															<tr>
 																<th
-																	className="fs-5 text"
+																	className="fs-5 profileHeader"
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -461,7 +461,7 @@ const Profile = ({ AllAuth }) => {
 																	Events
 																</th>
 																<th
-																	className="fs-5 text"
+																	className="fs-5 profileHeader"
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -469,7 +469,7 @@ const Profile = ({ AllAuth }) => {
 																	Fees
 																</th>
 																<th
-																	className="px-4 fs-5 text"
+																	className="px-1 fs-5 profileHeader"
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -670,7 +670,7 @@ const Profile = ({ AllAuth }) => {
 																}}
 															>
 																<th
-																	className="fs-3 text"
+																	className="fs-3 profileHeader"
 																	style={{
 																		fontSize:
 																			"25px",
@@ -681,7 +681,7 @@ const Profile = ({ AllAuth }) => {
 															</tr>
 															<tr>
 																<th
-																	className="fs-5 text"
+																	className="fs-5 profileHeader"
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -691,7 +691,7 @@ const Profile = ({ AllAuth }) => {
 																	Workshops
 																</th>
 																<th
-																	className="fs-5 text"
+																	className="fs-5 profileHeader"
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -765,7 +765,7 @@ const Profile = ({ AllAuth }) => {
 																		}}
 																	>
 																		<th
-																			className="fs-3 text"
+																			className="profileHeader"
 																			style={{
 																				fontSize:
 																					"25px",
@@ -776,7 +776,7 @@ const Profile = ({ AllAuth }) => {
 																	</tr>
 																	<tr>
 																		<th
-																			className="fs-5 text"
+																			className=" profileHeader"
 																			style={{
 																				border: "2px solid purple",
 																			}}
@@ -785,7 +785,7 @@ const Profile = ({ AllAuth }) => {
 																			Type
 																		</th>
 																		<th
-																			className="fs-5 text"
+																			className=" profileHeader"
 																			style={{
 																				border: "2px solid purple",
 																			}}
@@ -793,7 +793,7 @@ const Profile = ({ AllAuth }) => {
 																			Fees
 																		</th>
 																		<th
-																			className="fs-5 text"
+																			className=" profileHeader"
 																			style={{
 																				border: "2px solid purple",
 																			}}

@@ -37,6 +37,13 @@
 @media screen and (max-width:1000px) {
   .profile-card{
     margin: auto;
-    width: 75vw;
+    width: 80vw;
   }
+}
+
+@media screen and (max-width:400px) {
+  .profileHeader{
+    font-size: 5vw !important;
+  }
+  
 }
