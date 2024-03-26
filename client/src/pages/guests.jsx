@@ -45,8 +45,9 @@ const Guests = ({ AllAuth }) => {
 				<h1 style={{fontStyle:"italic"}}>
 					Chief Guest
 				</h1>
-					<div className="guestCards">
-						<GuestCard name="Mr. Daljeet Singh" desig="Director, DMRC" desc="Experienced Works Director with a demonstrated history of working in the railroad manufacture industry. Skilled in AutoCAD, Highways, Transportation Planning, Bridge, and Engineering. Strong operations professional graduated from B Tech in civil engg from IIT (BHU) Varanasi." url="./guests/guest.webp"/>
+				<div className="guestCards">
+						<GuestCard name="Mr. Daljeet Singh" desig="Director, DMRC" desc="Mr. Daljit Singh completed his graduation from IIT (BHU) and is now working as the Director (works) of Delhi Metro Rail Corporation, Lucknow Metro Rail Corporation, and Patna Metro Rail Corporation. Felicitated with the Lifetime Achievement by the Tunneling Association of India is a testimony." url="./guests/guest.webp"/>
+						<GuestCard name="Mr. Anupam Awathi" desig="Deputy Chief Project Manager,NHSRCL" desc="Deputy Chief Project Manager at the National High-Speed Rail Corporation Ltd (NHSRCL). He is also an alumnus of IIT (BHU). Recognized as the recipient of the Furuichi Award from the University of Tokyo and has received a dean's award after completion of master's." url="./guests/guest2.webp"/>
 					</div>
 					
 				</div>	
