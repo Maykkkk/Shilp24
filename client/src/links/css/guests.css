@@ -13,7 +13,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgb(125, 11, 148),rgb(216, 193, 219));
+  background: linear-gradient(rgb(125, 11, 148),rgb(209, 152, 218));
   clip-path: circle(20% at right 80%);
 }
 .guest-body::after{
@@ -192,6 +192,10 @@
   max-height: 100%;
 }
 .guestContainer .card__cont .name{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: wrap;
   background-color: rgba(0,0,0,0.6);
   padding: 0;margin: 0;width: 100%;
   font-family: 'Times New Roman', Times, serif;
