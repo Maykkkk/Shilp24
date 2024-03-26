@@ -227,6 +227,12 @@
   .card__cont {
     height: 16.5rem;
   }
+  .card__cont .name h3{
+    font-size: 1.3rem !important;
+  }
+  .card__cont .name h5{
+    font-size: 1.2rem !important;
+  }
   .card__cta p{
     font-size: 0.8rem;
   }
