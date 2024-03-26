@@ -431,9 +431,9 @@ const Profile = ({ AllAuth }) => {
 																margin: "0",
 															}}
 														>
-															<tr
+															<tr className="DashboardHeader"
 																style={{
-																	width: "170%",
+																	width: "133%",
 																	display:
 																		"flex",
 																	justifyContent:
@@ -450,9 +450,20 @@ const Profile = ({ AllAuth }) => {
 																	Dashboard
 																</th>
 															</tr>
+															<tr className="DashboardDescription"
+																style={{
+																	display:
+																		"flex",
+																		flex:"wrap"
+																}}
+															>
+																<th>
+																	All statuses of the payment would be updated once verified. Please wait for some time.
+																</th>
+															</tr>
 															<tr>
 																<th
-																	className="fs-5 profileHeader"
+																	className="fs-5"
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -461,7 +472,7 @@ const Profile = ({ AllAuth }) => {
 																	Events
 																</th>
 																<th
-																	className="fs-5 profileHeader"
+																	className="fs-5 "
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -469,7 +480,7 @@ const Profile = ({ AllAuth }) => {
 																	Fees
 																</th>
 																<th
-																	className="px-1 fs-5 profileHeader"
+																	className="px-1 fs-5 "
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -662,7 +673,7 @@ const Profile = ({ AllAuth }) => {
 														>
 															<tr
 																style={{
-																	width: "170%",
+																	width: "130%",
 																	display:
 																		"flex",
 																	justifyContent:
@@ -679,9 +690,20 @@ const Profile = ({ AllAuth }) => {
 																	Workshops
 																</th>
 															</tr>
+															<tr className="WorkshopDescription"
+																style={{
+																	display:
+																		"flex",
+																		flex:"wrap"
+																}}
+															>
+																<th>
+																	You have to pay shilp registration fees of Rs. 99 to avail the <b>FREE</b> workshops.
+																</th>
+															</tr>
 															<tr>
 																<th
-																	className="fs-5 profileHeader"
+																	className="fs-5 "
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -691,7 +713,7 @@ const Profile = ({ AllAuth }) => {
 																	Workshops
 																</th>
 																<th
-																	className="fs-5 profileHeader"
+																	className="fs-5 "
 																	style={{
 																		border: "2px solid purple",
 																	}}
@@ -753,9 +775,9 @@ const Profile = ({ AllAuth }) => {
 																		margin: "0",
 																	}}
 																>
-																	<tr
+																	<tr className="accommodationHeader"
 																		style={{
-																			width: "170%",
+																			width: "133%",
 																			display:
 																				"flex",
 																			position:
@@ -776,7 +798,7 @@ const Profile = ({ AllAuth }) => {
 																	</tr>
 																	<tr>
 																		<th
-																			className=" profileHeader"
+																			className=" "
 																			style={{
 																				border: "2px solid purple",
 																			}}
@@ -785,7 +807,7 @@ const Profile = ({ AllAuth }) => {
 																			Type
 																		</th>
 																		<th
-																			className=" profileHeader"
+																			className=" "
 																			style={{
 																				border: "2px solid purple",
 																			}}
@@ -793,7 +815,7 @@ const Profile = ({ AllAuth }) => {
 																			Fees
 																		</th>
 																		<th
-																			className=" profileHeader"
+																			className=" "
 																			style={{
 																				border: "2px solid purple",
 																			}}
