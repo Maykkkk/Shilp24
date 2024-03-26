@@ -33,6 +33,18 @@
     color:black;
     height:100% !important;
 }
+.DashboardDescription{
+  width: 134%;
+  font-size: 17px;
+  color:red;
+  margin-bottom: 10px;
+}
+.WorkshopDescription{
+  width: 120%;
+  font-size: 16px;
+  color:red;
+  margin-bottom: 10px;
+}
 
 @media screen and (max-width:1000px) {
   .profile-card{
@@ -43,6 +55,21 @@
 
 @media screen and (max-width:400px) {
   .profileHeader{
+    width: 150% !important;
     font-size: 5vw !important;
+  }
+  .DashboardHeader{
+    width: 160% !important;
+  }
+  .accommodationHeader{
+    width: 160% !important;
+  }
+  .DashboardDescription{
+    width: 165%;
+    font-size: 14px;
+  }
+  .WorkshopDescription{
+    width: 140%;
+    font-size: 14px;
   }
 }
