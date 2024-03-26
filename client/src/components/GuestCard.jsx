@@ -11,7 +11,7 @@ function GuestCard({name,desig, desc, url}) {
                             <img src={url} alt="" />
 							<pre className='name'>
                                 <h3>{`${name}`}</h3>
-                                    {name === "Mr. Anupam Awathi" ? (
+                                    {name === "Mr. Anupam Awasthi" ? (
                                         <h5>Deputy Chief Manager,<br/>NHSRCL</h5>
                                     ) : (
                                         <h5>{`${desig}`}</h5>
