@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
+
 // import NavBar from "../components/NavBar";
 
 const Admin = ({ AllAuth }) => {
-	const masterPass = "ces_3.14159";
-
 	const [Password, setPassword] = useState("");
 	const [isAdmin, setIsAdmin] = useState(false);
 	const [userId, setUserId] = useState("");
@@ -30,7 +29,7 @@ const Admin = ({ AllAuth }) => {
 
 	const onFormSubmit = async (e) => {
 		e.preventDefault();
-		if (Password === masterPass) {
+		if (Password === process.env.REACT_APP_ADMIN_PASS) {
 			setIsAdmin(true);
 		}
 	};
