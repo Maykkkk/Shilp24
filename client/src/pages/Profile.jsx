@@ -66,12 +66,22 @@ const Profile = ({ AllAuth }) => {
 				if (data.Workshops) {
 					setRegisteredWorkshops(data.Workshops);
 				}
-				setMobile(data.Mobile);
-				setCollege(data.College);
-				setReferralCode(data.Referral);
-				setYear(data.Year);
-				setAccommodationStatus(data.accommodationStatus);
-				if(data.PaidRegistration){
+				if (data.Mobile) {
+					setMobile(data.Mobile);
+				}
+				if (data.College) {
+					setCollege(data.College);
+				}
+				if (data.Referral) {
+					setReferralCode(data.Referral);
+				}
+				if (data.Year) {
+					setYear(data.Year);
+				}
+				if (data.accommodationStatus) {
+					setAccommodationStatus(data.accommodationStatus);
+				}
+				if (data.PaidRegistration) {
 					setPaidRegistration(data.PaidRegistration);
 				}
 			}
@@ -431,7 +441,8 @@ const Profile = ({ AllAuth }) => {
 																margin: "0",
 															}}
 														>
-															<tr className="DashboardHeader"
+															<tr
+																className="DashboardHeader"
 																style={{
 																	width: "133%",
 																	display:
@@ -450,15 +461,24 @@ const Profile = ({ AllAuth }) => {
 																	Dashboard
 																</th>
 															</tr>
-															<tr className="DashboardDescription"
+															<tr
+																className="DashboardDescription"
 																style={{
 																	display:
 																		"flex",
-																		flex:"wrap"
+																	flex: "wrap",
 																}}
 															>
 																<th>
-																	All statuses of the payment would be updated once verified. Please wait for some time.
+																	All statuses
+																	of the
+																	payment
+																	would be
+																	updated once
+																	verified.
+																	Please wait
+																	for some
+																	time.
 																</th>
 															</tr>
 															<tr>
@@ -690,15 +710,23 @@ const Profile = ({ AllAuth }) => {
 																	Workshops
 																</th>
 															</tr>
-															<tr className="WorkshopDescription"
+															<tr
+																className="WorkshopDescription"
 																style={{
 																	display:
 																		"flex",
-																		flex:"wrap"
+																	flex: "wrap",
 																}}
 															>
 																<th>
-																	You have to pay shilp registration fees of Rs. 99 to avail the <b>FREE</b> workshops.
+																	You have to
+																	pay shilp
+																	registration
+																	fees of Rs.
+																	99 to avail
+																	the{" "}
+																	<b>FREE</b>{" "}
+																	workshops.
 																</th>
 															</tr>
 															<tr>
@@ -775,7 +803,8 @@ const Profile = ({ AllAuth }) => {
 																		margin: "0",
 																	}}
 																>
-																	<tr className="accommodationHeader"
+																	<tr
+																		className="accommodationHeader"
 																		style={{
 																			width: "133%",
 																			display:
