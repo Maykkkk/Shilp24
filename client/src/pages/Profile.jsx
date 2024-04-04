@@ -955,7 +955,7 @@ const Profile = ({ AllAuth }) => {
 																			"15px",
 																	}}
 																>
-																	<a
+{/* 																	<a
 																		className="btn btn-outline-dark"
 																		href="https://forms.gle/7cLuc4N2ty37Gym57"
 																		target="_blank"
@@ -963,7 +963,7 @@ const Profile = ({ AllAuth }) => {
 																	>
 																		Accommodation
 																		Payment
-																	</a>
+																	</a> */}
 																	{FailureMessage ? (
 																		<Alert
 																			severity="error"
