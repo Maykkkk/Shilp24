@@ -650,24 +650,6 @@ const Profile = ({ AllAuth }) => {
 																			)}
 																		</th>
 																	</tr>
-																	<tr
-																		className="WorkshopDescription"
-																		style={{
-																			fontSize:
-																				"4vh",
-																		}}
-																	>
-																		<th
-																			colSpan={
-																				3
-																			}
-																		>
-																			<b>
-																				REGISTRATION
-																				CLOSED
-																			</b>
-																		</th>
-																	</tr>
 																</>
 															) : (
 																<></>
@@ -681,14 +663,14 @@ const Profile = ({ AllAuth }) => {
 																	"15px",
 															}}
 														>
-															{/* <a
+															<a
 																className="btn btn-outline-dark"
 																href="https://docs.google.com/forms/d/1CudQNhLcl_up_cCgQziIuHvccFzRTX4y_Oda1kztogU/edit"
 																target="_blank"
 																rel="noreferrer"
 															>
 																Fee Payment
-															</a> */}
+															</a>
 															{FailureMessage ? (
 																<Alert
 																	severity="error"
