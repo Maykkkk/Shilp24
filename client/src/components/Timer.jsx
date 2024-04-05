@@ -52,56 +52,66 @@
 
 // export default Timer
 
-import { useEffect, useState } from 'react';
-import '../links/css/Timer.css'
+// import { useEffect, useState } from "react";
+import "../links/css/Timer.css";
 
 function Timer() {
+	// const [days, setDays] = useState(0);
+	// const [hours, setHours] = useState(0);
+	// const [minutes, setMinutes] = useState(0);
+	// const [seconds, setSeconds] = useState(0);
 
-    const [days, setDays] = useState(0);
-    const [hours, setHours] = useState(0);
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(0);
+	const days = 0;
+	const hours = 0;
+	const minutes = 0;
+	const seconds = 0;
 
-    const deadline = "April, 5, 2024 08:00:00";
+	// const deadline = "April, 5, 2024 08:00:00";
 
-    const getTimeRemaining = () => {
-        const total = Date.parse(deadline) - Date.parse(new Date());
-        setSeconds(Math.floor((total / 1000) % 60));
-        setMinutes(Math.floor((total / 1000 / 60) % 60));
-        setHours(Math.floor((total / (1000 * 60 * 60)) % 24));
-        setDays(Math.floor(total / (1000 * 60 * 60 * 24)));
-    };
+	// const getTimeRemaining = () => {
+	//     const total = Date.parse(deadline) - Date.parse(new Date());
+	//     setSeconds(Math.floor((total / 1000) % 60));
+	//     setMinutes(Math.floor((total / 1000 / 60) % 60));
+	//     setHours(Math.floor((total / (1000 * 60 * 60)) % 24));
+	//     setDays(Math.floor(total / (1000 * 60 * 60 * 24)));
+	// };
 
-    useEffect(() => {
-        const interval = setInterval(() => getTimeRemaining(), 1000);
-        return () => clearInterval(interval);
-    }, []);
+	// useEffect(() => {
+	// 	const interval = setInterval(() => getTimeRemaining(), 1000);
+	// 	return () => clearInterval(interval);
+	// }, []);
 
-    return (
-        <div className="timer-container">
-            <div className="clockdiv">
-                <div className="box">
-                    <h4 className="days">{days < 10 ? "0" + days : days}</h4>
-                    <div className="smalltext">Days</div>
-                </div>
-                <div className="box">
-                    <h4 className="hours">{hours < 10 ? "0" + hours : hours}</h4>
-                    <div className="smalltext">Hours</div>
-                </div>
-                <div className="box">
-                    <h4 className="minutes">{minutes < 10 ? "0" + minutes : minutes}</h4>
-                    <div className="smalltext">Minutes</div>
-                </div>
-                <div className="box">
-                    <h4 className="seconds">{seconds < 10 ? "0" + seconds : seconds}</h4>
-                    <div className="smalltext">Seconds</div>
-                </div>
-                <div>
-                    <h2 className="subhead">Left</h2>
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<div className="timer-container">
+			<div className="clockdiv">
+				<div className="box">
+					<h4 className="days">{days < 10 ? "0" + days : days}</h4>
+					<div className="smalltext">Days</div>
+				</div>
+				<div className="box">
+					<h4 className="hours">
+						{hours < 10 ? "0" + hours : hours}
+					</h4>
+					<div className="smalltext">Hours</div>
+				</div>
+				<div className="box">
+					<h4 className="minutes">
+						{minutes < 10 ? "0" + minutes : minutes}
+					</h4>
+					<div className="smalltext">Minutes</div>
+				</div>
+				<div className="box">
+					<h4 className="seconds">
+						{seconds < 10 ? "0" + seconds : seconds}
+					</h4>
+					<div className="smalltext">Seconds</div>
+				</div>
+				<div>
+					<h2 className="subhead">Left</h2>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default Timer;
