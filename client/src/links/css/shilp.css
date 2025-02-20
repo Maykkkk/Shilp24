@@ -1,85 +1,151 @@
+/* 🌟 Base Styles */
 .contain {
-    position: relative;
-    /* width: 1927px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 4%;
-   height: 100vh;
-   background-image: url('../img/Clubs\ \(1\).png');
-   background-size: 100% 100%;
-   align-items: center;
+    padding: 5%;
+    min-height: 100vh;
+    background-color: #c9a883; /* Light brown background */
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 20px; /* Adds spacing between elements */
 }
-
-
 .description {
-    /* position: relative; */
-    /* Set font-related styles, text content, and color */
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: 3.5vh;
-    line-height: 5vh;
-    /* text-align: justify; */
-    color: #F8F8F8;
-    flex: 1 1 300px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #4a1f1f; /* Dark brown text */
+    max-width: 600px;
+    text-align: justify;
 }
 
-.shilp-logo{
-    flex: 0 0 auto; /* Prevent image from stretching */
-    margin-right: 20px;
-   
+.shilp-logo {
+    flex: 0 0 auto;
+    margin-right: 40px;
+    width: 400px;
+    height: 400px;
 }
 
+/* Ensure the 3D model fits correctly */
+.shilp-logo div {
+    width: 100%;
+    height: 100%;
+}
 
+/* 🌟 Stats Section */
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 14px;
+    flex-wrap: wrap;
+}
 
-@media screen and (max-width: 1200px) {
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2); /* Light opacity box */
+    padding: 12px;
+    border-radius: 10px;
+    min-width: 120px;
+}
+
+.stat-item h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #4a1f1f; /* Dark brown */
+    margin: 5px 0;
+}
+
+.stat-item p {
+    font-size: 0.8rem;
+    color: #4a1f1f;
+}
+
+.icon {
+    font-size: 1.8rem;
+    color: #4a1f1f;
+}
+
+/* 🌟 Responsive Design */
+@media screen and (max-width: 1024px) {
     .contain {
-        display: flex;
-        flex-direction: row; /* Stack elements in a column */
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20%;
-    }
-
-    .shilp-logo,
-    .description {
-        flex: 0 0 auto; /* Reset flex properties to default */
-        width: auto; /* Reset width */
-        text-align: left; /* Align text to the left */
-        margin-bottom: 0px; /* Remove margin between image and text */
-        margin-left: 4%;
-        margin-right: 4%;
+        flex-direction: column;
+        text-align: center;
+        padding: 5%;
     }
 
     .shilp-logo {
-        margin-bottom: 48px; /* Add spacing below the centered image */
+        margin-bottom: 20px;
     }
 
-    .description{
+    .description {
+        text-align: center;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-item {
         width: 100%;
-        font-size: 2.5vw;
-        line-height: 4vw;
+        max-width: 300px;
+        margin-bottom: 20px;
     }
 }
 
-.shilp-logo img{
-    width: 32vw;
-    height: auto;
+@media screen and (max-width: 768px) {
+    .description {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0 10px;
+    }
+
+    .stat-item {
+        min-width: 100px;
+        padding: 10px;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+    }
+
+    .stat-item h2 {
+        font-size: 1.2rem;
+    }
+
+    .stat-item p {
+        font-size: 0.9rem;
+    }
 }
 
-@media screen and (max-width: 500px){
-    .contain{
-         background-size: 100% 100%;
+@media screen and (max-width: 500px) {
+    .description {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
     }
-    .description{
-        margin-top: -35vw;
-        font-size: 4.4vw;
-        line-height: 8vw;
+
+    .stat-item {
+        width: 90%;
+        padding: 8px;
     }
-    .shilp-logo img{
-        margin-top: -10vh;
-        width: 80vw;
-        height: 80vw;
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    .stat-item h2 {
+        font-size: 1rem;
+    }
+
+    .stat-item p {
+        font-size: 0.8rem;
     }
 }

@@ -7,15 +7,7 @@ import image2 from "../links/img/galleryPhoto/2.jpg";
 import image3 from "../links/img/galleryPhoto/3.jpg";
 import image4 from "../links/img/galleryPhoto/4.jpg";
 import Footer from "../components/Footer";
-import ParticleBackground from "../components/ParticleBackground";
-import PacmanLoader from "react-spinners/PacmanLoader";
-
-const override = {
-	display: "flex",
-	justifyContent: "center",
-	alignItems: "center",
-	borderColor: "red",
-  };
+import Loader from "../components/LoadingScreen";
 
 function Gallery({ AllAuth }) {
 
@@ -31,15 +23,7 @@ function Gallery({ AllAuth }) {
 		<div className="App">
 			{loading ? (
 				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"#271e29"}}>
-					<ParticleBackground />
-					<PacmanLoader
-						color="#36d7b7"
-						loading={loading}
-						cssOverride={override}
-						size={50}
-						aria-label="Loading Spinner"
-						data-testid="loader"
-					/>
+					<Loader onComplete={() => setLoading(false)} />
 				</div>
 			) : 
 			<div className="body gallery-body">

@@ -1,23 +1,24 @@
-import React from 'react'
-import '../links/css/home.css';
+import React from 'react';
+import '../links/css/Hero.css';
 import Timer from './Timer';
+import ShilpLogo from '../links/img/Shilp-logo.png';
 
 function Hero() {
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center" id='home'>
-          <div id="title" className='hero-section'>
-            <h1 className='m-0 p-0 '>
-              <span className="primary x">SHILP </span> 
-              <span className="text-light">IIT BHU</span>
-              </h1>
-            <h2 className='text-light mb-0 p-0'>Civil Engineering Society</h2>
-          </div>
-          <h1 className='' style={{position:"absolute", bottom:"8vh", color:"white"}}>5-7 April, 2024</h1>
-          <div className="clockdiv" style={{color:"white"}}>
-            <Timer />
-          </div>
+    <div className="hero-container" id="home">
+      <div className="hero-content">
+        <h1 className="hero-title">SHILP'25</h1>
+        <h2 className="hero-subtitle">Civil Engineering Society</h2>
+        <img src={ShilpLogo} alt="Shilp Logo" className="hero-logo" />
+      </div>
+      <div className="hero-bottom">
+        <h3 className="hero-date">5-7 April, 2024</h3>
+        <div className="countdown-timer">
+          <Timer />
         </div>
-  )
+      </div>
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;

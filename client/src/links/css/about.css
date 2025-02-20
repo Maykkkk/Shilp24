@@ -1,99 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
 
-
-.about{
+.about-ces {
     height: 100vh;
     width: 100%;
-    display: grid;
-    grid-template-columns: 37vw 54vw;
+    background-color: #2e1633; /* Dark purple background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4vh 10vw;
     color: white;
-    margin-top: 20vh;
-    margin-right: 4%;
-    padding: 0 15px;
 }
 
-.about .left{
+.about-title {
+    font-size: 8vh;
     font-weight: 700;
-    padding-top: 6.8vw;
-    /* padding-left: 4.6vw; */
-    font-size: 4vh;
-    line-height: 5.5vh;
 }
 
-.about .title{
-    font-size: 9vh;
-    line-height: 10vh;
-}
-
-.about .logo img{
-    width: 25vw;
+.logo img {
+    width: 20vw;
+    min-width: 150px;
     object-fit: contain;
+    margin: 1.5vh 0;
 }
-.about .right{
+
+.about-description {
     font-family: 'Poppins', sans-serif;
-    margin-top: 9vw;
-    padding-left: 2vw;
-    font-size: 1.9vw;
-    font-weight: 600;
-    line-height: 6vh;
-    text-align:justify;
+    font-size: 2.4vh;
+    font-weight: 400;
+    line-height: 3.2vh;
+    max-width: 80vw;
+    margin-bottom: 3vh;
 }
-@media screen and (max-width:848px){
-    .about .right{
-        font-size: 2.5vw;
-        line-height: 4vw;
-    }
-}
-@media screen and (max-width:650px){
-    .about .right{
-        font-size: 2.8vw;
-        line-height: 5vw;
-    }
-}
-@media screen and (max-width:484px){
-    .about .right{
-        font-size: 3.5vw;
-        line-height: 5.5vw;
-    }
-}
-@media screen and (max-width:600px) {
-    .about{
-        display: flex;
-        flex-direction: column;
-        height: 120vh;
-        align-items: center;
-        justify-content: center;
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 5vh;
     }
 
-    .about span{
-        display: none;
+    .description {
+        font-size: 1.6vh;
+        max-width: 80vw;
     }
 
-    .about .title{
-        font-size: 6vh;
-    }
-
-    .about .left img{
-        width: 80%;
-    }
-    .about .left{
-        font-size: 6vh;
-        line-height: 6vh;
-    }
-    .about .right{
-        width: 100%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        font-size: 2vh;
-        line-height: normal;
-        text-align: justify;
-        padding-left: 4%;
-        padding-right: 4%;
+    .logo img {
+        width: 20vw;
     }
 }
-@media screen and (max-width:340px) {
-    .about{
-        margin-right:0;
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 4vh;
     }
-    
+
+    .description {
+        font-size: 1.5vh;
+        max-width: 90vw;
+        line-height: 2.5vh;
+    }
+
+    .logo img {
+        width: 25vw;
+    }
 }

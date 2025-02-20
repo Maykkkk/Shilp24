@@ -37,9 +37,6 @@
 .buttons .btn:hover{
     color: rgb(197, 142, 204);
 }
-.footer{
-    margin-top: 90vh;
-}
 .buttons .btn:nth-child(1){
     opacity: 0;
     animation: display 0.5s ease-in-out forwards;

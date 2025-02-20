@@ -11,16 +11,17 @@
 }
 .home-body {
 	position: relative;
-	background-color: #271e29;
+	background-color: #f5e6d3;
 }
 .body {
 	position: relative;
-	background-color: #271e29;
+	background: linear-gradient(to bottom, #d4b595, #4a2c2a); /* Background color similar to the image */
+
 	overflow-x: hidden;
 }
 
 .container {
-	background-color: #271e29;
+	background-color: #f5e6d3;
 	width: 100%;
 }
 @media screen and (min-width: 600px) {
@@ -57,22 +58,7 @@
 	-webkit-text-fill-color: transparent;
 }
 
-.container-about-events-footer {
-	height: 250vh;
-	width: 100%;
-	background-image: url(../img/Technec\ BGtechnex_bg.png);
-	background-size: 100% 45%;
-	background-repeat: no-repeat;
-	background-position-y: 0vh;
-	position: relative;
-}
 @media screen and (max-width: 500px) {
-	.container-about-events-footer {
-		background-size: 200% 50%;
-		background-position-y: 0vh;
-		background-position-x: -20vw;
-		background-image: url(../img/Technec\ BGtechnex_bg.png);
-	}
 	#title h1 {
 		font-size: 22vw;
 		font-weight: 700;
@@ -93,10 +79,4 @@
 	position: relative;
 	height: 100vh;
 	width: 100%;
-}
-
-.Bottom {
-	margin-top: 20vh;
-	width: 100%;
-	position: relative;
 }

@@ -144,7 +144,7 @@ const Contacts = [
     }]
   },
   {
-    id:9,
+    id:10,
     Designation:"Marketing Heads",
     data:[{
       url:"./TeamPhotos/III Year/Aman Srivastava _ MARKETING HEAD.webp",
@@ -183,7 +183,7 @@ const Contacts = [
       MobileNo:""
     }]
   },{
-    id:10,
+    id:11,
     Designation:"Marketing Executives",
     data:[{
       url:"/TeamPhotos/II Year/ADITYA MAURYA _ MARKETING EXECUTIVE.webp",
@@ -222,7 +222,7 @@ const Contacts = [
       "MobileNo": "7459058991"
     }]
   },{
-    id:11,
+    id:12,
     Designation:"Events Heads",
     data:[{
       url:"./TeamPhotos/III Year/PARAM SRIVASTAVA _ EVENTS HEAD.webp",
@@ -254,7 +254,7 @@ const Contacts = [
       MobileNo:""
     }]
   },{
-    id:12,
+    id:13,
     Designation:"Events Executives",
     data:[{
       url:"/TeamPhotos/II Year/AMAN MANI SHANDILYA _ EVENT EXECUTIVE.webp",
@@ -328,7 +328,7 @@ const Contacts = [
       "MobileNo": "7903219815"
     }]
   },{
-    id:13,
+    id:14,
     Designation:"Design and Content Heads",
     data:[{
       url:"./TeamPhotos/III Year/Ankit Kumar _ Content Head.webp",
@@ -353,7 +353,7 @@ const Contacts = [
       "MobileNo": "8432089220"
     }]
   },{
-    id:14,
+    id:15,
     Designation:"Design and Content Executives",
     data:[{
       url:"/TeamPhotos/II Year/Archit Thakur ll Design and Content Executive_.webp",
@@ -406,7 +406,7 @@ const Contacts = [
       "MobileNo": "9587024809"
     }]
   },{
-    id:15,
+    id:16,
     Designation:"Publicity Heads",
     data:[{
       url:"./TeamPhotos/III Year/AKHAND PRATAP YADAV _ PUBLICITY HEAD.webp",
@@ -452,7 +452,7 @@ const Contacts = [
       MobileNo:""
     }]
   },{
-    id:16,
+    id:17,
     Designation:"Publicity Executives",
     data:[{
       url:"./TeamPhotos/II Year/ANURAG PRAKASH _ PUBLICITY EXECUTIVE_.webp",
@@ -491,7 +491,7 @@ const Contacts = [
       "MobileNo": "7665374010"
     }]
   },{
-    id:17,
+    id:18,
     Designation:"PR Heads",
     data:[{
       url:"./TeamPhotos/III Year/NISHKARSH SHARMA PR HEAD.webp",
@@ -523,7 +523,7 @@ const Contacts = [
       "MobileNo": "8085733084"
     }]
   },{
-    id:18,
+    id:19,
     Designation:"PR Executives",
     data:[{
       url:"./TeamPhotos/II Year/AAKASH SRIVASTAVA _ PUBLIC RELATIONS EXECUTIVE .webp",

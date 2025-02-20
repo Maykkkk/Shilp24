@@ -6,15 +6,8 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 // import { MdEmail } from "react-icons/md";
 import Fade from "react-reveal/Fade";
-import PacmanLoader from "react-spinners/PacmanLoader";
-import ParticleBackground from "../components/ParticleBackground";
+import Loader from "../components/LoadingScreen";
 
-const override = {
-	display: "flex",
-	justifyContent: "center",
-	alignItems: "center",
-	borderColor: "red",
-  };
 
 const Contacts = ({ AllAuth }) => {
 
@@ -30,15 +23,7 @@ const Contacts = ({ AllAuth }) => {
 		<div className="App">
 			{loading ? (
 				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"#271e29"}}>
-					<ParticleBackground />
-					<PacmanLoader
-						color="#36d7b7"
-						loading={loading}
-						cssOverride={override}
-						size={50}
-						aria-label="Loading Spinner"
-						data-testid="loader"
-					/>
+					<Loader onComplete={() => setLoading(false)} />
 				</div>
 			) : 
 			<div className="body" id="contact">

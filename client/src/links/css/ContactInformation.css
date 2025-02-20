@@ -1,0 +1,58 @@
+.contact-section {
+    background-color: #e0b891; /* Matches your image */
+    text-align: center;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contact-heading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #3a1f0b;
+  }
+  
+  .contact-text,
+  .contact-email,
+  .contact-phone {
+    font-size: 1.2rem;
+    color: #4d2b14;
+  }
+  
+  .contact-email a {
+    text-decoration: none;
+    color: #4d2b14;
+    font-weight: bold;
+  }
+  
+  .sponsors-heading {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #3a1f0b;
+    margin-top: 40px;
+  }
+  
+  .sponsors {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .sponsor {
+    text-align: center;
+  }
+  
+  .sponsor img {
+    width: 70px; /* Adjust size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .sponsor p {
+    font-size: 1rem;
+    color: #4d2b14;
+    margin-top: 5px;
+  }
+  

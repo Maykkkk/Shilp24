@@ -2,11 +2,9 @@ import {useState, useEffect} from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GuestCard from "../components/GuestCard";
-import PacmanLoader from "react-spinners/PacmanLoader";
-import ParticleBackground from "../components/ParticleBackground";
 import '../links/css/home.css';
 import '../links/css/guests.css';
-
+import Loader from "../components/LoadingScreen";
 
 const Guests = ({ AllAuth }) => {
 
@@ -22,14 +20,7 @@ const Guests = ({ AllAuth }) => {
 		<>
 		{loading ? (
 			<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"black"}}>
-				<ParticleBackground />
-				<PacmanLoader
-					color="#36d7b7"
-					loading={loading}
-					size={50}
-					aria-label="Loading Spinner"
-					data-testid="loader"
-				/>
+				<Loader onComplete={() => setLoading(false)} />
 			</div>
 		) :
 		<div className="App">

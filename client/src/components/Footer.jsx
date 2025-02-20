@@ -1,65 +1,34 @@
-import React from 'react'
-import '../links/css/footer.css'
-import temple from '../links/img/Group 23.png'
-import chineseTemple from '../links/img/Group 3660.png'
-import newspaper from '../links/img/undraw_subscribe_vspl 1.png'
-import shilp from '../links/img/shilpp3-modified_auto_x2-removebg-preview 1.png'
+import React from 'react';
+import '../links/css/footer.css';
+import temple from '../links/img/Group 23.png';
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaSquareFacebook } from "react-icons/fa6";
 
 function Footer() {
   return (
     <div className='footer'>
-        {/* --------------- */}
-        <div className="mail-section">
-            <div className="image">
-                <img className='temple' src={temple} alt="" />
-                <img className='chineseTemple' src={chineseTemple} alt="" />
-            </div>
-            <div className="mail">
-                <a href="mailto:shilp@itbhu.ac.in">shilp@iitbhu.ac.in</a>
-            </div>
+        {/* Left Section */}
+        <div className="image">
+            <img src={temple} alt="Temple Icon" />
         </div>
-        {/* --------------- */}
-        <div className="line"></div>
-        {/* --------------- */}
+
+        {/* Subscription Section */}
         <div className="subscription">
-            <div className="new-image">
-                <img src={newspaper} alt="" />
-            </div>
-            <div className="subscribe">
-                Subscribe to our Newsletter!
-            </div>
-            <input type="email" name="user-mail" id="user-mail" placeholder='Enter your email'/>
-            <div className="subscribe-mobile">
-                Subscribe to our Newsletter!
-            </div>
+            <div className="subscribe">Subscribe to our Newsletter!</div>
+            <input type="email" placeholder='Enter your email' />
+            <button className="subscribe-button">Subscribe</button>
         </div>
-        {/* ---------------- */}
-        <div className="line"></div>
-        {/* ---------------- */}
+
+        {/* Social Media Section */}
         <div className="connect">
-            <div className="mobile-text">
-                Connect with us
-            </div>
-            <div className="logo">
-                <img src={shilp} alt="" />
-            </div>
-            <div className="text">
-                Connect with us
-            </div>
+            <div className="text">Connect with us</div>
             <div className="social-media-icons">
-                <a href="https://www.linkedin.com/company/civil-engineering-society-iit-bhu/"><FaLinkedin className='linkedIn'/></a>
-                <a href="https://www.instagram.com/ces_iitbhu/"><FaInstagram className='instagram' style={{margin:"0 0 0 1vw"}}/></a>
-                <a href="https://www.facebook.com/groups/157760987681133/"><FaSquareFacebook className='facebook' style={{margin:"0 0 0 1vw"}}/></a>
-                
+                <a href="https://www.linkedin.com"><FaLinkedin /></a>
+                <a href="https://www.instagram.com"><FaInstagram /></a>
             </div>
         </div>
-        {/* -------------- */}
-    
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

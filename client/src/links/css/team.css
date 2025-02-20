@@ -1,180 +1,165 @@
-.shilp-team{
-    background-image: url(../img/Clubs\ \(1\).png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+/* 🌟 Vintage Background */
+.shilp-team { 
+    background-image: url("https://www.transparenttextures.com/patterns/aged-paper.png"); /* Vintage Paper */
+    background-size: cover;
+    background-repeat: repeat;
     overflow-x: hidden;
     margin-top: 10vh;
+    padding: 5vh 0;
+    filter: sepia(10%) contrast(90%);
 }
-.team-title{
-    position: relative;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 2px 2px 6px rgb(221, 206, 206);
 
+/* 🌟 Keep Team Title Layout the Same */
+.team-title {
+    position: relative;
+    color: #3b2c20;
+    font-family: "Merriweather", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #dbb27de4;    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #6b4f3f;
+    margin-bottom: 30px;
 }
-.team-title::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgb(125, 11, 148),rgb(216, 193, 219));
-    clip-path: circle(20% at right 80%);
-}
-.team-title::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgb(233, 31, 48),rgb(216, 193, 219));
-    clip-path: circle(10% at left 25%);
-    z-index: 0;
-}
-.team-title h1{
-    margin-top: 2vw;
-}
-.team-container{
+
+/* 🟢 Keep Team Cards in ROW layout */
+.team-container {
     position: relative;
     z-index: 1;
     width: 85%;
     margin: auto;
-    display: flex;
-    flex-direction: row;
+    display: flex;  /* Keeps cards in a row */
+    flex-direction: row;  /* Ensures it remains horizontal */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 40px;
-    margin-bottom:40px;
-}
-.team-container .team-card{
-    position: relative;
-    width: 300px;height: 400px;
-    background: rgba(255, 255, 255, 0.05);
-    margin: 20px;
-    box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    transition: 1s;
-}
-.team-container .team-card:hover{
-    box-shadow: 0 15px 20px rgba(255, 255, 255, 0.362);
-}
-.team-container .team-card .team-content{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0.8;
-    transition: 0.5s;
+    margin-bottom: 40px;
 }
 
-.team-container .team-card:hover .team-content{
-    opacity: 1;
-    transform: translateY(-20px);
+/* 🌟 Vintage Themed Team Cards */
+.team-container .team-card {
+    width: 280px; /* Keep Original Size */
+    height: 380px;
+    margin: 20px;
+    background-image: url('../img/teamContainer.webp'); /* Replace with correct path */
+    background-size: cover;  /* Covers the full area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    border: 3px solid #6b4f3f; /* Dark Brown */
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.4s ease-in-out;
 }
-.team-container .team-card .team-content .imgBx{
+
+/* 🟢 Keep Profile Image Inside Circle */
+.team-container .team-card .team-content .imgBx {
     position: relative;
-    width: 180px;
-    height: 180px;
+    margin-top: 1.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     overflow: hidden;
-    border: 10px solid rgba(0,0,0,0.25);
+    border: 3px solid #cdb518; /* Aged Gold Frame */
+    background: #c4a484; /* Light Brown */
 }
-.team-container .team-card .team-content .imgBx img{
+
+/* 🌟 Image Stays Inside */
+.team-container .team-card .team-content .imgBx img {
     position: absolute;
-    top: 0;left: 0;width: 100%;height: 100%;
-    object-fit: cover;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps Image Fitting */
 }
-.team-container .team-card .team-content .contentBx{
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 18px;
+
+/* 🌟 Text Styling for Vintage Feel */
+.team-container .team-card .team-content .contentBx {
+    margin-left: 1vh;
+    margin-right: 1vh;
     text-align: center;
-    margin: 2opx 0 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: "Merriweather", serif;
+    color: #3b2c20;
+    letter-spacing: 1px;
+    text-align: center;
 }
-.team-container .team-card .sci{
+
+/* 🌟 Social Icons with Vintage Gold Effect */
+.team-container .team-card .sci {
     padding-left: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
-.team-container .team-card .sci li{
+
+.team-container .team-card .sci li {
     list-style: none;
     margin: 0 10px;
     transform: translateY(40px);
     transition: 0.5s;
     opacity: 0;
 }
-.team-container .team-card:hover .sci li{
+
+.team-container .team-card:hover .sci li {
     transform: translateY(0px);
     opacity: 1;
 }
-.team-container .team-card .sci li a{
-    color: #fff;
-    font-size: 25px;
+
+.team-container .team-card .sci li a {
+    color: #8b5a2b;  /* Goldish Brown */
+    font-size: 22px;
+    transition: 0.3s ease-in-out;
 }
 
+.team-container .team-card .sci li a:hover {
+    color: #5b3a29; /* Darker Brown */
+    transform: scale(1.2);
+}
 
+/* 🌟 Hover Effects */
+.team-container .team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.5);
+}
 
-.team-header{
+/* 🟢 Ensure Team Header Stays Centered */
+.team-header {
     margin: 5vh 0 5vh 0;
 }
-.team-header h1{
-    color: #D12156;
+
+.team-header h1 {
+    color: #5b3a29;
     font-size: 6vw;
     font-weight: 900;
-}
-.shilp-team .team-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 100vh;
+    font-family: "Playfair Display", serif;
+    text-align: center;
 }
 
-.sci .linkedIn:hover{
-    color: #0077b5;
-    transform: scale(1.2);
-}
-.sci .instagram:hover{
-    
-    background: #f09433; 
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-    border-radius: 15px 15px 15px 15px;
-    transform: scale(1.2);
-}
-.sci .gmail:hover{
-    color: 	red;
-    transform: scale(1.2);
-}
+/* 🟢 Keep Layout Responsive */
+@media screen and (max-width: 768px) {
+    .team-header h1 {
+        font-size: 8vw;
+    }
 
-@media screen and (max-width: 1295px) {
-    .team-title::after{
-        clip-path: circle(10% at left 5%);
+    .team-container {
+        flex-direction: row;  /* Keeps in Rows */
     }
-    
-}
-@media screen and (max-width: 625px){
-    .team-title::after{
-        display: none;
+
+    .team-container .team-card {
+        width: 250px;
+        height: 350px;
     }
-    .team-title::before{
-        clip-path: circle(5% at right 80%);
-    }
-    .team-header h1{
-        font-size: 10vw;
+
+    .team-container .team-card .team-content .imgBx {
+        width: 140px;
+        height: 140px;
     }
 }
