@@ -12,14 +12,15 @@ const Team = ({ AllAuth }) => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        }, 2000);
+        }, 5000);
     }, []);
 
     return (
         <div className="App">
             {loading ? (
-                <div className="loader-container" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", background: "#6b4f3f" }}>
-                    <Loader onComplete={() => setLoading(false)} />
+                <div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"black"}}>
+                {/* <ParticleBackground /> */}
+                <Loader onComplete={() => setLoading(false)} />
                 </div>
             ) : (
                 <div className="body">

@@ -10,15 +10,7 @@ import Faqs from "../components/Accommodation/Faqs";
 import ReachingIITBHU from "../components/Accommodation/ReachingIITBHU";
 import ContactUs from "../components/Accommodation/ContactUs";
 import Fade from "react-reveal/Fade";
-import ParticleBackground from "../components/ParticleBackground";
-import PacmanLoader from "react-spinners/PacmanLoader";
-
-const override = {
-	display: "flex",
-	justifyContent: "center",
-	alignItems: "center",
-	borderColor: "red",
-  };
+import Loader from "../components/LoadingScreen";
 
 const Accommodation = ({ AllAuth }) => {
 	const [onButton, setOnButton] = useState("aboutUs");
@@ -28,7 +20,7 @@ const Accommodation = ({ AllAuth }) => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 1000);
+		}, 5000);
 	}, []);
 
 	const buttonStyle = {
@@ -38,16 +30,9 @@ const Accommodation = ({ AllAuth }) => {
 	return (
 		<div className="App">
 			{loading ? (
-				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"#271e29"}}>
-					<ParticleBackground />
-					<PacmanLoader
-						color="#36d7b7"
-						loading={loading}
-						cssOverride={override}
-						size={50}
-						aria-label="Loading Spinner"
-						data-testid="loader"
-					/>
+				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"black"}}>
+				{/* <ParticleBackground /> */}
+				<Loader onComplete={() => setLoading(false)} />
 				</div>
 			) : 
 			<div className="body">

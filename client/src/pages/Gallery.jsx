@@ -16,7 +16,7 @@ function Gallery({ AllAuth }) {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 2000);
+		}, 5000);
 	}, []);
 
 	return (

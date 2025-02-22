@@ -3,26 +3,20 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../links/css/workshop.css";
 import Fade from "react-reveal/Fade";
-import ParticleBackground from "../components/ParticleBackground";
-import PacmanLoader from "react-spinners/PacmanLoader";
+
 import WorkshopCard from "../components/WorkshopCard";
 
 import { getDoc, doc } from "@firebase/firestore";
 import { db } from "../firebase";
+import Loader from "../components/LoadingScreen";
 
-const override = {
-	display: "flex",
-	justifyContent: "center",
-	alignItems: "center",
-	borderColor: "red",
-};
 const Competitions = ({ AllAuth }) => {
 	const [loading, setLoading] = useState(true);
 	const [RegisteredWorkshops, setRegisteredWorkshops] = useState([]);
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 1000);
+		}, 5000);
 	}, []);
 	useEffect(() => {
 		const docRef = doc(db, "userProfile", localStorage.getItem("UID"));
@@ -38,30 +32,13 @@ const Competitions = ({ AllAuth }) => {
 	return (
 		<div className="App">
 			{loading ? (
-				<div
-					className="loader-container"
-					style={{
-						display: "flex",
-						justifyContent: "center",
-						alignItems: "center",
-						height: "100vh",
-						background: "#271e29",
-					}}
-				>
-					<ParticleBackground />
-					<PacmanLoader
-						color="#36d7b7"
-						loading={loading}
-						cssOverride={override}
-						size={50}
-						aria-label="Loading Spinner"
-						data-testid="loader"
-					/>
+				<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"black"}}>
+				{/* <ParticleBackground /> */}
+				<Loader onComplete={() => setLoading(false)} />
 				</div>
 			) : (
 				<>
 					<div className="body workshop-body">
-						<ParticleBackground />
 						<NavBar AllAuth={AllAuth} />
 						<div className="workshopHeading">
 							<div className="workshopTitle">Workshops</div>

@@ -108,7 +108,7 @@ const NavBar = ({ AllAuth }) => {
 								Contacts
 							</Link>
 						</li>
-						<li className="nav-item px-2 mx-2">
+						{/* <li className="nav-item px-2 mx-2">
 							<Link
 								className={
 									"nav-link" +
@@ -120,7 +120,7 @@ const NavBar = ({ AllAuth }) => {
 							>
 								Store
 							</Link>
-						</li>
+						</li> */}
 						<li className="nav-item px-2 mx-2">
 							<Link
 								className={
@@ -147,7 +147,7 @@ const NavBar = ({ AllAuth }) => {
 								Team
 							</Link>
 						</li>
-						<li className="nav-item px-2 mx-2">
+						{/* <li className="nav-item px-2 mx-2">
 							<Link
 								className={
 									"nav-link" +
@@ -159,7 +159,7 @@ const NavBar = ({ AllAuth }) => {
 							>
 								Media
 							</Link>
-						</li>
+						</li> */}
 						<li className="nav-item px-2 mx-2">
 							<Link
 								className={

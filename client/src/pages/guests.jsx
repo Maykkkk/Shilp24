@@ -13,14 +13,15 @@ const Guests = ({ AllAuth }) => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 1000);
+		}, 5000);
 	}, []);
 
 	return (
 		<>
 		{loading ? (
 			<div className="loader-container" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", background:"black"}}>
-				<Loader onComplete={() => setLoading(false)} />
+			{/* <ParticleBackground /> */}
+			<Loader onComplete={() => setLoading(false)} />
 			</div>
 		) :
 		<div className="App">

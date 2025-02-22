@@ -16,7 +16,7 @@ const Contacts = ({ AllAuth }) => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 1000);
+		}, 5000);
 	}, []);
 
 	return (
