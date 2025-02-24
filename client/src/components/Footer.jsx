@@ -3,9 +3,11 @@ import '../links/css/footer.css';
 import temple from '../links/img/Group 23.png';
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import Fade from "react-reveal/Fade";
 
 function Footer() {
   return (
+    <Fade bottom>
     <div className='footer'>
         {/* Left Section */}
         <div className="image">
@@ -28,6 +30,7 @@ function Footer() {
             </div>
         </div>
     </div>
+    </Fade>
   );
 }
 

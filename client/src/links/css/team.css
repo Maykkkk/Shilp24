@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+VN:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'BasheqVintage';
+    src: url('../fonts/BasheqVintage.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 🌟 Vintage Background */
 .shilp-team { 
     background-image: url("https://www.transparenttextures.com/patterns/aged-paper.png"); /* Vintage Paper */
@@ -13,7 +22,7 @@
 .team-title {
     position: relative;
     color: #3b2c20;
-    font-family: "Merriweather", serif;
+    font-family: 'BasheqVintage', serif;
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
@@ -86,12 +95,16 @@
     text-align: center;
     font-size: 18px;
     text-transform: capitalize;
-    font-family: "Merriweather", serif;
+    font-family: 'BasheqVintage', serif;
     color: #3b2c20;
     letter-spacing: 1px;
     text-align: center;
 }
-
+.team-container .team-card .team-content .contentBx .profile-Name{
+    font-size: 1.5rem;
+    font-weight: "semi-bold";
+    margin-bottom: 5px;
+}
 /* 🌟 Social Icons with Vintage Gold Effect */
 .team-container .team-card .sci {
     padding-left: 0;
@@ -138,8 +151,8 @@
 .team-header h1 {
     color: #5b3a29;
     font-size: 6vw;
-    font-weight: 900;
-    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-family: 'BasheqVintage', serif;
     text-align: center;
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../links/css/EventSchedule.css";
+import Fade from "react-reveal/Fade"
 
 const EventSchedule = () => {
   const [activeDay, setActiveDay] = useState("Day 1");
@@ -48,6 +49,7 @@ const EventSchedule = () => {
       {/* Schedule Details */}
       <div className="schedule-details">
         {schedule[activeDay].map((event, index) => (
+          <Fade {...(index % 2 === 0 ? { left: true, delay: index * 100 } : { right: true, delay: index * 100 })}>
           <div key={index} className="event-card">
             <div className="event-info">
               <h3 className="event-title">{event.title}</h3>
@@ -58,6 +60,7 @@ const EventSchedule = () => {
               <p className="duration">{event.duration}</p>
             </div>
           </div>
+          </Fade>
         ))}
       </div>
     </div>

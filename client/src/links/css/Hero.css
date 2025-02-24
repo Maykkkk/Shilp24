@@ -32,7 +32,7 @@
 }
 
 .hero-title {
-	font-family: "Montserrat", sans-serif;
+	font-family: "Times New Roman", sans-serif;
 	font-size: 12vh; /* Increased size */
 	font-weight: 700;
 	color: #4a1f1f;
@@ -42,6 +42,7 @@
 	font-size: 5vh;
 	font-weight: 600;
 	color: #4a1f1f;
+	font-family: 'BasheqVintage', serif;
 }
 
 /* Improve logo visibility */

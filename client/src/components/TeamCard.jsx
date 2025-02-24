@@ -34,7 +34,7 @@ function TeamCard({Name, ProfilePhoto, style, LinkedIn, Gmail, Instagram}) {
                       <img src={ProfilePhoto} alt="ProfilePhoto" style={style}/>
                     </div>
                     <div className="contentBx">
-                      <h3>{Name}</h3>
+                      <div className = "profile-Name">{Name}</div>
                     </div>
                   </div>
                   <ul className="sci">
