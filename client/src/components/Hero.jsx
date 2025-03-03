@@ -12,7 +12,7 @@ function Hero() {
               </h1>
             <h2 className='text-light mb-0 p-0'>Civil Engineering Society</h2>
           </div>
-          <h1 className='' style={{position:"absolute", bottom:"8vh", color:"white"}}>5-7 April, 2024</h1>
+          <h1 className='' style={{position:"absolute", bottom:"8vh", color:"white"}}>11-13 April, 2025</h1>
           <div className="clockdiv" style={{color:"white"}}>
             <Timer />
           </div>
